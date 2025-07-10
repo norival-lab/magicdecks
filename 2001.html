@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mundial de 2001 - Arquivo Magic</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .player-header {
+                cursor: pointer;
+                transition: background-color 0.2s ease-in-out;
+            }
+            .decklist {
+                background-color: #1f2937; /* bg-gray-800 */
+                border-left: 3px solid #4f46e5; /* border-indigo-600 */
+            }
+        </style>
+    </head>
+    <body class="bg-gray-900 text-gray-200">
+        <div class="container mx-auto p-4 md:p-8">
+            <header class="text-center mb-10">
+                <a
+                    href="index.html"
+                    class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"
+                    >&larr; Voltar para o Arquivo</a
+                >
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
+                    2001 World Championship
+                </h1>
+                <p class="text-lg text-gray-400">
+                    A invasão Phyrexiana e o Bloco de Invasão dominam o cenário
+                    mundial.
+                </p>
+            </header>
+
+            <main id="archive-container" class="space-y-4">
+                <div
+                    class="bg-gray-800 rounded-lg shadow-lg overflow-hidden p-4 space-y-3"
+                >
+                    <!-- 1st Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2001-1')"
+                        >
+                            <p>
+                                <span class="font-bold">1º Lugar:</span> Tom van
+                                de Logt - <span class="italic">"Go-Mar"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2001-1"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">4 Nether Spirit</div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Counterspell<br />4 Dismantling Blow<br />4
+                                Dromar's Charm<br />4 Fact or Fiction<br />4
+                                Gerrard's Verdict<br />4 Repulse<br />4 Rout<br />4
+                                Teferi's Moat<br />4 Tsabo's Decree<br />4
+                                Vindicate<br />4 Yawgmoth's Agenda
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Adarkar Wastes<br />4 Coastal Tower<br />4
+                                Godless Shrine<br />4 Hallowed Fountain<br />4
+                                Island<br />4 Plains
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2nd Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2001-2')"
+                        >
+                            <p>
+                                <span class="font-bold">2º Lugar:</span> Alex
+                                Borteh -
+                                <span class="italic"
+                                    >"Red-Green Aggro (Fires)"</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2001-2"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Birds of Paradise<br />4 Flametongue Kavu<br />4
+                                Llanowar Elves<br />4 Raging Kavu<br />4
+                                Skizzik<br />4 Thornscape Battlemage<br />4
+                                Two-Headed Dragon
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Chimeric Idol<br />4 Fires of Yavimaya<br />4
+                                Ghitu Fire<br />4 Saproling Burst<br />4 Urza's
+                                Rage
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Brushland<br />4 Karplusan Forest<br />4
+                                Shivan Oasis
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3rd Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2001-3')"
+                        >
+                            <p>
+                                <span class="font-bold">3º Lugar:</span> Antoine
+                                Ruel -
+                                <span class="italic"
+                                    >"The Rock and His Millions"</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2001-3"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Birds of Paradise<br />4 Carnophage<br />4
+                                Phyrexian Negator<br />4 River Boa<br />4
+                                Skittering Skirge<br />4 Spiritmonger<br />4
+                                Uktabi Orangutan<br />4 Yavimaya Elder
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Carrionette<br />4 Cursed Scroll<br />4
+                                Diabolic Edict<br />4 Duress<br />4 Pernicious
+                                Deed<br />4 Sarcomancy<br />4 Vampiric Tutor
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Bayou<br />4 Llanowar Wastes<br />4 Treetop
+                                Village
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2001-4')"
+                        >
+                            <p>
+                                <span class="font-bold">4º Lugar:</span> Dave
+                                Humpherys -
+                                <span class="italic">"U/W Control"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2001-4"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Meddling Mage<br />4 Millstone
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Absorb<br />4 Counterspell<br />4 Dismantling
+                                Blow<br />4 Fact or Fiction<br />4 Forbid<br />4
+                                Impulse<br />4 Opt<br />4 Orim's Chant<br />4
+                                Power Sink<br />4 Repulse<br />4 Wrath of God
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Adarkar Wastes<br />10 Island<br />10 Plains
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2001-5')"
+                        >
+                            <p>
+                                <span class="font-bold">5º Lugar:</span> Mike
+                                Turian - <span class="italic">"The Rock"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2001-5"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Birds of Paradise<br />4 Llanowar Elves<br />4
+                                Penumbra Wurm<br />4 Phyrexian Scuta<br />4
+                                Spiritmonger<br />4 Thornscape Familiar<br />4
+                                Yavimaya Elder
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Duress<br />4 Pernicious Deed<br />4 Saproling
+                                Burst<br />4 Vampiric Tutor
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Llanowar Wastes<br />4 Treetop Village<br />8
+                                Forest<br />8 Swamp
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 6th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2001-6')"
+                        >
+                            <p>
+                                <span class="font-bold">6º Lugar:</span> Jan
+                                Tomcani -
+                                <span class="italic">"Red Deck Wins"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2001-6"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Blazing Specter<br />4 Flametongue Kavu<br />4
+                                Kris Mage<br />4 Mogg Sentry<br />4 Seal of Fire
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Firebolt<br />4 Ghitu Fire<br />4 Pillage<br />4
+                                Stone Rain<br />4 Urza's Rage
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">20 Mountain</div>
+                        </div>
+                    </div>
+                    <!-- 7th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2001-7')"
+                        >
+                            <p>
+                                <span class="font-bold">7º Lugar:</span> Raphael
+                                Levy - <span class="italic">"Fires"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2001-7"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Birds of Paradise<br />4 Flametongue Kavu<br />4
+                                Llanowar Elves<br />4 Raging Kavu<br />4
+                                Skizzik<br />4 Thornscape Battlemage<br />4
+                                Two-Headed Dragon
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Chimeric Idol<br />4 Fires of Yavimaya<br />4
+                                Ghitu Fire<br />4 Saproling Burst<br />4 Urza's
+                                Rage
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Brushland<br />4 Karplusan Forest<br />4
+                                Shivan Oasis
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 8th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2001-8')"
+                        >
+                            <p>
+                                <span class="font-bold">8º Lugar:</span> Olivier
+                                Ruel -
+                                <span class="italic">"U/B/R Control"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2001-8"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Flametongue Kavu<br />4 Nightscape Familiar
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Counterspell<br />4 Duress<br />4 Fact or
+                                Fiction<br />4 Fire/Ice<br />4 Prophetic Bolt<br />4
+                                Repulse<br />4 Spite/Malice<br />4 Undermine<br />4
+                                Urza's Rage
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Shivan Reef<br />4 Sulfurous Springs<br />4
+                                Underground River<br />4 Urborg Volcano
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script>
+            function toggleVisibility(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.classList.toggle("hidden");
+                }
+            }
+        </script>
+    </body>
+</html>

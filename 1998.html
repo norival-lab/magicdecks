@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mundial de 1998 - Arquivo Magic</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .player-header {
+                cursor: pointer;
+                transition: background-color 0.2s ease-in-out;
+            }
+            .decklist {
+                background-color: #1f2937; /* bg-gray-800 */
+                border-left: 3px solid #4f46e5; /* border-indigo-600 */
+            }
+        </style>
+    </head>
+    <body class="bg-gray-900 text-gray-200">
+        <div class="container mx-auto p-4 md:p-8">
+            <header class="text-center mb-10">
+                <a
+                    href="index.html"
+                    class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"
+                    >&larr; Voltar para o Arquivo</a
+                >
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
+                    1998 World Championship
+                </h1>
+                <p class="text-lg text-gray-400">
+                    O auge da "Era do Combo" com estratégias explosivas e decks
+                    agressivos.
+                </p>
+            </header>
+
+            <main id="archive-container" class="space-y-4">
+                <div
+                    class="bg-gray-800 rounded-lg shadow-lg overflow-hidden p-4 space-y-3"
+                >
+                    <!-- 1st Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1998-1')"
+                        >
+                            <p>
+                                <span class="font-bold">1º Lugar:</span> Brian
+                                Selden -
+                                <span class="italic">"Mono-Red Sligh"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1998-1"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Ball Lightning<br />4 Flowstone Sculpture<br />4
+                                Goblin Vandal<br />4 Ironclaw Orcs<br />4 Jackal
+                                Pup<br />4 Mogg Fanatic<br />1 Raging Goblin
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Cursed Scroll<br />4 Fireblast<br />4 Giant
+                                Strength<br />4 Hammer of Bogardan<br />4
+                                Incinerate<br />4 Kindl<br />4 Shock
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">19 Mountain</div>
+                        </div>
+                    </div>
+                    <!-- 2nd Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1998-2')"
+                        >
+                            <p>
+                                <span class="font-bold">2º Lugar:</span> Ben
+                                Rubin -
+                                <span class="italic">"High Tide Combo"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1998-2"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">4 Palinchron</div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                1 Brainstorm<br />4 Capsize<br />4
+                                Counterspell<br />4 Cursed Scroll<br />4
+                                Disrupt<br />4 Force of Will<br />4 Force
+                                Spike<br />4 High Tide<br />4 Impulse<br />4
+                                Mana Leak<br />4 Merchant Scroll<br />4 Mind
+                                Games<br />4 Nevinyrral's Disk<br />4 Stroke of
+                                Genius<br />4 Time Spiral<br />4 Turnabout
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                20 Island<br />1 Maze of Ith
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3rd Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1998-3')"
+                        >
+                            <p>
+                                <span class="font-bold">3º Lugar:</span> Raphaël
+                                Lévy -
+                                <span class="italic">"White Weenie"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1998-3"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Exalted Dragon<br />4 Knight of the White
+                                Orchid<br />4 Mother of Runes<br />4 Savannah
+                                Lions<br />4 Soltari Champion<br />4 Soltari
+                                Monk<br />4 Soltari Priest<br />4 Soul Warden<br />4
+                                Warrior Angel<br />4 White Knight
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Abeyance<br />4 Capsize<br />4 Cataclysm<br />4
+                                Cursed Scroll<br />4 Empyrial Armor<br />4
+                                Healing Salve<br />4 Humility<br />4 Waylay
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">17 Plains</div>
+                        </div>
+                    </div>
+                    <!-- 4th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1998-4')"
+                        >
+                            <p>
+                                <span class="font-bold">4º Lugar:</span> Chris
+                                Pikula -
+                                <span class="italic">"Mono-Red Aggro"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1998-4"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Ball Lightning<br />4 Ironclaw Orcs<br />4
+                                Jackal Pup<br />4 Mogg Fanatic
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Cursed Scroll<br />4 Fireblast<br />4 Hammer
+                                of Bogardan<br />4 Incinerate<br />4 Pillage<br />4
+                                Shock<br />4 Stone Rain
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">20 Mountain</div>
+                        </div>
+                    </div>
+                    <!-- 5th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1998-5')"
+                        >
+                            <p>
+                                <span class="font-bold">5º Lugar:</span> Scott
+                                Johns -
+                                <span class="italic">"Mono-Red Aggro"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1998-5"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Ball Lightning<br />4 Ironclaw Orcs<br />4
+                                Jackal Pup<br />4 Mogg Fanatic
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Cursed Scroll<br />4 Fireblast<br />4 Hammer
+                                of Bogardan<br />4 Incinerate<br />4 Pillage<br />4
+                                Shock<br />4 Stone Rain
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">20 Mountain</div>
+                        </div>
+                    </div>
+                    <!-- 6th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1998-6')"
+                        >
+                            <p>
+                                <span class="font-bold">6º Lugar:</span> Alan
+                                Comer - <span class="italic">"Turbo-Zvi"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1998-6"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Birds of Paradise<br />4 Llanowar Elves<br />4
+                                Quirion Ranger<br />4 Wall of Blossoms<br />4
+                                Wall of Roots
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Aluren<br />4 Brainstorm<br />4 Cavern
+                                Harpy<br />4 Corpse Dance<br />4 Man-o'-War<br />4
+                                Recycle<br />4 Uktabi Orangutan
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 City of Brass<br />4 Gemstone Mine<br />4
+                                Undiscovered Paradise
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 7th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1998-7')"
+                        >
+                            <p>
+                                <span class="font-bold">7º Lugar:</span> Jon
+                                Finkel -
+                                <span class="italic">"U/B Control"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1998-7"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Man-o'-War<br />4 Spindrift Drake
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Brainstorm<br />4 Counterspell<br />4 Force of
+                                Will<br />4 Force Spike<br />4 Impulse<br />4
+                                Mana Leak<br />4 Nevinyrral's Disk<br />4
+                                Whispers of the Muse
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                20 Island<br />4 Underground River
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 8th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1998-8')"
+                        >
+                            <p>
+                                <span class="font-bold">8º Lugar:</span> Brian
+                                Hacker -
+                                <span class="italic">"Mono-Red Aggro"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1998-8"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Ball Lightning<br />4 Ironclaw Orcs<br />4
+                                Jackal Pup<br />4 Mogg Fanatic
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Cursed Scroll<br />4 Fireblast<br />4 Hammer
+                                of Bogardan<br />4 Incinerate<br />4 Pillage<br />4
+                                Shock<br />4 Stone Rain
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">20 Mountain</div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script>
+            function toggleVisibility(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.classList.toggle("hidden");
+                }
+            }
+        </script>
+    </body>
+</html>

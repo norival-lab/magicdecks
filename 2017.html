@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mundial de 2017 - Arquivo Magic</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .player-header {
+                cursor: pointer;
+                transition: background-color 0.2s ease-in-out;
+            }
+            .decklist {
+                background-color: #1f2937; /* bg-gray-800 */
+                border-left: 3px solid #4f46e5; /* border-indigo-600 */
+            }
+        </style>
+    </head>
+    <body class="bg-gray-900 text-gray-200">
+        <div class="container mx-auto p-4 md:p-8">
+            <header class="text-center mb-10">
+                <a
+                    href="index.html"
+                    class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"
+                    >&larr; Voltar para o Arquivo</a
+                >
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
+                    2017 World Championship
+                </h1>
+                <p class="text-lg text-gray-400">
+                    O Bloco de Kaladesh e a dominância de Temur Energy.
+                </p>
+            </header>
+
+            <main id="archive-container" class="space-y-4">
+                <div
+                    class="bg-gray-800 rounded-lg shadow-lg overflow-hidden p-4 space-y-3"
+                >
+                    <!-- 1st Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2017-1')"
+                        >
+                            <p>
+                                <span class="font-bold">1º Lugar:</span> William
+                                Jensen -
+                                <span class="italic">"Temur Energy"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2017-1"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Bristling Hydra<br />4 Longtusk Cub<br />4
+                                Rogue Refiner<br />4 Servant of the Conduit<br />4
+                                Whirler Virtuoso
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Abrade<br />4 Attune with Aether<br />4
+                                Chandra, Torch of Defiance<br />4 Harnessed
+                                Lightning<br />4 Magma Spray
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Aether Hub<br />4 Botanical Sanctum<br />4
+                                Rootbound Crag<br />4 Spirebluff Canal<br />8
+                                Forest<br />8 Mountain
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2nd Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2017-2')"
+                        >
+                            <p>
+                                <span class="font-bold">2º Lugar:</span> Javier
+                                Dominguez -
+                                <span class="italic">"Ramunap Red"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2017-2"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Ahn-Crop Crasher<br />4 Bomat Courier<br />4
+                                Earthshaker Khenra<br />4 Falkenrath Gorger<br />4
+                                Hazoret the Fervent<br />4 Kari Zev, Skyship
+                                Raider<br />4 Soul-Scar Mage
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Abrade<br />4 Lightning Strike<br />4 Shock
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Ramunap Ruins<br />4 Sunscorched Desert<br />12
+                                Mountain
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3rd Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2017-3')"
+                        >
+                            <p>
+                                <span class="font-bold">3º Lugar:</span> Kelvin
+                                Chew -
+                                <span class="italic">"Temur Energy"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2017-3"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Bristling Hydra<br />4 Longtusk Cub<br />4
+                                Rogue Refiner<br />4 Servant of the Conduit<br />4
+                                Whirler Virtuoso
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Abrade<br />4 Attune with Aether<br />4
+                                Chandra, Torch of Defiance<br />4 Harnessed
+                                Lightning<br />4 Magma Spray
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Aether Hub<br />4 Botanical Sanctum<br />4
+                                Rootbound Crag<br />4 Spirebluff Canal<br />8
+                                Forest<br />8 Mountain
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2017-4')"
+                        >
+                            <p>
+                                <span class="font-bold">4º Lugar:</span> Josh
+                                Utter-Leyton -
+                                <span class="italic">"Temur Energy"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2017-4"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Bristling Hydra<br />4 Longtusk Cub<br />4
+                                Rogue Refiner<br />4 Servant of the Conduit<br />4
+                                Whirler Virtuoso
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Abrade<br />4 Attune with Aether<br />4
+                                Chandra, Torch of Defiance<br />4 Harnessed
+                                Lightning<br />4 Magma Spray
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Aether Hub<br />4 Botanical Sanctum<br />4
+                                Rootbound Crag<br />4 Spirebluff Canal<br />8
+                                Forest<br />8 Mountain
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script>
+            function toggleVisibility(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.classList.toggle("hidden");
+                }
+            }
+        </script>
+    </body>
+</html>

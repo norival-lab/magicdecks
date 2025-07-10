@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundial de 1995 - Arquivo Magic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .player-header {
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .decklist {
+            background-color: #1F2937; /* bg-gray-800 */
+            border-left: 3px solid #4F46E5; /* border-indigo-600 */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <a href="index.html" class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block">&larr; Voltar para o Arquivo</a>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">1995 World Championship</h1>
+            <p class="text-lg text-gray-400">O ano da ascensão do Necropotence e estratégias de controle refinadas.</p>
+        </header>
+
+        <main id="archive-container" class="space-y-4">
+            <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden p-4 space-y-3">
+                <!-- 1st Place -->
+                <div class="player-entry">
+                    <div class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md" onclick="toggleVisibility('deck-1995-1')">
+                        <p><span class="font-bold">1º Lugar:</span> Alexander Blumke - <span class="italic">"Mono Black Rack"</span></p>
+                    </div>
+                    <div id="deck-1995-1" class="decklist hidden mt-2 p-4 rounded-b-md">
+                        <h3 class="font-semibold text-lg mb-2 text-indigo-400">Criaturas</h3>
+                        <div class="text-gray-300">1 Black Knight<br>4 Hypnotic Specter<br>1 Ihsan's Shade<br>4 Order of the Ebon Hand<br>3 Sengir Vampire</div>
+                        <h3 class="font-semibold text-lg mt-4 mb-2 text-indigo-400">Mágicas</h3>
+                        <div class="text-gray-300">4 Bad Moon<br>3 Drain Life<br>4 Dark Ritual<br>4 Hymn to Tourach<br>1 The Rack<br>1 Mind Twist<br>1 Nevinyrral's Disk</div>
+                        <h3 class="font-semibold text-lg mt-4 mb-2 text-indigo-400">Terrenos</h3>
+                        <div class="text-gray-300">4 Strip Mine<br>20 Swamp</div>
+                    </div>
+                </div>
+                 <!-- 2nd Place -->
+                <div class="player-entry">
+                    <div class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md" onclick="toggleVisibility('deck-1995-2')">
+                        <p><span class="font-bold">2º Lugar:</span> Marc Hernandez - <span class="italic">"UW Control"</span></p>
+                    </div>
+                    <div id="deck-1995-2" class="decklist hidden mt-2 p-4 rounded-b-md">
+                         <h3 class="font-semibold text-lg mb-2 text-indigo-400">Criaturas</h3>
+                         <div class="text-gray-300">4 Fyndhorn Brownie<br>1 Timmerian Fiends</div>
+                         <h3 class="font-semibold text-lg mt-4 mb-2 text-indigo-400">Mágicas</h3>
+                         <div class="text-gray-300">2 Arcane Denail<br>2 Arenson's Aura<br>2 Counterspell<br>4 Disenchant<br>2 Feldon's Cane<br>1 Hall of Gemstone<br>4 Hallowed Ground<br>1 Ivory Tower<br>4 Land Tax<br>1 Land's Edge<br>2 Lim-Dul's Vault<br>1 Portcullis<br>1 Power Sink<br>1 Recall<br>1 Serrated Arrows<br>4 Swords to Plowshares<br>1 Zuran Orb</div>
+                         <h3 class="font-semibold text-lg mt-4 mb-2 text-indigo-400">Terrenos</h3>
+                         <div class="text-gray-300">4 Adarkar Wastes<br>1 Glacial Chasm<br>9 Island<br>1 Kjeldoran Outpost<br>1 Mishra's Factory<br>4 Plains<br>1 Rainbow Vale</div>
+                    </div>
+                </div>
+                <!-- 3rd Place -->
+                <div class="player-entry">
+                    <div class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md" onclick="toggleVisibility('deck-1995-3')">
+                        <p><span class="font-bold">3º Lugar:</span> Mark Justice - <span class="italic">"Turbo Stasis"</span></p>
+                    </div>
+                    <div id="deck-1995-3" class="decklist hidden mt-2 p-4 rounded-b-md">
+                         <h3 class="font-semibold text-lg mb-2 text-indigo-400">Mágicas</h3>
+                         <div class="text-gray-300">4 Boomerang<br>2 Counterspell<br>1 Despotic Scepter<br>4 Disrupting Scepter<br>2 Feldon's Cane<br>4 Force Spike<br>4 Howling Mine<br>1 Ivory Tower<br>1 Land Tax<br>2 Lim-Dul's Vault<br>1 Lodestone Bauble<br>1 Power Sink<br>1 Recall<br>4 Stasis<br>4 Swords to Plowshares<br>1 Urza's Bauble<br>1 Zuran Orb</div>
+                         <h3 class="font-semibold text-lg mt-4 mb-2 text-indigo-400">Terrenos</h3>
+                         <div class="text-gray-300">2 Adarkar Wastes<br>11 Island<br>1 Mishra's Factory<br>4 Plains</div>
+                    </div>
+                </div>
+                <!-- 4th Place -->
+                <div class="player-entry">
+                    <div class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md" onclick="toggleVisibility('deck-1995-4')">
+                        <p><span class="font-bold">4º Lugar:</span> Henry Stern - <span class="italic">"5-Color Control"</span></p>
+                    </div>
+                    <div id="deck-1995-4" class="decklist hidden mt-2 p-4 rounded-b-md">
+                         <h3 class="font-semibold text-lg mb-2 text-indigo-400">Criaturas</h3>
+                         <div class="text-gray-300">4 Birds of Paradise<br>4 Elvish Visionary<br>4 Fyndhorn Elves<br>4 Man-o'-War<br>4 Tinder Wall</div>
+                         <h3 class="font-semibold text-lg mt-4 mb-2 text-indigo-400">Mágicas</h3>
+                         <div class="text-gray-300">1 Divine Offering<br>2 Disrupt<br>4 Force of Will<br>2 Gerrard's Wisdom<br>1 Hammer of Bogardan<br>4 Incinerate<br>1 Lodestone Bauble<br>1 Mind Warp<br>1 Power Sink<br>1 Recall<br>4 Swords to Plowshares<br>1 Urza's Bauble<br>1 Zuran Orb</div>
+                         <h3 class="font-semibold text-lg mt-4 mb-2 text-indigo-400">Terrenos</h3>
+                         <div class="text-gray-300">2 Adarkar Wastes<br>2 Brushland<br>4 City of Brass<br>4 Karplusan Forest<br>4 Underground River</div>
+                    </div>
+                </div>
+                <!-- 5th Place -->
+                <div class="player-entry">
+                    <div class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md" onclick="toggleVisibility('deck-1995-5')">
+                        <p><span class="font-bold">5º Lugar:</span> Matt Place - <span class="italic">"ErhnamGeddon"</span></p>
+                    </div>
+                    <div id="deck-1995-5" class="decklist hidden mt-2 p-4 rounded-b-md">
+                         <h3 class="font-semibold text-lg mb-2 text-indigo-400">Criaturas</h3>
+                         <div class="text-gray-300">4 Birds of Paradise<br>4 Erhnam Djinn<br>4 Fyndhorn Elves<br>4 Llanowar Elves<br>2 Serra Angel<br>4 Whirling Dervish</div>
+                         <h3 class="font-semibold text-lg mt-4 mb-2 text-indigo-400">Mágicas</h3>
+                         <div class="text-gray-300">4 Armageddon<br>1 Balance<br>4 Disenchant<br>1 Regrowth<br>4 Swords to Plowshares</div>
+                         <h3 class="font-semibold text-lg mt-4 mb-2 text-indigo-400">Terrenos</h3>
+                         <div class="text-gray-300">4 Brushland<br>4 Karplusan Forest<br>4 Mishra's Factory<br>4 Savannah<br>4 Strip Mine</div>
+                    </div>
+                </div>
+                <!-- 6th Place -->
+                <div class="player-entry">
+                    <div class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md" onclick="toggleVisibility('deck-1995-6')">
+                        <p><span class="font-bold">6º Lugar:</span> Mike Long - <span class="italic">"Mono Black Necro"</span></p>
+                    </div>
+                    <div id="deck-1995-6" class="decklist hidden mt-2 p-4 rounded-b-md">
+                         <h3 class="font-semibold text-lg mb-2 text-indigo-400">Criaturas</h3>
+                         <div class="text-gray-300">4 Hypnotic Specter<br>4 Knight of Stromgald<br>4 Order of the Ebon Hand</div>
+                         <h3 class="font-semibold text-lg mt-4 mb-2 text-indigo-400">Mágicas</h3>
+                         <div class="text-gray-300">4 Dark Ritual<br>1 Demonic Consultation<br>4 Drain Life<br>4 Hymn to Tourach<br>1 Ivory Tower<br>1 Mind Twist<br>4 Necropotence<br>1 Nevinyrral's Disk<br>1 The Rack<br>1 Zuran Orb</div>
+                         <h3 class="font-semibold text-lg mt-4 mb-2 text-indigo-400">Terrenos</h3>
+                         <div class="text-gray-300">4 Mishra's Factory<br>4 Strip Mine<br>12 Swamp</div>
+                    </div>
+                </div>
+                <!-- 7th Place -->
+                <div class="player-entry">
+                    <div class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md" onclick="toggleVisibility('deck-1995-7')">
+                        <p><span class="font-bold">7º Lugar:</span> Olle Råde - <span class="italic">"ErhnamGeddon"</span></p>
+                    </div>
+                    <div id="deck-1995-7" class="decklist hidden mt-2 p-4 rounded-b-md">
+                         <h3 class="font-semibold text-lg mb-2 text-indigo-400">Criaturas</h3>
+                         <div class="text-gray-300">4 Birds of Paradise<br>4 Erhnam Djinn<br>4 Fyndhorn Elves<br>4 Llanowar Elves<br>2 Serra Angel<br>4 Whirling Dervish</div>
+                         <h3 class="font-semibold text-lg mt-4 mb-2 text-indigo-400">Mágicas</h3>
+                         <div class="text-gray-300">4 Armageddon<br>1 Balance<br>4 Disenchant<br>1 Regrowth<br>4 Swords to Plowshares</div>
+                         <h3 class="font-semibold text-lg mt-4 mb-2 text-indigo-400">Terrenos</h3>
+                         <div class="text-gray-300">4 Brushland<br>4 Karplusan Forest<br>4 Mishra's Factory<br>4 Savannah<br>4 Strip Mine</div>
+                    </div>
+                </div>
+                <!-- 8th Place -->
+                <div class="player-entry">
+                    <div class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md" onclick="toggleVisibility('deck-1995-8')">
+                        <p><span class="font-bold">8º Lugar:</span> Shawn Regnier - <span class="italic">"R/G Aggro"</span></p>
+                    </div>
+                    <div id="deck-1995-8" class="decklist hidden mt-2 p-4 rounded-b-md">
+                         <h3 class="font-semibold text-lg mb-2 text-indigo-400">Criaturas</h3>
+                         <div class="text-gray-300">4 Birds of Paradise<br>4 Erhnam Djinn<br>4 Fyndhorn Elves<br>4 Kird Ape<br>4 Llanowar Elves<br>4 Whirling Dervish</div>
+                         <h3 class="font-semibold text-lg mt-4 mb-2 text-indigo-400">Mágicas</h3>
+                         <div class="text-gray-300">4 Fireball<br>4 Giant Growth<br>4 Lightning Bolt<br>1 Shatter</div>
+                         <h3 class="font-semibold text-lg mt-4 mb-2 text-indigo-400">Terrenos</h3>
+                         <div class="text-gray-300">4 Karplusan Forest<br>4 Mishra's Factory<br>4 Strip Mine<br>4 Taiga</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleVisibility(elementId) {
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.classList.toggle('hidden');
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mundial de 2015 - Arquivo Magic</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .player-header {
+                cursor: pointer;
+                transition: background-color 0.2s ease-in-out;
+            }
+            .decklist {
+                background-color: #1f2937; /* bg-gray-800 */
+                border-left: 3px solid #4f46e5; /* border-indigo-600 */
+            }
+        </style>
+    </head>
+    <body class="bg-gray-900 text-gray-200">
+        <div class="container mx-auto p-4 md:p-8">
+            <header class="text-center mb-10">
+                <a
+                    href="index.html"
+                    class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"
+                    >&larr; Voltar para o Arquivo</a
+                >
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
+                    2015 World Championship
+                </h1>
+                <p class="text-lg text-gray-400">
+                    O Bloco de Batalha por Zendikar e a ascensão dos Eldrazi.
+                </p>
+            </header>
+
+            <main id="archive-container" class="space-y-4">
+                <div
+                    class="bg-gray-800 rounded-lg shadow-lg overflow-hidden p-4 space-y-3"
+                >
+                    <!-- 1st Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2015-1')"
+                        >
+                            <p>
+                                <span class="font-bold">1º Lugar:</span> Seth
+                                Manfield -
+                                <span class="italic">"Abzan Midrange"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2015-1"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Anafenza, the Foremost<br />4 Den Protector<br />4
+                                Hangarback Walker<br />4 Siege Rhino<br />4
+                                Warden of the First Tree
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Abzan Charm<br />4 Dromoka's Command<br />4
+                                Gideon, Ally of Zendikar<br />4 Murderous Cut<br />4
+                                Sorin, Solemn Visitor<br />4 Valorous Stance
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Canopy Vista<br />4 Flooded Strand<br />4
+                                Llanowar Wastes<br />4 Sandsteppe Citadel<br />4
+                                Shambling Vent<br />4 Sunken Hollow<br />4
+                                Windswept Heath<br />4 Wooded Foothills
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2nd Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2015-2')"
+                        >
+                            <p>
+                                <span class="font-bold">2º Lugar:</span> Owen
+                                Turtenwald -
+                                <span class="italic">"Jeskai Black"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2015-2"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Jace, Vryn's Prodigy<br />4 Mantis Rider<br />4
+                                Seeker of the Way<br />4 Soulfire Grand Master
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Crackling Doom<br />4 Dig Through Time<br />4
+                                Fiery Impulse<br />4 Jeskai Charm<br />4
+                                Kolaghan's Command<br />4 Ojutai's Command<br />4
+                                Treasure Cruise
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Bloodstained Mire<br />4 Flooded Strand<br />4
+                                Mystic Monastery<br />4 Polluted Delta<br />4
+                                Shivan Reef<br />4 Smoldering Marsh<br />4
+                                Sunken Hollow
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3rd Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2015-3')"
+                        >
+                            <p>
+                                <span class="font-bold">3º Lugar:</span> Paulo
+                                Vitor Damo da Rosa -
+                                <span class="italic">"Esper Dragons"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2015-3"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Dragonlord Ojutai<br />4 Dragonlord
+                                Silumgar<br />4 Jace, Vryn's Prodigy<br />4
+                                Silumgar, the Drifting Death
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Dig Through Time<br />4 Draconic Roar<br />4
+                                Foul-Tongue Invocation<br />4 Haven of the
+                                Spirit Dragon<br />4 Ojutai's Command<br />4
+                                Silumgar's Scorn<br />4 Ultimate Price
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Flooded Strand<br />4 Polluted Delta<br />4
+                                Prairie Stream<br />4 Shivan Reef<br />4
+                                Smoldering Marsh<br />4 Sunken Hollow
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2015-4')"
+                        >
+                            <p>
+                                <span class="font-bold">4º Lugar:</span>
+                                Kazuyuki Takimura -
+                                <span class="italic">"Atarka Red"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2015-4"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Abbot of Keral Keep<br />4 Dragon Fodder<br />4
+                                Monastery Swiftspear<br />4 Zurgo Bellstriker
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Atarka's Command<br />4 Become Immense<br />4
+                                Hordeling Outburst<br />4 Titan's Strength<br />4
+                                Wild Slash
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Bloodstained Mire<br />4 Cinder Glade<br />4
+                                Wooded Foothills<br />12 Mountain
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script>
+            function toggleVisibility(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.classList.toggle("hidden");
+                }
+            }
+        </script>
+    </body>
+</html>

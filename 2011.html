@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mundial de 2011 - Arquivo Magic</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .player-header {
+                cursor: pointer;
+                transition: background-color 0.2s ease-in-out;
+            }
+            .decklist {
+                background-color: #1f2937; /* bg-gray-800 */
+                border-left: 3px solid #4f46e5; /* border-indigo-600 */
+            }
+        </style>
+    </head>
+    <body class="bg-gray-900 text-gray-200">
+        <div class="container mx-auto p-4 md:p-8">
+            <header class="text-center mb-10">
+                <a
+                    href="index.html"
+                    class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"
+                    >&larr; Voltar para o Arquivo</a
+                >
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
+                    2011 World Championship
+                </h1>
+                <p class="text-lg text-gray-400">
+                    O Bloco de Innistrad e a ascensão de estratégias agressivas
+                    e disruptivas.
+                </p>
+            </header>
+
+            <main id="archive-container" class="space-y-4">
+                <div
+                    class="bg-gray-800 rounded-lg shadow-lg overflow-hidden p-4 space-y-3"
+                >
+                    <!-- 1st Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2011-1')"
+                        >
+                            <p>
+                                <span class="font-bold">1º Lugar:</span> Jun'ya
+                                Iyanaga -
+                                <span class="italic"
+                                    >"Mono-Blue Illusions"</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2011-1"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Adaptive Automaton<br />4 AEther Adept<br />4
+                                Geist-Honored Monk<br />4 Grand Abolisher<br />4
+                                Lord of the Unreal<br />4 Merfolk Looter<br />4
+                                Phantasmal Bear<br />4 Phantasmal Dragon<br />4
+                                Phantasmal Image<br />4 Phyrexian Metamorph<br />4
+                                Porcelain Legionnaire<br />4 Snapcaster Mage
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Dismember<br />4 Dissipate<br />4 Geth's
+                                Verdict<br />4 Gitaxian Probe<br />4 Gut Shot<br />4
+                                Mana Leak<br />4 Mental Misstep<br />4 Ponder<br />4
+                                Steel Sabotage<br />4 Turn Aside
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">4 Moorland Haunt</div>
+                        </div>
+                    </div>
+                    <!-- 2nd Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2011-2')"
+                        >
+                            <p>
+                                <span class="font-bold">2º Lugar:</span> Richard
+                                Bland - <span class="italic">"U/W Humans"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2011-2"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Accorder Paladin<br />4 Blade Splicer<br />4
+                                Champion of the Parish<br />4 Doomed Traveler<br />4
+                                Elite Vanguard<br />4 Fiend Hunter<br />4 Geist
+                                of Saint Traft<br />4 Grand Abolisher<br />4
+                                Leonin Relic-Warder<br />4 Mirran Crusader<br />4
+                                Phantasmal Image
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Angelic Destiny<br />4 Gideon's Lawkeeper<br />4
+                                Honor of the Pure<br />4 Mana Leak<br />4 Mental
+                                Misstep<br />4 Midnight Haunting<br />4 Oblivion
+                                Ring<br />4 Revoke Existence<br />4 Timely
+                                Reinforcements<br />4 Vapor Snag
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Glacial Fortress<br />4 Moorland Haunt<br />4
+                                Seachrome Coast
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3rd Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2011-3')"
+                        >
+                            <p>
+                                <span class="font-bold">3º Lugar:</span> Conley
+                                Woods -
+                                <span class="italic">"Tempered Steel"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2011-3"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Blade Splicer<br />4 Etched Champion<br />4
+                                Geist-Honored Monk<br />4 Glint Hawk<br />4
+                                Glint Hawk Idol<br />4 Hero of Bladehold<br />4
+                                Memnite<br />4 Mirran Crusader<br />4
+                                Ornithopter<br />4 Signal Pest<br />4
+                                Spellskite<br />4 Vault Skirge
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Accorder's Shield<br />4 Dispatch<br />4
+                                Flayer Husk<br />4 Intangible Virtue<br />4 Mox
+                                Opal<br />4 Origin Spellbomb<br />4 Tempered
+                                Steel
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Contested War Zone<br />4 Gavony Township<br />4
+                                Ghost Quarter<br />4 Inkmoth Nexus
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2011-4')"
+                        >
+                            <p>
+                                <span class="font-bold">4º Lugar:</span> Paulo
+                                Vitor Damo da Rosa -
+                                <span class="italic">"Solar Flare"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2011-4"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Consecrated Sphinx<br />4 Grave Titan<br />4
+                                Phantasmal Image<br />4 Snapcaster Mage<br />4
+                                Sun Titan
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Day of Judgment<br />4 Dissipate<br />4 Doom
+                                Blade<br />4 Forbidden Alchemy<br />4 Go for the
+                                Throat<br />4 Liliana of the Veil<br />4 Mana
+                                Leak<br />4 Oblivion Ring<br />4 Ponder<br />4
+                                Think Twice<br />4 Unburial Rites
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Darkslick Shores<br />4 Drowned Catacomb<br />4
+                                Glacial Fortress<br />4 Isolated Chapel<br />4
+                                Seachrome Coast
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2011-5')"
+                        >
+                            <p>
+                                <span class="font-bold">5º Lugar:</span> Craig
+                                Wescoe -
+                                <span class="italic">"Mono-White Humans"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2011-5"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Champion of the Parish<br />4 Doomed
+                                Traveler<br />4 Elite Inquisitor<br />4 Fiend
+                                Hunter<br />4 Gideon's Lawkeeper<br />4 Grand
+                                Abolisher<br />4 Hero of Bladehold<br />4 Leonin
+                                Relic-Warder<br />4 Mirran Crusader
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Angelic Destiny<br />4 Honor of the Pure<br />4
+                                Oblivion Ring
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">20 Plains</div>
+                        </div>
+                    </div>
+                    <!-- 6th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2011-6')"
+                        >
+                            <p>
+                                <span class="font-bold">6º Lugar:</span> Josh
+                                Utter-Leyton -
+                                <span class="italic">"Tempered Steel"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2011-6"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Blade Splicer<br />4 Etched Champion<br />4
+                                Geist-Honored Monk<br />4 Glint Hawk<br />4
+                                Glint Hawk Idol<br />4 Hero of Bladehold<br />4
+                                Memnite<br />4 Mirran Crusader<br />4
+                                Ornithopter<br />4 Signal Pest<br />4
+                                Spellskite<br />4 Vault Skirge
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Accorder's Shield<br />4 Dispatch<br />4
+                                Flayer Husk<br />4 Intangible Virtue<br />4 Mox
+                                Opal<br />4 Origin Spellbomb<br />4 Tempered
+                                Steel
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Contested War Zone<br />4 Gavony Township<br />4
+                                Ghost Quarter<br />4 Inkmoth Nexus
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 7th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2011-7')"
+                        >
+                            <p>
+                                <span class="font-bold">7º Lugar:</span> Shuuhei
+                                Nakamura -
+                                <span class="italic">"Mono-Red Aggro"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2011-7"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Chandra's Phoenix<br />4 Grim Lavamancer<br />4
+                                Spikeshot Elder<br />4 Stormblood Berserker<br />4
+                                Stromkirk Noble
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Arc Trail<br />4 Brimstone Volley<br />4
+                                Galvanic Blast<br />4 Gut Shot<br />4
+                                Incinerate<br />4 Shrine of Burning Rage<br />4
+                                Volt Charge
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">20 Mountain</div>
+                        </div>
+                    </div>
+                    <!-- 8th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2011-8')"
+                        >
+                            <p>
+                                <span class="font-bold">8º Lugar:</span> Ben
+                                Stark - <span class="italic">"U/W Humans"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2011-8"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Accorder Paladin<br />4 Blade Splicer<br />4
+                                Champion of the Parish<br />4 Doomed Traveler<br />4
+                                Elite Vanguard<br />4 Fiend Hunter<br />4 Geist
+                                of Saint Traft<br />4 Grand Abolisher<br />4
+                                Leonin Relic-Warder<br />4 Mirran Crusader<br />4
+                                Phantasmal Image
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Angelic Destiny<br />4 Gideon's Lawkeeper<br />4
+                                Honor of the Pure<br />4 Mana Leak<br />4 Mental
+                                Misstep<br />4 Midnight Haunting<br />4 Oblivion
+                                Ring<br />4 Revoke Existence<br />4 Timely
+                                Reinforcements<br />4 Vapor Snag
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Glacial Fortress<br />4 Moorland Haunt<br />4
+                                Seachrome Coast
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script>
+            function toggleVisibility(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.classList.toggle("hidden");
+                }
+            }
+        </script>
+    </body>
+</html>

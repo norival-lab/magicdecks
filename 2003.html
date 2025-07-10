@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mundial de 2003 - Arquivo Magic</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .player-header {
+                cursor: pointer;
+                transition: background-color 0.2s ease-in-out;
+            }
+            .decklist {
+                background-color: #1f2937; /* bg-gray-800 */
+                border-left: 3px solid #4f46e5; /* border-indigo-600 */
+            }
+        </style>
+    </head>
+    <body class="bg-gray-900 text-gray-200">
+        <div class="container mx-auto p-4 md:p-8">
+            <header class="text-center mb-10">
+                <a
+                    href="index.html"
+                    class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"
+                    >&larr; Voltar para o Arquivo</a
+                >
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
+                    2003 World Championship
+                </h1>
+                <p class="text-lg text-gray-400">
+                    O Bloco de Onslaught e a vitória do alemão Daniel Zink com
+                    seu deck de controle.
+                </p>
+            </header>
+
+            <main id="archive-container" class="space-y-4">
+                <div
+                    class="bg-gray-800 rounded-lg shadow-lg overflow-hidden p-4 space-y-3"
+                >
+                    <!-- 1st Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2003-1')"
+                        >
+                            <p>
+                                <span class="font-bold">1º Lugar:</span> Daniel
+                                Zink -
+                                <span class="italic">"Mono-White Control"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2003-1"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Eternal Dragon<br />4 Exalted Angel
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Akroma's Vengeance<br />4 Astral Slide<br />4
+                                Decree of Justice<br />4 Renewed Faith<br />4
+                                Starstorm<br />4 Wing Shards<br />4 Wrath of God
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                8 Plains<br />4 Secluded Steppe<br />4 Temple of
+                                the False God
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2nd Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2003-2')"
+                        >
+                            <p>
+                                <span class="font-bold">2º Lugar:</span> Tuomo
+                                Nieminen -
+                                <span class="italic">"Reanimator"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2003-2"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Akroma, Angel of Wrath<br />4 Doomed
+                                Necromancer<br />4 Faceless Butcher<br />4
+                                Putrid Imp<br />4 Verdant Force<br />4 Visara
+                                the Dreadful
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Buried Alive<br />4 Chrome Mox<br />4
+                                Duress<br />4 Entomb<br />4 Exhume<br />4
+                                Reanimate<br />4 Smother<br />4 Tainted Pact
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 City of Brass<br />4 Grand Coliseum<br />4
+                                Tarnished Citadel
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3rd Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2003-3')"
+                        >
+                            <p>
+                                <span class="font-bold">3º Lugar:</span> Dave
+                                Humpherys - <span class="italic">"Tinker"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2003-3"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Metalworker<br />4 Phyrexian Colossus
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Brainstorm<br />4 Burning Wish<br />4 Grim
+                                Monolith<br />4 Mana Leak<br />4 Mishra's
+                                Helix<br />4 Temporal Aperture<br />4 Thran
+                                Dynamo<br />4 Tinker<br />4 Tangle Wire<br />4
+                                Upheaval<br />4 Voltaic Key
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Ancient Tomb<br />4 City of Traitors<br />10
+                                Snow-Covered Island
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2003-4')"
+                        >
+                            <p>
+                                <span class="font-bold">4º Lugar:</span> Jin
+                                Okamoto - <span class="italic">"Wake"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2003-4"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Birds of Paradise<br />4 Eternal Witness<br />4
+                                Wall of Blossoms
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Brainstorm<br />4 Counterspell<br />4 Cunning
+                                Wish<br />4 Fact or Fiction<br />4 Forbid<br />4
+                                Living Wish<br />4 Mana Leak<br />4 Mirari's
+                                Wake<br />4 Moment's Peace<br />4 Wrath of God
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Adarkar Wastes<br />4 Brushland<br />4 City of
+                                Brass<br />4 Flooded Strand<br />4 Windswept
+                                Heath
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2003-5')"
+                        >
+                            <p>
+                                <span class="font-bold">5º Lugar:</span>
+                                Wolfgang Eder -
+                                <span class="italic">"Reanimator"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2003-5"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Akroma, Angel of Wrath<br />4 Doomed
+                                Necromancer<br />4 Faceless Butcher<br />4
+                                Putrid Imp<br />4 Verdant Force<br />4 Visara
+                                the Dreadful
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Buried Alive<br />4 Chrome Mox<br />4
+                                Duress<br />4 Entomb<br />4 Exhume<br />4
+                                Reanimate<br />4 Smother<br />4 Tainted Pact
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 City of Brass<br />4 Grand Coliseum<br />4
+                                Tarnished Citadel
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 6th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2003-6')"
+                        >
+                            <p>
+                                <span class="font-bold">6º Lugar:</span> Peer
+                                Kröger -
+                                <span class="italic">"Reanimator"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2003-6"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Akroma, Angel of Wrath<br />4 Doomed
+                                Necromancer<br />4 Faceless Butcher<br />4
+                                Putrid Imp<br />4 Verdant Force<br />4 Visara
+                                the Dreadful
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Buried Alive<br />4 Chrome Mox<br />4
+                                Duress<br />4 Entomb<br />4 Exhume<br />4
+                                Reanimate<br />4 Smother<br />4 Tainted Pact
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 City of Brass<br />4 Grand Coliseum<br />4
+                                Tarnished Citadel
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 7th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2003-7')"
+                        >
+                            <p>
+                                <span class="font-bold">7º Lugar:</span> Gabriel
+                                Nassif - <span class="italic">"The Rock"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2003-7"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Birds of Paradise<br />4 Eternal Witness<br />4
+                                Ravenous Baloth<br />4 Spiritmonger<br />4 Wall
+                                of Blossoms<br />4 Yavimaya Elder
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Cabal Therapy<br />4 Call of the Herd<br />4
+                                Duress<br />4 Living Wish<br />4 Pernicious
+                                Deed<br />4 Smother
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Llanowar Wastes<br />4 Treetop Village<br />10
+                                Swamp<br />10 Forest
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 8th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2003-8')"
+                        >
+                            <p>
+                                <span class="font-bold">8º Lugar:</span> Jeroen
+                                Remie -
+                                <span class="italic">"U/W Control"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2003-8"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">4 Exalted Angel</div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Akroma's Vengeance<br />4 Brainstorm<br />4
+                                Counterspell<br />4 Cunning Wish<br />4 Decree
+                                of Justice<br />4 Fact or Fiction<br />4 Force
+                                Spike<br />4 Mana Leak<br />4 Renewed Faith<br />4
+                                Wrath of God
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Adarkar Wastes<br />4 Flooded Strand<br />10
+                                Island<br />10 Plains
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script>
+            function toggleVisibility(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.classList.toggle("hidden");
+                }
+            }
+        </script>
+    </body>
+</html>

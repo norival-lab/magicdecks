@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Top 10 Decks do Formato Vintage - Arquivo Magic</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .player-header {
+                cursor: pointer;
+                transition: background-color 0.2s ease-in-out;
+            }
+            .decklist {
+                background-color: #1f2937; /* bg-gray-800 */
+                border-left: 3px solid #8b5cf6; /* border-violet-500 */
+            }
+        </style>
+    </head>
+    <body class="bg-gray-900 text-gray-200">
+        <div class="container mx-auto p-4 md:p-8">
+            <header class="text-center mb-10">
+                <a
+                    href="index.html"
+                    class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"
+                    >&larr; Voltar para o Arquivo</a
+                >
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
+                    Top 10 Decks do Formato Vintage
+                </h1>
+                <p class="text-lg text-gray-400">
+                    Uma seleção dos arquétipos mais icônicos e poderosos que
+                    definiram o formato Vintage, onde quase todas as cartas são
+                    legais.
+                </p>
+            </header>
+
+            <main id="archive-container" class="space-y-4">
+                <div
+                    class="bg-gray-800 rounded-lg shadow-lg overflow-hidden p-4 space-y-3"
+                >
+                    <!-- 1. Shops -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-1')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >1. Shops (MUD/Stax)</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-1"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck de "prisão" que usa
+                                <span class="font-semibold text-violet-400"
+                                    >Mishra's Workshop</span
+                                >
+                                para acelerar artefatos que travam o jogo, como
+                                <span class="font-semibold text-violet-400"
+                                    >Sphere of Resistance</span
+                                >
+                                e
+                                <span class="font-semibold text-violet-400"
+                                    >Chalice of the Void</span
+                                >, impedindo o oponente de jogar suas mágicas.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-violet-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Mishra's Workshop<br />4 Ancient Tomb<br />4
+                                Wasteland<br />1 Strip Mine<br />1 Tolarian
+                                Academy<br />4 Sphere of Resistance<br />4 Thorn
+                                of Amethyst<br />4 Lodestone Golem<br />4
+                                Arcbound Ravager<br />4 Foundry Inspector<br />4
+                                Phyrexian Revoker<br />1 Trinisphere<br />1
+                                Chalice of the Void<br />1 Sol Ring<br />1 Mana
+                                Crypt
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Paradoxical Outcome -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-2')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >2. Paradoxical Outcome (PO)</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-2"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck de combo que abusa de artefatos de custo
+                                zero (como os Moxes) e
+                                <span class="font-semibold text-violet-400"
+                                    >Paradoxical Outcome</span
+                                >
+                                para comprar uma quantidade massiva de cartas em
+                                um único turno, vencendo com
+                                <span class="font-semibold text-violet-400"
+                                    >Tendrils of Agony</span
+                                >
+                                ou
+                                <span class="font-semibold text-violet-400"
+                                    >Monastery Mentor</span
+                                >.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-violet-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Paradoxical Outcome<br />1 Black Lotus<br />1
+                                Mox Sapphire<br />1 Mox Jet<br />1 Mox Ruby<br />1
+                                Mox Pearl<br />1 Mox Emerald<br />1 Mana
+                                Crypt<br />1 Sol Ring<br />4 Urza's Saga<br />2
+                                Monastery Mentor<br />1 Sensei's Divining Top<br />4
+                                Force of Will<br />1 Ancestral Recall<br />1
+                                Brainstorm<br />1 Ponder<br />1 Gitaxian
+                                Probe<br />4 Flooded Strand<br />3 Tundra<br />2
+                                Underground Sea
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Dredge -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-3')"
+                        >
+                            <p><span class="font-bold">3. Dredge</span></p>
+                        </div>
+                        <div
+                            id="deck-top-3"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                O "bicho-papão" do formato. Ignora a maioria das
+                                interações ao usar
+                                <span class="font-semibold text-violet-400"
+                                    >Bazaar of Baghdad</span
+                                >
+                                para encher o cemitério e criar um exército de
+                                zumbis com
+                                <span class="font-semibold text-violet-400"
+                                    >Bridge from Below</span
+                                >. É tão poderoso que força todos os outros
+                                decks a usarem muito hate de cemitério.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-violet-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Bazaar of Baghdad<br />4 Golgari
+                                Grave-Troll<br />4 Stinkweed Imp<br />4
+                                Narcomoeba<br />4 Bridge from Below<br />4 Cabal
+                                Therapy<br />4 Ichorid<br />4 Serum Powder<br />4
+                                Hollow One<br />4 Force of Vigor<br />4 Leyline
+                                of the Void<br />4 Mana Confluence<br />4
+                                Undiscovered Paradise
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Oath of Druids -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-4')"
+                        >
+                            <p>
+                                <span class="font-bold">4. Oath of Druids</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-4"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck de combo que usa
+                                <span class="font-semibold text-violet-400"
+                                    >Oath of Druids</span
+                                >
+                                para colocar as criaturas mais devastadoras do
+                                jogo, como
+                                <span class="font-semibold text-violet-400"
+                                    >Griselbrand</span
+                                >, diretamente em campo. O deck é construído com
+                                poucas ou nenhuma criatura para garantir que o
+                                efeito do Oath seja sempre vantajoso.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-violet-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Oath of Druids<br />1 Griselbrand<br />1
+                                Atraxa, Grand Unifier<br />4 Force of Will<br />1
+                                Black Lotus<br />1 Mox Sapphire<br />1 Mox
+                                Jet<br />1 Mox Emerald<br />1 Ancestral
+                                Recall<br />1 Time Walk<br />2 Show and Tell<br />1
+                                Demonic Tutor<br />4 Forbidden Orchard<br />3
+                                Tropical Island<br />2 Underground Sea<br />1
+                                Bayou<br />4 Misty Rainforest
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Lurrus Control -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-5')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >5. Lurrus Control (Dimir/Esper)</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-5"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Uma estratégia de controle que abusa do poder de
+                                <span class="font-semibold text-violet-400"
+                                    >Lurrus of the Dream-Den</span
+                                >
+                                como companheiro para gerar valor contínuo,
+                                reconjurando permanentes de baixo custo do
+                                cemitério, como
+                                <span class="font-semibold text-violet-400"
+                                    >Black Lotus</span
+                                >
+                                e
+                                <span class="font-semibold text-violet-400"
+                                    >Mishra's Bauble</span
+                                >.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-violet-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                1 Lurrus of the Dream-Den (Companion)<br />1
+                                Black Lotus<br />1 Mox Sapphire<br />1 Mox
+                                Jet<br />4 Force of Will<br />4 Preordain<br />1
+                                Ancestral Recall<br />1 Brainstorm<br />4
+                                Mishra's Bauble<br />4 Doomsday<br />4 Thassa's
+                                Oracle<br />4 Dark Ritual<br />4 Underground
+                                Sea<br />4 Polluted Delta<br />4 Misty
+                                Rainforest
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Doomsday -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-6')"
+                        >
+                            <p><span class="font-bold">6. Doomsday</span></p>
+                        </div>
+                        <div
+                            id="deck-top-6"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck de combo que busca vencer conjurando
+                                <span class="font-semibold text-violet-400"
+                                    >Doomsday</span
+                                >
+                                para criar um "pacote" de cinco cartas no topo
+                                do grimório que garante a vitória, geralmente
+                                através de
+                                <span class="font-semibold text-violet-400"
+                                    >Thassa's Oracle</span
+                                >. É um quebra-cabeça complexo que exige
+                                precisão e conhecimento do formato.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-violet-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Doomsday<br />4 Thassa's Oracle<br />4 Dark
+                                Ritual<br />4 Brainstorm<br />4 Ponder<br />4
+                                Force of Will<br />4 Daze<br />4 Lotus Petal<br />1
+                                Street Wraith<br />1 Lion's Eye Diamond<br />4
+                                Underground Sea<br />4 Polluted Delta<br />4
+                                Misty Rainforest<br />2 Island<br />1 Swamp
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. Tinker -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-7')"
+                        >
+                            <p><span class="font-bold">7. Tinker</span></p>
+                        </div>
+                        <div
+                            id="deck-top-7"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Uma estratégia clássica que usa a mágica
+                                <span class="font-semibold text-violet-400"
+                                    >Tinker</span
+                                >
+                                para sacrificar um artefato de baixo custo e
+                                buscar uma ameaça devastadora diretamente do
+                                grimório, como
+                                <span class="font-semibold text-violet-400"
+                                    >Blightsteel Colossus</span
+                                >
+                                ou
+                                <span class="font-semibold text-violet-400"
+                                    >Sphinx of the Steel Wind</span
+                                >.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-violet-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                1 Blightsteel Colossus<br />1 Sphinx of the
+                                Steel Wind<br />4 Tinker<br />1 Black Lotus<br />1
+                                Mana Crypt<br />1 Sol Ring<br />1 Mox
+                                Sapphire<br />1 Mox Opal<br />4 Force of Will<br />1
+                                Ancestral Recall<br />1 Time Walk<br />4 Voltaic
+                                Key<br />1 Time Vault<br />4 Underground Sea<br />4
+                                Tolarian Academy<br />4 Urza's Saga
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. Xerox (Tempo) -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-8')"
+                        >
+                            <p>
+                                <span class="font-bold">8. Xerox (Tempo)</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-8"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                O princípio "Xerox" refere-se a decks com
+                                pouquíssimos terrenos que usam uma grande
+                                quantidade de mágicas de compra de cartas
+                                baratas ("cantrips") para encontrar as cartas
+                                que precisam. No Vintage, isso se traduz em um
+                                deck de tempo agressivo com ameaças como
+                                <span class="font-semibold text-violet-400"
+                                    >Ragavan</span
+                                >
+                                e
+                                <span class="font-semibold text-violet-400"
+                                    >Dreadhorde Arcanist</span
+                                >, apoiado pela Power Nine.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-violet-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Ragavan, Nimble Pilferer<br />4 Dreadhorde
+                                Arcanist<br />1 Black Lotus<br />1 Mox Ruby<br />1
+                                Mox Sapphire<br />1 Ancestral Recall<br />1 Time
+                                Walk<br />4 Brainstorm<br />4 Ponder<br />4
+                                Preordain<br />4 Force of Will<br />4 Lightning
+                                Bolt<br />4 Pyroblast<br />3 Volcanic Island<br />2
+                                Tundra<br />4 Flooded Strand<br />4 Scalding
+                                Tarn
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9. Survival of the Fittest -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-9')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >9. Survival of the Fittest</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-9"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck que usa o encantamento
+                                <span class="font-semibold text-violet-400"
+                                    >Survival of the Fittest</span
+                                >
+                                para criar uma "caixa de ferramentas" de
+                                criaturas, buscando a resposta certa para cada
+                                situação. O combo clássico envolve descartar
+                                <span class="font-semibold text-violet-400"
+                                    >Vengevine</span
+                                >
+                                para buscar outras criaturas e depois
+                                conjurá-las para trazer as Vengevines de volta.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-violet-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Survival of the Fittest<br />4 Vengevine<br />4
+                                Basking Rootwalla<br />4 Hollow One<br />4
+                                Collector Ouphe<br />1 Squee, Goblin Nabob<br />1
+                                Ancestral Recall<br />1 Black Lotus<br />1 Mox
+                                Emerald<br />4 Force of Vigor<br />4 Mental
+                                Misstep<br />4 Bazaar of Baghdad<br />4 Tropical
+                                Island<br />4 Savannah<br />4 Windswept Heath
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10. The Deck (Classic Control) -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-10')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >10. The Deck (Classic)</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-10"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                O avô de todos os decks de controle. Criado por
+                                Brian Weissman, sua filosofia é simples:
+                                responder a tudo que o oponente faz com as
+                                mágicas mais eficientes do jogo e vencer
+                                lentamente com uma única e poderosa ameaça. É um
+                                deck que representa a história pura do Magic.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-violet-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                1 Ancestral Recall<br />1 Time Walk<br />1 Black
+                                Lotus<br />1 Mox Sapphire<br />1 Mox Jet<br />1
+                                Mox Ruby<br />1 Mox Pearl<br />1 Mox Emerald<br />1
+                                Demonic Tutor<br />1 Mind Twist<br />4 Force of
+                                Will<br />4 Mana Drain<br />2 Counterspell<br />1
+                                Braingeyser<br />1 The Abyss<br />1 Moat<br />1
+                                Balance<br />2 Serra Angel<br />3 Swords to
+                                Plowshares<br />1 Sol Ring<br />1 Library of
+                                Alexandria<br />4 Tundra<br />4 Underground
+                                Sea<br />3 Volcanic Island<br />2 Scrubland<br />1
+                                Strip Mine
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script>
+            function toggleVisibility(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.classList.toggle("hidden");
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mundial de 1997 - Arquivo Magic</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .player-header {
+                cursor: pointer;
+                transition: background-color 0.2s ease-in-out;
+            }
+            .decklist {
+                background-color: #1f2937; /* bg-gray-800 */
+                border-left: 3px solid #4f46e5; /* border-indigo-600 */
+            }
+        </style>
+    </head>
+    <body class="bg-gray-900 text-gray-200">
+        <div class="container mx-auto p-4 md:p-8">
+            <header class="text-center mb-10">
+                <a
+                    href="index.html"
+                    class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"
+                    >&larr; Voltar para o Arquivo</a
+                >
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
+                    1997 World Championship
+                </h1>
+                <p class="text-lg text-gray-400">
+                    O formato Bloco de Mirage e o retorno de estratégias de
+                    controle poderosas.
+                </p>
+            </header>
+
+            <main id="archive-container" class="space-y-4">
+                <div
+                    class="bg-gray-800 rounded-lg shadow-lg overflow-hidden p-4 space-y-3"
+                >
+                    <!-- 1st Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1997-1')"
+                        >
+                            <p>
+                                <span class="font-bold">1º Lugar:</span> Jakub
+                                Slemr -
+                                <span class="italic">"Turbo-Stasis"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1997-1"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                1 Arcane Denial<br />4 Boomerang<br />4
+                                Counterspell<br />2 Despotic Scepter<br />4
+                                Dissipate<br />4 Force of Will<br />4 Howling
+                                Mine<br />1 Ivory Tower<br />1 Lim-Dul's
+                                Vault<br />1 Lodestone Bauble<br />4 Stasis<br />4
+                                Swords to Plowshares<br />1 Urza's Bauble<br />1
+                                Zuran Orb
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Adarkar Wastes<br />1 Glacial Chasm<br />10
+                                Island<br />4 Plains<br />1 Thawing Glaciers
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2nd Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1997-2')"
+                        >
+                            <p>
+                                <span class="font-bold">2º Lugar:</span> Janosch
+                                Kühn -
+                                <span class="italic">"Five-Color Black"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1997-2"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Balduvian Horde<br />4 Black Knight<br />4
+                                Hypnotic Specter<br />4 Knight of Stromgald<br />4
+                                Man-o'-War<br />4 Tinder Wall
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Dark Ritual<br />1 Demonic Consultation<br />1
+                                Dystopia<br />4 Fireball<br />1 Gerrard's
+                                Wisdom<br />4 Hymn to Tourach<br />1
+                                Nevinyrral's Disk<br />1 Power Sink
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Badlands<br />4 City of Brass<br />1 Rainbow
+                                Vale<br />4 Strip Mine<br />4 Underground Sea<br />1
+                                Volcanic Island
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3rd Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1997-3')"
+                        >
+                            <p>
+                                <span class="font-bold">3º Lugar:</span> Paul
+                                McCabe -
+                                <span class="italic">"Blue-White Control"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1997-3"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Benthic Explorers<br />4 Cloud Elemental<br />1
+                                Knight of the Mists<br />4 Man-o'-War
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                1 Arcane Denial<br />1 Counterspell<br />3
+                                Disenchant<br />4 Dissipate<br />4 Force of
+                                Will<br />4 Impulse<br />1 Ivory Tower<br />1
+                                Memory Lapse<br />1 Power Sink<br />1 Serrated
+                                Arrows<br />4 Swords to Plowshares<br />1 Zuran
+                                Orb
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Adarkar Wastes<br />1 Glacial Chasm<br />1
+                                Halls of Mist<br />11 Island<br />1 Kjeldoran
+                                Outpost<br />1 Rainbow Vale<br />1 Thawing
+                                Glaciers
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1997-4')"
+                        >
+                            <p>
+                                <span class="font-bold">4º Lugar:</span> Svend
+                                Geertsen -
+                                <span class="italic">"U/W Control"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1997-4"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">4 Serra Angel</div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Abeyance<br />4 Arcane Denial<br />4
+                                Counterspell<br />4 Disenchant<br />4
+                                Dissipate<br />4 Force of Will<br />4 Impulse<br />1
+                                Ivory Tower<br />1 Recall<br />4 Swords to
+                                Plowshares
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Adarkar Wastes<br />1 Glacial Chasm<br />10
+                                Island<br />2 Kjeldoran Outpost<br />4 Plains<br />1
+                                Thawing Glaciers
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1997-5')"
+                        >
+                            <p>
+                                <span class="font-bold">5º Lugar:</span> Nate
+                                Clarke - <span class="italic">"R/G Aggro"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1997-5"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Birds of Paradise<br />4 Elvish Archers<br />4
+                                Erhnam Djinn<br />4 Fyndhorn Elves<br />4
+                                Llanowar Elves<br />4 Whirling Dervish
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Fireball<br />4 Giant Growth<br />4
+                                Incinerate<br />4 Lightning Bolt
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Karplusan Forest<br />4 Mishra's Factory<br />4
+                                Strip Mine<br />4 Taiga
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 6th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1997-6')"
+                        >
+                            <p>
+                                <span class="font-bold">6º Lugar:</span> Terry
+                                Borer -
+                                <span class="italic"
+                                    >"R/W Land Destruction"</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1997-6"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Black Vise<br />4 Dwarven Miner<br />4 Knight
+                                of the White Orchid
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Armageddon<br />4 Disenchant<br />4
+                                Incinerate<br />4 Lightning Bolt<br />4
+                                Pillage<br />4 Stone Rain<br />4 Swords to
+                                Plowshares
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Plateau<br />4 Strip Mine<br />8 Mountain<br />8
+                                Plains
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 7th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1997-7')"
+                        >
+                            <p>
+                                <span class="font-bold">7º Lugar:</span> Nikolai
+                                Weibull -
+                                <span class="italic">"Necropotence"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1997-7"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Hypnotic Specter<br />4 Knight of Stromgald<br />4
+                                Order of the Ebon Hand
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Dark Ritual<br />1 Demonic Consultation<br />4
+                                Drain Life<br />4 Hymn to Tourach<br />1 Ivory
+                                Tower<br />1 Mind Twist<br />4 Necropotence<br />1
+                                Nevinyrral's Disk<br />1 The Rack<br />1 Zuran
+                                Orb
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Mishra's Factory<br />4 Strip Mine<br />12
+                                Swamp
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 8th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1997-8')"
+                        >
+                            <p>
+                                <span class="font-bold">8º Lugar:</span> David
+                                Mills -
+                                <span class="italic">"U/W Control"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1997-8"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">4 Serra Angel</div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Abeyance<br />4 Arcane Denial<br />4
+                                Counterspell<br />4 Disenchant<br />4
+                                Dissipate<br />4 Force of Will<br />4 Impulse<br />1
+                                Ivory Tower<br />1 Recall<br />4 Swords to
+                                Plowshares
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Adarkar Wastes<br />1 Glacial Chasm<br />10
+                                Island<br />2 Kjeldoran Outpost<br />4 Plains<br />1
+                                Thawing Glaciers
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script>
+            function toggleVisibility(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.classList.toggle("hidden");
+                }
+            }
+        </script>
+    </body>
+</html>

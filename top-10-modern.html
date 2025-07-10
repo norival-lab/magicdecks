@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Top 10 Decks do Formato Modern - Arquivo Magic</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .player-header {
+                cursor: pointer;
+                transition: background-color 0.2s ease-in-out;
+            }
+            .decklist {
+                background-color: #1f2937; /* bg-gray-800 */
+                border-left: 3px solid #10b981; /* border-emerald-500 */
+            }
+        </style>
+    </head>
+    <body class="bg-gray-900 text-gray-200">
+        <div class="container mx-auto p-4 md:p-8">
+            <header class="text-center mb-10">
+                <a
+                    href="index.html"
+                    class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"
+                    >&larr; Voltar para o Arquivo</a
+                >
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
+                    Top 10 Decks do Formato Modern
+                </h1>
+                <p class="text-lg text-gray-400">
+                    Uma seleção dos arquétipos mais icônicos e competitivos que
+                    definiram o formato Modern.
+                </p>
+            </header>
+
+            <main id="archive-container" class="space-y-4">
+                <div
+                    class="bg-gray-800 rounded-lg shadow-lg overflow-hidden p-4 space-y-3"
+                >
+                    <!-- 1. Izzet Murktide -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-1')"
+                        >
+                            <p>
+                                <span class="font-bold">1. Izzet Murktide</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-1"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                O auge da estratégia de tempo. Usa ameaças
+                                eficientes como
+                                <span class="font-semibold text-emerald-400"
+                                    >Dragon's Rage Channeler</span
+                                >
+                                e
+                                <span class="font-semibold text-emerald-400"
+                                    >Murktide Regent</span
+                                >, protegidas por um arsenal de mágicas de baixo
+                                custo como
+                                <span class="font-semibold text-emerald-400"
+                                    >Counterspell</span
+                                >
+                                e
+                                <span class="font-semibold text-emerald-400"
+                                    >Lightning Bolt</span
+                                >.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-emerald-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Murktide Regent<br />4 Dragon's Rage
+                                Channeler<br />4 Ragavan, Nimble Pilferer<br />4
+                                Expressive Iteration<br />4 Mishra's Bauble<br />4
+                                Serum Visions<br />4 Counterspell<br />4
+                                Lightning Bolt<br />2 Unholy Heat<br />4
+                                Scalding Tarn<br />4 Misty Rainforest<br />2
+                                Steam Vents<br />1 Spirebluff Canal<br />6
+                                Island<br />1 Mountain
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Amulet Titan -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-2')"
+                        >
+                            <p>
+                                <span class="font-bold">2. Amulet Titan</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-2"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck de combo complexo que usa
+                                <span class="font-semibold text-emerald-400"
+                                    >Amulet of Vigor</span
+                                >
+                                para desvirar terrenos que entram virados,
+                                gerando uma quantidade massiva de mana. A
+                                vitória vem ao conjurar
+                                <span class="font-semibold text-emerald-400"
+                                    >Primeval Titan</span
+                                >
+                                para buscar terrenos utilitários e atacar para
+                                vencer.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-emerald-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Primeval Titan<br />4 Dryad of the Ilysian
+                                Grove<br />4 Azusa, Lost but Seeking<br />4
+                                Amulet of Vigor<br />4 Summoner's Pact<br />4
+                                Explore<br />1 Pact of Negation<br />1 Slayers'
+                                Stronghold<br />1 Sunhome, Fortress of the
+                                Legion<br />4 Simic Growth Chamber<br />4
+                                Selesnya Sanctuary<br />1 Boros Garrison<br />1
+                                Tolaria West<br />1 Valakut, the Molten
+                                Pinnacle<br />1 Cavern of Souls
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. 4-Color Omnath -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-3')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >3. 4-Color Omnath (Money Pile)</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-3"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Conhecido como "Money Pile", este deck joga com
+                                as cartas individualmente mais poderosas do
+                                formato. A sinergia entre
+                                <span class="font-semibold text-emerald-400"
+                                    >Omnath, Locus of Creation</span
+                                >, fetch lands, e elementais como
+                                <span class="font-semibold text-emerald-400"
+                                    >Solitude</span
+                                >
+                                e
+                                <span class="font-semibold text-emerald-400"
+                                    >Endurance</span
+                                >
+                                gera um valor absurdo.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-emerald-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Omnath, Locus of Creation<br />4 Solitude<br />4
+                                Endurance<br />4 Wrenn and Six<br />4 Teferi,
+                                Time Raveler<br />4 Leyline Binding<br />4 The
+                                One Ring<br />4 Counterspell<br />4 Misty
+                                Rainforest<br />4 Windswept Heath<br />4 Wooded
+                                Foothills<br />2 Temple Garden<br />2 Steam
+                                Vents<br />2 Sacred Foundry<br />1 Raugrin
+                                Triome
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Hammer Time -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-4')"
+                        >
+                            <p><span class="font-bold">4. Hammer Time</span></p>
+                        </div>
+                        <div
+                            id="deck-top-4"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck aggro-combo explosivo. O objetivo é
+                                equipar
+                                <span class="font-semibold text-emerald-400"
+                                    >Colossus Hammer</span
+                                >
+                                em uma criatura, geralmente de graça com
+                                <span class="font-semibold text-emerald-400"
+                                    >Sigarda's Aid</span
+                                >
+                                ou
+                                <span class="font-semibold text-emerald-400"
+                                    >Puresteel Paladin</span
+                                >, para um ataque letal de 10 ou mais de dano,
+                                muitas vezes com infect.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-emerald-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Colossus Hammer<br />4 Sigarda's Aid<br />4
+                                Puresteel Paladin<br />4 Ornithopter<br />4
+                                Memnite<br />4 Stoneforge Mystic<br />4 Esper
+                                Sentinel<br />4 Urza's Saga<br />4 Inkmoth
+                                Nexus<br />4 Springleaf Drum<br />1
+                                Shadowspear<br />1 Blacksmith's Skill<br />4
+                                Windswept Heath<br />4 Marsh Flats<br />1
+                                Godless Shrine
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Jund -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-5')"
+                        >
+                            <p><span class="font-bold">5. Jund</span></p>
+                        </div>
+                        <div
+                            id="deck-top-5"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                O deck midrange clássico do Modern. A estratégia
+                                é simples: trocar recursos 1-por-1 com descartes
+                                (<span class="font-semibold text-emerald-400"
+                                    >Thoughtseize</span
+                                >) e remoções (<span
+                                    class="font-semibold text-emerald-400"
+                                    >Fatal Push</span
+                                >), e então vencer com ameaças eficientes como
+                                <span class="font-semibold text-emerald-400"
+                                    >Tarmogoyf</span
+                                >
+                                e
+                                <span class="font-semibold text-emerald-400"
+                                    >Liliana of the Veil</span
+                                >.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-emerald-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Tarmogoyf<br />4 Dark Confidant<br />4 Wrenn
+                                and Six<br />4 Liliana of the Veil<br />4
+                                Thoughtseize<br />4 Inquisition of Kozilek<br />4
+                                Lightning Bolt<br />3 Fatal Push<br />2
+                                Maelstrom Pulse<br />4 Blackcleave Cliffs<br />4
+                                Verdant Catacombs<br />2 Blood Crypt<br />2
+                                Overgrown Tomb<br />1 Stomping Ground<br />3
+                                Raging Ravine
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Burn -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-6')"
+                        >
+                            <p><span class="font-bold">6. Burn</span></p>
+                        </div>
+                        <div
+                            id="deck-top-6"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                A estratégia mais direta do formato: causar 20
+                                de dano ao oponente o mais rápido possível. Usa
+                                uma combinação de criaturas rápidas (<span
+                                    class="font-semibold text-emerald-400"
+                                    >Goblin Guide, Monastery Swiftspear</span
+                                >) e uma quantidade massiva de feitiços de dano
+                                direto (<span
+                                    class="font-semibold text-emerald-400"
+                                    >Lightning Bolt, Lava Spike</span
+                                >).
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-emerald-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Goblin Guide<br />4 Monastery Swiftspear<br />4
+                                Eidolon of the Great Revel<br />4 Lightning
+                                Bolt<br />4 Lava Spike<br />4 Rift Bolt<br />4
+                                Skewer the Critics<br />4 Boros Charm<br />4
+                                Searing Blaze<br />4 Sunbaked Canyon<br />4 Arid
+                                Mesa<br />2 Sacred Foundry<br />8 Mountain
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. Living End -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-7')"
+                        >
+                            <p><span class="font-bold">7. Living End</span></p>
+                        </div>
+                        <div
+                            id="deck-top-7"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck de combo que não paga mana por suas
+                                mágicas. Ele enche o cemitério com criaturas que
+                                possuem a habilidade de "Ciclar" e depois
+                                conjura
+                                <span class="font-semibold text-emerald-400"
+                                    >Living End</span
+                                >
+                                através da mecânica de "Cascata" (<span
+                                    class="font-semibold text-emerald-400"
+                                    >Violent Outburst, Shardless Agent</span
+                                >), limpando a mesa do oponente e trazendo um
+                                exército de criaturas de volta.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-emerald-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                3 Living End<br />4 Violent Outburst<br />4
+                                Shardless Agent<br />4 Grief<br />4 Street
+                                Wraith<br />4 Striped Riverwinder<br />4 Troll
+                                of Khazad-dûm<br />4 Generous Ent<br />4 Force
+                                of Negation<br />4 Subtlety<br />4 Zagoth
+                                Triome<br />4 Breeding Pool<br />4 Watery
+                                Grave<br />4 Misty Rainforest
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. Tron -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-8')"
+                        >
+                            <p><span class="font-bold">8. G/x Tron</span></p>
+                        </div>
+                        <div
+                            id="deck-top-8"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                O objetivo do Tron é simples: montar o
+                                "Urzatron" (<span
+                                    class="font-semibold text-emerald-400"
+                                    >Urza's Mine, Urza's Power Plant, Urza's
+                                    Tower</span
+                                >) para gerar 7 manas no terceiro turno. Com
+                                essa mana, ele conjura ameaças massivas e
+                                difíceis de responder como
+                                <span class="font-semibold text-emerald-400"
+                                    >Karn Liberated</span
+                                >
+                                e
+                                <span class="font-semibold text-emerald-400"
+                                    >Wurmcoil Engine</span
+                                >.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-emerald-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Karn Liberated<br />4 Wurmcoil Engine<br />2
+                                Ulamog, the Ceaseless Hunger<br />4 Sylvan
+                                Scrying<br />4 Ancient Stirrings<br />4
+                                Expedition Map<br />4 Chromatic Star<br />4
+                                Chromatic Sphere<br />1 Oblivion Stone<br />4
+                                Urza's Mine<br />4 Urza's Power Plant<br />4
+                                Urza's Tower<br />4 Forest<br />1 Sanctum of
+                                Ugin
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9. Rhinos -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-9')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >9. Crashing Footfalls (Rhinos)</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-9"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Similar ao Living End, este deck usa a mecânica
+                                de "Cascata" para conjurar
+                                <span class="font-semibold text-emerald-400"
+                                    >Crashing Footfalls</span
+                                >
+                                sem pagar seu custo, colocando duas fichas de
+                                Rinoceronte 4/4 com atropelar em jogo. O resto
+                                do deck é composto por mágicas de interação e
+                                proteção.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-emerald-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Crashing Footfalls<br />4 Violent Outburst<br />4
+                                Shardless Agent<br />4 Force of Negation<br />4
+                                Force of Vigor<br />4 Subtlety<br />4 Fire //
+                                Ice<br />4 Bonecrusher Giant<br />4 Brazen
+                                Borrower<br />4 Leyline Binding<br />4 Wooded
+                                Foothills<br />4 Misty Rainforest<br />2
+                                Breeding Pool<br />2 Steam Vents<br />1 Temple
+                                Garden
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10. Yawgmoth -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-10')"
+                        >
+                            <p><span class="font-bold">10. Yawgmoth</span></p>
+                        </div>
+                        <div
+                            id="deck-top-10"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck de combo baseado em criaturas que
+                                utiliza a habilidade de
+                                <span class="font-semibold text-emerald-400"
+                                    >Yawgmoth, Thran Physician</span
+                                >
+                                em conjunto com criaturas com a habilidade de
+                                "Imortal" (<span
+                                    class="font-semibold text-emerald-400"
+                                    >Geralf's Messenger, Strangleroot
+                                    Geist</span
+                                >) para gerar um loop de dano, compra de cartas
+                                e proliferação de marcadores.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-emerald-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Yawgmoth, Thran Physician<br />4 Strangleroot
+                                Geist<br />4 Young Wolf<br />4 Birds of
+                                Paradise<br />4 Ignoble Hierarch<br />4 Grist,
+                                the Hunger Tide<br />4 Chord of Calling<br />4
+                                Eldritch Evolution<br />2 Geralf's Messenger<br />1
+                                Hapatra, Vizier of Poisons<br />4 Verdant
+                                Catacombs<br />4 Overgrown Tomb<br />4 Twilight
+                                Mire<br />4 Nurturing Peatland<br />2 Forest<br />1
+                                Swamp
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script>
+            function toggleVisibility(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.classList.toggle("hidden");
+                }
+            }
+        </script>
+    </body>
+</html>

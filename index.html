@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Arquivo dos Mundiais de Magic: The Gathering</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .year-link,
+            .special-link {
+                transition: transform 0.2s ease-in-out,
+                    box-shadow 0.2s ease-in-out;
+            }
+            .year-link:hover,
+            .special-link:hover {
+                transform: translateY(-5px);
+            }
+            .special-link.amber:hover {
+                box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.4),
+                    0 4px 6px -2px rgba(245, 158, 11, 0.2);
+            }
+            .special-link.emerald:hover {
+                box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.4),
+                    0 4px 6px -2px rgba(16, 185, 129, 0.2);
+            }
+            .special-link.sky:hover {
+                box-shadow: 0 10px 15px -3px rgba(14, 165, 233, 0.4),
+                    0 4px 6px -2px rgba(14, 165, 233, 0.2);
+            }
+            .special-link.rose:hover {
+                box-shadow: 0 10px 15px -3px rgba(244, 63, 94, 0.4),
+                    0 4px 6px -2px rgba(244, 63, 94, 0.2);
+            }
+            .special-link.violet:hover {
+                box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.4),
+                    0 4px 6px -2px rgba(139, 92, 246, 0.2);
+            }
+            .special-link.cyan:hover {
+                box-shadow: 0 10px 15px -3px rgba(6, 182, 212, 0.4),
+                    0 4px 6px -2px rgba(6, 182, 212, 0.2);
+            }
+            .year-link:hover {
+                box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.4),
+                    0 4px 6px -2px rgba(79, 70, 229, 0.2);
+            }
+            .placeholder {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-900 text-gray-200">
+        <div class="container mx-auto p-4 md:p-8">
+            <header class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
+                    Decks Magic The Gathering
+                </h1>
+                <p class="text-lg text-gray-400">
+                    Um registro histórico dos decks Top de Magic The Gathering
+                    de cada formato e mundiais.
+                </p>
+            </header>
+
+            <main>
+                <div class="mb-12">
+                    <h2
+                        class="text-2xl font-bold text-white border-b-2 border-indigo-500 pb-2 mb-6"
+                    >
+                        Seções Especiais
+                    </h2>
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6"
+                    >
+                        <a
+                            href="top-10-decks-caros.html"
+                            class="special-link amber bg-amber-600/20 border border-amber-500 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                        >
+                            <span class="text-xl font-bold text-amber-400"
+                                >Top 10 Decks Mais Caros da História</span
+                            >
+                        </a>
+                        <a
+                            href="top-10-modern.html"
+                            class="special-link emerald bg-emerald-600/20 border border-emerald-500 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                        >
+                            <span class="text-xl font-bold text-emerald-400"
+                                >Top 10 Decks do Formato Modern</span
+                            >
+                        </a>
+                        <a
+                            href="top-10-pioneer.html"
+                            class="special-link sky bg-sky-600/20 border border-sky-500 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                        >
+                            <span class="text-xl font-bold text-sky-400"
+                                >Top 10 Decks do Formato Pioneer</span
+                            >
+                        </a>
+                        <a
+                            href="top-10-legacy.html"
+                            class="special-link rose bg-rose-600/20 border border-rose-500 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                        >
+                            <span class="text-xl font-bold text-rose-400"
+                                >Top 10 Decks do Formato Legacy</span
+                            >
+                        </a>
+                        <a
+                            href="top-10-vintage.html"
+                            class="special-link violet bg-violet-600/20 border border-violet-500 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                        >
+                            <span class="text-xl font-bold text-violet-400"
+                                >Top 10 Decks do Formato Vintage</span
+                            >
+                        </a>
+                        <a
+                            href="top-10-pauper.html"
+                            class="special-link cyan bg-cyan-600/20 border border-cyan-500 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                        >
+                            <span class="text-xl font-bold text-cyan-400"
+                                >Top 10 Decks do Formato Pauper</span
+                            >
+                        </a>
+                    </div>
+                </div>
+
+                <h2
+                    class="text-2xl font-bold text-white border-b-2 border-indigo-500 pb-2 mb-6"
+                >
+                    Campeonatos Mundiais por Ano
+                </h2>
+                <div
+                    class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
+                >
+                    <!-- Links para cada ano -->
+                    <a
+                        href="1994.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >1994</span
+                        >
+                    </a>
+                    <a
+                        href="1995.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >1995</span
+                        >
+                    </a>
+                    <a
+                        href="1996.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >1996</span
+                        >
+                    </a>
+                    <a
+                        href="1997.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >1997</span
+                        >
+                    </a>
+                    <a
+                        href="1998.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >1998</span
+                        >
+                    </a>
+                    <a
+                        href="1999.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >1999</span
+                        >
+                    </a>
+                    <a
+                        href="2000.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2000</span
+                        >
+                    </a>
+                    <a
+                        href="2001.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2001</span
+                        >
+                    </a>
+                    <a
+                        href="2002.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2002</span
+                        >
+                    </a>
+                    <a
+                        href="2003.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2003</span
+                        >
+                    </a>
+                    <a
+                        href="2004.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2004</span
+                        >
+                    </a>
+                    <a
+                        href="2005.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2005</span
+                        >
+                    </a>
+                    <a
+                        href="2006.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2006</span
+                        >
+                    </a>
+                    <a
+                        href="2007.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2007</span
+                        >
+                    </a>
+                    <a
+                        href="2008.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2008</span
+                        >
+                    </a>
+                    <a
+                        href="2009.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2009</span
+                        >
+                    </a>
+                    <a
+                        href="2010.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2010</span
+                        >
+                    </a>
+                    <a
+                        href="2011.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2011</span
+                        >
+                    </a>
+                    <a
+                        href="2012.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2012</span
+                        >
+                    </a>
+                    <a
+                        href="2013.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2013</span
+                        >
+                    </a>
+                    <a
+                        href="2014.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2014</span
+                        >
+                    </a>
+                    <a
+                        href="2015.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2015</span
+                        >
+                    </a>
+                    <a
+                        href="2016.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2016</span
+                        >
+                    </a>
+                    <a
+                        href="2017.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2017</span
+                        >
+                    </a>
+                    <a
+                        href="2018.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2018</span
+                        >
+                    </a>
+                    <a
+                        href="2019.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2019</span
+                        >
+                    </a>
+                    <a
+                        href="2020.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2020</span
+                        >
+                    </a>
+                    <a
+                        href="2021.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2021</span
+                        >
+                    </a>
+                    <a
+                        href="2022.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2022</span
+                        >
+                    </a>
+                    <a
+                        href="2023.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2023</span
+                        >
+                    </a>
+                    <a
+                        href="2024.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center placeholder"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2024</span
+                        >
+                    </a>
+                    <a
+                        href="2025.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center placeholder"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2025</span
+                        >
+                    </a>
+                    <a
+                        href="2026.html"
+                        class="year-link bg-gray-800 p-6 rounded-lg text-center flex flex-col justify-center items-center placeholder"
+                    >
+                        <span class="text-3xl font-bold text-indigo-400"
+                            >2026</span
+                        >
+                    </a>
+
+                    <!-- Adicionar links para outros anos aqui -->
+                </div>
+            </main>
+
+            <footer class="text-center mt-12 text-gray-500">
+                <p>Criado para preservar a história do Magic competitivo.</p>
+            </footer>
+        </div>
+    </body>
+</html>

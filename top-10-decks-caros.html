@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Top 10 Decks Mais Caros - Arquivo Magic</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .player-header {
+                cursor: pointer;
+                transition: background-color 0.2s ease-in-out;
+            }
+            .decklist {
+                background-color: #1f2937; /* bg-gray-800 */
+                border-left: 3px solid #f59e0b; /* border-amber-500 */
+            }
+        </style>
+    </head>
+    <body class="bg-gray-900 text-gray-200">
+        <div class="container mx-auto p-4 md:p-8">
+            <header class="text-center mb-10">
+                <a
+                    href="index.html"
+                    class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"
+                    >&larr; Voltar para o Arquivo</a
+                >
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
+                    Top 10 Decks Mais Caros da História
+                </h1>
+                <p class="text-lg text-gray-400">
+                    Uma viagem pelos arquétipos mais poderosos e valiosos dos
+                    formatos eternos (excluindo Commander).
+                </p>
+            </header>
+
+            <main id="archive-container" class="space-y-4">
+                <div
+                    class="bg-gray-800 rounded-lg shadow-lg overflow-hidden p-4 space-y-3"
+                >
+                    <!-- 1. Vintage Shops -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-1')"
+                        >
+                            <p>
+                                <span class="font-bold">1. Vintage Shops</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-1"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                O arquétipo "Shops" é uma força definidora do
+                                Vintage. Seu nome vem de
+                                <span class="font-semibold text-amber-400"
+                                    >Mishra's Workshop</span
+                                >, que acelera artefatos de "prisão" como
+                                <span class="font-semibold text-amber-400"
+                                    >Sphere of Resistance</span
+                                >
+                                para sufocar o oponente. O custo é astronômico
+                                devido às quatro cópias de Workshop, a Power
+                                Nine completa (Black Lotus, Moxes) e outros
+                                artefatos raros.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-amber-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Mishra's Workshop<br />1 Black Lotus<br />1
+                                Mox Sapphire<br />1 Mox Jet<br />1 Mox Ruby<br />1
+                                Mox Pearl<br />1 Mox Emerald<br />1 Sol Ring<br />1
+                                Mana Crypt<br />4 Sphere of Resistance<br />4
+                                Thorn of Amethyst<br />4 Lodestone Golem<br />4
+                                Arcbound Ravager<br />4 Foundry Inspector<br />4
+                                Phyrexian Revoker<br />1 Trinisphere<br />1
+                                Chalice of the Void<br />4 Ancient Tomb<br />4
+                                Wasteland<br />1 Strip Mine<br />1 Tolarian
+                                Academy
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. The Deck -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-2')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >2. The Deck (Vintage Control)</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-2"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                O arquétipo de controle original, criado por
+                                Brian Weissman. Vence controlando o jogo com as
+                                mágicas mais eficientes e poderosas já
+                                impressas. Seu valor vem do uso extensivo da
+                                Power Nine e dos terrenos duplos originais, como
+                                <span class="font-semibold text-amber-400"
+                                    >Underground Sea</span
+                                >.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-amber-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                1 Ancestral Recall<br />1 Time Walk<br />1 Black
+                                Lotus<br />1 Mox Sapphire<br />1 Mox Jet<br />1
+                                Mox Ruby<br />1 Mox Pearl<br />1 Mox Emerald<br />1
+                                Demonic Tutor<br />1 Mind Twist<br />4 Force of
+                                Will<br />4 Mana Drain<br />2 Counterspell<br />1
+                                Braingeyser<br />1 The Abyss<br />1 Moat<br />1
+                                Balance<br />2 Serra Angel<br />3 Swords to
+                                Plowshares<br />1 Sol Ring<br />1 Library of
+                                Alexandria<br />4 Tundra<br />4 Underground
+                                Sea<br />3 Volcanic Island<br />2 Scrubland<br />1
+                                Strip Mine
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Legacy Delver -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-3')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >3. Legacy Delver (Grixis/Temur)</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-3"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um pilar do formato Legacy, o Delver é um deck
+                                de tempo ultra eficiente. O custo não vem de
+                                cartas da Power Nine, mas da base de mana
+                                perfeita, que exige múltiplas cópias dos
+                                caríssimos terrenos duplos originais (<span
+                                    class="font-semibold text-amber-400"
+                                    >Underground Sea, Volcanic Island, Tropical
+                                    Island</span
+                                >) e fetch lands.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-amber-400"
+                            >
+                                Lista Exemplo (Grixis)
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Delver of Secrets<br />4 Dragon's Rage
+                                Channeler<br />4 Murktide Regent<br />4
+                                Brainstorm<br />4 Ponder<br />4 Daze<br />4
+                                Force of Will<br />4 Lightning Bolt<br />4
+                                Mishra's Bauble<br />3 Underground Sea<br />3
+                                Volcanic Island<br />4 Wasteland<br />4 Polluted
+                                Delta<br />4 Scalding Tarn
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Vintage Oath of Druids -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-4')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >4. Vintage Oath of Druids</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-4"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck de combo que usa o encantamento
+                                <span class="font-semibold text-amber-400"
+                                    >Oath of Druids</span
+                                >
+                                para colocar criaturas colossais como
+                                <span class="font-semibold text-amber-400"
+                                    >Griselbrand</span
+                                >
+                                diretamente do grimório para o campo de batalha.
+                                O custo vem da Power Nine, terrenos duplos e do
+                                próprio Oath, que está na Reserved List.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-amber-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Oath of Druids<br />1 Griselbrand<br />1
+                                Emrakul, the Aeons Torn<br />4 Force of Will<br />1
+                                Black Lotus<br />1 Mox Sapphire<br />1 Mox
+                                Jet<br />1 Mox Emerald<br />1 Ancestral
+                                Recall<br />1 Time Walk<br />2 Show and Tell<br />1
+                                Demonic Tutor<br />4 Forbidden Orchard<br />3
+                                Tropical Island<br />2 Underground Sea<br />1
+                                Bayou<br />4 Misty Rainforest
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Legacy Lands -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-5')"
+                        >
+                            <p>
+                                <span class="font-bold">5. Legacy Lands</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-5"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Uma estratégia única que usa terrenos como suas
+                                principais ameaças e ferramentas de controle. O
+                                custo proibitivo vem principalmente de uma única
+                                carta:
+                                <span class="font-semibold text-amber-400"
+                                    >The Tabernacle at Pendrell Vale</span
+                                >, além de
+                                <span class="font-semibold text-amber-400"
+                                    >Mox Diamond</span
+                                >
+                                e uma base de mana com vários terrenos duplos.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-amber-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Life from the Loam<br />4 Exploration<br />1
+                                The Tabernacle at Pendrell Vale<br />4 Mox
+                                Diamond<br />4 Crop Rotation<br />4 Wasteland<br />4
+                                Rishadan Port<br />1 Dark Depths<br />1
+                                Thespian's Stage<br />4 Taiga<br />3 Savannah<br />1
+                                Karakas<br />1 Forest<br />4 Grove of the
+                                Burnwillows
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Vintage Dredge -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-6')"
+                        >
+                            <p>
+                                <span class="font-bold">6. Vintage Dredge</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-6"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um arquétipo que 'joga' do cemitério em vez da
+                                mão, usando a mecânica de Dredge. O motor do
+                                deck e a fonte de seu custo exorbitante são as
+                                quatro cópias de
+                                <span class="font-semibold text-amber-400"
+                                    >Bazaar of Baghdad</span
+                                >, uma carta de Arabian Nights.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-amber-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Bazaar of Baghdad<br />4 Golgari
+                                Grave-Troll<br />4 Stinkweed Imp<br />4
+                                Narcomoeba<br />4 Bridge from Below<br />4 Cabal
+                                Therapy<br />4 Ichorid<br />4 Serum Powder<br />4
+                                Hollow One<br />4 Force of Vigor<br />4 Leyline
+                                of the Void<br />4 Mana Confluence<br />4
+                                Undiscovered Paradise
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. Death and Taxes (Legacy) -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-7')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >7. Death and Taxes (Legacy)</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-7"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck mono-branco de 'prisão' que taxa os
+                                recursos do oponente com criaturas disruptivas.
+                                Embora não use Power Nine, seu custo é elevado
+                                por cartas como
+                                <span class="font-semibold text-amber-400"
+                                    >Rishadan Port</span
+                                >,
+                                <span class="font-semibold text-amber-400"
+                                    >Karakas</span
+                                >, e quatro cópias de
+                                <span class="font-semibold text-amber-400"
+                                    >Aether Vial</span
+                                >.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-amber-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Thalia, Guardian of Thraben<br />4 Mother of
+                                Runes<br />4 Stoneforge Mystic<br />4 Aether
+                                Vial<br />4 Swords to Plowshares<br />4 Rishadan
+                                Port<br />4 Wasteland<br />1 Karakas<br />3
+                                Flickerwisp<br />2 Recruiter of the Guard<br />1
+                                Umezawa's Jitte<br />1 Batterskull<br />10
+                                Plains<br />4 Solitude
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. Storm (Legacy/Vintage) -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-8')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >8. Storm (Legacy/Vintage)</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-8"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck de combo que busca conjurar dezenas de
+                                mágicas em um único turno para vencer com a
+                                habilidade 'Storm'. Em Legacy, o custo vem de
+                                <span class="font-semibold text-amber-400"
+                                    >Lion's Eye Diamond</span
+                                >
+                                e terrenos duplos. Em Vintage, o custo dispara
+                                com a inclusão da Power Nine.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-amber-400"
+                            >
+                                Lista Exemplo (Legacy)
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Lion's Eye Diamond<br />4 Dark Ritual<br />4
+                                Cabal Ritual<br />4 Brainstorm<br />4 Ponder<br />1
+                                Ad Nauseam<br />1 Tendrils of Agony<br />4 Lotus
+                                Petal<br />4 Duress<br />1 Demonic Tutor<br />2
+                                Underground Sea<br />1 Volcanic Island<br />1
+                                Badlands<br />4 Polluted Delta
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9. Reanimator (Legacy) -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-9')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >9. Reanimator (Legacy)</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-9"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Uma estratégia de combo que coloca criaturas
+                                enormes no cemitério para reanimá-las no
+                                primeiro ou segundo turno. O custo é
+                                impulsionado pela necessidade de terrenos duplos
+                                como
+                                <span class="font-semibold text-amber-400"
+                                    >Underground Sea</span
+                                >
+                                e cartas de proteção como
+                                <span class="font-semibold text-amber-400"
+                                    >Force of Will</span
+                                >.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-amber-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Reanimate<br />4 Exhume<br />4 Entomb<br />4
+                                Griselbrand<br />4 Chancellor of the Annex<br />4
+                                Dark Ritual<br />4 Thoughtseize<br />4 Force of
+                                Will<br />4 Brainstorm<br />4 Daze<br />4
+                                Underground Sea<br />4 Polluted Delta<br />4
+                                Watery Grave<br />2 Swamp
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10. Sneak and Show (Legacy) -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-10')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >10. Sneak and Show (Legacy)</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-10"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck de combo que usa
+                                <span class="font-semibold text-amber-400"
+                                    >Show and Tell</span
+                                >
+                                ou
+                                <span class="font-semibold text-amber-400"
+                                    >Sneak Attack</span
+                                >
+                                para colocar criaturas imbatíveis como
+                                <span class="font-semibold text-amber-400"
+                                    >Emrakul, the Aeons Torn</span
+                                >
+                                ou
+                                <span class="font-semibold text-amber-400"
+                                    >Griselbrand</span
+                                >
+                                em jogo. O custo vem dos terrenos duplos (<span
+                                    class="font-semibold text-amber-400"
+                                    >Volcanic Island</span
+                                >), Force of Will e das próprias peças do combo.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-amber-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Show and Tell<br />4 Sneak Attack<br />4
+                                Emrakul, the Aeons Torn<br />4 Griselbrand<br />4
+                                Force of Will<br />4 Brainstorm<br />4 Ponder<br />4
+                                Lotus Petal<br />4 Preordain<br />3 Volcanic
+                                Island<br />3 Ancient Tomb<br />4 Scalding
+                                Tarn<br />4 Misty Rainforest<br />1 Mountain<br />1
+                                Island
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script>
+            function toggleVisibility(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.classList.toggle("hidden");
+                }
+            }
+        </script>
+    </body>
+</html>

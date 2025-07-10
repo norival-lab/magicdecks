@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mundial de 2023 - Arquivo Magic</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .player-header {
+                cursor: pointer;
+                transition: background-color 0.2s ease-in-out;
+            }
+            .decklist {
+                background-color: #1f2937; /* bg-gray-800 */
+                border-left: 3px solid #4f46e5; /* border-indigo-600 */
+            }
+        </style>
+    </head>
+    <body class="bg-gray-900 text-gray-200">
+        <div class="container mx-auto p-4 md:p-8">
+            <header class="text-center mb-10">
+                <a
+                    href="index.html"
+                    class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"
+                    >&larr; Voltar para o Arquivo</a
+                >
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
+                    2023 World Championship
+                </h1>
+                <p class="text-lg text-gray-400">
+                    O Bloco de Terras Selvagens de Eldraine e a ascensão dos
+                    decks de Domain Ramp.
+                </p>
+            </header>
+
+            <main id="archive-container" class="space-y-4">
+                <div
+                    class="bg-gray-800 rounded-lg shadow-lg overflow-hidden p-4 space-y-3"
+                >
+                    <!-- 1st Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2023-1')"
+                        >
+                            <p>
+                                <span class="font-bold">1º Lugar:</span>
+                                Jean-Emmanuel Depraz -
+                                <span class="italic">"Domain Ramp"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2023-1"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Archangel of Wrath<br />4 Atraxa, Grand
+                                Unifier<br />4 Herd Migration<br />4 Leyline
+                                Binding<br />4 Topiary Stomper
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Depopulate<br />4 Invasion of Zendikar<br />4
+                                Ossification<br />4 Sunfall<br />4 Up the
+                                Beanstalk
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Boseiju, Who Endures<br />4 Jetmir's Garden<br />4
+                                Leyline of the Guildpact<br />4 Plaza of
+                                Heroes<br />4 Raugrin Triome<br />4 Spara's
+                                Headquarters<br />4 The Wandering Emperor<br />4
+                                Xander's Lounge<br />4 Ziatora's Proving Ground
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2nd Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2023-2')"
+                        >
+                            <p>
+                                <span class="font-bold">2º Lugar:</span> Kazune
+                                Kosaka -
+                                <span class="italic">"Azorius Soldiers"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2023-2"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Brutal Cathar<br />4 Harbin, Vanguard
+                                Aviator<br />4 Recruitment Officer<br />4
+                                Resolute Reinforcements<br />4 Skystrike
+                                Officer<br />4 Thalia, Guardian of Thraben<br />4
+                                Valiant Veteran<br />4 Yotian Tactician
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Fortified Beachhead<br />4 Make Disappear<br />4
+                                Ossification<br />4 Protect the Negotiators
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Adarkar Wastes<br />4 Deserted Beach<br />4
+                                Seachrome Coast<br />8 Island<br />8 Plains
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3rd Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2023-3')"
+                        >
+                            <p>
+                                <span class="font-bold">3º Lugar:</span> Anthony
+                                Lee -
+                                <span class="italic">"Esper Legends"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2023-3"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Dennick, Pious Apprentice<br />4 Raffine,
+                                Scheming Seer<br />4 Sheoldred, the
+                                Apocalypse<br />4 Skrelv, Defector Mite<br />4
+                                Thalia, Guardian of Thraben
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Cut Down<br />4 Go for the Throat<br />4 Make
+                                Disappear<br />4 Plaza of Heroes<br />4 The
+                                Wandering Emperor<br />4 Wedding Announcement
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Caves of Koilos<br />4 Deserted Beach<br />4
+                                Eiganjo, Seat of the Empire<br />4 Otawara,
+                                Soaring City<br />4 Raffine's Tower<br />4
+                                Seachrome Coast<br />4 Shattered Sanctum<br />4
+                                Takenuma, Abandoned Mire
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2023-4')"
+                        >
+                            <p>
+                                <span class="font-bold">4º Lugar:</span> Simon
+                                Nielsen -
+                                <span class="italic">"Domain Ramp"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2023-4"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Archangel of Wrath<br />4 Atraxa, Grand
+                                Unifier<br />4 Herd Migration<br />4 Leyline
+                                Binding<br />4 Topiary Stomper
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Depopulate<br />4 Invasion of Zendikar<br />4
+                                Ossification<br />4 Sunfall<br />4 Up the
+                                Beanstalk
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Boseiju, Who Endures<br />4 Jetmir's Garden<br />4
+                                Leyline of the Guildpact<br />4 Plaza of
+                                Heroes<br />4 Raugrin Triome<br />4 Spara's
+                                Headquarters<br />4 The Wandering Emperor<br />4
+                                Xander's Lounge<br />4 Ziatora's Proving Ground
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2023-5')"
+                        >
+                            <p>
+                                <span class="font-bold">5º Lugar:</span> Lorenzo
+                                Terlizzi -
+                                <span class="italic">"Bant Control"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2023-5"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Atraxa, Grand Unifier<br />4 Herd Migration<br />4
+                                Topiary Stomper
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Depopulate<br />4 Invasion of Zendikar<br />4
+                                Leyline Binding<br />4 Ossification<br />4
+                                Sunfall<br />4 Temporary Lockdown<br />4 The
+                                Wandering Emperor<br />4 Up the Beanstalk
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Boseiju, Who Endures<br />4 Brushland<br />4
+                                Deserted Beach<br />4 Dreamroot Cascade<br />4
+                                Eiganjo, Seat of the Empire<br />4 Jetmir's
+                                Garden<br />4 Otawara, Soaring City<br />4
+                                Overgrown Farmland<br />4 Spara's
+                                Headquarters<br />4 Yavimaya Coast
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 6th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2023-6')"
+                        >
+                            <p>
+                                <span class="font-bold">6º Lugar:</span> Chris
+                                de Turi -
+                                <span class="italic">"Esper Legends"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2023-6"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Dennick, Pious Apprentice<br />4 Raffine,
+                                Scheming Seer<br />4 Sheoldred, the
+                                Apocalypse<br />4 Skrelv, Defector Mite<br />4
+                                Thalia, Guardian of Thraben
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Cut Down<br />4 Go for the Throat<br />4 Make
+                                Disappear<br />4 Plaza of Heroes<br />4 The
+                                Wandering Emperor<br />4 Wedding Announcement
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Caves of Koilos<br />4 Deserted Beach<br />4
+                                Eiganjo, Seat of the Empire<br />4 Otawara,
+                                Soaring City<br />4 Raffine's Tower<br />4
+                                Seachrome Coast<br />4 Shattered Sanctum<br />4
+                                Takenuma, Abandoned Mire
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 7th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2023-7')"
+                        >
+                            <p>
+                                <span class="font-bold">7º Lugar:</span> Greg
+                                Orange -
+                                <span class="italic">"Bant Control"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2023-7"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Atraxa, Grand Unifier<br />4 Herd Migration<br />4
+                                Topiary Stomper
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Depopulate<br />4 Invasion of Zendikar<br />4
+                                Leyline Binding<br />4 Ossification<br />4
+                                Sunfall<br />4 Temporary Lockdown<br />4 The
+                                Wandering Emperor<br />4 Up the Beanstalk
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Boseiju, Who Endures<br />4 Brushland<br />4
+                                Deserted Beach<br />4 Dreamroot Cascade<br />4
+                                Eiganjo, Seat of the Empire<br />4 Jetmir's
+                                Garden<br />4 Otawara, Soaring City<br />4
+                                Overgrown Farmland<br />4 Spara's
+                                Headquarters<br />4 Yavimaya Coast
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 8th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-2023-8')"
+                        >
+                            <p>
+                                <span class="font-bold">8º Lugar:</span> Reid
+                                Duke - <span class="italic">"Domain Ramp"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-2023-8"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Archangel of Wrath<br />4 Atraxa, Grand
+                                Unifier<br />4 Herd Migration<br />4 Leyline
+                                Binding<br />4 Topiary Stomper
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Depopulate<br />4 Invasion of Zendikar<br />4
+                                Ossification<br />4 Sunfall<br />4 Up the
+                                Beanstalk
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Boseiju, Who Endures<br />4 Jetmir's Garden<br />4
+                                Leyline of the Guildpact<br />4 Plaza of
+                                Heroes<br />4 Raugrin Triome<br />4 Spara's
+                                Headquarters<br />4 The Wandering Emperor<br />4
+                                Xander's Lounge<br />4 Ziatora's Proving Ground
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script>
+            function toggleVisibility(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.classList.toggle("hidden");
+                }
+            }
+        </script>
+    </body>
+</html>

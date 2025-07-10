@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Top 10 Decks do Formato Legacy - Arquivo Magic</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .player-header {
+                cursor: pointer;
+                transition: background-color 0.2s ease-in-out;
+            }
+            .decklist {
+                background-color: #1f2937; /* bg-gray-800 */
+                border-left: 3px solid #f43f5e; /* border-rose-500 */
+            }
+        </style>
+    </head>
+    <body class="bg-gray-900 text-gray-200">
+        <div class="container mx-auto p-4 md:p-8">
+            <header class="text-center mb-10">
+                <a
+                    href="index.html"
+                    class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"
+                    >&larr; Voltar para o Arquivo</a
+                >
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
+                    Top 10 Decks do Formato Legacy
+                </h1>
+                <p class="text-lg text-gray-400">
+                    Uma seleção dos arquétipos mais icônicos e poderosos que
+                    definiram o formato Legacy.
+                </p>
+            </header>
+
+            <main id="archive-container" class="space-y-4">
+                <div
+                    class="bg-gray-800 rounded-lg shadow-lg overflow-hidden p-4 space-y-3"
+                >
+                    <!-- 1. Izzet Delver -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-1')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >1. Izzet/Grixis Delver</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-1"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                O rei indiscutível do formato por muitos anos. É
+                                a definição de um deck de "tempo", usando
+                                ameaças de custo um como
+                                <span class="font-semibold text-rose-400"
+                                    >Delver of Secrets</span
+                                >
+                                e
+                                <span class="font-semibold text-rose-400"
+                                    >Dragon's Rage Channeler</span
+                                >, protegidas por um conjunto das mágicas mais
+                                eficientes do jogo, como
+                                <span class="font-semibold text-rose-400"
+                                    >Force of Will</span
+                                >
+                                e
+                                <span class="font-semibold text-rose-400"
+                                    >Daze</span
+                                >.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-rose-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Delver of Secrets<br />4 Dragon's Rage
+                                Channeler<br />4 Murktide Regent<br />4
+                                Brainstorm<br />4 Ponder<br />4 Lightning
+                                Bolt<br />4 Daze<br />4 Force of Will<br />4
+                                Mishra's Bauble<br />3 Volcanic Island<br />3
+                                Underground Sea<br />4 Wasteland<br />4 Polluted
+                                Delta<br />4 Scalding Tarn
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Lands -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-2')"
+                        >
+                            <p><span class="font-bold">2. Lands</span></p>
+                        </div>
+                        <div
+                            id="deck-top-2"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Uma estratégia única que usa terrenos como suas
+                                principais armas. O deck controla os recursos do
+                                oponente com
+                                <span class="font-semibold text-rose-400"
+                                    >Wasteland</span
+                                >
+                                e
+                                <span class="font-semibold text-rose-400"
+                                    >Rishadan Port</span
+                                >, enquanto monta um combo para criar uma ficha
+                                20/20 com
+                                <span class="font-semibold text-rose-400"
+                                    >Dark Depths</span
+                                >
+                                e
+                                <span class="font-semibold text-rose-400"
+                                    >Thespian's Stage</span
+                                >.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-rose-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Life from the Loam<br />4 Exploration<br />4
+                                Mox Diamond<br />4 Crop Rotation<br />4
+                                Wasteland<br />4 Rishadan Port<br />1 Dark
+                                Depths<br />1 Thespian's Stage<br />1 The
+                                Tabernacle at Pendrell Vale<br />4 Taiga<br />3
+                                Savannah<br />1 Karakas<br />1 Forest<br />4
+                                Grove of the Burnwillows<br />1 Maze of Ith
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Death & Taxes -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-3')"
+                        >
+                            <p>
+                                <span class="font-bold">3. Death & Taxes</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-3"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                O principal deck mono-branco do formato. Ele
+                                ataca a base de mana do oponente e taxa suas
+                                mágicas com criaturas como
+                                <span class="font-semibold text-rose-400"
+                                    >Thalia, Guardian of Thraben</span
+                                >
+                                e
+                                <span class="font-semibold text-rose-400"
+                                    >Leonin Arbiter</span
+                                >, enquanto controla o campo com
+                                <span class="font-semibold text-rose-400"
+                                    >Swords to Plowshares</span
+                                >
+                                e
+                                <span class="font-semibold text-rose-400"
+                                    >Solitude</span
+                                >.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-rose-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Thalia, Guardian of Thraben<br />4 Mother of
+                                Runes<br />4 Stoneforge Mystic<br />4 Aether
+                                Vial<br />4 Swords to Plowshares<br />4 Rishadan
+                                Port<br />4 Wasteland<br />1 Karakas<br />3
+                                Flickerwisp<br />2 Recruiter of the Guard<br />1
+                                Umezawa's Jitte<br />1 Batterskull<br />10
+                                Plains<br />4 Solitude
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Sneak and Show -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-4')"
+                        >
+                            <p>
+                                <span class="font-bold">4. Sneak and Show</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-4"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck de combo clássico que visa colocar uma
+                                criatura colossal como
+                                <span class="font-semibold text-rose-400"
+                                    >Emrakul, the Aeons Torn</span
+                                >
+                                ou
+                                <span class="font-semibold text-rose-400"
+                                    >Griselbrand</span
+                                >
+                                em jogo através de
+                                <span class="font-semibold text-rose-400"
+                                    >Show and Tell</span
+                                >
+                                ou
+                                <span class="font-semibold text-rose-400"
+                                    >Sneak Attack</span
+                                >, geralmente vencendo no mesmo turno.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-rose-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Show and Tell<br />4 Sneak Attack<br />4
+                                Emrakul, the Aeons Torn<br />4 Griselbrand<br />4
+                                Force of Will<br />4 Brainstorm<br />4 Ponder<br />4
+                                Lotus Petal<br />4 Preordain<br />3 Volcanic
+                                Island<br />3 Ancient Tomb<br />4 Scalding
+                                Tarn<br />4 Misty Rainforest<br />1 Mountain<br />1
+                                Island
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Reanimator -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-5')"
+                        >
+                            <p><span class="font-bold">5. Reanimator</span></p>
+                        </div>
+                        <div
+                            id="deck-top-5"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                A estratégia de reanimação mais rápida e brutal.
+                                O plano é colocar uma criatura como
+                                <span class="font-semibold text-rose-400"
+                                    >Griselbrand</span
+                                >
+                                no cemitério com
+                                <span class="font-semibold text-rose-400"
+                                    >Entomb</span
+                                >
+                                e trazê-la de volta com
+                                <span class="font-semibold text-rose-400"
+                                    >Reanimate</span
+                                >
+                                ou
+                                <span class="font-semibold text-rose-400"
+                                    >Animate Dead</span
+                                >, muitas vezes no primeiro turno.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-rose-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Reanimate<br />4 Exhume<br />4 Entomb<br />4
+                                Griselbrand<br />4 Chancellor of the Annex<br />4
+                                Dark Ritual<br />4 Thoughtseize<br />4 Force of
+                                Will<br />4 Brainstorm<br />4 Daze<br />4
+                                Underground Sea<br />4 Polluted Delta<br />4
+                                Watery Grave<br />2 Swamp
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Storm (ANT/TES) -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-6')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >6. Storm (ANT/TES)</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-6"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck de combo que busca conjurar muitas
+                                mágicas em um turno para vencer com a habilidade
+                                "Storm", geralmente com
+                                <span class="font-semibold text-rose-400"
+                                    >Tendrils of Agony</span
+                                >. Usa rituais de mana e a controversa
+                                <span class="font-semibold text-rose-400"
+                                    >Lion's Eye Diamond</span
+                                >
+                                para gerar mana e comprar cartas.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-rose-400"
+                            >
+                                Lista Exemplo (ANT)
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Lion's Eye Diamond<br />4 Dark Ritual<br />4
+                                Cabal Ritual<br />4 Brainstorm<br />4 Ponder<br />1
+                                Ad Nauseam<br />1 Tendrils of Agony<br />4 Lotus
+                                Petal<br />4 Duress<br />1 Demonic Tutor<br />2
+                                Underground Sea<br />1 Volcanic Island<br />1
+                                Badlands<br />4 Polluted Delta
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. Elves -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-7')"
+                        >
+                            <p><span class="font-bold">7. Elves!</span></p>
+                        </div>
+                        <div
+                            id="deck-top-7"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck tribal que enche a mesa com Elfos para
+                                gerar uma quantidade absurda de mana com
+                                <span class="font-semibold text-rose-400"
+                                    >Gaea's Cradle</span
+                                >
+                                e
+                                <span class="font-semibold text-rose-400"
+                                    >Heritage Druid</span
+                                >. A vitória vem através de um ataque massivo ou
+                                de um combo com
+                                <span class="font-semibold text-rose-400"
+                                    >Craterhoof Behemoth</span
+                                >.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-rose-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Glimpse of Nature<br />4 Heritage Druid<br />4
+                                Nettle Sentinel<br />4 Quirion Ranger<br />4
+                                Wirewood Symbiote<br />4 Elvish Visionary<br />1
+                                Craterhoof Behemoth<br />4 Green Sun's Zenith<br />4
+                                Natural Order<br />4 Gaea's Cradle<br />4
+                                Windswept Heath<br />2 Bayou<br />2 Savannah<br />4
+                                Forest
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. Doomsday -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-8')"
+                        >
+                            <p><span class="font-bold">8. Doomsday</span></p>
+                        </div>
+                        <div
+                            id="deck-top-8"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um dos decks de combo mais complexos do Magic. O
+                                plano é conjurar
+                                <span class="font-semibold text-rose-400"
+                                    >Doomsday</span
+                                >, exilando o grimório e a mão para criar um
+                                novo grimório de exatamente cinco cartas. Com as
+                                cartas certas, o jogador vence no mesmo turno,
+                                geralmente com
+                                <span class="font-semibold text-rose-400"
+                                    >Thassa's Oracle</span
+                                >.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-rose-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Doomsday<br />4 Thassa's Oracle<br />4 Dark
+                                Ritual<br />4 Brainstorm<br />4 Ponder<br />4
+                                Force of Will<br />4 Daze<br />4 Lotus Petal<br />1
+                                Street Wraith<br />1 Lion's Eye Diamond<br />4
+                                Underground Sea<br />4 Polluted Delta<br />4
+                                Misty Rainforest<br />2 Island<br />1 Swamp
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9. 8-Cast -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-9')"
+                        >
+                            <p><span class="font-bold">9. 8-Cast</span></p>
+                        </div>
+                        <div
+                            id="deck-top-9"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Uma evolução do clássico Affinity. Este deck
+                                mono-azul usa artefatos de custo zero ou um para
+                                comprar cartas massivamente com
+                                <span class="font-semibold text-rose-400"
+                                    >Thoughtcast</span
+                                >
+                                e
+                                <span class="font-semibold text-rose-400"
+                                    >Thought Monitor</span
+                                >. A vitória vem através de construtos gigantes
+                                criados por
+                                <span class="font-semibold text-rose-400"
+                                    >Urza's Saga</span
+                                >
+                                e
+                                <span class="font-semibold text-rose-400"
+                                    >Sai, Master Thopterist</span
+                                >.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-rose-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Thoughtcast<br />4 Thought Monitor<br />4
+                                Urza's Saga<br />4 Emry, Lurker of the Loch<br />4
+                                Sai, Master Thopterist<br />4 Kappa Cannoneer<br />4
+                                Force of Will<br />4 Chalice of the Void<br />4
+                                Mishra's Bauble<br />4 Urza's Bauble<br />4 Mox
+                                Opal<br />4 Ancient Tomb<br />4 Seat of the
+                                Synod
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10. Jeskai Control -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-10')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >10. Jeskai Control</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-10"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck de controle que combina as melhores
+                                mágicas de anulação e compra de cartas do azul
+                                com as remoções mais eficientes do branco (<span
+                                    class="font-semibold text-rose-400"
+                                    >Swords to Plowshares</span
+                                >) e do vermelho (<span
+                                    class="font-semibold text-rose-400"
+                                    >Lightning Bolt</span
+                                >). É um arquétipo adaptável que busca controlar
+                                o jogo e vencer com poucas ameaças poderosas.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-rose-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Brainstorm<br />4 Ponder<br />4 Force of
+                                Will<br />4 Swords to Plowshares<br />4
+                                Lightning Bolt<br />2 Counterspell<br />2
+                                Supreme Verdict<br />2 Teferi, Time Raveler<br />2
+                                Narset, Parter of Veils<br />2 Expressive
+                                Iteration<br />4 Prismatic Ending<br />4
+                                Tundra<br />4 Volcanic Island<br />4 Flooded
+                                Strand<br />4 Scalding Tarn<br />2 Mystic
+                                Sanctuary
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script>
+            function toggleVisibility(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.classList.toggle("hidden");
+                }
+            }
+        </script>
+    </body>
+</html>

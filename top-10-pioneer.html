@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Top 10 Decks do Formato Pioneer - Arquivo Magic</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .player-header {
+                cursor: pointer;
+                transition: background-color 0.2s ease-in-out;
+            }
+            .decklist {
+                background-color: #1f2937; /* bg-gray-800 */
+                border-left: 3px solid #0ea5e9; /* border-sky-500 */
+            }
+        </style>
+    </head>
+    <body class="bg-gray-900 text-gray-200">
+        <div class="container mx-auto p-4 md:p-8">
+            <header class="text-center mb-10">
+                <a
+                    href="index.html"
+                    class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"
+                    >&larr; Voltar para o Arquivo</a
+                >
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
+                    Top 10 Decks do Formato Pioneer
+                </h1>
+                <p class="text-lg text-gray-400">
+                    Uma seleção dos arquétipos mais icônicos e competitivos que
+                    definiram o formato Pioneer.
+                </p>
+            </header>
+
+            <main id="archive-container" class="space-y-4">
+                <div
+                    class="bg-gray-800 rounded-lg shadow-lg overflow-hidden p-4 space-y-3"
+                >
+                    <!-- 1. Izzet Phoenix -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-1')"
+                        >
+                            <p>
+                                <span class="font-bold">1. Izzet Phoenix</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-1"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck que dominou o início do formato. A
+                                estratégia consiste em encher o cemitério com
+                                mágicas de baixo custo para trazer de volta
+                                <span class="font-semibold text-sky-400"
+                                    >Arclight Phoenix</span
+                                >
+                                e criar uma grande ameaça com
+                                <span class="font-semibold text-sky-400"
+                                    >Thing in the Ice</span
+                                >.
+                            </p>
+                            <h3 class="font-semibold text-lg mb-2 text-sky-400">
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Arclight Phoenix<br />4 Thing in the Ice<br />4
+                                Opt<br />4 Thought Scour<br />4 Treasure
+                                Cruise<br />4 Lightning Axe<br />4 Fiery
+                                Impulse<br />2 Izzet Charm<br />4 Steam Vents<br />4
+                                Spirebluff Canal<br />4 Shivan Reef<br />4
+                                Sulfur Falls<br />4 Island<br />2 Mountain
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Rakdos Midrange -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-2')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >2. Rakdos Midrange</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-2"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um pilar de consistência no formato. Joga as
+                                melhores cartas de descarte (<span
+                                    class="font-semibold text-sky-400"
+                                    >Thoughtseize</span
+                                >), remoção (<span
+                                    class="font-semibold text-sky-400"
+                                    >Fatal Push</span
+                                >) e ameaças eficientes (<span
+                                    class="font-semibold text-sky-400"
+                                    >Sheoldred, the Apocalypse</span
+                                >,
+                                <span class="font-semibold text-sky-400"
+                                    >Graveyard Trespasser</span
+                                >) para controlar o jogo.
+                            </p>
+                            <h3 class="font-semibold text-lg mb-2 text-sky-400">
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Sheoldred, the Apocalypse<br />4 Graveyard
+                                Trespasser<br />4 Bloodtithe Harvester<br />4
+                                Fable of the Mirror-Breaker<br />4
+                                Thoughtseize<br />3 Fatal Push<br />4
+                                Bonecrusher Giant<br />2 Dreadbore<br />4 Blood
+                                Crypt<br />4 Blackcleave Cliffs<br />4 Haunted
+                                Ridge<br />2 Hive of the Eye Tyrant<br />1 Den
+                                of the Bugbear<br />1 Takenuma, Abandoned
+                                Mire<br />1 Sokenzan, Crucible of Defiance
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Mono-Green Devotion -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-3')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >3. Mono-Green Devotion</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-3"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck de rampa que abusa de
+                                <span class="font-semibold text-sky-400"
+                                    >Nykthos, Shrine to Nyx</span
+                                >
+                                para gerar quantidades massivas de mana. Com
+                                essa mana, ele conjura planeswalkers poderosos
+                                como
+                                <span class="font-semibold text-sky-400"
+                                    >Karn, the Great Creator</span
+                                >
+                                para buscar artefatos de um "wishboard" e vencer
+                                o jogo.
+                            </p>
+                            <h3 class="font-semibold text-lg mb-2 text-sky-400">
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Llanowar Elves<br />4 Elvish Mystic<br />4
+                                Old-Growth Troll<br />4 Cavalier of Thorns<br />4
+                                Karn, the Great Creator<br />4 Storm the
+                                Festival<br />4 Oath of Nissa<br />3 Kiora,
+                                Behemoth Beckoner<br />4 Nykthos, Shrine to
+                                Nyx<br />1 Boseiju, Who Endures<br />1 Lair of
+                                the Hydra<br />18 Forest
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Niv-Mizzet Reborn -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-4')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >4. Niv-Mizzet Reborn</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-4"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck de 5 cores que busca conjurar
+                                <span class="font-semibold text-sky-400"
+                                    >Niv-Mizzet Reborn</span
+                                >
+                                para recarregar a mão com as melhores cartas de
+                                duas cores do formato. É um deck de "good stuff"
+                                que gera um valor imenso e controla o jogo com
+                                uma variedade de respostas.
+                            </p>
+                            <h3 class="font-semibold text-lg mb-2 text-sky-400">
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Niv-Mizzet Reborn<br />4 Sylvan Caryatid<br />4
+                                Bring to Light<br />1 Dreadbore<br />1 Abrupt
+                                Decay<br />1 Vanishing Verse<br />1 Expressive
+                                Iteration<br />1 The Wandering Emperor<br />1
+                                Omnath, Locus of Creation<br />1 Tolsimir,
+                                Friend to Wolves<br />4 Raugrin Triome<br />4
+                                Zagoth Triome<br />4 Ketria Triome<br />4
+                                Indatha Triome<br />4 Savai Triome
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Azorius Control -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-5')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >5. Azorius Control</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-5"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                O arquétipo de controle clássico, adaptado para
+                                o Pioneer. Usa uma combinação de remoções em
+                                massa (<span class="font-semibold text-sky-400"
+                                    >Supreme Verdict</span
+                                >), anulações (<span
+                                    class="font-semibold text-sky-400"
+                                    >Absorb, Dovin's Veto</span
+                                >) e planeswalkers poderosos (<span
+                                    class="font-semibold text-sky-400"
+                                    >Teferi, Hero of Dominaria</span
+                                >) para dominar o jogo a longo prazo.
+                            </p>
+                            <h3 class="font-semibold text-lg mb-2 text-sky-400">
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Teferi, Hero of Dominaria<br />4 The Wandering
+                                Emperor<br />4 Supreme Verdict<br />4 Absorb<br />4
+                                Dovin's Veto<br />4 March of Otherworldly
+                                Light<br />4 Memory Deluge<br />2 Farewell<br />4
+                                Hallowed Fountain<br />4 Irrigated Farmland<br />4
+                                Deserted Beach<br />2 Field of Ruin<br />2
+                                Castle Vantress<br />6 Island<br />4 Plains
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Lotus Field Combo -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-6')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >6. Lotus Field Combo</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-6"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck de combo que visa colocar
+                                <span class="font-semibold text-sky-400"
+                                    >Lotus Field</span
+                                >
+                                em jogo e desvirá-lo múltiplas vezes com cartas
+                                como
+                                <span class="font-semibold text-sky-400"
+                                    >Thespian's Stage</span
+                                >
+                                e
+                                <span class="font-semibold text-sky-400"
+                                    >Hidden Strings</span
+                                >. Gera mana infinita para vencer com uma grande
+                                mágica como
+                                <span class="font-semibold text-sky-400"
+                                    >Approach of the Second Sun</span
+                                >.
+                            </p>
+                            <h3 class="font-semibold text-lg mb-2 text-sky-400">
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Lotus Field<br />4 Thespian's Stage<br />4
+                                Sylvan Scrying<br />4 Pore Over the Pages<br />4
+                                Hidden Strings<br />4 Vizier of Tumbling
+                                Sands<br />4 Strict Proctor<br />1 Approach of
+                                the Second Sun<br />4 Botanical Sanctum<br />4
+                                Temple of Mystery<br />4 Yavimaya Coast<br />4
+                                Barkchannel Pathway
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. Mono-White Humans -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-7')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >7. Mono-White Humans</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-7"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Uma estratégia aggro tribal consistente e
+                                poderosa. Usa criaturas humanas de baixo custo e
+                                as fortalece com "lords" como
+                                <span class="font-semibold text-sky-400"
+                                    >Thalia's Lieutenant</span
+                                >
+                                e
+                                <span class="font-semibold text-sky-400"
+                                    >Valiant Veteran</span
+                                >.
+                                <span class="font-semibold text-sky-400"
+                                    >Brave the Elements</span
+                                >
+                                oferece proteção e uma forma de vencer o jogo.
+                            </p>
+                            <h3 class="font-semibold text-lg mb-2 text-sky-400">
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Thalia's Lieutenant<br />4 Valiant Veteran<br />4
+                                Thalia, Guardian of Thraben<br />4 Adeline,
+                                Resplendent Cathar<br />4 Hopeful Initiate<br />4
+                                Dauntless Bodyguard<br />4 Recruitment
+                                Officer<br />4 Brave the Elements<br />4
+                                Ossification<br />4 Mutavault<br />4 Shefet
+                                Dunes<br />1 Eiganjo, Seat of the Empire<br />14
+                                Plains
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. Winota, Joiner of Forces -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-8')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >8. Winota, Joiner of Forces</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-8"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck de combo tão poderoso que
+                                <span class="font-semibold text-sky-400"
+                                    >Winota, Joiner of Forces</span
+                                >
+                                foi banida. A estratégia era usar criaturas
+                                não-humanas baratas para atacar e ativar a
+                                habilidade da Winota, colocando humanos
+                                devastadores como
+                                <span class="font-semibold text-sky-400"
+                                    >Angrath's Marauders</span
+                                >
+                                ou
+                                <span class="font-semibold text-sky-400"
+                                    >Agent of Treachery</span
+                                >
+                                em jogo de graça.
+                            </p>
+                            <h3 class="font-semibold text-lg mb-2 text-sky-400">
+                                Lista Exemplo (Pré-Ban)
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Winota, Joiner of Forces<br />4 Llanowar
+                                Elves<br />4 Elvish Mystic<br />4 Voice of
+                                Resurgence<br />4 Prosperous Innkeeper<br />3
+                                Angrath's Marauders<br />2 Kenrith, the Returned
+                                King<br />4 Esika's Chariot<br />4 Fable of the
+                                Mirror-Breaker<br />4 Stomping Ground<br />4
+                                Temple Garden<br />4 Sacred Foundry<br />4
+                                Branchloft Pathway<br />4 Cragcrown Pathway
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9. Boros Convoke -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-9')"
+                        >
+                            <p>
+                                <span class="font-bold">9. Boros Convoke</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-9"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck aggro que enche a mesa com criaturas
+                                baratas e fichas para conjurar mágicas com
+                                "Convocar", como
+                                <span class="font-semibold text-sky-400"
+                                    >Knight-Errant of Eos</span
+                                >
+                                e
+                                <span class="font-semibold text-sky-400"
+                                    >Venerated Loxodon</span
+                                >, muito antes do esperado.
+                                <span class="font-semibold text-sky-400"
+                                    >Gleeful Demolition</span
+                                >
+                                em um artefato cria um exército instantâneo.
+                            </p>
+                            <h3 class="font-semibold text-lg mb-2 text-sky-400">
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Venerated Loxodon<br />4 Knight-Errant of
+                                Eos<br />4 Voldaren Epicure<br />4 Resolute
+                                Reinforcements<br />4 Ornithopter<br />4 Gleeful
+                                Demolition<br />4 Thraben Inspector<br />4
+                                Imodane's Recruiter<br />4 Reckless
+                                Bushwhacker<br />4 Battlefield Forge<br />4
+                                Inspiring Vantage<br />4 Sacred Foundry<br />4
+                                Needleverge Pathway<br />4 Mountain<br />2
+                                Plains
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10. Inverter of Truth -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-10')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >10. Inverter of Truth</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-10"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Outro deck de combo banido. A estratégia era
+                                esvaziar o próprio grimório com cartas como
+                                <span class="font-semibold text-sky-400"
+                                    >Thought Scour</span
+                                >, conjurar
+                                <span class="font-semibold text-sky-400"
+                                    >Inverter of Truth</span
+                                >
+                                para exilar o grimório e colocar o cemitério
+                                como o novo grimório, e então vencer com
+                                <span class="font-semibold text-sky-400"
+                                    >Thassa's Oracle</span
+                                >
+                                ou
+                                <span class="font-semibold text-sky-400"
+                                    >Jace, Wielder of Mysteries</span
+                                >.
+                            </p>
+                            <h3 class="font-semibold text-lg mb-2 text-sky-400">
+                                Lista Exemplo (Pré-Ban)
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Inverter of Truth<br />4 Thassa's Oracle<br />4
+                                Jace, Wielder of Mysteries<br />4
+                                Thoughtseize<br />4 Fatal Push<br />4 Dig
+                                Through Time<br />4 Opt<br />4 Thought Scour<br />4
+                                Drown in the Loch<br />4 Watery Grave<br />4
+                                Fabled Passage<br />4 Drowned Catacomb<br />4
+                                Temple of Deceit<br />4 Island<br />4 Swamp
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script>
+            function toggleVisibility(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.classList.toggle("hidden");
+                }
+            }
+        </script>
+    </body>
+</html>

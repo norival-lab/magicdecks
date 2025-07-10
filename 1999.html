@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mundial de 1999 - Arquivo Magic</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .player-header {
+                cursor: pointer;
+                transition: background-color 0.2s ease-in-out;
+            }
+            .decklist {
+                background-color: #1f2937; /* bg-gray-800 */
+                border-left: 3px solid #4f46e5; /* border-indigo-600 */
+            }
+        </style>
+    </head>
+    <body class="bg-gray-900 text-gray-200">
+        <div class="container mx-auto p-4 md:p-8">
+            <header class="text-center mb-10">
+                <a
+                    href="index.html"
+                    class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"
+                    >&larr; Voltar para o Arquivo</a
+                >
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
+                    1999 World Championship
+                </h1>
+                <p class="text-lg text-gray-400">
+                    A Era de Urza em seu esplendor, com artefatos e combos
+                    definindo o metagame.
+                </p>
+            </header>
+
+            <main id="archive-container" class="space-y-4">
+                <div
+                    class="bg-gray-800 rounded-lg shadow-lg overflow-hidden p-4 space-y-3"
+                >
+                    <!-- 1st Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1999-1')"
+                        >
+                            <p>
+                                <span class="font-bold">1º Lugar:</span> Kai
+                                Budde - <span class="italic">"Tinker"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1999-1"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Covetous Dragon<br />4 Great Whale<br />4
+                                Metalworker<br />4 Phyrexian Colossus
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Grim Monolith<br />4 Mishra's Helix<br />4
+                                Temporal Aperture<br />4 Thran Dynamo<br />4
+                                Tinker<br />4 Voltaic Key
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Ancient Tomb<br />4 City of Traitors<br />10
+                                Snow-Covered Island
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2nd Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1999-2')"
+                        >
+                            <p>
+                                <span class="font-bold">2º Lugar:</span> Mark Le
+                                Pine -
+                                <span class="italic">"Mono-Red Aggro"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1999-2"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Avalanche Riders<br />4 Falkenrath Gorger<br />4
+                                Goblin Bombardment<br />4 Goblin Patrol<br />4
+                                Gorilla Shaman<br />4 Jackal Pup<br />4 Mogg
+                                Fanatic<br />4 Viashino Sandscout
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Arc Lightning<br />4 Cursed Scroll<br />4 Fire
+                                Diamond<br />4 Hammer of Bogardan<br />4
+                                Pillage<br />4 Shock<br />4 Stone Rain
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">20 Mountain</div>
+                        </div>
+                    </div>
+                    <!-- 3rd Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1999-3')"
+                        >
+                            <p>
+                                <span class="font-bold">3º Lugar:</span> Matt
+                                Linde - <span class="italic">"Wildfire"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1999-3"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Avalanche Riders<br />4 Covetous Dragon<br />4
+                                Great Whale<br />1 Karn, Silver Golem
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Cursed Scroll<br />4 Fire Diamond<br />4 Grim
+                                Monolith<br />4 Pillage<br />4 Temporal
+                                Aperture<br />4 Thran Dynamo<br />4 Trash for
+                                Treasure<br />4 Voltaic Key<br />4 Wildfire
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">12 Mountain</div>
+                        </div>
+                    </div>
+                    <!-- 4th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1999-4')"
+                        >
+                            <p>
+                                <span class="font-bold">4º Lugar:</span> Jakub
+                                Slemr -
+                                <span class="italic">"U/R Control"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1999-4"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Covetous Dragon<br />4 Great Whale
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Brainstorm<br />4 Counterspell<br />4 Fire
+                                Diamond<br />4 Forbid<br />4 Force of Will<br />4
+                                Grim Monolith<br />4 Impulse<br />4 Mana Leak<br />4
+                                Stroke of Genius<br />4 Thran Dynamo<br />4
+                                Wildfire
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                10 Island<br />4 Shivan Reef<br />4 Volcanic
+                                Island
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1999-5')"
+                        >
+                            <p>
+                                <span class="font-bold">5º Lugar:</span> Gary
+                                Wise -
+                                <span class="italic">"U/B Reanimator"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1999-5"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Avatar of Woe<br />4 Phyrexian Negator<br />4
+                                Priest of Gix<br />4 Skittering Skirge
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Animate Dead<br />4 Brainstorm<br />4 Dark
+                                Ritual<br />4 Duress<br />4 Exhume<br />4 Force
+                                of Will<br />4 Frantic Search<br />4 Reanimate
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Underground River<br />8 Island<br />8 Swamp
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 6th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1999-6')"
+                        >
+                            <p>
+                                <span class="font-bold">6º Lugar:</span> Jamie
+                                Parke -
+                                <span class="italic">"U/R Control"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1999-6"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Covetous Dragon<br />4 Great Whale
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Brainstorm<br />4 Counterspell<br />4 Fire
+                                Diamond<br />4 Forbid<br />4 Force of Will<br />4
+                                Grim Monolith<br />4 Impulse<br />4 Mana Leak<br />4
+                                Stroke of Genius<br />4 Thran Dynamo<br />4
+                                Wildfire
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                10 Island<br />4 Shivan Reef<br />4 Volcanic
+                                Island
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 7th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1999-7')"
+                        >
+                            <p>
+                                <span class="font-bold">7º Lugar:</span> Dave
+                                Humpherys -
+                                <span class="italic">"U/R Control"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1999-7"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Criaturas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Covetous Dragon<br />4 Great Whale
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Brainstorm<br />4 Counterspell<br />4 Fire
+                                Diamond<br />4 Forbid<br />4 Force of Will<br />4
+                                Grim Monolith<br />4 Impulse<br />4 Mana Leak<br />4
+                                Stroke of Genius<br />4 Thran Dynamo<br />4
+                                Wildfire
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                10 Island<br />4 Shivan Reef<br />4 Volcanic
+                                Island
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 8th Place -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-1999-8')"
+                        >
+                            <p>
+                                <span class="font-bold">8º Lugar:</span> Marco
+                                Blume - <span class="italic">"Academy"</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-1999-8"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <h3
+                                class="font-semibold text-lg mb-2 text-indigo-400"
+                            >
+                                Mágicas
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Abeyance<br />4 Brainstorm<br />4 Candelabra
+                                of Tawnos<br />4 Capsize<br />4 Counterspell<br />4
+                                Force of Will<br />4 Impulse<br />4 Mana
+                                Vault<br />4 Mind Over Matter<br />4 Mox
+                                Diamond<br />4 Stroke of Genius<br />4 Time
+                                Spiral<br />4 Windfall
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Terrenos
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Tolarian Academy<br />10 Island
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script>
+            function toggleVisibility(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.classList.toggle("hidden");
+                }
+            }
+        </script>
+    </body>
+</html>

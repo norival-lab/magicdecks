@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Top 10 Decks do Formato Pauper - Arquivo Magic</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .player-header {
+                cursor: pointer;
+                transition: background-color 0.2s ease-in-out;
+            }
+            .decklist {
+                background-color: #1f2937; /* bg-gray-800 */
+                border-left: 3px solid #06b6d4; /* border-cyan-500 */
+            }
+        </style>
+    </head>
+    <body class="bg-gray-900 text-gray-200">
+        <div class="container mx-auto p-4 md:p-8">
+            <header class="text-center mb-10">
+                <a
+                    href="index.html"
+                    class="text-indigo-400 hover:text-indigo-300 mb-4 inline-block"
+                    >&larr; Voltar para o Arquivo</a
+                >
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
+                    Top 10 Decks do Formato Pauper
+                </h1>
+                <p class="text-lg text-gray-400">
+                    Uma seleção dos arquétipos mais icônicos e poderosos da
+                    história do formato das cartas comuns.
+                </p>
+            </header>
+
+            <main id="archive-container" class="space-y-4">
+                <div
+                    class="bg-gray-800 rounded-lg shadow-lg overflow-hidden p-4 space-y-3"
+                >
+                    <!-- 1. Mono-Blue Delver -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-1')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >1. Mono-Blue Delver</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-1"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                O rei do formato por muito tempo. Uma estratégia
+                                de tempo que usa
+                                <span class="font-semibold text-cyan-400"
+                                    >Delver of Secrets</span
+                                >
+                                e fadas como
+                                <span class="font-semibold text-cyan-400"
+                                    >Spellstutter Sprite</span
+                                >
+                                para controlar o jogo, apoiado por mágicas
+                                "free" como
+                                <span class="font-semibold text-cyan-400"
+                                    >Gush</span
+                                >
+                                e
+                                <span class="font-semibold text-cyan-400"
+                                    >Daze</span
+                                >
+                                (ambas banidas).
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-cyan-400"
+                            >
+                                Lista Exemplo (Clássica)
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Delver of Secrets<br />4 Spellstutter
+                                Sprite<br />4 Faerie Miscreant<br />4 Ninja of
+                                the Deep Hours<br />4 Ponder<br />4 Preordain<br />4
+                                Counterspell<br />4 Daze<br />2 Gush<br />4
+                                Snap<br />18 Snow-Covered Island
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Storm -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-2')"
+                        >
+                            <p><span class="font-bold">2. Storm</span></p>
+                        </div>
+                        <div
+                            id="deck-top-2"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck de combo que foi tão dominante que levou
+                                ao banimento de várias de suas peças-chave, como
+                                <span class="font-semibold text-cyan-400"
+                                    >Grapeshot</span
+                                >
+                                e
+                                <span class="font-semibold text-cyan-400"
+                                    >Empty the Warrens</span
+                                >. O objetivo era conjurar muitas mágicas em um
+                                turno usando rituais e vencer com a mecânica
+                                "Storm".
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-cyan-400"
+                            >
+                                Lista Exemplo (Clássica)
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Grapeshot<br />4 Empty the Warrens<br />4 Rite
+                                of Flame<br />4 Dark Ritual<br />4 Cabal
+                                Ritual<br />4 Manamorphose<br />4 Lotus Petal<br />4
+                                Chromatic Star<br />4 Chromatic Sphere<br />4
+                                Gitaxian Probe<br />4 Ponder<br />4 Preordain<br />4
+                                Seething Song
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Affinity -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-3')"
+                        >
+                            <p><span class="font-bold">3. Affinity</span></p>
+                        </div>
+                        <div
+                            id="deck-top-3"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck aggro explosivo que usa terrenos de
+                                artefato e mágicas com "Afinidade por Artefatos"
+                                para colocar ameaças como
+                                <span class="font-semibold text-cyan-400"
+                                    >Myr Enforcer</span
+                                >
+                                e
+                                <span class="font-semibold text-cyan-400"
+                                    >Frogmite</span
+                                >
+                                muito cedo no jogo.
+                                <span class="font-semibold text-cyan-400"
+                                    >Atog</span
+                                >, combinado com
+                                <span class="font-semibold text-cyan-400"
+                                    >Disciple of the Vault</span
+                                >, era uma condição de vitória devastadora.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-cyan-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Atog<br />4 Frogmite<br />4 Myr Enforcer<br />4
+                                Disciple of the Vault<br />4 Thoughtcast<br />4
+                                Chromatic Star<br />4 Cranial Plating<br />4
+                                Springleaf Drum<br />4 Galvanic Blast<br />4
+                                Vault of Whispers<br />4 Great Furnace<br />4
+                                Seat of the Synod<br />4 Tree of Tales<br />4
+                                Darksteel Citadel
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Izzet Drake -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-4')"
+                        >
+                            <p><span class="font-bold">4. Izzet Drake</span></p>
+                        </div>
+                        <div
+                            id="deck-top-4"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck de combo que abusava da interação entre
+                                <span class="font-semibold text-cyan-400"
+                                    >Peregrine Drake</span
+                                >, que desvirava 5 terrenos ao entrar, e mágicas
+                                de "flicker" como
+                                <span class="font-semibold text-cyan-400"
+                                    >Ghostly Flicker</span
+                                >
+                                para gerar mana infinita e vencer. O poder do
+                                combo levou ao banimento do Drake.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-cyan-400"
+                            >
+                                Lista Exemplo (Pré-Ban)
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Peregrine Drake<br />4 Archaeomancer<br />4
+                                Sea Gate Oracle<br />4 Ghostly Flicker<br />4
+                                Ponder<br />4 Preordain<br />4 Compulsive
+                                Research<br />4 Flame Slash<br />4 Lightning
+                                Bolt<br />4 Izzet Boilerworks<br />4 Swiftwater
+                                Cliffs<br />8 Island<br />4 Mountain
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Tron -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-5')"
+                        >
+                            <p><span class="font-bold">5. Tron</span></p>
+                        </div>
+                        <div
+                            id="deck-top-5"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Assim como em outros formatos, o Tron busca
+                                montar o "Urzatron" para gerar muita mana. No
+                                Pauper, ele usa essa mana para controlar o jogo
+                                com mágicas de "flicker" (<span
+                                    class="font-semibold text-cyan-400"
+                                    >Ghostly Flicker</span
+                                >,
+                                <span class="font-semibold text-cyan-400"
+                                    >Ephemerate</span
+                                >) em criaturas com efeitos de entrar em campo,
+                                como
+                                <span class="font-semibold text-cyan-400"
+                                    >Mnemonic Wall</span
+                                >, criando um loop de valor quase infinito.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-cyan-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Urza's Mine<br />4 Urza's Power Plant<br />4
+                                Urza's Tower<br />4 Mnemonic Wall<br />4
+                                Mulldrifter<br />4 Stonehorn Dignitary<br />4
+                                Ghostly Flicker<br />4 Ephemerate<br />4
+                                Moment's Peace<br />4 Impulse<br />4
+                                Preordain<br />4 Counterspell<br />4 Thornwood
+                                Falls<br />4 Island
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Stompy -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-6')"
+                        >
+                            <p><span class="font-bold">6. Stompy</span></p>
+                        </div>
+                        <div
+                            id="deck-top-6"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck aggro mono-verde clássico e eficiente.
+                                Usa as criaturas verdes de custo um mais
+                                agressivas, como
+                                <span class="font-semibold text-cyan-400"
+                                    >Nettle Sentinel</span
+                                >
+                                e
+                                <span class="font-semibold text-cyan-400"
+                                    >Skarrgan Pit-Skulk</span
+                                >, e as fortalece com mágicas de "pump" baratas
+                                como
+                                <span class="font-semibold text-cyan-400"
+                                    >Giant Growth</span
+                                >
+                                e
+                                <span class="font-semibold text-cyan-400"
+                                    >Rancor</span
+                                >.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-cyan-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Nettle Sentinel<br />4 Skarrgan Pit-Skulk<br />4
+                                Quirion Ranger<br />4 Silhana Ledgewalker<br />4
+                                Vault Skirge<br />4 Burning-Tree Emissary<br />4
+                                Rancor<br />4 Giant Growth<br />4 Vines of
+                                Vastwood<br />4 Hunger of the Howlpack<br />18
+                                Forest
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. Boros Monarch -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-7')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >7. Boros Monarch/Bully</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-7"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um deck midrange que combina as melhores
+                                criaturas brancas de baixo custo com as remoções
+                                vermelhas mais eficientes. Ele gera valor com
+                                cartas como
+                                <span class="font-semibold text-cyan-400"
+                                    >Palace Sentinels</span
+                                >
+                                (introduzindo a mecânica "Monarch" no formato) e
+                                <span class="font-semibold text-cyan-400"
+                                    >Squadron Hawk</span
+                                >.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-cyan-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Glint Hawk<br />4 Kor Skyfisher<br />4 Thraben
+                                Inspector<br />4 Squadron Hawk<br />4 Palace
+                                Sentinels<br />4 Battle Screech<br />4 Lightning
+                                Bolt<br />4 Galvanic Blast<br />4 Journey to
+                                Nowhere<br />4 Prophetic Prism<br />4 Ancient
+                                Den<br />4 Great Furnace<br />4 Boros
+                                Garrison<br />4 Wind-Scarred Crag
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. Mono-Black Control -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-8')"
+                        >
+                            <p>
+                                <span class="font-bold"
+                                    >8. Mono-Black Control</span
+                                >
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-8"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Um arquétipo de controle que usa a consistência
+                                da mana preta para controlar o jogo com
+                                remoções, descartes e ameaças resilientes.
+                                Cartas como
+                                <span class="font-semibold text-cyan-400"
+                                    >Chittering Rats</span
+                                >
+                                e
+                                <span class="font-semibold text-cyan-400"
+                                    >Gray Merchant of Asphodel</span
+                                >
+                                são a espinha dorsal da estratégia.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-cyan-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Chittering Rats<br />4 Phyrexian Rager<br />4
+                                Cuombajj Witches<br />4 Gray Merchant of
+                                Asphodel<br />4 Gurmag Angler<br />4 Sign in
+                                Blood<br />4 Chainer's Edict<br />4 Disfigure<br />2
+                                Tendrils of Corruption<br />4 Unearth<br />22
+                                Swamp
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9. Izzet Faeries -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-9')"
+                        >
+                            <p>
+                                <span class="font-bold">9. Izzet Faeries</span>
+                            </p>
+                        </div>
+                        <div
+                            id="deck-top-9"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Uma variação do Mono-Blue Delver que adiciona o
+                                vermelho para ter acesso a remoções poderosas
+                                como
+                                <span class="font-semibold text-cyan-400"
+                                    >Skred</span
+                                >
+                                (usado com terrenos nevados) e
+                                <span class="font-semibold text-cyan-400"
+                                    >Lightning Bolt</span
+                                >. Mantém o núcleo de fadas e anulações para uma
+                                estratégia de tempo versátil.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-cyan-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Spellstutter Sprite<br />4 Faerie Seer<br />4
+                                Ninja of the Deep Hours<br />4 Augur of Bolas<br />4
+                                Brainstorm<br />4 Counterspell<br />4 Skred<br />4
+                                Lightning Bolt<br />4 Preordain<br />2
+                                Moon-Circuit Hacker<br />10 Snow-Covered
+                                Island<br />6 Snow-Covered Mountain<br />4
+                                Volatile Fjord
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10. Caw-Blade -->
+                    <div class="player-entry">
+                        <div
+                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
+                            onclick="toggleVisibility('deck-top-10')"
+                        >
+                            <p><span class="font-bold">10. Caw-Blade</span></p>
+                        </div>
+                        <div
+                            id="deck-top-10"
+                            class="decklist hidden mt-2 p-4 rounded-b-md"
+                        >
+                            <p class="mb-4 text-gray-300">
+                                Uma adaptação do famoso deck de Standard, o
+                                Caw-Blade do Pauper usa
+                                <span class="font-semibold text-cyan-400"
+                                    >Squadron Hawk</span
+                                >
+                                para gerar vantagem de cartas e carregar
+                                equipamentos como
+                                <span class="font-semibold text-cyan-400"
+                                    >Bonesplitter</span
+                                >. O deck controla o jogo com anulações e
+                                remoções brancas, sendo uma força dominante em
+                                sua época.
+                            </p>
+                            <h3
+                                class="font-semibold text-lg mb-2 text-cyan-400"
+                            >
+                                Lista Exemplo
+                            </h3>
+                            <div class="text-gray-300">
+                                4 Squadron Hawk<br />4 Kor Skyfisher<br />4
+                                Thraben Inspector<br />4 Counterspell<br />4
+                                Brainstorm<br />4 Ponder<br />4 Swords to
+                                Plowshares<br />4 Journey to Nowhere<br />4
+                                Bonesplitter<br />2 Mana Leak<br />4 Tranquil
+                                Cove<br />8 Island<br />8 Plains
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script>
+            function toggleVisibility(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.classList.toggle("hidden");
+                }
+            }
+        </script>
+    </body>
+</html>
