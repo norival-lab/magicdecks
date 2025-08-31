@@ -1,26 +1,35 @@
-﻿            #card-tooltip {
-                position: absolute;
+# Script para atualizar todos os arquivos HTML com o mesmo padrao de tooltip do 2024.html
+
+# Define o CSS padrao do tooltip
+$tooltipCSS = @'
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo a janela */
                 display: none;
-                z-index: 1000;
-                border: 2px solid #333;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-                pointer-events: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
             }
             #card-tooltip img {
-                width: 200px;
+                display: block;
+                width: 250px; /* Tamanho da imagem */
                 height: auto;
-                border-radius: 6px;
             }
+            /* Estilo para o nome da carta, para indicar que e interativo */
             .card-name {
                 cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
             }
-        </style>
-    </head>
-    <body class="bg-gray-900 text-gray-200">
-        <div class="container mx-auto p-4 md:p-8">
-            ...existing code...
-        </div>        <!-- Script para o tooltip da imagem da carta -->
+'@
+
+# Define o JavaScript padrao do tooltip
+$tooltipJS = @'
+        <!-- Script para o tooltip da imagem da carta -->
         <script>
             // Cria o elemento tooltip uma vez e anexa ao body
             const tooltip = document.createElement('div');
@@ -86,6 +95,43 @@
                 }
             }
         </script>
-    </body>
-</html>
+'@
 
+# Lista todos os arquivos HTML (exceto 2024.html que ja esta correto)
+$htmlFiles = Get-ChildItem -Path "." -Filter "*.html" | Where-Object { $_.Name -ne "2024.html" -and $_.Name -ne "index.html" }
+
+$totalFiles = 0
+$updatedFiles = 0
+
+foreach ($file in $htmlFiles) {
+    $totalFiles++
+    Write-Host "Processando: $($file.Name)"
+    
+    try {
+        # Le o conteudo do arquivo
+        $content = Get-Content -Path $file.FullName -Raw -Encoding UTF8
+        
+        # Substitui o JavaScript do tooltip
+        if ($content -match '(?s)\s*<!--\s*Script para o tooltip.*?</script>') {
+            $content = $content -replace '(?s)\s*<!--\s*Script para o tooltip.*?</script>', $tooltipJS
+            $updatedFiles++
+        } elseif ($content -match '(?s)</body>') {
+            # Se nao tem script do tooltip, adiciona antes do </body>
+            $content = $content -replace '(?s)(\s*)</body>', "`n$tooltipJS`n`$1</body>"
+            $updatedFiles++
+        }
+        
+        # Salva o arquivo atualizado
+        Set-Content -Path $file.FullName -Value $content -Encoding UTF8
+        Write-Host "Atualizado: $($file.Name)"
+        
+    } catch {
+        Write-Host "Erro ao processar $($file.Name): $($_.Exception.Message)"
+    }
+}
+
+Write-Host ""
+Write-Host "Resumo:"
+Write-Host "Total de arquivos processados: $totalFiles"
+Write-Host "Arquivos atualizados com sucesso: $updatedFiles"
+Write-Host "Todos os arquivos agora tem o mesmo padrao de tooltip do 2024.html!"

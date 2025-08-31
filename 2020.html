@@ -23,22 +23,28 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            /* Estilo para a "caixinha" da imagem da carta */
             #card-tooltip {
-                position: absolute;
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
                 display: none;
-                z-index: 1000;
-                border: 2px solid #333;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-                pointer-events: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
             }
             #card-tooltip img {
-                width: 200px;
+                display: block;
+                width: 250px; /* Tamanho da imagem */
                 height: auto;
-                border-radius: 6px;
             }
+            /* Estilo para o nome da carta, para indicar que é interativo */
             .card-name {
                 cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
             }
         </style>
     </head>
@@ -219,8 +225,7 @@
                     </div>
                 </div>
             </main>
-        </div>
-        <!-- Script para o tooltip da imagem da carta -->
+        </div>        <!-- Script para o tooltip da imagem da carta -->
         <script>
             // Cria o elemento tooltip uma vez e anexa ao body
             const tooltip = document.createElement('div');
@@ -232,17 +237,23 @@
             // Pega todos os elementos que devem acionar o tooltip
             const cardSpans = document.querySelectorAll('.card-name');
 
-            // Função para atualizar a posição do tooltip
+            // Funcao para atualizar a posicao do tooltip
             const updateTooltipPosition = (e) => {
+                // Adiciona um pequeno deslocamento para evitar cintilacao/piscar
                 let x = e.clientX + 15;
                 let y = e.clientY + 15;
+
                 const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Impede que o tooltip saia da borda direita da tela
                 if (x + tooltipRect.width > window.innerWidth) {
                     x = e.clientX - tooltipRect.width - 15;
                 }
+                // Impede que o tooltip saia da borda inferior da tela
                 if (y + tooltipRect.height > window.innerHeight) {
                     y = e.clientY - tooltipRect.height - 15;
                 }
+
                 tooltip.style.left = `${x}px`;
                 tooltip.style.top = `${y}px`;
             };
@@ -251,22 +262,28 @@
                 span.addEventListener('mouseover', (e) => {
                     const cardName = span.getAttribute('data-card');
                     if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. E otima para isso.
+                        // A versao 'normal' tem um bom tamanho. 'large' tambem esta disponivel.
                         const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
                         tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensoes corretas antes de mostrar
                         tooltipImage.onload = () => {
                             tooltip.style.display = 'block';
-                            updateTooltipPosition(e);
+                            updateTooltipPosition(e); // Posicao inicial correta
                         }
                     }
                 });
+
                 span.addEventListener('mousemove', updateTooltipPosition);
+
                 span.addEventListener('mouseout', () => {
                     tooltip.style.display = 'none';
-                    tooltipImage.src = '';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rapido
                 });
             });
 
-            // Função para expandir/recolher as listas de deck
+            // Funcao original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {
@@ -276,4 +293,5 @@
         </script>
     </body>
 </html>
+
 
