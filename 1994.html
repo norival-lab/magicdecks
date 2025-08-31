@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8" />
@@ -22,6 +22,23 @@
             .decklist {
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
+            }
+                    #card-tooltip {
+                position: absolute;
+                display: none;
+                z-index: 1000;
+                border: 2px solid #333;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                pointer-events: none;
+            }
+            #card-tooltip img {
+                width: 200px;
+                height: auto;
+                border-radius: 6px;
+            }
+            .card-name {
+                cursor: pointer;
             }
         </style>
     </head>
@@ -529,3 +546,4 @@
         </script>
     </body>
 </html>
+

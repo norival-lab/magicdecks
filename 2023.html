@@ -23,6 +23,29 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
