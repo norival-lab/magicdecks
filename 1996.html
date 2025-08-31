@@ -429,8 +429,53 @@
                 </div>
             </main>
         </div>
-
+        <!-- Script para o tooltip da imagem da carta -->
         <script>
+            // Cria o elemento tooltip uma vez e anexa ao body
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.innerHTML = '<img>';
+            document.body.appendChild(tooltip);
+            const tooltipImage = tooltip.querySelector('img');
+
+            // Pega todos os elementos que devem acionar o tooltip
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+                const tooltipRect = tooltip.getBoundingClientRect();
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e);
+                        }
+                    }
+                });
+                span.addEventListener('mousemove', updateTooltipPosition);
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = '';
+                });
+            });
+
+            // Função para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {
