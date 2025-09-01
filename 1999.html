@@ -23,6 +23,29 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -67,8 +90,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Covetous Dragon<br />4 Great Whale<br />4
-                                Metalworker<br />4 Phyrexian Colossus
+                                <span class="card-name" data-card="Covetous Dragon">4 Covetous Dragon</span><br/>
+                                <span class="card-name" data-card="Great Whale">4 Great Whale</span><br/>
+                                <span class="card-name" data-card="Metalworker">4 Metalworker</span><br/>
+                                <span class="card-name" data-card="Phyrexian Colossus">4 Phyrexian Colossus</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -76,9 +101,12 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Grim Monolith<br />4 Mishra's Helix<br />4
-                                Temporal Aperture<br />4 Thran Dynamo<br />4
-                                Tinker<br />4 Voltaic Key
+                                <span class="card-name" data-card="Grim Monolith">4 Grim Monolith</span><br/>
+                                <span class="card-name" data-card="Mishra's Helix">4 Mishra's Helix</span><br/>
+                                <span class="card-name" data-card="Temporal Aperture">4 Temporal Aperture</span><br/>
+                                <span class="card-name" data-card="Thran Dynamo">4 Thran Dynamo</span><br/>
+                                <span class="card-name" data-card="Tinker">4 Tinker</span><br/>
+                                <span class="card-name" data-card="Voltaic Key">4 Voltaic Key</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -86,8 +114,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Ancient Tomb<br />4 City of Traitors<br />10
-                                Snow-Covered Island
+                                <span class="card-name" data-card="Ancient Tomb">4 Ancient Tomb</span><br/>
+                                <span class="card-name" data-card="City of Traitors">4 City of Traitors</span><br/>
+                                <span class="card-name" data-card="Snow-Covered Island">10 Snow-Covered Island</span>
                             </div>
                         </div>
                     </div>
@@ -113,10 +142,14 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Avalanche Riders<br />4 Falkenrath Gorger<br />4
-                                Goblin Bombardment<br />4 Goblin Patrol<br />4
-                                Gorilla Shaman<br />4 Jackal Pup<br />4 Mogg
-                                Fanatic<br />4 Viashino Sandscout
+                                <span class="card-name" data-card="Avalanche Riders">4 Avalanche Riders</span><br/>
+                                <span class="card-name" data-card="Falkenrath Gorger">4 Falkenrath Gorger</span><br/>
+                                <span class="card-name" data-card="Goblin Bombardment">4 Goblin Bombardment</span><br/>
+                                <span class="card-name" data-card="Goblin Patrol">4 Goblin Patrol</span><br/>
+                                <span class="card-name" data-card="Gorilla Shaman">4 Gorilla Shaman</span><br/>
+                                <span class="card-name" data-card="Jackal Pup">4 Jackal Pup</span><br/>
+                                <span class="card-name" data-card="Mogg Fanatic">4 Mogg Fanatic</span><br/>
+                                <span class="card-name" data-card="Viashino Sandscout">4 Viashino Sandscout</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -124,16 +157,20 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Arc Lightning<br />4 Cursed Scroll<br />4 Fire
-                                Diamond<br />4 Hammer of Bogardan<br />4
-                                Pillage<br />4 Shock<br />4 Stone Rain
+                                <span class="card-name" data-card="Arc Lightning">4 Arc Lightning</span><br/>
+                                <span class="card-name" data-card="Cursed Scroll">4 Cursed Scroll</span><br/>
+                                <span class="card-name" data-card="Fire Diamond">4 Fire Diamond</span><br/>
+                                <span class="card-name" data-card="Hammer of Bogardan">4 Hammer of Bogardan</span><br/>
+                                <span class="card-name" data-card="Pillage">4 Pillage</span><br/>
+                                <span class="card-name" data-card="Shock">4 Shock</span><br/>
+                                <span class="card-name" data-card="Stone Rain">4 Stone Rain</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
                                 Terrenos
                             </h3>
-                            <div class="text-gray-300">20 Mountain</div>
+                            <div class="text-gray-300"><span class="card-name" data-card="Mountain">20 Mountain</span></div>
                         </div>
                     </div>
                     <!-- 3rd Place -->
@@ -157,8 +194,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Avalanche Riders<br />4 Covetous Dragon<br />4
-                                Great Whale<br />1 Karn, Silver Golem
+                                <span class="card-name" data-card="Avalanche Riders">4 Avalanche Riders</span><br/>
+                                <span class="card-name" data-card="Covetous Dragon">4 Covetous Dragon</span><br/>
+                                <span class="card-name" data-card="Great Whale">4 Great Whale</span><br/>
+                                <span class="card-name" data-card="Karn, Silver Golem">1 Karn, Silver Golem</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -166,17 +205,22 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Cursed Scroll<br />4 Fire Diamond<br />4 Grim
-                                Monolith<br />4 Pillage<br />4 Temporal
-                                Aperture<br />4 Thran Dynamo<br />4 Trash for
-                                Treasure<br />4 Voltaic Key<br />4 Wildfire
+                                <span class="card-name" data-card="Cursed Scroll">4 Cursed Scroll</span><br/>
+                                <span class="card-name" data-card="Fire Diamond">4 Fire Diamond</span><br/>
+                                <span class="card-name" data-card="Grim Monolith">4 Grim Monolith</span><br/>
+                                <span class="card-name" data-card="Pillage">4 Pillage</span><br/>
+                                <span class="card-name" data-card="Temporal Aperture">4 Temporal Aperture</span><br/>
+                                <span class="card-name" data-card="Thran Dynamo">4 Thran Dynamo</span><br/>
+                                <span class="card-name" data-card="Trash for Treasure">4 Trash for Treasure</span><br/>
+                                <span class="card-name" data-card="Voltaic Key">4 Voltaic Key</span><br/>
+                                <span class="card-name" data-card="Wildfire">4 Wildfire</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
                                 Terrenos
                             </h3>
-                            <div class="text-gray-300">12 Mountain</div>
+                            <div class="text-gray-300"><span class="card-name" data-card="Mountain">12 Mountain</span></div>
                         </div>
                     </div>
                     <!-- 4th Place -->
@@ -201,7 +245,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Covetous Dragon<br />4 Great Whale
+                                <span class="card-name" data-card="Covetous Dragon">4 Covetous Dragon</span><br/>
+                                <span class="card-name" data-card="Great Whale">4 Great Whale</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -209,11 +254,17 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Brainstorm<br />4 Counterspell<br />4 Fire
-                                Diamond<br />4 Forbid<br />4 Force of Will<br />4
-                                Grim Monolith<br />4 Impulse<br />4 Mana Leak<br />4
-                                Stroke of Genius<br />4 Thran Dynamo<br />4
-                                Wildfire
+                                <span class="card-name" data-card="Brainstorm">4 Brainstorm</span><br/>
+                                <span class="card-name" data-card="Counterspell">4 Counterspell</span><br/>
+                                <span class="card-name" data-card="Fire Diamond">4 Fire Diamond</span><br/>
+                                <span class="card-name" data-card="Forbid">4 Forbid</span><br/>
+                                <span class="card-name" data-card="Force of Will">4 Force of Will</span><br/>
+                                <span class="card-name" data-card="Grim Monolith">4 Grim Monolith</span><br/>
+                                <span class="card-name" data-card="Impulse">4 Impulse</span><br/>
+                                <span class="card-name" data-card="Mana Leak">4 Mana Leak</span><br/>
+                                <span class="card-name" data-card="Stroke of Genius">4 Stroke of Genius</span><br/>
+                                <span class="card-name" data-card="Thran Dynamo">4 Thran Dynamo</span><br/>
+                                <span class="card-name" data-card="Wildfire">4 Wildfire</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -221,8 +272,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                10 Island<br />4 Shivan Reef<br />4 Volcanic
-                                Island
+                                <span class="card-name" data-card="Island">10 Island</span><br/>
+                                <span class="card-name" data-card="Shivan Reef">4 Shivan Reef</span><br/>
+                                <span class="card-name" data-card="Volcanic Island">4 Volcanic Island</span>
                             </div>
                         </div>
                     </div>
@@ -248,8 +300,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Avatar of Woe<br />4 Phyrexian Negator<br />4
-                                Priest of Gix<br />4 Skittering Skirge
+                                <span class="card-name" data-card="Avatar of Woe">4 Avatar of Woe</span><br/>
+                                <span class="card-name" data-card="Phyrexian Negator">4 Phyrexian Negator</span><br/>
+                                <span class="card-name" data-card="Priest of Gix">4 Priest of Gix</span><br/>
+                                <span class="card-name" data-card="Skittering Skirge">4 Skittering Skirge</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -257,9 +311,14 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Animate Dead<br />4 Brainstorm<br />4 Dark
-                                Ritual<br />4 Duress<br />4 Exhume<br />4 Force
-                                of Will<br />4 Frantic Search<br />4 Reanimate
+                                <span class="card-name" data-card="Animate Dead">4 Animate Dead</span><br/>
+                                <span class="card-name" data-card="Brainstorm">4 Brainstorm</span><br/>
+                                <span class="card-name" data-card="Dark Ritual">4 Dark Ritual</span><br/>
+                                <span class="card-name" data-card="Duress">4 Duress</span><br/>
+                                <span class="card-name" data-card="Exhume">4 Exhume</span><br/>
+                                <span class="card-name" data-card="Force of Will">4 Force of Will</span><br/>
+                                <span class="card-name" data-card="Frantic Search">4 Frantic Search</span><br/>
+                                <span class="card-name" data-card="Reanimate">4 Reanimate</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -267,7 +326,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Underground River<br />8 Island<br />8 Swamp
+                                <span class="card-name" data-card="Underground River">4 Underground River</span><br/>
+                                <span class="card-name" data-card="Island">8 Island</span><br/>
+                                <span class="card-name" data-card="Swamp">8 Swamp</span>
                             </div>
                         </div>
                     </div>
@@ -293,7 +354,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Covetous Dragon<br />4 Great Whale
+                                <span class="card-name" data-card="Covetous Dragon">4 Covetous Dragon</span><br/>
+                                <span class="card-name" data-card="Great Whale">4 Great Whale</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -301,11 +363,17 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Brainstorm<br />4 Counterspell<br />4 Fire
-                                Diamond<br />4 Forbid<br />4 Force of Will<br />4
-                                Grim Monolith<br />4 Impulse<br />4 Mana Leak<br />4
-                                Stroke of Genius<br />4 Thran Dynamo<br />4
-                                Wildfire
+                                <span class="card-name" data-card="Brainstorm">4 Brainstorm</span><br/>
+                                <span class="card-name" data-card="Counterspell">4 Counterspell</span><br/>
+                                <span class="card-name" data-card="Fire Diamond">4 Fire Diamond</span><br/>
+                                <span class="card-name" data-card="Forbid">4 Forbid</span><br/>
+                                <span class="card-name" data-card="Force of Will">4 Force of Will</span><br/>
+                                <span class="card-name" data-card="Grim Monolith">4 Grim Monolith</span><br/>
+                                <span class="card-name" data-card="Impulse">4 Impulse</span><br/>
+                                <span class="card-name" data-card="Mana Leak">4 Mana Leak</span><br/>
+                                <span class="card-name" data-card="Stroke of Genius">4 Stroke of Genius</span><br/>
+                                <span class="card-name" data-card="Thran Dynamo">4 Thran Dynamo</span><br/>
+                                <span class="card-name" data-card="Wildfire">4 Wildfire</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -313,8 +381,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                10 Island<br />4 Shivan Reef<br />4 Volcanic
-                                Island
+                                <span class="card-name" data-card="Island">10 Island</span><br/>
+                                <span class="card-name" data-card="Shivan Reef">4 Shivan Reef</span><br/>
+                                <span class="card-name" data-card="Volcanic Island">4 Volcanic Island</span>
                             </div>
                         </div>
                     </div>
@@ -340,7 +409,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Covetous Dragon<br />4 Great Whale
+                                <span class="card-name" data-card="Covetous Dragon">4 Covetous Dragon</span><br/>
+                                <span class="card-name" data-card="Great Whale">4 Great Whale</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -348,11 +418,17 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Brainstorm<br />4 Counterspell<br />4 Fire
-                                Diamond<br />4 Forbid<br />4 Force of Will<br />4
-                                Grim Monolith<br />4 Impulse<br />4 Mana Leak<br />4
-                                Stroke of Genius<br />4 Thran Dynamo<br />4
-                                Wildfire
+                                <span class="card-name" data-card="Brainstorm">4 Brainstorm</span><br/>
+                                <span class="card-name" data-card="Counterspell">4 Counterspell</span><br/>
+                                <span class="card-name" data-card="Fire Diamond">4 Fire Diamond</span><br/>
+                                <span class="card-name" data-card="Forbid">4 Forbid</span><br/>
+                                <span class="card-name" data-card="Force of Will">4 Force of Will</span><br/>
+                                <span class="card-name" data-card="Grim Monolith">4 Grim Monolith</span><br/>
+                                <span class="card-name" data-card="Impulse">4 Impulse</span><br/>
+                                <span class="card-name" data-card="Mana Leak">4 Mana Leak</span><br/>
+                                <span class="card-name" data-card="Stroke of Genius">4 Stroke of Genius</span><br/>
+                                <span class="card-name" data-card="Thran Dynamo">4 Thran Dynamo</span><br/>
+                                <span class="card-name" data-card="Wildfire">4 Wildfire</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -360,8 +436,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                10 Island<br />4 Shivan Reef<br />4 Volcanic
-                                Island
+                                <span class="card-name" data-card="Island">10 Island</span><br/>
+                                <span class="card-name" data-card="Shivan Reef">4 Shivan Reef</span><br/>
+                                <span class="card-name" data-card="Volcanic Island">4 Volcanic Island</span>
                             </div>
                         </div>
                     </div>
@@ -386,12 +463,19 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Abeyance<br />4 Brainstorm<br />4 Candelabra
-                                of Tawnos<br />4 Capsize<br />4 Counterspell<br />4
-                                Force of Will<br />4 Impulse<br />4 Mana
-                                Vault<br />4 Mind Over Matter<br />4 Mox
-                                Diamond<br />4 Stroke of Genius<br />4 Time
-                                Spiral<br />4 Windfall
+                                <span class="card-name" data-card="Abeyance">4 Abeyance</span><br/>
+                                <span class="card-name" data-card="Brainstorm">4 Brainstorm</span><br/>
+                                <span class="card-name" data-card="Candelabra of Tawnos">4 Candelabra of Tawnos</span><br/>
+                                <span class="card-name" data-card="Capsize">4 Capsize</span><br/>
+                                <span class="card-name" data-card="Counterspell">4 Counterspell</span><br/>
+                                <span class="card-name" data-card="Force of Will">4 Force of Will</span><br/>
+                                <span class="card-name" data-card="Impulse">4 Impulse</span><br/>
+                                <span class="card-name" data-card="Mana Vault">4 Mana Vault</span><br/>
+                                <span class="card-name" data-card="Mind Over Matter">4 Mind Over Matter</span><br/>
+                                <span class="card-name" data-card="Mox Diamond">4 Mox Diamond</span><br/>
+                                <span class="card-name" data-card="Stroke of Genius">4 Stroke of Genius</span><br/>
+                                <span class="card-name" data-card="Time Spiral">4 Time Spiral</span><br/>
+                                <span class="card-name" data-card="Windfall">4 Windfall</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -399,7 +483,8 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Tolarian Academy<br />10 Island
+                                <span class="card-name" data-card="Tolarian Academy">4 Tolarian Academy</span><br/>
+                                <span class="card-name" data-card="Island">10 Island</span>
                             </div>
                         </div>
                     </div>
@@ -413,6 +498,63 @@
                     element.classList.toggle("hidden");
                 }
             }
+
+            // Script para o tooltip da imagem da carta
+            // Cria o elemento tooltip uma vez e anexa ao body
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.innerHTML = '<img>';
+            document.body.appendChild(tooltip);
+            const tooltipImage = tooltip.querySelector('img');
+
+            // Pega todos os elementos que devem acionar o tooltip
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                // Adiciona um pequeno deslocamento para evitar cintilação/piscar
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+
+                const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
         </script>
     </body>
 </html>

@@ -23,6 +23,30 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
+
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -67,7 +91,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Nightscape Familiar<br />4 Psychatog
+                                <span class="card-name" data-card="Nightscape Familiar">4 Nightscape Familiar</span><br/>
+                                <span class="card-name" data-card="Psychatog">4 Psychatog</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -75,13 +100,21 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Chainer's Edict<br />4 Circular Logic<br />4
-                                Compulsion<br />4 Counterspell<br />4 Cunning
-                                Wish<br />4 Deep Analysis<br />4 Duress<br />4
-                                Fact or Fiction<br />4 Force Spike<br />4
-                                Innocent Blood<br />4 Memory Lapse<br />4
-                                Repulse<br />4 Smother<br />4 Standstill<br />4
-                                Upheaval
+                                <span class="card-name" data-card="Chainer's Edict">4 Chainer's Edict</span><br/>
+                                <span class="card-name" data-card="Circular Logic">4 Circular Logic</span><br/>
+                                <span class="card-name" data-card="Compulsion">4 Compulsion</span><br/>
+                                <span class="card-name" data-card="Counterspell">4 Counterspell</span><br/>
+                                <span class="card-name" data-card="Cunning Wish">4 Cunning Wish</span><br/>
+                                <span class="card-name" data-card="Deep Analysis">4 Deep Analysis</span><br/>
+                                <span class="card-name" data-card="Duress">4 Duress</span><br/>
+                                <span class="card-name" data-card="Fact or Fiction">4 Fact or Fiction</span><br/>
+                                <span class="card-name" data-card="Force Spike">4 Force Spike</span><br/>
+                                <span class="card-name" data-card="Innocent Blood">4 Innocent Blood</span><br/>
+                                <span class="card-name" data-card="Memory Lapse">4 Memory Lapse</span><br/>
+                                <span class="card-name" data-card="Repulse">4 Repulse</span><br/>
+                                <span class="card-name" data-card="Smother">4 Smother</span><br/>
+                                <span class="card-name" data-card="Standstill">4 Standstill</span><br/>
+                                <span class="card-name" data-card="Upheaval">4 Upheaval</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -89,9 +122,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Cephalid Coliseum<br />4 Darkwater
-                                Catacombs<br />10 Island<br />6 Swamp<br />4
-                                Underground River
+                                <span class="card-name" data-card="Cephalid Coliseum">4 Cephalid Coliseum</span><br/>
+                                <span class="card-name" data-card="Darkwater Catacombs">4 Darkwater Catacombs</span><br/>
+                                <span class="card-name" data-card="Island">10 Island</span><br/>
+                                <span class="card-name" data-card="Swamp">6 Swamp</span><br/>
+                                <span class="card-name" data-card="Underground River">4 Underground River</span>
                             </div>
                         </div>
                     </div>
@@ -117,8 +152,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Faceless Butcher<br />4 Nantuko Shade<br />4
-                                Visara the Dreadful
+                                <span class="card-name" data-card="Faceless Butcher">4 Faceless Butcher</span><br/>
+                                <span class="card-name" data-card="Nantuko Shade">4 Nantuko Shade</span><br/>
+                                <span class="card-name" data-card="Visara the Dreadful">4 Visara the Dreadful</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -126,11 +162,17 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Chainer's Edict<br />4 Corrupt<br />4 Diabolic
-                                Tutor<br />4 Duress<br />4 Edict<br />4 Haunting
-                                Echoes<br />4 Innocent Blood<br />4 Mind
-                                Sludge<br />4 Mutilate<br />4 Rancid Earth<br />4
-                                Tainted Pact
+                                <span class="card-name" data-card="Chainer's Edict">4 Chainer's Edict</span><br/>
+                                <span class="card-name" data-card="Corrupt">4 Corrupt</span><br/>
+                                <span class="card-name" data-card="Diabolic Tutor">4 Diabolic Tutor</span><br/>
+                                <span class="card-name" data-card="Duress">4 Duress</span><br/>
+                                <span class="card-name" data-card="Edict">4 Edict</span><br/>
+                                <span class="card-name" data-card="Haunting Echoes">4 Haunting Echoes</span><br/>
+                                <span class="card-name" data-card="Innocent Blood">4 Innocent Blood</span><br/>
+                                <span class="card-name" data-card="Mind Sludge">4 Mind Sludge</span><br/>
+                                <span class="card-name" data-card="Mutilate">4 Mutilate</span><br/>
+                                <span class="card-name" data-card="Rancid Earth">4 Rancid Earth</span><br/>
+                                <span class="card-name" data-card="Tainted Pact">4 Tainted Pact</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -138,7 +180,8 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Cabal Coffers<br />24 Swamp
+                                <span class="card-name" data-card="Cabal Coffers">4 Cabal Coffers</span><br/>
+                                <span class="card-name" data-card="Swamp">24 Swamp</span>
                             </div>
                         </div>
                     </div>
@@ -164,10 +207,13 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Anurid Brushhopper<br />4 Birds of Paradise<br />4
-                                Flametongue Kavu<br />4 Grim Lavamancer<br />4
-                                Llanowar Elves<br />4 Phantom Centaur<br />4
-                                Wild Mongrel
+                                <span class="card-name" data-card="Anurid Brushhopper">4 Anurid Brushhopper</span><br/>
+                                <span class="card-name" data-card="Birds of Paradise">4 Birds of Paradise</span><br/>
+                                <span class="card-name" data-card="Flametongue Kavu">4 Flametongue Kavu</span><br/>
+                                <span class="card-name" data-card="Grim Lavamancer">4 Grim Lavamancer</span><br/>
+                                <span class="card-name" data-card="Llanowar Elves">4 Llanowar Elves</span><br/>
+                                <span class="card-name" data-card="Phantom Centaur">4 Phantom Centaur</span><br/>
+                                <span class="card-name" data-card="Wild Mongrel">4 Wild Mongrel</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -175,9 +221,12 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Call of the Herd<br />4 Elephant Guide<br />4
-                                Firebolt<br />4 Glorious Anthem<br />4 Roar of
-                                the Wurm<br />4 Violent Eruption
+                                <span class="card-name" data-card="Call of the Herd">4 Call of the Herd</span><br/>
+                                <span class="card-name" data-card="Elephant Guide">4 Elephant Guide</span><br/>
+                                <span class="card-name" data-card="Firebolt">4 Firebolt</span><br/>
+                                <span class="card-name" data-card="Glorious Anthem">4 Glorious Anthem</span><br/>
+                                <span class="card-name" data-card="Roar of the Wurm">4 Roar of the Wurm</span><br/>
+                                <span class="card-name" data-card="Violent Eruption">4 Violent Eruption</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -185,9 +234,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Brushland<br />4 Karplusan Forest<br />4
-                                Mossfire Valley<br />4 Wooded Foothills<br />4
-                                Yavimaya Coast
+                                <span class="card-name" data-card="Brushland">4 Brushland</span><br/>
+                                <span class="card-name" data-card="Karplusan Forest">4 Karplusan Forest</span><br/>
+                                <span class="card-name" data-card="Mossfire Valley">4 Mossfire Valley</span><br/>
+                                <span class="card-name" data-card="Wooded Foothills">4 Wooded Foothills</span><br/>
+                                <span class="card-name" data-card="Yavimaya Coast">4 Yavimaya Coast</span>
                             </div>
                         </div>
                     </div>
@@ -213,8 +264,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Basking Rootwalla<br />4 Nimble Mongoose<br />4
-                                Werebear<br />4 Wild Mongrel
+                                <span class="card-name" data-card="Basking Rootwalla">4 Basking Rootwalla</span><br/>
+                                <span class="card-name" data-card="Nimble Mongoose">4 Nimble Mongoose</span><br/>
+                                <span class="card-name" data-card="Werebear">4 Werebear</span><br/>
+                                <span class="card-name" data-card="Wild Mongrel">4 Wild Mongrel</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -222,9 +275,14 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Careful Study<br />4 Counterspell<br />4
-                                Daze<br />4 Force Spike<br />4 Gush<br />4 Land
-                                Grant<br />4 Mental Note<br />4 Standstill
+                                <span class="card-name" data-card="Careful Study">4 Careful Study</span><br/>
+                                <span class="card-name" data-card="Counterspell">4 Counterspell</span><br/>
+                                <span class="card-name" data-card="Daze">4 Daze</span><br/>
+                                <span class="card-name" data-card="Force Spike">4 Force Spike</span><br/>
+                                <span class="card-name" data-card="Gush">4 Gush</span><br/>
+                                <span class="card-name" data-card="Land Grant">4 Land Grant</span><br/>
+                                <span class="card-name" data-card="Mental Note">4 Mental Note</span><br/>
+                                <span class="card-name" data-card="Standstill">4 Standstill</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -232,7 +290,8 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                10 Island<br />6 Forest
+                                <span class="card-name" data-card="Island">10 Island</span><br/>
+                                <span class="card-name" data-card="Forest">6 Forest</span>
                             </div>
                         </div>
                     </div>
@@ -258,8 +317,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Basking Rootwalla<br />4 Nimble Mongoose<br />4
-                                Werebear<br />4 Wild Mongrel
+                                <span class="card-name" data-card="Basking Rootwalla">4 Basking Rootwalla</span><br/>
+                                <span class="card-name" data-card="Nimble Mongoose">4 Nimble Mongoose</span><br/>
+                                <span class="card-name" data-card="Werebear">4 Werebear</span><br/>
+                                <span class="card-name" data-card="Wild Mongrel">4 Wild Mongrel</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -267,9 +328,14 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Careful Study<br />4 Counterspell<br />4
-                                Daze<br />4 Force Spike<br />4 Gush<br />4 Land
-                                Grant<br />4 Mental Note<br />4 Standstill
+                                <span class="card-name" data-card="Careful Study">4 Careful Study</span><br/>
+                                <span class="card-name" data-card="Counterspell">4 Counterspell</span><br/>
+                                <span class="card-name" data-card="Daze">4 Daze</span><br/>
+                                <span class="card-name" data-card="Force Spike">4 Force Spike</span><br/>
+                                <span class="card-name" data-card="Gush">4 Gush</span><br/>
+                                <span class="card-name" data-card="Land Grant">4 Land Grant</span><br/>
+                                <span class="card-name" data-card="Mental Note">4 Mental Note</span><br/>
+                                <span class="card-name" data-card="Standstill">4 Standstill</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -277,7 +343,8 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                10 Island<br />6 Forest
+                                <span class="card-name" data-card="Island">10 Island</span><br/>
+                                <span class="card-name" data-card="Forest">6 Forest</span>
                             </div>
                         </div>
                     </div>
@@ -303,7 +370,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Nightscape Familiar<br />4 Psychatog
+                                <span class="card-name" data-card="Nightscape Familiar">4 Nightscape Familiar</span><br/>
+                                <span class="card-name" data-card="Psychatog">4 Psychatog</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -311,13 +379,21 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Chainer's Edict<br />4 Circular Logic<br />4
-                                Compulsion<br />4 Counterspell<br />4 Cunning
-                                Wish<br />4 Deep Analysis<br />4 Duress<br />4
-                                Fact or Fiction<br />4 Force Spike<br />4
-                                Innocent Blood<br />4 Memory Lapse<br />4
-                                Repulse<br />4 Smother<br />4 Standstill<br />4
-                                Upheaval
+                                <span class="card-name" data-card="Chainer's Edict">4 Chainer's Edict</span><br/>
+                                <span class="card-name" data-card="Circular Logic">4 Circular Logic</span><br/>
+                                <span class="card-name" data-card="Compulsion">4 Compulsion</span><br/>
+                                <span class="card-name" data-card="Counterspell">4 Counterspell</span><br/>
+                                <span class="card-name" data-card="Cunning Wish">4 Cunning Wish</span><br/>
+                                <span class="card-name" data-card="Deep Analysis">4 Deep Analysis</span><br/>
+                                <span class="card-name" data-card="Duress">4 Duress</span><br/>
+                                <span class="card-name" data-card="Fact or Fiction">4 Fact or Fiction</span><br/>
+                                <span class="card-name" data-card="Force Spike">4 Force Spike</span><br/>
+                                <span class="card-name" data-card="Innocent Blood">4 Innocent Blood</span><br/>
+                                <span class="card-name" data-card="Memory Lapse">4 Memory Lapse</span><br/>
+                                <span class="card-name" data-card="Repulse">4 Repulse</span><br/>
+                                <span class="card-name" data-card="Smother">4 Smother</span><br/>
+                                <span class="card-name" data-card="Standstill">4 Standstill</span><br/>
+                                <span class="card-name" data-card="Upheaval">4 Upheaval</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -325,9 +401,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Cephalid Coliseum<br />4 Darkwater
-                                Catacombs<br />10 Island<br />6 Swamp<br />4
-                                Underground River
+                                <span class="card-name" data-card="Cephalid Coliseum">4 Cephalid Coliseum</span><br/>
+                                <span class="card-name" data-card="Darkwater Catacombs">4 Darkwater Catacombs</span><br/>
+                                <span class="card-name" data-card="Island">10 Island</span><br/>
+                                <span class="card-name" data-card="Swamp">6 Swamp</span><br/>
+                                <span class="card-name" data-card="Underground River">4 Underground River</span>
                             </div>
                         </div>
                     </div>
@@ -353,7 +431,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Nightscape Familiar<br />4 Psychatog
+                                <span class="card-name" data-card="Nightscape Familiar">4 Nightscape Familiar</span><br/>
+                                <span class="card-name" data-card="Psychatog">4 Psychatog</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -361,13 +440,21 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Chainer's Edict<br />4 Circular Logic<br />4
-                                Compulsion<br />4 Counterspell<br />4 Cunning
-                                Wish<br />4 Deep Analysis<br />4 Duress<br />4
-                                Fact or Fiction<br />4 Force Spike<br />4
-                                Innocent Blood<br />4 Memory Lapse<br />4
-                                Repulse<br />4 Smother<br />4 Standstill<br />4
-                                Upheaval
+                                <span class="card-name" data-card="Chainer's Edict">4 Chainer's Edict</span><br/>
+                                <span class="card-name" data-card="Circular Logic">4 Circular Logic</span><br/>
+                                <span class="card-name" data-card="Compulsion">4 Compulsion</span><br/>
+                                <span class="card-name" data-card="Counterspell">4 Counterspell</span><br/>
+                                <span class="card-name" data-card="Cunning Wish">4 Cunning Wish</span><br/>
+                                <span class="card-name" data-card="Deep Analysis">4 Deep Analysis</span><br/>
+                                <span class="card-name" data-card="Duress">4 Duress</span><br/>
+                                <span class="card-name" data-card="Fact or Fiction">4 Fact or Fiction</span><br/>
+                                <span class="card-name" data-card="Force Spike">4 Force Spike</span><br/>
+                                <span class="card-name" data-card="Innocent Blood">4 Innocent Blood</span><br/>
+                                <span class="card-name" data-card="Memory Lapse">4 Memory Lapse</span><br/>
+                                <span class="card-name" data-card="Repulse">4 Repulse</span><br/>
+                                <span class="card-name" data-card="Smother">4 Smother</span><br/>
+                                <span class="card-name" data-card="Standstill">4 Standstill</span><br/>
+                                <span class="card-name" data-card="Upheaval">4 Upheaval</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -375,9 +462,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Cephalid Coliseum<br />4 Darkwater
-                                Catacombs<br />10 Island<br />6 Swamp<br />4
-                                Underground River
+                                <span class="card-name" data-card="Cephalid Coliseum">4 Cephalid Coliseum</span><br/>
+                                <span class="card-name" data-card="Darkwater Catacombs">4 Darkwater Catacombs</span><br/>
+                                <span class="card-name" data-card="Island">10 Island</span><br/>
+                                <span class="card-name" data-card="Swamp">6 Swamp</span><br/>
+                                <span class="card-name" data-card="Underground River">4 Underground River</span>
                             </div>
                         </div>
                     </div>
@@ -402,10 +491,13 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Anurid Brushhopper<br />4 Birds of Paradise<br />4
-                                Flametongue Kavu<br />4 Grim Lavamancer<br />4
-                                Llanowar Elves<br />4 Phantom Centaur<br />4
-                                Wild Mongrel
+                                <span class="card-name" data-card="Anurid Brushhopper">4 Anurid Brushhopper</span><br/>
+                                <span class="card-name" data-card="Birds of Paradise">4 Birds of Paradise</span><br/>
+                                <span class="card-name" data-card="Flametongue Kavu">4 Flametongue Kavu</span><br/>
+                                <span class="card-name" data-card="Grim Lavamancer">4 Grim Lavamancer</span><br/>
+                                <span class="card-name" data-card="Llanowar Elves">4 Llanowar Elves</span><br/>
+                                <span class="card-name" data-card="Phantom Centaur">4 Phantom Centaur</span><br/>
+                                <span class="card-name" data-card="Wild Mongrel">4 Wild Mongrel</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -413,9 +505,12 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Call of the Herd<br />4 Elephant Guide<br />4
-                                Firebolt<br />4 Glorious Anthem<br />4 Roar of
-                                the Wurm<br />4 Violent Eruption
+                                <span class="card-name" data-card="Call of the Herd">4 Call of the Herd</span><br/>
+                                <span class="card-name" data-card="Elephant Guide">4 Elephant Guide</span><br/>
+                                <span class="card-name" data-card="Firebolt">4 Firebolt</span><br/>
+                                <span class="card-name" data-card="Glorious Anthem">4 Glorious Anthem</span><br/>
+                                <span class="card-name" data-card="Roar of the Wurm">4 Roar of the Wurm</span><br/>
+                                <span class="card-name" data-card="Violent Eruption">4 Violent Eruption</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -423,9 +518,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Brushland<br />4 Karplusan Forest<br />4
-                                Mossfire Valley<br />4 Wooded Foothills<br />4
-                                Yavimaya Coast
+                                <span class="card-name" data-card="Brushland">4 Brushland</span><br/>
+                                <span class="card-name" data-card="Karplusan Forest">4 Karplusan Forest</span><br/>
+                                <span class="card-name" data-card="Mossfire Valley">4 Mossfire Valley</span><br/>
+                                <span class="card-name" data-card="Wooded Foothills">4 Wooded Foothills</span><br/>
+                                <span class="card-name" data-card="Yavimaya Coast">4 Yavimaya Coast</span>
                             </div>
                         </div>
                     </div>
@@ -433,6 +530,71 @@
             </main>
         </div>
         <script>
+            function toggleVisibility(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.classList.toggle("hidden");
+                }
+            }
+
+            // Script para o tooltip da imagem da carta
+            // Cria o elemento tooltip uma vez e anexa ao body
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.innerHTML = '<img>';
+            document.body.appendChild(tooltip);
+            const tooltipImage = tooltip.querySelector('img');
+
+            // Pega todos os elementos que devem acionar o tooltip
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                // Adiciona um pequeno deslocamento para evitar cintilação/piscar
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+
+                const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
+
+            // Função original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {

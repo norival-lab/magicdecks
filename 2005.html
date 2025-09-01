@@ -23,6 +23,31 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -68,9 +93,12 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Elves of Deep
-                                Shadow<br />4 Loxodon Hierarch<br />4 Selesnya
-                                Guildmage<br />4 Watchwolf<br />4 Wood Elves
+                                <span class="card-name" data-card="Birds of Paradise">4 Birds of Paradise</span><br/>
+                                <span class="card-name" data-card="Elves of Deep Shadow">4 Elves of Deep Shadow</span><br/>
+                                <span class="card-name" data-card="Loxodon Hierarch">4 Loxodon Hierarch</span><br/>
+                                <span class="card-name" data-card="Selesnya Guildmage">4 Selesnya Guildmage</span><br/>
+                                <span class="card-name" data-card="Watchwolf">4 Watchwolf</span><br/>
+                                <span class="card-name" data-card="Wood Elves">4 Wood Elves</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -78,9 +106,10 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Congregation at Dawn<br />4 Glare of
-                                Subdual<br />4 Selesnya Signet<br />4 Umezawa's
-                                Jitte
+                                <span class="card-name" data-card="Congregation at Dawn">4 Congregation at Dawn</span><br/>
+                                <span class="card-name" data-card="Glare of Subdual">4 Glare of Subdual</span><br/>
+                                <span class="card-name" data-card="Selesnya Signet">4 Selesnya Signet</span><br/>
+                                <span class="card-name" data-card="Umezawa's Jitte">4 Umezawa's Jitte</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -88,9 +117,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Brushland<br />4 Overgrown Tomb<br />4
-                                Savannah<br />4 Temple Garden<br />4 Vitu-Ghazi,
-                                the City-Tree
+                                <span class="card-name" data-card="Brushland">4 Brushland</span><br/>
+                                <span class="card-name" data-card="Overgrown Tomb">4 Overgrown Tomb</span><br/>
+                                <span class="card-name" data-card="Savannah">4 Savannah</span><br/>
+                                <span class="card-name" data-card="Temple Garden">4 Temple Garden</span><br/>
+                                <span class="card-name" data-card="Vitu-Ghazi, the City-Tree">4 Vitu-Ghazi, the City-Tree</span>
                             </div>
                         </div>
                     </div>
@@ -116,13 +147,17 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Elves of Deep
-                                Shadow<br />4 Hana Kami<br />4 Ink-Eyes, Servant
-                                of Oni<br />4 Kagemaro, First to Suffer<br />4
-                                Kokusho, the Evening Star<br />4 Loxodon
-                                Hierarch<br />4 Meloku the Clouded Mirror<br />4
-                                Myojin of Seeing Winds<br />4 Sakura-Tribe
-                                Elder<br />4 Yosei, the Morning Star
+                                <span class="card-name" data-card="Birds of Paradise">4 Birds of Paradise</span><br/>
+                                <span class="card-name" data-card="Elves of Deep Shadow">4 Elves of Deep Shadow</span><br/>
+                                <span class="card-name" data-card="Hana Kami">4 Hana Kami</span><br/>
+                                <span class="card-name" data-card="Ink-Eyes, Servant of Oni">4 Ink-Eyes, Servant of Oni</span><br/>
+                                <span class="card-name" data-card="Kagemaro, First to Suffer">4 Kagemaro, First to Suffer</span><br/>
+                                <span class="card-name" data-card="Kokusho, the Evening Star">4 Kokusho, the Evening Star</span><br/>
+                                <span class="card-name" data-card="Loxodon Hierarch">4 Loxodon Hierarch</span><br/>
+                                <span class="card-name" data-card="Meloku the Clouded Mirror">4 Meloku the Clouded Mirror</span><br/>
+                                <span class="card-name" data-card="Myojin of Seeing Winds">4 Myojin of Seeing Winds</span><br/>
+                                <span class="card-name" data-card="Sakura-Tribe Elder">4 Sakura-Tribe Elder</span><br/>
+                                <span class="card-name" data-card="Yosei, the Morning Star">4 Yosei, the Morning Star</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -130,13 +165,19 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Circle of Protection: Red<br />4 Cranial
-                                Extraction<br />4 Enduring Ideal<br />4 Gifts
-                                Ungiven<br />4 Goryo's Vengeance<br />4 Greater
-                                Good<br />4 Heartbeat of Spring<br />4 Kodama's
-                                Reach<br />4 Putrefy<br />4 Remand<br />4
-                                Sensei's Divining Top<br />4 Thoughts of Ruin<br />4
-                                Umezawa's Jitte
+                                <span class="card-name" data-card="Circle of Protection: Red">4 Circle of Protection: Red</span><br/>
+                                <span class="card-name" data-card="Cranial Extraction">4 Cranial Extraction</span><br/>
+                                <span class="card-name" data-card="Enduring Ideal">4 Enduring Ideal</span><br/>
+                                <span class="card-name" data-card="Gifts Ungiven">4 Gifts Ungiven</span><br/>
+                                <span class="card-name" data-card="Goryo's Vengeance">4 Goryo's Vengeance</span><br/>
+                                <span class="card-name" data-card="Greater Good">4 Greater Good</span><br/>
+                                <span class="card-name" data-card="Heartbeat of Spring">4 Heartbeat of Spring</span><br/>
+                                <span class="card-name" data-card="Kodama's Reach">4 Kodama's Reach</span><br/>
+                                <span class="card-name" data-card="Putrefy">4 Putrefy</span><br/>
+                                <span class="card-name" data-card="Remand">4 Remand</span><br/>
+                                <span class="card-name" data-card="Sensei's Divining Top">4 Sensei's Divining Top</span><br/>
+                                <span class="card-name" data-card="Thoughts of Ruin">4 Thoughts of Ruin</span><br/>
+                                <span class="card-name" data-card="Umezawa's Jitte">4 Umezawa's Jitte</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -144,14 +185,22 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />4 Breeding Pool<br />4
-                                Brushland<br />4 Hallowed Fountain<br />4
-                                Overgrown Tomb<br />4 Savannah<br />4 Shivan
-                                Reef<br />4 Steam Vents<br />4 Stomping
-                                Ground<br />4 Temple Garden<br />4 Tropical
-                                Island<br />4 Tundra<br />4 Underground Sea<br />4
-                                Volcanic Island<br />4 Watery Grave<br />4
-                                Yavimaya Coast
+                                <span class="card-name" data-card="Adarkar Wastes">4 Adarkar Wastes</span><br/>
+                                <span class="card-name" data-card="Breeding Pool">4 Breeding Pool</span><br/>
+                                <span class="card-name" data-card="Brushland">4 Brushland</span><br/>
+                                <span class="card-name" data-card="Hallowed Fountain">4 Hallowed Fountain</span><br/>
+                                <span class="card-name" data-card="Overgrown Tomb">4 Overgrown Tomb</span><br/>
+                                <span class="card-name" data-card="Savannah">4 Savannah</span><br/>
+                                <span class="card-name" data-card="Shivan Reef">4 Shivan Reef</span><br/>
+                                <span class="card-name" data-card="Steam Vents">4 Steam Vents</span><br/>
+                                <span class="card-name" data-card="Stomping Ground">4 Stomping Ground</span><br/>
+                                <span class="card-name" data-card="Temple Garden">4 Temple Garden</span><br/>
+                                <span class="card-name" data-card="Tropical Island">4 Tropical Island</span><br/>
+                                <span class="card-name" data-card="Tundra">4 Tundra</span><br/>
+                                <span class="card-name" data-card="Underground Sea">4 Underground Sea</span><br/>
+                                <span class="card-name" data-card="Volcanic Island">4 Volcanic Island</span><br/>
+                                <span class="card-name" data-card="Watery Grave">4 Watery Grave</span><br/>
+                                <span class="card-name" data-card="Yavimaya Coast">4 Yavimaya Coast</span>
                             </div>
                         </div>
                     </div>
@@ -179,8 +228,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Jushi Apprentice<br />4 Meloku the Clouded
-                                Mirror<br />4 Morphling
+                                <span class="card-name" data-card="Jushi Apprentice">4 Jushi Apprentice</span><br/>
+                                <span class="card-name" data-card="Meloku the Clouded Mirror">4 Meloku the Clouded Mirror</span><br/>
+                                <span class="card-name" data-card="Morphling">4 Morphling</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -188,15 +238,24 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Boomerang<br />4 Circle of Protection: Red<br />4
-                                Condescend<br />4 Counterspell<br />4 Crucible
-                                of Worlds<br />4 Disrupting Shoal<br />4 Dust
-                                Bowl<br />4 Fact or Fiction<br />4 Force
-                                Spike<br />4 Hinder<br />4 Powder Keg<br />4
-                                Psychatog<br />4 Remand<br />4 Sensei's Divining
-                                Top<br />4 Thirst for Knowledge<br />4 Umezawa's
-                                Jitte<br />4 Vedalken Shackles<br />4 Wrath of
-                                God
+                                <span class="card-name" data-card="Boomerang">4 Boomerang</span><br/>
+                                <span class="card-name" data-card="Circle of Protection: Red">4 Circle of Protection: Red</span><br/>
+                                <span class="card-name" data-card="Condescend">4 Condescend</span><br/>
+                                <span class="card-name" data-card="Counterspell">4 Counterspell</span><br/>
+                                <span class="card-name" data-card="Crucible of Worlds">4 Crucible of Worlds</span><br/>
+                                <span class="card-name" data-card="Disrupting Shoal">4 Disrupting Shoal</span><br/>
+                                <span class="card-name" data-card="Dust Bowl">4 Dust Bowl</span><br/>
+                                <span class="card-name" data-card="Fact or Fiction">4 Fact or Fiction</span><br/>
+                                <span class="card-name" data-card="Force Spike">4 Force Spike</span><br/>
+                                <span class="card-name" data-card="Hinder">4 Hinder</span><br/>
+                                <span class="card-name" data-card="Powder Keg">4 Powder Keg</span><br/>
+                                <span class="card-name" data-card="Psychatog">4 Psychatog</span><br/>
+                                <span class="card-name" data-card="Remand">4 Remand</span><br/>
+                                <span class="card-name" data-card="Sensei's Divining Top">4 Sensei's Divining Top</span><br/>
+                                <span class="card-name" data-card="Thirst for Knowledge">4 Thirst for Knowledge</span><br/>
+                                <span class="card-name" data-card="Umezawa's Jitte">4 Umezawa's Jitte</span><br/>
+                                <span class="card-name" data-card="Vedalken Shackles">4 Vedalken Shackles</span><br/>
+                                <span class="card-name" data-card="Wrath of God">4 Wrath of God</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -204,12 +263,17 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />4 Desert<br />4 Flooded
-                                Strand<br />4 Minamo, School at Water's Edge<br />4
-                                Mishra's Factory<br />4 Oboro, Palace in the
-                                Clouds<br />4 Polluted Delta<br />4 Rishadan
-                                Port<br />10 Snow-Covered Island<br />4 Stalking
-                                Stones<br />4 Wayfarer's Bauble
+                                <span class="card-name" data-card="Adarkar Wastes">4 Adarkar Wastes</span><br/>
+                                <span class="card-name" data-card="Desert">4 Desert</span><br/>
+                                <span class="card-name" data-card="Flooded Strand">4 Flooded Strand</span><br/>
+                                <span class="card-name" data-card="Minamo, School at Water's Edge">4 Minamo, School at Water's Edge</span><br/>
+                                <span class="card-name" data-card="Mishra's Factory">4 Mishra's Factory</span><br/>
+                                <span class="card-name" data-card="Oboro, Palace in the Clouds">4 Oboro, Palace in the Clouds</span><br/>
+                                <span class="card-name" data-card="Polluted Delta">4 Polluted Delta</span><br/>
+                                <span class="card-name" data-card="Rishadan Port">4 Rishadan Port</span><br/>
+                                <span class="card-name" data-card="Snow-Covered Island">10 Snow-Covered Island</span><br/>
+                                <span class="card-name" data-card="Stalking Stones">4 Stalking Stones</span><br/>
+                                <span class="card-name" data-card="Wayfarer's Bauble">4 Wayfarer's Bauble</span>
                             </div>
                         </div>
                     </div>
@@ -235,13 +299,17 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Elves of Deep
-                                Shadow<br />4 Hana Kami<br />4 Ink-Eyes, Servant
-                                of Oni<br />4 Kagemaro, First to Suffer<br />4
-                                Kokusho, the Evening Star<br />4 Loxodon
-                                Hierarch<br />4 Meloku the Clouded Mirror<br />4
-                                Myojin of Seeing Winds<br />4 Sakura-Tribe
-                                Elder<br />4 Yosei, the Morning Star
+                                <span class="card-name" data-card="Birds of Paradise">4 Birds of Paradise</span><br/>
+                                <span class="card-name" data-card="Elves of Deep Shadow">4 Elves of Deep Shadow</span><br/>
+                                <span class="card-name" data-card="Hana Kami">4 Hana Kami</span><br/>
+                                <span class="card-name" data-card="Ink-Eyes, Servant of Oni">4 Ink-Eyes, Servant of Oni</span><br/>
+                                <span class="card-name" data-card="Kagemaro, First to Suffer">4 Kagemaro, First to Suffer</span><br/>
+                                <span class="card-name" data-card="Kokusho, the Evening Star">4 Kokusho, the Evening Star</span><br/>
+                                <span class="card-name" data-card="Loxodon Hierarch">4 Loxodon Hierarch</span><br/>
+                                <span class="card-name" data-card="Meloku the Clouded Mirror">4 Meloku the Clouded Mirror</span><br/>
+                                <span class="card-name" data-card="Myojin of Seeing Winds">4 Myojin of Seeing Winds</span><br/>
+                                <span class="card-name" data-card="Sakura-Tribe Elder">4 Sakura-Tribe Elder</span><br/>
+                                <span class="card-name" data-card="Yosei, the Morning Star">4 Yosei, the Morning Star</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -249,13 +317,19 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Circle of Protection: Red<br />4 Cranial
-                                Extraction<br />4 Enduring Ideal<br />4 Gifts
-                                Ungiven<br />4 Goryo's Vengeance<br />4 Greater
-                                Good<br />4 Heartbeat of Spring<br />4 Kodama's
-                                Reach<br />4 Putrefy<br />4 Remand<br />4
-                                Sensei's Divining Top<br />4 Thoughts of Ruin<br />4
-                                Umezawa's Jitte
+                                <span class="card-name" data-card="Circle of Protection: Red">4 Circle of Protection: Red</span><br/>
+                                <span class="card-name" data-card="Cranial Extraction">4 Cranial Extraction</span><br/>
+                                <span class="card-name" data-card="Enduring Ideal">4 Enduring Ideal</span><br/>
+                                <span class="card-name" data-card="Gifts Ungiven">4 Gifts Ungiven</span><br/>
+                                <span class="card-name" data-card="Goryo's Vengeance">4 Goryo's Vengeance</span><br/>
+                                <span class="card-name" data-card="Greater Good">4 Greater Good</span><br/>
+                                <span class="card-name" data-card="Heartbeat of Spring">4 Heartbeat of Spring</span><br/>
+                                <span class="card-name" data-card="Kodama's Reach">4 Kodama's Reach</span><br/>
+                                <span class="card-name" data-card="Putrefy">4 Putrefy</span><br/>
+                                <span class="card-name" data-card="Remand">4 Remand</span><br/>
+                                <span class="card-name" data-card="Sensei's Divining Top">4 Sensei's Divining Top</span><br/>
+                                <span class="card-name" data-card="Thoughts of Ruin">4 Thoughts of Ruin</span><br/>
+                                <span class="card-name" data-card="Umezawa's Jitte">4 Umezawa's Jitte</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -263,14 +337,22 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />4 Breeding Pool<br />4
-                                Brushland<br />4 Hallowed Fountain<br />4
-                                Overgrown Tomb<br />4 Savannah<br />4 Shivan
-                                Reef<br />4 Steam Vents<br />4 Stomping
-                                Ground<br />4 Temple Garden<br />4 Tropical
-                                Island<br />4 Tundra<br />4 Underground Sea<br />4
-                                Volcanic Island<br />4 Watery Grave<br />4
-                                Yavimaya Coast
+                                <span class="card-name" data-card="Adarkar Wastes">4 Adarkar Wastes</span><br/>
+                                <span class="card-name" data-card="Breeding Pool">4 Breeding Pool</span><br/>
+                                <span class="card-name" data-card="Brushland">4 Brushland</span><br/>
+                                <span class="card-name" data-card="Hallowed Fountain">4 Hallowed Fountain</span><br/>
+                                <span class="card-name" data-card="Overgrown Tomb">4 Overgrown Tomb</span><br/>
+                                <span class="card-name" data-card="Savannah">4 Savannah</span><br/>
+                                <span class="card-name" data-card="Shivan Reef">4 Shivan Reef</span><br/>
+                                <span class="card-name" data-card="Steam Vents">4 Steam Vents</span><br/>
+                                <span class="card-name" data-card="Stomping Ground">4 Stomping Ground</span><br/>
+                                <span class="card-name" data-card="Temple Garden">4 Temple Garden</span><br/>
+                                <span class="card-name" data-card="Tropical Island">4 Tropical Island</span><br/>
+                                <span class="card-name" data-card="Tundra">4 Tundra</span><br/>
+                                <span class="card-name" data-card="Underground Sea">4 Underground Sea</span><br/>
+                                <span class="card-name" data-card="Volcanic Island">4 Volcanic Island</span><br/>
+                                <span class="card-name" data-card="Watery Grave">4 Watery Grave</span><br/>
+                                <span class="card-name" data-card="Yavimaya Coast">4 Yavimaya Coast</span>
                             </div>
                         </div>
                     </div>
@@ -298,11 +380,15 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Dark Confidant<br />4 Hand of Cruelty<br />4
-                                Hand of Honor<br />4 Hypnotic Specter<br />4
-                                Isamaru, Hound of Konda<br />4 Knight of the
-                                Holy Nimbus<br />4 Paladin en-Vec<br />4
-                                Savannah Lions<br />4 White Knight
+                                <span class="card-name" data-card="Dark Confidant">4 Dark Confidant</span><br/>
+                                <span class="card-name" data-card="Hand of Cruelty">4 Hand of Cruelty</span><br/>
+                                <span class="card-name" data-card="Hand of Honor">4 Hand of Honor</span><br/>
+                                <span class="card-name" data-card="Hypnotic Specter">4 Hypnotic Specter</span><br/>
+                                <span class="card-name" data-card="Isamaru, Hound of Konda">4 Isamaru, Hound of Konda</span><br/>
+                                <span class="card-name" data-card="Knight of the Holy Nimbus">4 Knight of the Holy Nimbus</span><br/>
+                                <span class="card-name" data-card="Paladin en-Vec">4 Paladin en-Vec</span><br/>
+                                <span class="card-name" data-card="Savannah Lions">4 Savannah Lions</span><br/>
+                                <span class="card-name" data-card="White Knight">4 White Knight</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -310,9 +396,11 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Castigate<br />4 Gerrard's Verdict<br />4
-                                Mortify<br />4 Shining Shoal<br />4 Umezawa's
-                                Jitte
+                                <span class="card-name" data-card="Castigate">4 Castigate</span><br/>
+                                <span class="card-name" data-card="Gerrard's Verdict">4 Gerrard's Verdict</span><br/>
+                                <span class="card-name" data-card="Mortify">4 Mortify</span><br/>
+                                <span class="card-name" data-card="Shining Shoal">4 Shining Shoal</span><br/>
+                                <span class="card-name" data-card="Umezawa's Jitte">4 Umezawa's Jitte</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -320,8 +408,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Caves of Koilos<br />4 Godless Shrine<br />4
-                                Shizo, Death's Storehouse
+                                <span class="card-name" data-card="Caves of Koilos">4 Caves of Koilos</span><br/>
+                                <span class="card-name" data-card="Godless Shrine">4 Godless Shrine</span><br/>
+                                <span class="card-name" data-card="Shizo, Death's Storehouse">4 Shizo, Death's Storehouse</span>
                             </div>
                         </div>
                     </div>
@@ -346,17 +435,25 @@
                             >
                                 Criaturas
                             </h3>
-                            <div class="text-gray-300">4 Magnivore</div>
+                            <div class="text-gray-300">
+                                <span class="card-name" data-card="Magnivore">4 Magnivore</span>
+                            </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Annex<br />4 Boomerang<br />4 Demolish<br />4
-                                Eye of Nowhere<br />4 Mana Leak<br />4 Remand<br />4
-                                Shard of Broken Glass<br />4 Sleight of Hand<br />4
-                                Stone Rain<br />4 Volcanic Hammer
+                                <span class="card-name" data-card="Annex">4 Annex</span><br/>
+                                <span class="card-name" data-card="Boomerang">4 Boomerang</span><br/>
+                                <span class="card-name" data-card="Demolish">4 Demolish</span><br/>
+                                <span class="card-name" data-card="Eye of Nowhere">4 Eye of Nowhere</span><br/>
+                                <span class="card-name" data-card="Mana Leak">4 Mana Leak</span><br/>
+                                <span class="card-name" data-card="Remand">4 Remand</span><br/>
+                                <span class="card-name" data-card="Shard of Broken Glass">4 Shard of Broken Glass</span><br/>
+                                <span class="card-name" data-card="Sleight of Hand">4 Sleight of Hand</span><br/>
+                                <span class="card-name" data-card="Stone Rain">4 Stone Rain</span><br/>
+                                <span class="card-name" data-card="Volcanic Hammer">4 Volcanic Hammer</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -364,8 +461,10 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Shivan Reef<br />4 Steam Vents<br />10
-                                Island<br />10 Mountain
+                                <span class="card-name" data-card="Shivan Reef">4 Shivan Reef</span><br/>
+                                <span class="card-name" data-card="Steam Vents">4 Steam Vents</span><br/>
+                                <span class="card-name" data-card="Island">10 Island</span><br/>
+                                <span class="card-name" data-card="Mountain">10 Mountain</span>
                             </div>
                         </div>
                     </div>
@@ -391,13 +490,17 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Elves of Deep
-                                Shadow<br />4 Hana Kami<br />4 Ink-Eyes, Servant
-                                of Oni<br />4 Kagemaro, First to Suffer<br />4
-                                Kokusho, the Evening Star<br />4 Loxodon
-                                Hierarch<br />4 Meloku the Clouded Mirror<br />4
-                                Myojin of Seeing Winds<br />4 Sakura-Tribe
-                                Elder<br />4 Yosei, the Morning Star
+                                <span class="card-name" data-card="Birds of Paradise">4 Birds of Paradise</span><br/>
+                                <span class="card-name" data-card="Elves of Deep Shadow">4 Elves of Deep Shadow</span><br/>
+                                <span class="card-name" data-card="Hana Kami">4 Hana Kami</span><br/>
+                                <span class="card-name" data-card="Ink-Eyes, Servant of Oni">4 Ink-Eyes, Servant of Oni</span><br/>
+                                <span class="card-name" data-card="Kagemaro, First to Suffer">4 Kagemaro, First to Suffer</span><br/>
+                                <span class="card-name" data-card="Kokusho, the Evening Star">4 Kokusho, the Evening Star</span><br/>
+                                <span class="card-name" data-card="Loxodon Hierarch">4 Loxodon Hierarch</span><br/>
+                                <span class="card-name" data-card="Meloku the Clouded Mirror">4 Meloku the Clouded Mirror</span><br/>
+                                <span class="card-name" data-card="Myojin of Seeing Winds">4 Myojin of Seeing Winds</span><br/>
+                                <span class="card-name" data-card="Sakura-Tribe Elder">4 Sakura-Tribe Elder</span><br/>
+                                <span class="card-name" data-card="Yosei, the Morning Star">4 Yosei, the Morning Star</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -405,13 +508,19 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Circle of Protection: Red<br />4 Cranial
-                                Extraction<br />4 Enduring Ideal<br />4 Gifts
-                                Ungiven<br />4 Goryo's Vengeance<br />4 Greater
-                                Good<br />4 Heartbeat of Spring<br />4 Kodama's
-                                Reach<br />4 Putrefy<br />4 Remand<br />4
-                                Sensei's Divining Top<br />4 Thoughts of Ruin<br />4
-                                Umezawa's Jitte
+                                <span class="card-name" data-card="Circle of Protection: Red">4 Circle of Protection: Red</span><br/>
+                                <span class="card-name" data-card="Cranial Extraction">4 Cranial Extraction</span><br/>
+                                <span class="card-name" data-card="Enduring Ideal">4 Enduring Ideal</span><br/>
+                                <span class="card-name" data-card="Gifts Ungiven">4 Gifts Ungiven</span><br/>
+                                <span class="card-name" data-card="Goryo's Vengeance">4 Goryo's Vengeance</span><br/>
+                                <span class="card-name" data-card="Greater Good">4 Greater Good</span><br/>
+                                <span class="card-name" data-card="Heartbeat of Spring">4 Heartbeat of Spring</span><br/>
+                                <span class="card-name" data-card="Kodama's Reach">4 Kodama's Reach</span><br/>
+                                <span class="card-name" data-card="Putrefy">4 Putrefy</span><br/>
+                                <span class="card-name" data-card="Remand">4 Remand</span><br/>
+                                <span class="card-name" data-card="Sensei's Divining Top">4 Sensei's Divining Top</span><br/>
+                                <span class="card-name" data-card="Thoughts of Ruin">4 Thoughts of Ruin</span><br/>
+                                <span class="card-name" data-card="Umezawa's Jitte">4 Umezawa's Jitte</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -419,14 +528,22 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />4 Breeding Pool<br />4
-                                Brushland<br />4 Hallowed Fountain<br />4
-                                Overgrown Tomb<br />4 Savannah<br />4 Shivan
-                                Reef<br />4 Steam Vents<br />4 Stomping
-                                Ground<br />4 Temple Garden<br />4 Tropical
-                                Island<br />4 Tundra<br />4 Underground Sea<br />4
-                                Volcanic Island<br />4 Watery Grave<br />4
-                                Yavimaya Coast
+                                <span class="card-name" data-card="Adarkar Wastes">4 Adarkar Wastes</span><br/>
+                                <span class="card-name" data-card="Breeding Pool">4 Breeding Pool</span><br/>
+                                <span class="card-name" data-card="Brushland">4 Brushland</span><br/>
+                                <span class="card-name" data-card="Hallowed Fountain">4 Hallowed Fountain</span><br/>
+                                <span class="card-name" data-card="Overgrown Tomb">4 Overgrown Tomb</span><br/>
+                                <span class="card-name" data-card="Savannah">4 Savannah</span><br/>
+                                <span class="card-name" data-card="Shivan Reef">4 Shivan Reef</span><br/>
+                                <span class="card-name" data-card="Steam Vents">4 Steam Vents</span><br/>
+                                <span class="card-name" data-card="Stomping Ground">4 Stomping Ground</span><br/>
+                                <span class="card-name" data-card="Temple Garden">4 Temple Garden</span><br/>
+                                <span class="card-name" data-card="Tropical Island">4 Tropical Island</span><br/>
+                                <span class="card-name" data-card="Tundra">4 Tundra</span><br/>
+                                <span class="card-name" data-card="Underground Sea">4 Underground Sea</span><br/>
+                                <span class="card-name" data-card="Volcanic Island">4 Volcanic Island</span><br/>
+                                <span class="card-name" data-card="Watery Grave">4 Watery Grave</span><br/>
+                                <span class="card-name" data-card="Yavimaya Coast">4 Yavimaya Coast</span>
                             </div>
                         </div>
                     </div>
@@ -451,9 +568,12 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Elves of Deep
-                                Shadow<br />4 Loxodon Hierarch<br />4 Selesnya
-                                Guildmage<br />4 Watchwolf<br />4 Wood Elves
+                                <span class="card-name" data-card="Birds of Paradise">4 Birds of Paradise</span><br/>
+                                <span class="card-name" data-card="Elves of Deep Shadow">4 Elves of Deep Shadow</span><br/>
+                                <span class="card-name" data-card="Loxodon Hierarch">4 Loxodon Hierarch</span><br/>
+                                <span class="card-name" data-card="Selesnya Guildmage">4 Selesnya Guildmage</span><br/>
+                                <span class="card-name" data-card="Watchwolf">4 Watchwolf</span><br/>
+                                <span class="card-name" data-card="Wood Elves">4 Wood Elves</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -461,9 +581,10 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Congregation at Dawn<br />4 Glare of
-                                Subdual<br />4 Selesnya Signet<br />4 Umezawa's
-                                Jitte
+                                <span class="card-name" data-card="Congregation at Dawn">4 Congregation at Dawn</span><br/>
+                                <span class="card-name" data-card="Glare of Subdual">4 Glare of Subdual</span><br/>
+                                <span class="card-name" data-card="Selesnya Signet">4 Selesnya Signet</span><br/>
+                                <span class="card-name" data-card="Umezawa's Jitte">4 Umezawa's Jitte</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -471,9 +592,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Brushland<br />4 Overgrown Tomb<br />4
-                                Savannah<br />4 Temple Garden<br />4 Vitu-Ghazi,
-                                the City-Tree
+                                <span class="card-name" data-card="Brushland">4 Brushland</span><br/>
+                                <span class="card-name" data-card="Overgrown Tomb">4 Overgrown Tomb</span><br/>
+                                <span class="card-name" data-card="Savannah">4 Savannah</span><br/>
+                                <span class="card-name" data-card="Temple Garden">4 Temple Garden</span><br/>
+                                <span class="card-name" data-card="Vitu-Ghazi, the City-Tree">4 Vitu-Ghazi, the City-Tree</span>
                             </div>
                         </div>
                     </div>
@@ -481,6 +604,72 @@
             </main>
         </div>
         <script>
+            function toggleVisibility(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.classList.toggle("hidden");
+                }
+            }
+
+            // Script para o tooltip da imagem da carta
+            // Cria o elemento tooltip uma vez e anexa ao body
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.innerHTML = '<img>';
+            document.body.appendChild(tooltip);
+            const tooltipImage = tooltip.querySelector('img');
+
+            // Pega todos os elementos que devem acionar o tooltip
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                // Adiciona um pequeno deslocamento para evitar cintilação/piscar
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+
+                const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = x + 'px';
+                tooltip.style.top = y + 'px';
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
+
+            // Função original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {

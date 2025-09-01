@@ -21,7 +21,30 @@
             }
             .decklist {
                 background-color: #1f2937; /* bg-gray-800 */
-                border-left: 3px solid #06b6d4; /* border-cyan-500 */
+                border-left: 3px solid #4f46e5; /* border-indigo-600 */
+            }
+                    /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
             }
         </style>
     </head>
@@ -89,11 +112,11 @@
                                 Lista Exemplo (Clássica)
                             </h3>
                             <div class="text-gray-300">
-                                4 Delver of Secrets<br />4 Spellstutter
-                                Sprite<br />4 Faerie Miscreant<br />4 Ninja of
-                                the Deep Hours<br />4 Ponder<br />4 Preordain<br />4
-                                Counterspell<br />4 Daze<br />2 Gush<br />4
-                                Snap<br />18 Snow-Covered Island
+                                4 <span class="card-name" data-card="Delver of Secrets">Delver of Secrets</span><br />4 <span class="card-name" data-card="Spellstutter Sprite">Spellstutter
+                                Sprite</span><br />4 <span class="card-name" data-card="Faerie Miscreant">Faerie Miscreant</span><br />4 <span class="card-name" data-card="Ninja of the Deep Hours">Ninja of
+                                the Deep Hours</span><br />4 <span class="card-name" data-card="Ponder">Ponder</span><br />4 <span class="card-name" data-card="Preordain">Preordain</span><br />4
+                                <span class="card-name" data-card="Counterspell">Counterspell</span><br />4 <span class="card-name" data-card="Daze">Daze</span><br />2 <span class="card-name" data-card="Gush">Gush</span><br />4
+                                <span class="card-name" data-card="Snap">Snap</span><br />18 <span class="card-name" data-card="Snow-Covered Island">Snow-Covered Island</span>
                             </div>
                         </div>
                     </div>
@@ -129,12 +152,12 @@
                                 Lista Exemplo (Clássica)
                             </h3>
                             <div class="text-gray-300">
-                                4 Grapeshot<br />4 Empty the Warrens<br />4 Rite
-                                of Flame<br />4 Dark Ritual<br />4 Cabal
-                                Ritual<br />4 Manamorphose<br />4 Lotus Petal<br />4
-                                Chromatic Star<br />4 Chromatic Sphere<br />4
-                                Gitaxian Probe<br />4 Ponder<br />4 Preordain<br />4
-                                Seething Song
+                                4 <span class="card-name" data-card="Grapeshot">Grapeshot</span><br />4 <span class="card-name" data-card="Empty the Warrens">Empty the Warrens</span><br />4 <span class="card-name" data-card="Rite of Flame">Rite
+                                of Flame</span><br />4 <span class="card-name" data-card="Dark Ritual">Dark Ritual</span><br />4 <span class="card-name" data-card="Cabal Ritual">Cabal
+                                Ritual</span><br />4 <span class="card-name" data-card="Manamorphose">Manamorphose</span><br />4 <span class="card-name" data-card="Lotus Petal">Lotus Petal</span><br />4
+                                <span class="card-name" data-card="Chromatic Star">Chromatic Star</span><br />4 <span class="card-name" data-card="Chromatic Sphere">Chromatic Sphere</span><br />4
+                                <span class="card-name" data-card="Gitaxian Probe">Gitaxian Probe</span><br />4 <span class="card-name" data-card="Ponder">Ponder</span><br />4 <span class="card-name" data-card="Preordain">Preordain</span><br />4
+                                <span class="card-name" data-card="Seething Song">Seething Song</span>
                             </div>
                         </div>
                     </div>
@@ -176,13 +199,13 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Atog<br />4 Frogmite<br />4 Myr Enforcer<br />4
-                                Disciple of the Vault<br />4 Thoughtcast<br />4
-                                Chromatic Star<br />4 Cranial Plating<br />4
-                                Springleaf Drum<br />4 Galvanic Blast<br />4
-                                Vault of Whispers<br />4 Great Furnace<br />4
-                                Seat of the Synod<br />4 Tree of Tales<br />4
-                                Darksteel Citadel
+                                4 <span class="card-name" data-card="Atog">Atog</span><br />4 <span class="card-name" data-card="Frogmite">Frogmite</span><br />4 <span class="card-name" data-card="Myr Enforcer">Myr Enforcer</span><br />4
+                                <span class="card-name" data-card="Disciple of the Vault">Disciple of the Vault</span><br />4 <span class="card-name" data-card="Thoughtcast">Thoughtcast</span><br />4
+                                <span class="card-name" data-card="Chromatic Star">Chromatic Star</span><br />4 <span class="card-name" data-card="Cranial Plating">Cranial Plating</span><br />4
+                                <span class="card-name" data-card="Springleaf Drum">Springleaf Drum</span><br />4 <span class="card-name" data-card="Galvanic Blast">Galvanic Blast</span><br />4
+                                <span class="card-name" data-card="Vault of Whispers">Vault of Whispers</span><br />4 <span class="card-name" data-card="Great Furnace">Great Furnace</span><br />4
+                                <span class="card-name" data-card="Seat of the Synod">Seat of the Synod</span><br />4 <span class="card-name" data-card="Tree of Tales">Tree of Tales</span><br />4
+                                <span class="card-name" data-card="Darksteel Citadel">Darksteel Citadel</span>
                             </div>
                         </div>
                     </div>
@@ -217,12 +240,12 @@
                                 Lista Exemplo (Pré-Ban)
                             </h3>
                             <div class="text-gray-300">
-                                4 Peregrine Drake<br />4 Archaeomancer<br />4
-                                Sea Gate Oracle<br />4 Ghostly Flicker<br />4
-                                Ponder<br />4 Preordain<br />4 Compulsive
-                                Research<br />4 Flame Slash<br />4 Lightning
-                                Bolt<br />4 Izzet Boilerworks<br />4 Swiftwater
-                                Cliffs<br />8 Island<br />4 Mountain
+                                4 <span class="card-name" data-card="Peregrine Drake">Peregrine Drake</span><br />4 <span class="card-name" data-card="Archaeomancer">Archaeomancer</span><br />4
+                                <span class="card-name" data-card="Sea Gate Oracle">Sea Gate Oracle</span><br />4 <span class="card-name" data-card="Ghostly Flicker">Ghostly Flicker</span><br />4
+                                <span class="card-name" data-card="Ponder">Ponder</span><br />4 <span class="card-name" data-card="Preordain">Preordain</span><br />4 <span class="card-name" data-card="Compulsive Research">Compulsive
+                                Research</span><br />4 <span class="card-name" data-card="Flame Slash">Flame Slash</span><br />4 <span class="card-name" data-card="Lightning Bolt">Lightning
+                                Bolt</span><br />4 <span class="card-name" data-card="Izzet Boilerworks">Izzet Boilerworks</span><br />4 <span class="card-name" data-card="Swiftwater Cliffs">Swiftwater
+                                Cliffs</span><br />8 <span class="card-name" data-card="Island">Island</span><br />4 <span class="card-name" data-card="Mountain">Mountain</span>
                             </div>
                         </div>
                     </div>
@@ -261,13 +284,13 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Urza's Mine<br />4 Urza's Power Plant<br />4
-                                Urza's Tower<br />4 Mnemonic Wall<br />4
-                                Mulldrifter<br />4 Stonehorn Dignitary<br />4
-                                Ghostly Flicker<br />4 Ephemerate<br />4
-                                Moment's Peace<br />4 Impulse<br />4
-                                Preordain<br />4 Counterspell<br />4 Thornwood
-                                Falls<br />4 Island
+                                4 <span class="card-name" data-card="Urza's Mine">Urza's Mine</span><br />4 <span class="card-name" data-card="Urza's Power Plant">Urza's Power Plant</span><br />4
+                                <span class="card-name" data-card="Urza's Tower">Urza's Tower</span><br />4 <span class="card-name" data-card="Mnemonic Wall">Mnemonic Wall</span><br />4
+                                <span class="card-name" data-card="Mulldrifter">Mulldrifter</span><br />4 <span class="card-name" data-card="Stonehorn Dignitary">Stonehorn Dignitary</span><br />4
+                                <span class="card-name" data-card="Ghostly Flicker">Ghostly Flicker</span><br />4 <span class="card-name" data-card="Ephemerate">Ephemerate</span><br />4
+                                <span class="card-name" data-card="Moment's Peace">Moment's Peace</span><br />4 <span class="card-name" data-card="Impulse">Impulse</span><br />4
+                                <span class="card-name" data-card="Preordain">Preordain</span><br />4 <span class="card-name" data-card="Counterspell">Counterspell</span><br />4 <span class="card-name" data-card="Thornwood Falls">Thornwood
+                                Falls</span><br />4 <span class="card-name" data-card="Island">Island</span>
                             </div>
                         </div>
                     </div>
@@ -310,12 +333,12 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Nettle Sentinel<br />4 Skarrgan Pit-Skulk<br />4
-                                Quirion Ranger<br />4 Silhana Ledgewalker<br />4
-                                Vault Skirge<br />4 Burning-Tree Emissary<br />4
-                                Rancor<br />4 Giant Growth<br />4 Vines of
-                                Vastwood<br />4 Hunger of the Howlpack<br />18
-                                Forest
+                                4 <span class="card-name" data-card="Nettle Sentinel">Nettle Sentinel</span><br />4 <span class="card-name" data-card="Skarrgan Pit-Skulk">Skarrgan Pit-Skulk</span><br />4
+                                <span class="card-name" data-card="Quirion Ranger">Quirion Ranger</span><br />4 <span class="card-name" data-card="Silhana Ledgewalker">Silhana Ledgewalker</span><br />4
+                                <span class="card-name" data-card="Vault Skirge">Vault Skirge</span><br />4 <span class="card-name" data-card="Burning-Tree Emissary">Burning-Tree Emissary</span><br />4
+                                <span class="card-name" data-card="Rancor">Rancor</span><br />4 <span class="card-name" data-card="Giant Growth">Giant Growth</span><br />4 <span class="card-name" data-card="Vines of Vastwood">Vines of
+                                Vastwood</span><br />4 <span class="card-name" data-card="Hunger of the Howlpack">Hunger of the Howlpack</span><br />18
+                                <span class="card-name" data-card="Forest">Forest</span>
                             </div>
                         </div>
                     </div>
@@ -355,13 +378,13 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Glint Hawk<br />4 Kor Skyfisher<br />4 Thraben
-                                Inspector<br />4 Squadron Hawk<br />4 Palace
-                                Sentinels<br />4 Battle Screech<br />4 Lightning
-                                Bolt<br />4 Galvanic Blast<br />4 Journey to
-                                Nowhere<br />4 Prophetic Prism<br />4 Ancient
-                                Den<br />4 Great Furnace<br />4 Boros
-                                Garrison<br />4 Wind-Scarred Crag
+                                4 <span class="card-name" data-card="Glint Hawk">Glint Hawk</span><br />4 <span class="card-name" data-card="Kor Skyfisher">Kor Skyfisher</span><br />4 <span class="card-name" data-card="Thraben Inspector">Thraben
+                                Inspector</span><br />4 <span class="card-name" data-card="Squadron Hawk">Squadron Hawk</span><br />4 <span class="card-name" data-card="Palace Sentinels">Palace
+                                Sentinels</span><br />4 <span class="card-name" data-card="Battle Screech">Battle Screech</span><br />4 <span class="card-name" data-card="Lightning Bolt">Lightning
+                                Bolt</span><br />4 <span class="card-name" data-card="Galvanic Blast">Galvanic Blast</span><br />4 <span class="card-name" data-card="Journey to Nowhere">Journey to
+                                Nowhere</span><br />4 <span class="card-name" data-card="Prophetic Prism">Prophetic Prism</span><br />4 <span class="card-name" data-card="Ancient Den">Ancient
+                                Den</span><br />4 <span class="card-name" data-card="Great Furnace">Great Furnace</span><br />4 <span class="card-name" data-card="Boros Garrison">Boros
+                                Garrison</span><br />4 <span class="card-name" data-card="Wind-Scarred Crag">Wind-Scarred Crag</span>
                             </div>
                         </div>
                     </div>
@@ -402,12 +425,12 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Chittering Rats<br />4 Phyrexian Rager<br />4
-                                Cuombajj Witches<br />4 Gray Merchant of
-                                Asphodel<br />4 Gurmag Angler<br />4 Sign in
-                                Blood<br />4 Chainer's Edict<br />4 Disfigure<br />2
-                                Tendrils of Corruption<br />4 Unearth<br />22
-                                Swamp
+                                4 <span class="card-name" data-card="Chittering Rats">Chittering Rats</span><br />4 <span class="card-name" data-card="Phyrexian Rager">Phyrexian Rager</span><br />4
+                                <span class="card-name" data-card="Cuombajj Witches">Cuombajj Witches</span><br />4 <span class="card-name" data-card="Gray Merchant of Asphodel">Gray Merchant of
+                                Asphodel</span><br />4 <span class="card-name" data-card="Gurmag Angler">Gurmag Angler</span><br />4 <span class="card-name" data-card="Sign in Blood">Sign in
+                                Blood</span><br />4 <span class="card-name" data-card="Chainer's Edict">Chainer's Edict</span><br />4 <span class="card-name" data-card="Disfigure">Disfigure</span><br />2
+                                <span class="card-name" data-card="Tendrils of Corruption">Tendrils of Corruption</span><br />4 <span class="card-name" data-card="Unearth">Unearth</span><br />22
+                                <span class="card-name" data-card="Swamp">Swamp</span>
                             </div>
                         </div>
                     </div>
@@ -445,13 +468,13 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Spellstutter Sprite<br />4 Faerie Seer<br />4
-                                Ninja of the Deep Hours<br />4 Augur of Bolas<br />4
-                                Brainstorm<br />4 Counterspell<br />4 Skred<br />4
-                                Lightning Bolt<br />4 Preordain<br />2
-                                Moon-Circuit Hacker<br />10 Snow-Covered
-                                Island<br />6 Snow-Covered Mountain<br />4
-                                Volatile Fjord
+                                4 <span class="card-name" data-card="Spellstutter Sprite">Spellstutter Sprite</span><br />4 <span class="card-name" data-card="Faerie Seer">Faerie Seer</span><br />4
+                                <span class="card-name" data-card="Ninja of the Deep Hours">Ninja of the Deep Hours</span><br />4 <span class="card-name" data-card="Augur of Bolas">Augur of Bolas</span><br />4
+                                <span class="card-name" data-card="Brainstorm">Brainstorm</span><br />4 <span class="card-name" data-card="Counterspell">Counterspell</span><br />4 <span class="card-name" data-card="Skred">Skred</span><br />4
+                                <span class="card-name" data-card="Lightning Bolt">Lightning Bolt</span><br />4 <span class="card-name" data-card="Preordain">Preordain</span><br />2
+                                <span class="card-name" data-card="Moon-Circuit Hacker">Moon-Circuit Hacker</span><br />10 <span class="card-name" data-card="Snow-Covered Island">Snow-Covered
+                                Island</span><br />6 <span class="card-name" data-card="Snow-Covered Mountain">Snow-Covered Mountain</span><br />4
+                                <span class="card-name" data-card="Volatile Fjord">Volatile Fjord</span>
                             </div>
                         </div>
                     </div>
@@ -488,12 +511,12 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Squadron Hawk<br />4 Kor Skyfisher<br />4
-                                Thraben Inspector<br />4 Counterspell<br />4
-                                Brainstorm<br />4 Ponder<br />4 Swords to
-                                Plowshares<br />4 Journey to Nowhere<br />4
-                                Bonesplitter<br />2 Mana Leak<br />4 Tranquil
-                                Cove<br />8 Island<br />8 Plains
+                                4 <span class="card-name" data-card="Squadron Hawk">Squadron Hawk</span><br />4 <span class="card-name" data-card="Kor Skyfisher">Kor Skyfisher</span><br />4
+                                <span class="card-name" data-card="Thraben Inspector">Thraben Inspector</span><br />4 <span class="card-name" data-card="Counterspell">Counterspell</span><br />4
+                                <span class="card-name" data-card="Brainstorm">Brainstorm</span><br />4 <span class="card-name" data-card="Ponder">Ponder</span><br />4 <span class="card-name" data-card="Swords to Plowshares">Swords to
+                                Plowshares</span><br />4 <span class="card-name" data-card="Journey to Nowhere">Journey to Nowhere</span><br />4
+                                <span class="card-name" data-card="Bonesplitter">Bonesplitter</span><br />2 <span class="card-name" data-card="Mana Leak">Mana Leak</span><br />4 <span class="card-name" data-card="Tranquil Cove">Tranquil
+                                Cove</span><br />8 <span class="card-name" data-card="Island">Island</span><br />8 <span class="card-name" data-card="Plains">Plains</span>
                             </div>
                         </div>
                     </div>
@@ -502,6 +525,63 @@
         </div>
 
         <script>
+            // Cria o elemento tooltip uma vez e anexa ao body
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.innerHTML = '<img>';
+            document.body.appendChild(tooltip);
+            const tooltipImage = tooltip.querySelector('img');
+
+            // Pega todos os elementos que devem acionar o tooltip
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                // Adiciona um pequeno deslocamento para evitar cintilação/piscar
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+
+                const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
+
+            // Função original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {

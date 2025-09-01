@@ -23,6 +23,29 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #8b5cf6; /* border-violet-500 */
             }
+                    /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -518,6 +541,59 @@
                     element.classList.toggle("hidden");
                 }
             }
+        </script>
+            <div id="card-tooltip">
+            <img id="card-image" src="" alt="Carta" />
+        </div>
+        <script>
+            // Função para mostrar o tooltip da carta
+            function showCardTooltip(event, cardName) {
+                const tooltip = document.getElementById('card-tooltip');
+                const cardImage = document.getElementById('card-image');
+                
+                // Constrói a URL da imagem da carta
+                const imageUrl = `https://gatherer.wizards.com/Handlers/Image.ashx?name=${encodeURIComponent(cardName)}&type=card`;
+                
+                cardImage.src = imageUrl;
+                tooltip.style.display = 'block';
+                
+                // Posiciona o tooltip próximo ao cursor
+                const x = event.clientX + 10;
+                const y = event.clientY + 10;
+                
+                tooltip.style.left = x + 'px';
+                tooltip.style.top = y + 'px';
+            }
+            
+            // Função para esconder o tooltip
+            function hideCardTooltip() {
+                const tooltip = document.getElementById('card-tooltip');
+                tooltip.style.display = 'none';
+            }
+            
+            // Adiciona event listeners para todas as cartas
+            document.addEventListener('DOMContentLoaded', function() {
+                const cardElements = document.querySelectorAll('[data-card]');
+                
+                cardElements.forEach(function(element) {
+                    element.addEventListener('mouseenter', function(event) {
+                        const cardName = this.getAttribute('data-card');
+                        showCardTooltip(event, cardName);
+                    });
+                    
+                    element.addEventListener('mouseleave', hideCardTooltip);
+                    
+                    element.addEventListener('mousemove', function(event) {
+                        const tooltip = document.getElementById('card-tooltip');
+                        if (tooltip.style.display === 'block') {
+                            const x = event.clientX + 10;
+                            const y = event.clientY + 10;
+                            tooltip.style.left = x + 'px';
+                            tooltip.style.top = y + 'px';
+                        }
+                    });
+                });
+            });
         </script>
     </body>
 </html>

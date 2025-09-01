@@ -23,6 +23,29 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -68,10 +91,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Bomat Courier<br />4 Goblin Chainwhirler<br />4
-                                Hazoret the Fervent<br />4 Kari Zev, Skyship
-                                Raider<br />4 Rekindling Phoenix<br />4
-                                Scrapheap Scrounger<br />4 Soul-Scar Mage
+                                4 <span class="card-name" data-card="Bomat Courier">Bomat Courier</span><br />4 <span class="card-name" data-card="Goblin Chainwhirler">Goblin Chainwhirler</span><br />4
+                                <span class="card-name" data-card="Hazoret the Fervent">Hazoret the Fervent</span><br />4 <span class="card-name" data-card="Kari Zev, Skyship Raider">Kari Zev, Skyship
+                                Raider</span><br />4 <span class="card-name" data-card="Rekindling Phoenix">Rekindling Phoenix</span><br />4
+                                <span class="card-name" data-card="Scrapheap Scrounger">Scrapheap Scrounger</span><br />4 <span class="card-name" data-card="Soul-Scar Mage">Soul-Scar Mage</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -79,10 +102,10 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Abrade<br />4 Chandra, Torch of Defiance<br />4
-                                Glorybringer<br />4 Heart of Kiran<br />4
-                                Lightning Strike<br />4 Shock<br />4 Unlicensed
-                                Disintegration
+                                4 <span class="card-name" data-card="Abrade">Abrade</span><br />4 <span class="card-name" data-card="Chandra, Torch of Defiance">Chandra, Torch of Defiance</span><br />4
+                                <span class="card-name" data-card="Glorybringer">Glorybringer</span><br />4 <span class="card-name" data-card="Heart of Kiran">Heart of Kiran</span><br />4
+                                <span class="card-name" data-card="Lightning Strike">Lightning Strike</span><br />4 <span class="card-name" data-card="Shock">Shock</span><br />4 <span class="card-name" data-card="Unlicensed Disintegration">Unlicensed
+                                Disintegration</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -90,8 +113,8 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Dragonskull Summit<br />4 Spire of Industry<br />12
-                                Mountain
+                                4 <span class="card-name" data-card="Dragonskull Summit">Dragonskull Summit</span><br />4 <span class="card-name" data-card="Spire of Industry">Spire of Industry</span><br />12
+                                <span class="card-name" data-card="Mountain">Mountain</span>
                             </div>
                         </div>
                     </div>
@@ -117,7 +140,7 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Lyra Dawnbringer<br />4 Torrential Gearhulk
+                                4 <span class="card-name" data-card="Lyra Dawnbringer">Lyra Dawnbringer</span><br />4 <span class="card-name" data-card="Torrential Gearhulk">Torrential Gearhulk</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -125,12 +148,12 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Approach of the Second Sun<br />4 Cast Out<br />4
-                                Censor<br />4 Disallow<br />4 Essence Scatter<br />4
-                                Fumigate<br />4 Glimmer of Genius<br />4
-                                Hieroglyphic Illumination<br />4 Negate<br />4
-                                Settle the Wreckage<br />4 Teferi, Hero of
-                                Dominaria
+                                4 <span class="card-name" data-card="Approach of the Second Sun">Approach of the Second Sun</span><br />4 <span class="card-name" data-card="Cast Out">Cast Out</span><br />4
+                                <span class="card-name" data-card="Censor">Censor</span><br />4 <span class="card-name" data-card="Disallow">Disallow</span><br />4 <span class="card-name" data-card="Essence Scatter">Essence Scatter</span><br />4
+                                <span class="card-name" data-card="Fumigate">Fumigate</span><br />4 <span class="card-name" data-card="Glimmer of Genius">Glimmer of Genius</span><br />4
+                                <span class="card-name" data-card="Hieroglyphic Illumination">Hieroglyphic Illumination</span><br />4 <span class="card-name" data-card="Negate">Negate</span><br />4
+                                <span class="card-name" data-card="Settle the Wreckage">Settle the Wreckage</span><br />4 <span class="card-name" data-card="Teferi, Hero of Dominaria">Teferi, Hero of
+                                Dominaria</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -138,8 +161,8 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Field of Ruin<br />4 Glacial Fortress<br />4
-                                Irrigated Farmland<br />10 Island<br />10 Plains
+                                4 <span class="card-name" data-card="Field of Ruin">Field of Ruin</span><br />4 <span class="card-name" data-card="Glacial Fortress">Glacial Fortress</span><br />4
+                                <span class="card-name" data-card="Irrigated Farmland">Irrigated Farmland</span><br />10 <span class="card-name" data-card="Island">Island</span><br />10 <span class="card-name" data-card="Plains">Plains</span>
                             </div>
                         </div>
                     </div>
@@ -164,7 +187,7 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Lyra Dawnbringer<br />4 Torrential Gearhulk
+                                4 <span class="card-name" data-card="Lyra Dawnbringer">Lyra Dawnbringer</span><br />4 <span class="card-name" data-card="Torrential Gearhulk">Torrential Gearhulk</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -172,12 +195,12 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Approach of the Second Sun<br />4 Cast Out<br />4
-                                Censor<br />4 Disallow<br />4 Essence Scatter<br />4
-                                Fumigate<br />4 Glimmer of Genius<br />4
-                                Hieroglyphic Illumination<br />4 Negate<br />4
-                                Settle the Wreckage<br />4 Teferi, Hero of
-                                Dominaria
+                                4 <span class="card-name" data-card="Approach of the Second Sun">Approach of the Second Sun</span><br />4 <span class="card-name" data-card="Cast Out">Cast Out</span><br />4
+                                <span class="card-name" data-card="Censor">Censor</span><br />4 <span class="card-name" data-card="Disallow">Disallow</span><br />4 <span class="card-name" data-card="Essence Scatter">Essence Scatter</span><br />4
+                                <span class="card-name" data-card="Fumigate">Fumigate</span><br />4 <span class="card-name" data-card="Glimmer of Genius">Glimmer of Genius</span><br />4
+                                <span class="card-name" data-card="Hieroglyphic Illumination">Hieroglyphic Illumination</span><br />4 <span class="card-name" data-card="Negate">Negate</span><br />4
+                                <span class="card-name" data-card="Settle the Wreckage">Settle the Wreckage</span><br />4 <span class="card-name" data-card="Teferi, Hero of Dominaria">Teferi, Hero of
+                                Dominaria</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -185,8 +208,8 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Field of Ruin<br />4 Glacial Fortress<br />4
-                                Irrigated Farmland<br />10 Island<br />10 Plains
+                                4 <span class="card-name" data-card="Field of Ruin">Field of Ruin</span><br />4 <span class="card-name" data-card="Glacial Fortress">Glacial Fortress</span><br />4
+                                <span class="card-name" data-card="Irrigated Farmland">Irrigated Farmland</span><br />10 <span class="card-name" data-card="Island">Island</span><br />10 <span class="card-name" data-card="Plains">Plains</span>
                             </div>
                         </div>
                     </div>
@@ -211,10 +234,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Bomat Courier<br />4 Goblin Chainwhirler<br />4
-                                Hazoret the Fervent<br />4 Kari Zev, Skyship
-                                Raider<br />4 Rekindling Phoenix<br />4
-                                Scrapheap Scrounger<br />4 Soul-Scar Mage
+                                4 <span class="card-name" data-card="Bomat Courier">Bomat Courier</span><br />4 <span class="card-name" data-card="Goblin Chainwhirler">Goblin Chainwhirler</span><br />4
+                                <span class="card-name" data-card="Hazoret the Fervent">Hazoret the Fervent</span><br />4 <span class="card-name" data-card="Kari Zev, Skyship Raider">Kari Zev, Skyship
+                                Raider</span><br />4 <span class="card-name" data-card="Rekindling Phoenix">Rekindling Phoenix</span><br />4
+                                <span class="card-name" data-card="Scrapheap Scrounger">Scrapheap Scrounger</span><br />4 <span class="card-name" data-card="Soul-Scar Mage">Soul-Scar Mage</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -222,10 +245,10 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Abrade<br />4 Chandra, Torch of Defiance<br />4
-                                Glorybringer<br />4 Heart of Kiran<br />4
-                                Lightning Strike<br />4 Shock<br />4 Unlicensed
-                                Disintegration
+                                4 <span class="card-name" data-card="Abrade">Abrade</span><br />4 <span class="card-name" data-card="Chandra, Torch of Defiance">Chandra, Torch of Defiance</span><br />4
+                                <span class="card-name" data-card="Glorybringer">Glorybringer</span><br />4 <span class="card-name" data-card="Heart of Kiran">Heart of Kiran</span><br />4
+                                <span class="card-name" data-card="Lightning Strike">Lightning Strike</span><br />4 <span class="card-name" data-card="Shock">Shock</span><br />4 <span class="card-name" data-card="Unlicensed Disintegration">Unlicensed
+                                Disintegration</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -233,8 +256,8 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Dragonskull Summit<br />4 Spire of Industry<br />12
-                                Mountain
+                                4 <span class="card-name" data-card="Dragonskull Summit">Dragonskull Summit</span><br />4 <span class="card-name" data-card="Spire of Industry">Spire of Industry</span><br />12
+                                <span class="card-name" data-card="Mountain">Mountain</span>
                             </div>
                         </div>
                     </div>
@@ -242,6 +265,63 @@
             </main>
         </div>
         <script>
+            // Cria o elemento tooltip uma vez e anexa ao body
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.innerHTML = '<img>';
+            document.body.appendChild(tooltip);
+            const tooltipImage = tooltip.querySelector('img');
+
+            // Pega todos os elementos que devem acionar o tooltip
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                // Adiciona um pequeno deslocamento para evitar cintilação/piscar
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+
+                const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
+
+            // Função original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {

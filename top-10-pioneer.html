@@ -21,7 +21,30 @@
             }
             .decklist {
                 background-color: #1f2937; /* bg-gray-800 */
-                border-left: 3px solid #0ea5e9; /* border-sky-500 */
+                border-left: 3px solid #4f46e5; /* border-indigo-600 */
+            }
+                    /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
             }
         </style>
     </head>
@@ -76,12 +99,12 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Arclight Phoenix<br />4 Thing in the Ice<br />4
-                                Opt<br />4 Thought Scour<br />4 Treasure
-                                Cruise<br />4 Lightning Axe<br />4 Fiery
-                                Impulse<br />2 Izzet Charm<br />4 Steam Vents<br />4
-                                Spirebluff Canal<br />4 Shivan Reef<br />4
-                                Sulfur Falls<br />4 Island<br />2 Mountain
+                                4 <span class="card-name" data-card="Arclight Phoenix">Arclight Phoenix</span><br />4 <span class="card-name" data-card="Thing in the Ice">Thing in the Ice</span><br />4
+                                <span class="card-name" data-card="Opt">Opt</span><br />4 <span class="card-name" data-card="Thought Scour">Thought Scour</span><br />4 <span class="card-name" data-card="Treasure Cruise">Treasure
+                                Cruise</span><br />4 <span class="card-name" data-card="Lightning Axe">Lightning Axe</span><br />4 <span class="card-name" data-card="Fiery Impulse">Fiery
+                                Impulse</span><br />2 <span class="card-name" data-card="Izzet Charm">Izzet Charm</span><br />4 <span class="card-name" data-card="Steam Vents">Steam Vents</span><br />4
+                                <span class="card-name" data-card="Spirebluff Canal">Spirebluff Canal</span><br />4 <span class="card-name" data-card="Shivan Reef">Shivan Reef</span><br />4
+                                <span class="card-name" data-card="Sulfur Falls">Sulfur Falls</span><br />4 <span class="card-name" data-card="Island">Island</span><br />2 <span class="card-name" data-card="Mountain">Mountain</span>
                             </div>
                         </div>
                     </div>
@@ -122,15 +145,15 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Sheoldred, the Apocalypse<br />4 Graveyard
-                                Trespasser<br />4 Bloodtithe Harvester<br />4
-                                Fable of the Mirror-Breaker<br />4
-                                Thoughtseize<br />3 Fatal Push<br />4
-                                Bonecrusher Giant<br />2 Dreadbore<br />4 Blood
-                                Crypt<br />4 Blackcleave Cliffs<br />4 Haunted
-                                Ridge<br />2 Hive of the Eye Tyrant<br />1 Den
-                                of the Bugbear<br />1 Takenuma, Abandoned
-                                Mire<br />1 Sokenzan, Crucible of Defiance
+                                4 <span class="card-name" data-card="Sheoldred, the Apocalypse">Sheoldred, the Apocalypse</span><br />4 <span class="card-name" data-card="Graveyard Trespasser">Graveyard
+                                Trespasser</span><br />4 <span class="card-name" data-card="Bloodtithe Harvester">Bloodtithe Harvester</span><br />4
+                                <span class="card-name" data-card="Fable of the Mirror-Breaker">Fable of the Mirror-Breaker</span><br />4
+                                <span class="card-name" data-card="Thoughtseize">Thoughtseize</span><br />3 <span class="card-name" data-card="Fatal Push">Fatal Push</span><br />4
+                                <span class="card-name" data-card="Bonecrusher Giant">Bonecrusher Giant</span><br />2 <span class="card-name" data-card="Dreadbore">Dreadbore</span><br />4 <span class="card-name" data-card="Blood Crypt">Blood
+                                Crypt</span><br />4 <span class="card-name" data-card="Blackcleave Cliffs">Blackcleave Cliffs</span><br />4 <span class="card-name" data-card="Haunted Ridge">Haunted
+                                Ridge</span><br />2 <span class="card-name" data-card="Hive of the Eye Tyrant">Hive of the Eye Tyrant</span><br />1 <span class="card-name" data-card="Den of the Bugbear">Den
+                                of the Bugbear</span><br />1 <span class="card-name" data-card="Takenuma, Abandoned Mire">Takenuma, Abandoned
+                                Mire</span><br />1 <span class="card-name" data-card="Sokenzan, Crucible of Defiance">Sokenzan, Crucible of Defiance</span>
                             </div>
                         </div>
                     </div>
@@ -169,13 +192,13 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Llanowar Elves<br />4 Elvish Mystic<br />4
-                                Old-Growth Troll<br />4 Cavalier of Thorns<br />4
-                                Karn, the Great Creator<br />4 Storm the
-                                Festival<br />4 Oath of Nissa<br />3 Kiora,
-                                Behemoth Beckoner<br />4 Nykthos, Shrine to
-                                Nyx<br />1 Boseiju, Who Endures<br />1 Lair of
-                                the Hydra<br />18 Forest
+                                4 <span class="card-name" data-card="Llanowar Elves">Llanowar Elves</span><br />4 <span class="card-name" data-card="Elvish Mystic">Elvish Mystic</span><br />4
+                                <span class="card-name" data-card="Old-Growth Troll">Old-Growth Troll</span><br />4 <span class="card-name" data-card="Cavalier of Thorns">Cavalier of Thorns</span><br />4
+                                <span class="card-name" data-card="Karn, the Great Creator">Karn, the Great Creator</span><br />4 <span class="card-name" data-card="Storm the Festival">Storm the
+                                Festival</span><br />4 <span class="card-name" data-card="Oath of Nissa">Oath of Nissa</span><br />3 <span class="card-name" data-card="Kiora, Behemoth Beckoner">Kiora,
+                                Behemoth Beckoner</span><br />4 <span class="card-name" data-card="Nykthos, Shrine to Nyx">Nykthos, Shrine to
+                                Nyx</span><br />1 <span class="card-name" data-card="Boseiju, Who Endures">Boseiju, Who Endures</span><br />1 <span class="card-name" data-card="Lair of the Hydra">Lair of
+                                the Hydra</span><br />18 <span class="card-name" data-card="Forest">Forest</span>
                             </div>
                         </div>
                     </div>
@@ -210,14 +233,14 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Niv-Mizzet Reborn<br />4 Sylvan Caryatid<br />4
-                                Bring to Light<br />1 Dreadbore<br />1 Abrupt
-                                Decay<br />1 Vanishing Verse<br />1 Expressive
-                                Iteration<br />1 The Wandering Emperor<br />1
-                                Omnath, Locus of Creation<br />1 Tolsimir,
-                                Friend to Wolves<br />4 Raugrin Triome<br />4
-                                Zagoth Triome<br />4 Ketria Triome<br />4
-                                Indatha Triome<br />4 Savai Triome
+                                4 <span class="card-name" data-card="Niv-Mizzet Reborn">Niv-Mizzet Reborn</span><br />4 <span class="card-name" data-card="Sylvan Caryatid">Sylvan Caryatid</span><br />4
+                                <span class="card-name" data-card="Bring to Light">Bring to Light</span><br />1 <span class="card-name" data-card="Dreadbore">Dreadbore</span><br />1 <span class="card-name" data-card="Abrupt Decay">Abrupt
+                                Decay</span><br />1 <span class="card-name" data-card="Vanishing Verse">Vanishing Verse</span><br />1 <span class="card-name" data-card="Expressive Iteration">Expressive
+                                Iteration</span><br />1 <span class="card-name" data-card="The Wandering Emperor">The Wandering Emperor</span><br />1
+                                <span class="card-name" data-card="Omnath, Locus of Creation">Omnath, Locus of Creation</span><br />1 <span class="card-name" data-card="Tolsimir, Friend to Wolves">Tolsimir,
+                                Friend to Wolves</span><br />4 <span class="card-name" data-card="Raugrin Triome">Raugrin Triome</span><br />4
+                                <span class="card-name" data-card="Zagoth Triome">Zagoth Triome</span><br />4 <span class="card-name" data-card="Ketria Triome">Ketria Triome</span><br />4
+                                <span class="card-name" data-card="Indatha Triome">Indatha Triome</span><br />4 <span class="card-name" data-card="Savai Triome">Savai Triome</span>
                             </div>
                         </div>
                     </div>
@@ -255,13 +278,13 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Teferi, Hero of Dominaria<br />4 The Wandering
-                                Emperor<br />4 Supreme Verdict<br />4 Absorb<br />4
-                                Dovin's Veto<br />4 March of Otherworldly
-                                Light<br />4 Memory Deluge<br />2 Farewell<br />4
-                                Hallowed Fountain<br />4 Irrigated Farmland<br />4
-                                Deserted Beach<br />2 Field of Ruin<br />2
-                                Castle Vantress<br />6 Island<br />4 Plains
+                                4 <span class="card-name" data-card="Teferi, Hero of Dominaria">Teferi, Hero of Dominaria</span><br />4 <span class="card-name" data-card="The Wandering Emperor">The Wandering
+                                Emperor</span><br />4 <span class="card-name" data-card="Supreme Verdict">Supreme Verdict</span><br />4 <span class="card-name" data-card="Absorb">Absorb</span><br />4
+                                <span class="card-name" data-card="Dovin's Veto">Dovin's Veto</span><br />4 <span class="card-name" data-card="March of Otherworldly Light">March of Otherworldly
+                                Light</span><br />4 <span class="card-name" data-card="Memory Deluge">Memory Deluge</span><br />2 <span class="card-name" data-card="Farewell">Farewell</span><br />4
+                                <span class="card-name" data-card="Hallowed Fountain">Hallowed Fountain</span><br />4 <span class="card-name" data-card="Irrigated Farmland">Irrigated Farmland</span><br />4
+                                <span class="card-name" data-card="Deserted Beach">Deserted Beach</span><br />2 <span class="card-name" data-card="Field of Ruin">Field of Ruin</span><br />2
+                                <span class="card-name" data-card="Castle Vantress">Castle Vantress</span><br />6 <span class="card-name" data-card="Island">Island</span><br />4 <span class="card-name" data-card="Plains">Plains</span>
                             </div>
                         </div>
                     </div>
@@ -305,13 +328,13 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Lotus Field<br />4 Thespian's Stage<br />4
-                                Sylvan Scrying<br />4 Pore Over the Pages<br />4
-                                Hidden Strings<br />4 Vizier of Tumbling
-                                Sands<br />4 Strict Proctor<br />1 Approach of
-                                the Second Sun<br />4 Botanical Sanctum<br />4
-                                Temple of Mystery<br />4 Yavimaya Coast<br />4
-                                Barkchannel Pathway
+                                4 <span class="card-name" data-card="Lotus Field">Lotus Field</span><br />4 <span class="card-name" data-card="Thespian's Stage">Thespian's Stage</span><br />4
+                                <span class="card-name" data-card="Sylvan Scrying">Sylvan Scrying</span><br />4 <span class="card-name" data-card="Pore Over the Pages">Pore Over the Pages</span><br />4
+                                <span class="card-name" data-card="Hidden Strings">Hidden Strings</span><br />4 <span class="card-name" data-card="Vizier of Tumbling Sands">Vizier of Tumbling
+                                Sands</span><br />4 <span class="card-name" data-card="Strict Proctor">Strict Proctor</span><br />1 <span class="card-name" data-card="Approach of the Second Sun">Approach of
+                                the Second Sun</span><br />4 <span class="card-name" data-card="Botanical Sanctum">Botanical Sanctum</span><br />4
+                                <span class="card-name" data-card="Temple of Mystery">Temple of Mystery</span><br />4 <span class="card-name" data-card="Yavimaya Coast">Yavimaya Coast</span><br />4
+                                <span class="card-name" data-card="Barkchannel Pathway">Barkchannel Pathway</span>
                             </div>
                         </div>
                     </div>
@@ -352,14 +375,14 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Thalia's Lieutenant<br />4 Valiant Veteran<br />4
-                                Thalia, Guardian of Thraben<br />4 Adeline,
-                                Resplendent Cathar<br />4 Hopeful Initiate<br />4
-                                Dauntless Bodyguard<br />4 Recruitment
-                                Officer<br />4 Brave the Elements<br />4
-                                Ossification<br />4 Mutavault<br />4 Shefet
-                                Dunes<br />1 Eiganjo, Seat of the Empire<br />14
-                                Plains
+                                4 <span class="card-name" data-card="Thalia's Lieutenant">Thalia's Lieutenant</span><br />4 <span class="card-name" data-card="Valiant Veteran">Valiant Veteran</span><br />4
+                                <span class="card-name" data-card="Thalia, Guardian of Thraben">Thalia, Guardian of Thraben</span><br />4 <span class="card-name" data-card="Adeline, Resplendent Cathar">Adeline,
+                                Resplendent Cathar</span><br />4 <span class="card-name" data-card="Hopeful Initiate">Hopeful Initiate</span><br />4
+                                <span class="card-name" data-card="Dauntless Bodyguard">Dauntless Bodyguard</span><br />4 <span class="card-name" data-card="Recruitment Officer">Recruitment
+                                Officer</span><br />4 <span class="card-name" data-card="Brave the Elements">Brave the Elements</span><br />4
+                                <span class="card-name" data-card="Ossification">Ossification</span><br />4 <span class="card-name" data-card="Mutavault">Mutavault</span><br />4 <span class="card-name" data-card="Shefet Dunes">Shefet
+                                Dunes</span><br />1 <span class="card-name" data-card="Eiganjo, Seat of the Empire">Eiganjo, Seat of the Empire</span><br />14
+                                <span class="card-name" data-card="Plains">Plains</span>
                             </div>
                         </div>
                     </div>
@@ -402,14 +425,14 @@
                                 Lista Exemplo (Pré-Ban)
                             </h3>
                             <div class="text-gray-300">
-                                4 Winota, Joiner of Forces<br />4 Llanowar
-                                Elves<br />4 Elvish Mystic<br />4 Voice of
-                                Resurgence<br />4 Prosperous Innkeeper<br />3
-                                Angrath's Marauders<br />2 Kenrith, the Returned
-                                King<br />4 Esika's Chariot<br />4 Fable of the
-                                Mirror-Breaker<br />4 Stomping Ground<br />4
-                                Temple Garden<br />4 Sacred Foundry<br />4
-                                Branchloft Pathway<br />4 Cragcrown Pathway
+                                4 <span class="card-name" data-card="Winota, Joiner of Forces">Winota, Joiner of Forces</span><br />4 <span class="card-name" data-card="Llanowar Elves">Llanowar
+                                Elves</span><br />4 <span class="card-name" data-card="Elvish Mystic">Elvish Mystic</span><br />4 <span class="card-name" data-card="Voice of Resurgence">Voice of
+                                Resurgence</span><br />4 <span class="card-name" data-card="Prosperous Innkeeper">Prosperous Innkeeper</span><br />3
+                                <span class="card-name" data-card="Angrath's Marauders">Angrath's Marauders</span><br />2 <span class="card-name" data-card="Kenrith, the Returned King">Kenrith, the Returned
+                                King</span><br />4 <span class="card-name" data-card="Esika's Chariot">Esika's Chariot</span><br />4 <span class="card-name" data-card="Fable of the Mirror-Breaker">Fable of the
+                                Mirror-Breaker</span><br />4 <span class="card-name" data-card="Stomping Ground">Stomping Ground</span><br />4
+                                <span class="card-name" data-card="Temple Garden">Temple Garden</span><br />4 <span class="card-name" data-card="Sacred Foundry">Sacred Foundry</span><br />4
+                                <span class="card-name" data-card="Branchloft Pathway">Branchloft Pathway</span><br />4 <span class="card-name" data-card="Cragcrown Pathway">Cragcrown Pathway</span>
                             </div>
                         </div>
                     </div>
@@ -448,15 +471,15 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Venerated Loxodon<br />4 Knight-Errant of
-                                Eos<br />4 Voldaren Epicure<br />4 Resolute
-                                Reinforcements<br />4 Ornithopter<br />4 Gleeful
-                                Demolition<br />4 Thraben Inspector<br />4
-                                Imodane's Recruiter<br />4 Reckless
-                                Bushwhacker<br />4 Battlefield Forge<br />4
-                                Inspiring Vantage<br />4 Sacred Foundry<br />4
-                                Needleverge Pathway<br />4 Mountain<br />2
-                                Plains
+                                4 <span class="card-name" data-card="Venerated Loxodon">Venerated Loxodon</span><br />4 <span class="card-name" data-card="Knight-Errant of Eos">Knight-Errant of
+                                Eos</span><br />4 <span class="card-name" data-card="Voldaren Epicure">Voldaren Epicure</span><br />4 <span class="card-name" data-card="Resolute Reinforcements">Resolute
+                                Reinforcements</span><br />4 <span class="card-name" data-card="Ornithopter">Ornithopter</span><br />4 <span class="card-name" data-card="Gleeful Demolition">Gleeful
+                                Demolition</span><br />4 <span class="card-name" data-card="Thraben Inspector">Thraben Inspector</span><br />4
+                                <span class="card-name" data-card="Imodane's Recruiter">Imodane's Recruiter</span><br />4 <span class="card-name" data-card="Reckless Bushwhacker">Reckless
+                                Bushwhacker</span><br />4 <span class="card-name" data-card="Battlefield Forge">Battlefield Forge</span><br />4
+                                <span class="card-name" data-card="Inspiring Vantage">Inspiring Vantage</span><br />4 <span class="card-name" data-card="Sacred Foundry">Sacred Foundry</span><br />4
+                                <span class="card-name" data-card="Needleverge Pathway">Needleverge Pathway</span><br />4 <span class="card-name" data-card="Mountain">Mountain</span><br />2
+                                <span class="card-name" data-card="Plains">Plains</span>
                             </div>
                         </div>
                     </div>
@@ -500,13 +523,13 @@
                                 Lista Exemplo (Pré-Ban)
                             </h3>
                             <div class="text-gray-300">
-                                4 Inverter of Truth<br />4 Thassa's Oracle<br />4
-                                Jace, Wielder of Mysteries<br />4
-                                Thoughtseize<br />4 Fatal Push<br />4 Dig
-                                Through Time<br />4 Opt<br />4 Thought Scour<br />4
-                                Drown in the Loch<br />4 Watery Grave<br />4
-                                Fabled Passage<br />4 Drowned Catacomb<br />4
-                                Temple of Deceit<br />4 Island<br />4 Swamp
+                                4 <span class="card-name" data-card="Inverter of Truth">Inverter of Truth</span><br />4 <span class="card-name" data-card="Thassa's Oracle">Thassa's Oracle</span><br />4
+                                <span class="card-name" data-card="Jace, Wielder of Mysteries">Jace, Wielder of Mysteries</span><br />4
+                                <span class="card-name" data-card="Thoughtseize">Thoughtseize</span><br />4 <span class="card-name" data-card="Fatal Push">Fatal Push</span><br />4 <span class="card-name" data-card="Dig Through Time">Dig
+                                Through Time</span><br />4 <span class="card-name" data-card="Opt">Opt</span><br />4 <span class="card-name" data-card="Thought Scour">Thought Scour</span><br />4
+                                <span class="card-name" data-card="Drown in the Loch">Drown in the Loch</span><br />4 <span class="card-name" data-card="Watery Grave">Watery Grave</span><br />4
+                                <span class="card-name" data-card="Fabled Passage">Fabled Passage</span><br />4 <span class="card-name" data-card="Drowned Catacomb">Drowned Catacomb</span><br />4
+                                <span class="card-name" data-card="Temple of Deceit">Temple of Deceit</span><br />4 <span class="card-name" data-card="Island">Island</span><br />4 <span class="card-name" data-card="Swamp">Swamp</span>
                             </div>
                         </div>
                     </div>
@@ -515,6 +538,63 @@
         </div>
 
         <script>
+            // Cria o elemento tooltip uma vez e anexa ao body
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.innerHTML = '<img>';
+            document.body.appendChild(tooltip);
+            const tooltipImage = tooltip.querySelector('img');
+
+            // Pega todos os elementos que devem acionar o tooltip
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                // Adiciona um pequeno deslocamento para evitar cintilação/piscar
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+
+                const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
+
+            // Função original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {

@@ -23,6 +23,29 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -68,13 +91,13 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                1 Arcane Denial<br />4 Boomerang<br />4
-                                Counterspell<br />2 Despotic Scepter<br />4
-                                Dissipate<br />4 Force of Will<br />4 Howling
-                                Mine<br />1 Ivory Tower<br />1 Lim-Dul's
-                                Vault<br />1 Lodestone Bauble<br />4 Stasis<br />4
-                                Swords to Plowshares<br />1 Urza's Bauble<br />1
-                                Zuran Orb
+                                1 <span class="card-name" data-card="Arcane Denial">Arcane Denial</span><br />4 <span class="card-name" data-card="Boomerang">Boomerang</span><br />4
+                                <span class="card-name" data-card="Counterspell">Counterspell</span><br />2 <span class="card-name" data-card="Despotic Scepter">Despotic Scepter</span><br />4
+                                <span class="card-name" data-card="Dissipate">Dissipate</span><br />4 <span class="card-name" data-card="Force of Will">Force of Will</span><br />4 <span class="card-name" data-card="Howling Mine">Howling
+                                Mine</span><br />1 <span class="card-name" data-card="Ivory Tower">Ivory Tower</span><br />1 <span class="card-name" data-card="Lim-Dul's Vault">Lim-Dul's
+                                Vault</span><br />1 <span class="card-name" data-card="Lodestone Bauble">Lodestone Bauble</span><br />4 <span class="card-name" data-card="Stasis">Stasis</span><br />4
+                                <span class="card-name" data-card="Swords to Plowshares">Swords to Plowshares</span><br />1 <span class="card-name" data-card="Urza's Bauble">Urza's Bauble</span><br />1
+                                <span class="card-name" data-card="Zuran Orb">Zuran Orb</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -82,8 +105,8 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />1 Glacial Chasm<br />10
-                                Island<br />4 Plains<br />1 Thawing Glaciers
+                                4 <span class="card-name" data-card="Adarkar Wastes">Adarkar Wastes</span><br />1 <span class="card-name" data-card="Glacial Chasm">Glacial Chasm</span><br />10
+                                <span class="card-name" data-card="Island">Island</span><br />4 <span class="card-name" data-card="Plains">Plains</span><br />1 <span class="card-name" data-card="Thawing Glaciers">Thawing Glaciers</span>
                             </div>
                         </div>
                     </div>
@@ -109,9 +132,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Balduvian Horde<br />4 Black Knight<br />4
-                                Hypnotic Specter<br />4 Knight of Stromgald<br />4
-                                Man-o'-War<br />4 Tinder Wall
+                                4 <span class="card-name" data-card="Balduvian Horde">Balduvian Horde</span><br />4 <span class="card-name" data-card="Black Knight">Black Knight</span><br />4
+                                <span class="card-name" data-card="Hypnotic Specter">Hypnotic Specter</span><br />4 <span class="card-name" data-card="Knight of Stromgald">Knight of Stromgald</span><br />4
+                                <span class="card-name" data-card="Man-o'-War">Man-o'-War</span><br />4 <span class="card-name" data-card="Tinder Wall">Tinder Wall</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -119,10 +142,10 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Dark Ritual<br />1 Demonic Consultation<br />1
-                                Dystopia<br />4 Fireball<br />1 Gerrard's
-                                Wisdom<br />4 Hymn to Tourach<br />1
-                                Nevinyrral's Disk<br />1 Power Sink
+                                4 <span class="card-name" data-card="Dark Ritual">Dark Ritual</span><br />1 <span class="card-name" data-card="Demonic Consultation">Demonic Consultation</span><br />1
+                                <span class="card-name" data-card="Dystopia">Dystopia</span><br />4 <span class="card-name" data-card="Fireball">Fireball</span><br />1 <span class="card-name" data-card="Gerrard's Wisdom">Gerrard's
+                                Wisdom</span><br />4 <span class="card-name" data-card="Hymn to Tourach">Hymn to Tourach</span><br />1
+                                <span class="card-name" data-card="Nevinyrral's Disk">Nevinyrral's Disk</span><br />1 <span class="card-name" data-card="Power Sink">Power Sink</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -130,9 +153,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Badlands<br />4 City of Brass<br />1 Rainbow
-                                Vale<br />4 Strip Mine<br />4 Underground Sea<br />1
-                                Volcanic Island
+                                4 <span class="card-name" data-card="Badlands">Badlands</span><br />4 <span class="card-name" data-card="City of Brass">City of Brass</span><br />1 <span class="card-name" data-card="Rainbow Vale">Rainbow
+                                Vale</span><br />4 <span class="card-name" data-card="Strip Mine">Strip Mine</span><br />4 <span class="card-name" data-card="Underground Sea">Underground Sea</span><br />1
+                                <span class="card-name" data-card="Volcanic Island">Volcanic Island</span>
                             </div>
                         </div>
                     </div>
@@ -158,8 +181,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Benthic Explorers<br />4 Cloud Elemental<br />1
-                                Knight of the Mists<br />4 Man-o'-War
+                                4 <span class="card-name" data-card="Benthic Explorers">Benthic Explorers</span><br />4 <span class="card-name" data-card="Cloud Elemental">Cloud Elemental</span><br />1
+                                <span class="card-name" data-card="Knight of the Mists">Knight of the Mists</span><br />4 <span class="card-name" data-card="Man-o'-War">Man-o'-War</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -167,12 +190,12 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                1 Arcane Denial<br />1 Counterspell<br />3
-                                Disenchant<br />4 Dissipate<br />4 Force of
-                                Will<br />4 Impulse<br />1 Ivory Tower<br />1
-                                Memory Lapse<br />1 Power Sink<br />1 Serrated
-                                Arrows<br />4 Swords to Plowshares<br />1 Zuran
-                                Orb
+                                1 <span class="card-name" data-card="Arcane Denial">Arcane Denial</span><br />1 <span class="card-name" data-card="Counterspell">Counterspell</span><br />3
+                                <span class="card-name" data-card="Disenchant">Disenchant</span><br />4 <span class="card-name" data-card="Dissipate">Dissipate</span><br />4 <span class="card-name" data-card="Force of Will">Force of
+                                Will</span><br />4 <span class="card-name" data-card="Impulse">Impulse</span><br />1 <span class="card-name" data-card="Ivory Tower">Ivory Tower</span><br />1
+                                <span class="card-name" data-card="Memory Lapse">Memory Lapse</span><br />1 <span class="card-name" data-card="Power Sink">Power Sink</span><br />1 <span class="card-name" data-card="Serrated Arrows">Serrated
+                                Arrows</span><br />4 <span class="card-name" data-card="Swords to Plowshares">Swords to Plowshares</span><br />1 <span class="card-name" data-card="Zuran Orb">Zuran
+                                Orb</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -180,10 +203,10 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />1 Glacial Chasm<br />1
-                                Halls of Mist<br />11 Island<br />1 Kjeldoran
-                                Outpost<br />1 Rainbow Vale<br />1 Thawing
-                                Glaciers
+                                4 <span class="card-name" data-card="Adarkar Wastes">Adarkar Wastes</span><br />1 <span class="card-name" data-card="Glacial Chasm">Glacial Chasm</span><br />1
+                                <span class="card-name" data-card="Halls of Mist">Halls of Mist</span><br />11 <span class="card-name" data-card="Island">Island</span><br />1 <span class="card-name" data-card="Kjeldoran Outpost">Kjeldoran
+                                Outpost</span><br />1 <span class="card-name" data-card="Rainbow Vale">Rainbow Vale</span><br />1 <span class="card-name" data-card="Thawing Glaciers">Thawing
+                                Glaciers</span>
                             </div>
                         </div>
                     </div>
@@ -208,18 +231,18 @@
                             >
                                 Criaturas
                             </h3>
-                            <div class="text-gray-300">4 Serra Angel</div>
+                            <div class="text-gray-300">4 <span class="card-name" data-card="Serra Angel">Serra Angel</span></div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Abeyance<br />4 Arcane Denial<br />4
-                                Counterspell<br />4 Disenchant<br />4
-                                Dissipate<br />4 Force of Will<br />4 Impulse<br />1
-                                Ivory Tower<br />1 Recall<br />4 Swords to
-                                Plowshares
+                                4 <span class="card-name" data-card="Abeyance">Abeyance</span><br />4 <span class="card-name" data-card="Arcane Denial">Arcane Denial</span><br />4
+                                <span class="card-name" data-card="Counterspell">Counterspell</span><br />4 <span class="card-name" data-card="Disenchant">Disenchant</span><br />4
+                                <span class="card-name" data-card="Dissipate">Dissipate</span><br />4 <span class="card-name" data-card="Force of Will">Force of Will</span><br />4 <span class="card-name" data-card="Impulse">Impulse</span><br />1
+                                <span class="card-name" data-card="Ivory Tower">Ivory Tower</span><br />1 <span class="card-name" data-card="Recall">Recall</span><br />4 <span class="card-name" data-card="Swords to Plowshares">Swords to
+                                Plowshares</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -227,9 +250,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />1 Glacial Chasm<br />10
-                                Island<br />2 Kjeldoran Outpost<br />4 Plains<br />1
-                                Thawing Glaciers
+                                4 <span class="card-name" data-card="Adarkar Wastes">Adarkar Wastes</span><br />1 <span class="card-name" data-card="Glacial Chasm">Glacial Chasm</span><br />10
+                                <span class="card-name" data-card="Island">Island</span><br />2 <span class="card-name" data-card="Kjeldoran Outpost">Kjeldoran Outpost</span><br />4 <span class="card-name" data-card="Plains">Plains</span><br />1
+                                <span class="card-name" data-card="Thawing Glaciers">Thawing Glaciers</span>
                             </div>
                         </div>
                     </div>
@@ -254,9 +277,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Elvish Archers<br />4
-                                Erhnam Djinn<br />4 Fyndhorn Elves<br />4
-                                Llanowar Elves<br />4 Whirling Dervish
+                                4 <span class="card-name" data-card="Birds of Paradise">Birds of Paradise</span><br />4 <span class="card-name" data-card="Elvish Archers">Elvish Archers</span><br />4
+                                <span class="card-name" data-card="Erhnam Djinn">Erhnam Djinn</span><br />4 <span class="card-name" data-card="Fyndhorn Elves">Fyndhorn Elves</span><br />4
+                                <span class="card-name" data-card="Llanowar Elves">Llanowar Elves</span><br />4 <span class="card-name" data-card="Whirling Dervish">Whirling Dervish</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -264,8 +287,8 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Fireball<br />4 Giant Growth<br />4
-                                Incinerate<br />4 Lightning Bolt
+                                4 <span class="card-name" data-card="Fireball">Fireball</span><br />4 <span class="card-name" data-card="Giant Growth">Giant Growth</span><br />4
+                                <span class="card-name" data-card="Incinerate">Incinerate</span><br />4 <span class="card-name" data-card="Lightning Bolt">Lightning Bolt</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -273,8 +296,8 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Karplusan Forest<br />4 Mishra's Factory<br />4
-                                Strip Mine<br />4 Taiga
+                                4 <span class="card-name" data-card="Karplusan Forest">Karplusan Forest</span><br />4 <span class="card-name" data-card="Mishra's Factory">Mishra's Factory</span><br />4
+                                <span class="card-name" data-card="Strip Mine">Strip Mine</span><br />4 <span class="card-name" data-card="Taiga">Taiga</span>
                             </div>
                         </div>
                     </div>
@@ -302,8 +325,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Black Vise<br />4 Dwarven Miner<br />4 Knight
-                                of the White Orchid
+                                4 <span class="card-name" data-card="Black Vise">Black Vise</span><br />4 <span class="card-name" data-card="Dwarven Miner">Dwarven Miner</span><br />4 <span class="card-name" data-card="Knight of the White Orchid">Knight
+                                of the White Orchid</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -311,10 +334,10 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Armageddon<br />4 Disenchant<br />4
-                                Incinerate<br />4 Lightning Bolt<br />4
-                                Pillage<br />4 Stone Rain<br />4 Swords to
-                                Plowshares
+                                4 <span class="card-name" data-card="Armageddon">Armageddon</span><br />4 <span class="card-name" data-card="Disenchant">Disenchant</span><br />4
+                                <span class="card-name" data-card="Incinerate">Incinerate</span><br />4 <span class="card-name" data-card="Lightning Bolt">Lightning Bolt</span><br />4
+                                <span class="card-name" data-card="Pillage">Pillage</span><br />4 <span class="card-name" data-card="Stone Rain">Stone Rain</span><br />4 <span class="card-name" data-card="Swords to Plowshares">Swords to
+                                Plowshares</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -322,8 +345,8 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Plateau<br />4 Strip Mine<br />8 Mountain<br />8
-                                Plains
+                                4 <span class="card-name" data-card="Plateau">Plateau</span><br />4 <span class="card-name" data-card="Strip Mine">Strip Mine</span><br />8 <span class="card-name" data-card="Mountain">Mountain</span><br />8
+                                <span class="card-name" data-card="Plains">Plains</span>
                             </div>
                         </div>
                     </div>
@@ -349,8 +372,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Hypnotic Specter<br />4 Knight of Stromgald<br />4
-                                Order of the Ebon Hand
+                                4 <span class="card-name" data-card="Hypnotic Specter">Hypnotic Specter</span><br />4 <span class="card-name" data-card="Knight of Stromgald">Knight of Stromgald</span><br />4
+                                <span class="card-name" data-card="Order of the Ebon Hand">Order of the Ebon Hand</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -358,11 +381,11 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Dark Ritual<br />1 Demonic Consultation<br />4
-                                Drain Life<br />4 Hymn to Tourach<br />1 Ivory
-                                Tower<br />1 Mind Twist<br />4 Necropotence<br />1
-                                Nevinyrral's Disk<br />1 The Rack<br />1 Zuran
-                                Orb
+                                4 <span class="card-name" data-card="Dark Ritual">Dark Ritual</span><br />1 <span class="card-name" data-card="Demonic Consultation">Demonic Consultation</span><br />4
+                                <span class="card-name" data-card="Drain Life">Drain Life</span><br />4 <span class="card-name" data-card="Hymn to Tourach">Hymn to Tourach</span><br />1 <span class="card-name" data-card="Ivory Tower">Ivory
+                                Tower</span><br />1 <span class="card-name" data-card="Mind Twist">Mind Twist</span><br />4 <span class="card-name" data-card="Necropotence">Necropotence</span><br />1
+                                <span class="card-name" data-card="Nevinyrral's Disk">Nevinyrral's Disk</span><br />1 <span class="card-name" data-card="The Rack">The Rack</span><br />1 <span class="card-name" data-card="Zuran Orb">Zuran
+                                Orb</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -370,8 +393,8 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Mishra's Factory<br />4 Strip Mine<br />12
-                                Swamp
+                                4 <span class="card-name" data-card="Mishra's Factory">Mishra's Factory</span><br />4 <span class="card-name" data-card="Strip Mine">Strip Mine</span><br />12
+                                <span class="card-name" data-card="Swamp">Swamp</span>
                             </div>
                         </div>
                     </div>
@@ -396,18 +419,18 @@
                             >
                                 Criaturas
                             </h3>
-                            <div class="text-gray-300">4 Serra Angel</div>
+                            <div class="text-gray-300">4 <span class="card-name" data-card="Serra Angel">Serra Angel</span></div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Abeyance<br />4 Arcane Denial<br />4
-                                Counterspell<br />4 Disenchant<br />4
-                                Dissipate<br />4 Force of Will<br />4 Impulse<br />1
-                                Ivory Tower<br />1 Recall<br />4 Swords to
-                                Plowshares
+                                4 <span class="card-name" data-card="Abeyance">Abeyance</span><br />4 <span class="card-name" data-card="Arcane Denial">Arcane Denial</span><br />4
+                                <span class="card-name" data-card="Counterspell">Counterspell</span><br />4 <span class="card-name" data-card="Disenchant">Disenchant</span><br />4
+                                <span class="card-name" data-card="Dissipate">Dissipate</span><br />4 <span class="card-name" data-card="Force of Will">Force of Will</span><br />4 <span class="card-name" data-card="Impulse">Impulse</span><br />1
+                                <span class="card-name" data-card="Ivory Tower">Ivory Tower</span><br />1 <span class="card-name" data-card="Recall">Recall</span><br />4 <span class="card-name" data-card="Swords to Plowshares">Swords to
+                                Plowshares</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -415,9 +438,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />1 Glacial Chasm<br />10
-                                Island<br />2 Kjeldoran Outpost<br />4 Plains<br />1
-                                Thawing Glaciers
+                                4 <span class="card-name" data-card="Adarkar Wastes">Adarkar Wastes</span><br />1 <span class="card-name" data-card="Glacial Chasm">Glacial Chasm</span><br />10
+                                <span class="card-name" data-card="Island">Island</span><br />2 <span class="card-name" data-card="Kjeldoran Outpost">Kjeldoran Outpost</span><br />4 <span class="card-name" data-card="Plains">Plains</span><br />1
+                                <span class="card-name" data-card="Thawing Glaciers">Thawing Glaciers</span>
                             </div>
                         </div>
                     </div>
@@ -425,6 +448,63 @@
             </main>
         </div>
         <script>
+            // Cria o elemento tooltip uma vez e anexa ao body
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.innerHTML = '<img>';
+            document.body.appendChild(tooltip);
+            const tooltipImage = tooltip.querySelector('img');
+
+            // Pega todos os elementos que devem acionar o tooltip
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                // Adiciona um pequeno deslocamento para evitar cintilação/piscar
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+
+                const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
+
+            // Função original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {

@@ -23,6 +23,32 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
+            
+
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -68,7 +94,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Eternal Dragon<br />4 Exalted Angel
+                                <span class="card-name" data-card="Eternal Dragon">4 Eternal Dragon</span><br/>
+                                <span class="card-name" data-card="Exalted Angel">4 Exalted Angel</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -76,9 +103,13 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Akroma's Vengeance<br />4 Astral Slide<br />4
-                                Decree of Justice<br />4 Renewed Faith<br />4
-                                Starstorm<br />4 Wing Shards<br />4 Wrath of God
+                                <span class="card-name" data-card="Akroma's Vengeance">4 Akroma's Vengeance</span><br/>
+                                <span class="card-name" data-card="Astral Slide">4 Astral Slide</span><br/>
+                                <span class="card-name" data-card="Decree of Justice">4 Decree of Justice</span><br/>
+                                <span class="card-name" data-card="Renewed Faith">4 Renewed Faith</span><br/>
+                                <span class="card-name" data-card="Starstorm">4 Starstorm</span><br/>
+                                <span class="card-name" data-card="Wing Shards">4 Wing Shards</span><br/>
+                                <span class="card-name" data-card="Wrath of God">4 Wrath of God</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -86,8 +117,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                8 Plains<br />4 Secluded Steppe<br />4 Temple of
-                                the False God
+                                <span class="card-name" data-card="Plains">8 Plains</span><br/>
+                                <span class="card-name" data-card="Secluded Steppe">4 Secluded Steppe</span><br/>
+                                <span class="card-name" data-card="Temple of the False God">4 Temple of the False God</span>
                             </div>
                         </div>
                     </div>
@@ -113,10 +145,12 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Akroma, Angel of Wrath<br />4 Doomed
-                                Necromancer<br />4 Faceless Butcher<br />4
-                                Putrid Imp<br />4 Verdant Force<br />4 Visara
-                                the Dreadful
+                                <span class="card-name" data-card="Akroma, Angel of Wrath">4 Akroma, Angel of Wrath</span><br/>
+                                <span class="card-name" data-card="Doomed Necromancer">4 Doomed Necromancer</span><br/>
+                                <span class="card-name" data-card="Faceless Butcher">4 Faceless Butcher</span><br/>
+                                <span class="card-name" data-card="Putrid Imp">4 Putrid Imp</span><br/>
+                                <span class="card-name" data-card="Verdant Force">4 Verdant Force</span><br/>
+                                <span class="card-name" data-card="Visara the Dreadful">4 Visara the Dreadful</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -124,9 +158,14 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Buried Alive<br />4 Chrome Mox<br />4
-                                Duress<br />4 Entomb<br />4 Exhume<br />4
-                                Reanimate<br />4 Smother<br />4 Tainted Pact
+                                <span class="card-name" data-card="Buried Alive">4 Buried Alive</span><br/>
+                                <span class="card-name" data-card="Chrome Mox">4 Chrome Mox</span><br/>
+                                <span class="card-name" data-card="Duress">4 Duress</span><br/>
+                                <span class="card-name" data-card="Entomb">4 Entomb</span><br/>
+                                <span class="card-name" data-card="Exhume">4 Exhume</span><br/>
+                                <span class="card-name" data-card="Reanimate">4 Reanimate</span><br/>
+                                <span class="card-name" data-card="Smother">4 Smother</span><br/>
+                                <span class="card-name" data-card="Tainted Pact">4 Tainted Pact</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -134,8 +173,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 City of Brass<br />4 Grand Coliseum<br />4
-                                Tarnished Citadel
+                                <span class="card-name" data-card="City of Brass">4 City of Brass</span><br/>
+                                <span class="card-name" data-card="Grand Coliseum">4 Grand Coliseum</span><br/>
+                                <span class="card-name" data-card="Tarnished Citadel">4 Tarnished Citadel</span>
                             </div>
                         </div>
                     </div>
@@ -160,7 +200,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Metalworker<br />4 Phyrexian Colossus
+                                <span class="card-name" data-card="Metalworker">4 Metalworker</span><br/>
+                                <span class="card-name" data-card="Phyrexian Colossus">4 Phyrexian Colossus</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -168,11 +209,17 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Brainstorm<br />4 Burning Wish<br />4 Grim
-                                Monolith<br />4 Mana Leak<br />4 Mishra's
-                                Helix<br />4 Temporal Aperture<br />4 Thran
-                                Dynamo<br />4 Tinker<br />4 Tangle Wire<br />4
-                                Upheaval<br />4 Voltaic Key
+                                <span class="card-name" data-card="Brainstorm">4 Brainstorm</span><br/>
+                                <span class="card-name" data-card="Burning Wish">4 Burning Wish</span><br/>
+                                <span class="card-name" data-card="Grim Monolith">4 Grim Monolith</span><br/>
+                                <span class="card-name" data-card="Mana Leak">4 Mana Leak</span><br/>
+                                <span class="card-name" data-card="Mishra's Helix">4 Mishra's Helix</span><br/>
+                                <span class="card-name" data-card="Temporal Aperture">4 Temporal Aperture</span><br/>
+                                <span class="card-name" data-card="Thran Dynamo">4 Thran Dynamo</span><br/>
+                                <span class="card-name" data-card="Tinker">4 Tinker</span><br/>
+                                <span class="card-name" data-card="Tangle Wire">4 Tangle Wire</span><br/>
+                                <span class="card-name" data-card="Upheaval">4 Upheaval</span><br/>
+                                <span class="card-name" data-card="Voltaic Key">4 Voltaic Key</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -180,8 +227,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Ancient Tomb<br />4 City of Traitors<br />10
-                                Snow-Covered Island
+                                <span class="card-name" data-card="Ancient Tomb">4 Ancient Tomb</span><br/>
+                                <span class="card-name" data-card="City of Traitors">4 City of Traitors</span><br/>
+                                <span class="card-name" data-card="Snow-Covered Island">10 Snow-Covered Island</span>
                             </div>
                         </div>
                     </div>
@@ -206,8 +254,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Eternal Witness<br />4
-                                Wall of Blossoms
+                                <span class="card-name" data-card="Birds of Paradise">4 Birds of Paradise</span><br/>
+                                <span class="card-name" data-card="Eternal Witness">4 Eternal Witness</span><br/>
+                                <span class="card-name" data-card="Wall of Blossoms">4 Wall of Blossoms</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -215,10 +264,16 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Brainstorm<br />4 Counterspell<br />4 Cunning
-                                Wish<br />4 Fact or Fiction<br />4 Forbid<br />4
-                                Living Wish<br />4 Mana Leak<br />4 Mirari's
-                                Wake<br />4 Moment's Peace<br />4 Wrath of God
+                                <span class="card-name" data-card="Brainstorm">4 Brainstorm</span><br/>
+                                <span class="card-name" data-card="Counterspell">4 Counterspell</span><br/>
+                                <span class="card-name" data-card="Cunning Wish">4 Cunning Wish</span><br/>
+                                <span class="card-name" data-card="Fact or Fiction">4 Fact or Fiction</span><br/>
+                                <span class="card-name" data-card="Forbid">4 Forbid</span><br/>
+                                <span class="card-name" data-card="Living Wish">4 Living Wish</span><br/>
+                                <span class="card-name" data-card="Mana Leak">4 Mana Leak</span><br/>
+                                <span class="card-name" data-card="Mirari's Wake">4 Mirari's Wake</span><br/>
+                                <span class="card-name" data-card="Moment's Peace">4 Moment's Peace</span><br/>
+                                <span class="card-name" data-card="Wrath of God">4 Wrath of God</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -226,9 +281,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />4 Brushland<br />4 City of
-                                Brass<br />4 Flooded Strand<br />4 Windswept
-                                Heath
+                                <span class="card-name" data-card="Adarkar Wastes">4 Adarkar Wastes</span><br/>
+                                <span class="card-name" data-card="Brushland">4 Brushland</span><br/>
+                                <span class="card-name" data-card="City of Brass">4 City of Brass</span><br/>
+                                <span class="card-name" data-card="Flooded Strand">4 Flooded Strand</span><br/>
+                                <span class="card-name" data-card="Windswept Heath">4 Windswept Heath</span>
                             </div>
                         </div>
                     </div>
@@ -254,10 +311,12 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Akroma, Angel of Wrath<br />4 Doomed
-                                Necromancer<br />4 Faceless Butcher<br />4
-                                Putrid Imp<br />4 Verdant Force<br />4 Visara
-                                the Dreadful
+                                <span class="card-name" data-card="Akroma, Angel of Wrath">4 Akroma, Angel of Wrath</span><br/>
+                                <span class="card-name" data-card="Doomed Necromancer">4 Doomed Necromancer</span><br/>
+                                <span class="card-name" data-card="Faceless Butcher">4 Faceless Butcher</span><br/>
+                                <span class="card-name" data-card="Putrid Imp">4 Putrid Imp</span><br/>
+                                <span class="card-name" data-card="Verdant Force">4 Verdant Force</span><br/>
+                                <span class="card-name" data-card="Visara the Dreadful">4 Visara the Dreadful</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -265,9 +324,14 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Buried Alive<br />4 Chrome Mox<br />4
-                                Duress<br />4 Entomb<br />4 Exhume<br />4
-                                Reanimate<br />4 Smother<br />4 Tainted Pact
+                                <span class="card-name" data-card="Buried Alive">4 Buried Alive</span><br/>
+                                <span class="card-name" data-card="Chrome Mox">4 Chrome Mox</span><br/>
+                                <span class="card-name" data-card="Duress">4 Duress</span><br/>
+                                <span class="card-name" data-card="Entomb">4 Entomb</span><br/>
+                                <span class="card-name" data-card="Exhume">4 Exhume</span><br/>
+                                <span class="card-name" data-card="Reanimate">4 Reanimate</span><br/>
+                                <span class="card-name" data-card="Smother">4 Smother</span><br/>
+                                <span class="card-name" data-card="Tainted Pact">4 Tainted Pact</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -275,8 +339,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 City of Brass<br />4 Grand Coliseum<br />4
-                                Tarnished Citadel
+                                <span class="card-name" data-card="City of Brass">4 City of Brass</span><br/>
+                                <span class="card-name" data-card="Grand Coliseum">4 Grand Coliseum</span><br/>
+                                <span class="card-name" data-card="Tarnished Citadel">4 Tarnished Citadel</span>
                             </div>
                         </div>
                     </div>
@@ -302,10 +367,12 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Akroma, Angel of Wrath<br />4 Doomed
-                                Necromancer<br />4 Faceless Butcher<br />4
-                                Putrid Imp<br />4 Verdant Force<br />4 Visara
-                                the Dreadful
+                                <span class="card-name" data-card="Akroma, Angel of Wrath">4 Akroma, Angel of Wrath</span><br/>
+                                <span class="card-name" data-card="Doomed Necromancer">4 Doomed Necromancer</span><br/>
+                                <span class="card-name" data-card="Faceless Butcher">4 Faceless Butcher</span><br/>
+                                <span class="card-name" data-card="Putrid Imp">4 Putrid Imp</span><br/>
+                                <span class="card-name" data-card="Verdant Force">4 Verdant Force</span><br/>
+                                <span class="card-name" data-card="Visara the Dreadful">4 Visara the Dreadful</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -313,9 +380,14 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Buried Alive<br />4 Chrome Mox<br />4
-                                Duress<br />4 Entomb<br />4 Exhume<br />4
-                                Reanimate<br />4 Smother<br />4 Tainted Pact
+                                <span class="card-name" data-card="Buried Alive">4 Buried Alive</span><br/>
+                                <span class="card-name" data-card="Chrome Mox">4 Chrome Mox</span><br/>
+                                <span class="card-name" data-card="Duress">4 Duress</span><br/>
+                                <span class="card-name" data-card="Entomb">4 Entomb</span><br/>
+                                <span class="card-name" data-card="Exhume">4 Exhume</span><br/>
+                                <span class="card-name" data-card="Reanimate">4 Reanimate</span><br/>
+                                <span class="card-name" data-card="Smother">4 Smother</span><br/>
+                                <span class="card-name" data-card="Tainted Pact">4 Tainted Pact</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -323,8 +395,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 City of Brass<br />4 Grand Coliseum<br />4
-                                Tarnished Citadel
+                                <span class="card-name" data-card="City of Brass">4 City of Brass</span><br/>
+                                <span class="card-name" data-card="Grand Coliseum">4 Grand Coliseum</span><br/>
+                                <span class="card-name" data-card="Tarnished Citadel">4 Tarnished Citadel</span>
                             </div>
                         </div>
                     </div>
@@ -349,9 +422,12 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Eternal Witness<br />4
-                                Ravenous Baloth<br />4 Spiritmonger<br />4 Wall
-                                of Blossoms<br />4 Yavimaya Elder
+                                <span class="card-name" data-card="Birds of Paradise">4 Birds of Paradise</span><br/>
+                                <span class="card-name" data-card="Eternal Witness">4 Eternal Witness</span><br/>
+                                <span class="card-name" data-card="Ravenous Baloth">4 Ravenous Baloth</span><br/>
+                                <span class="card-name" data-card="Spiritmonger">4 Spiritmonger</span><br/>
+                                <span class="card-name" data-card="Wall of Blossoms">4 Wall of Blossoms</span><br/>
+                                <span class="card-name" data-card="Yavimaya Elder">4 Yavimaya Elder</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -359,9 +435,12 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Cabal Therapy<br />4 Call of the Herd<br />4
-                                Duress<br />4 Living Wish<br />4 Pernicious
-                                Deed<br />4 Smother
+                                <span class="card-name" data-card="Cabal Therapy">4 Cabal Therapy</span><br/>
+                                <span class="card-name" data-card="Call of the Herd">4 Call of the Herd</span><br/>
+                                <span class="card-name" data-card="Duress">4 Duress</span><br/>
+                                <span class="card-name" data-card="Living Wish">4 Living Wish</span><br/>
+                                <span class="card-name" data-card="Pernicious Deed">4 Pernicious Deed</span><br/>
+                                <span class="card-name" data-card="Smother">4 Smother</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -369,8 +448,10 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Llanowar Wastes<br />4 Treetop Village<br />10
-                                Swamp<br />10 Forest
+                                <span class="card-name" data-card="Llanowar Wastes">4 Llanowar Wastes</span><br/>
+                                <span class="card-name" data-card="Treetop Village">4 Treetop Village</span><br/>
+                                <span class="card-name" data-card="Swamp">10 Swamp</span><br/>
+                                <span class="card-name" data-card="Forest">10 Forest</span>
                             </div>
                         </div>
                     </div>
@@ -395,18 +476,25 @@
                             >
                                 Criaturas
                             </h3>
-                            <div class="text-gray-300">4 Exalted Angel</div>
+                            <div class="text-gray-300">
+                                <span class="card-name" data-card="Exalted Angel">4 Exalted Angel</span>
+                            </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Akroma's Vengeance<br />4 Brainstorm<br />4
-                                Counterspell<br />4 Cunning Wish<br />4 Decree
-                                of Justice<br />4 Fact or Fiction<br />4 Force
-                                Spike<br />4 Mana Leak<br />4 Renewed Faith<br />4
-                                Wrath of God
+                                <span class="card-name" data-card="Akroma's Vengeance">4 Akroma's Vengeance</span><br/>
+                                <span class="card-name" data-card="Brainstorm">4 Brainstorm</span><br/>
+                                <span class="card-name" data-card="Counterspell">4 Counterspell</span><br/>
+                                <span class="card-name" data-card="Cunning Wish">4 Cunning Wish</span><br/>
+                                <span class="card-name" data-card="Decree of Justice">4 Decree of Justice</span><br/>
+                                <span class="card-name" data-card="Fact or Fiction">4 Fact or Fiction</span><br/>
+                                <span class="card-name" data-card="Force Spike">4 Force Spike</span><br/>
+                                <span class="card-name" data-card="Mana Leak">4 Mana Leak</span><br/>
+                                <span class="card-name" data-card="Renewed Faith">4 Renewed Faith</span><br/>
+                                <span class="card-name" data-card="Wrath of God">4 Wrath of God</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -414,8 +502,10 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />4 Flooded Strand<br />10
-                                Island<br />10 Plains
+                                <span class="card-name" data-card="Adarkar Wastes">4 Adarkar Wastes</span><br/>
+                                <span class="card-name" data-card="Flooded Strand">4 Flooded Strand</span><br/>
+                                <span class="card-name" data-card="Island">10 Island</span><br/>
+                                <span class="card-name" data-card="Plains">10 Plains</span>
                             </div>
                         </div>
                     </div>
@@ -423,6 +513,71 @@
             </main>
         </div>
         <script>
+            function toggleVisibility(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.classList.toggle("hidden");
+                }
+            }
+
+            // Script para o tooltip da imagem da carta
+            // Cria o elemento tooltip uma vez e anexa ao body
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.innerHTML = '<img>';
+            document.body.appendChild(tooltip);
+            const tooltipImage = tooltip.querySelector('img');
+
+            // Pega todos os elementos que devem acionar o tooltip
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                // Adiciona um pequeno deslocamento para evitar cintilação/piscar
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+
+                const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
+
+            // Função original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {

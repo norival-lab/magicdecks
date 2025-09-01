@@ -23,6 +23,31 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -67,10 +92,12 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Doran, the Siege
-                                Tower<br />4 Elves of Deep Shadow<br />4
-                                Shriekmaw<br />4 Tarmogoyf<br />4 Treefolk
-                                Harbinger
+                                <span class="card-name" data-card="Birds of Paradise">4 Birds of Paradise</span><br/>
+                                <span class="card-name" data-card="Doran, the Siege Tower">4 Doran, the Siege Tower</span><br/>
+                                <span class="card-name" data-card="Elves of Deep Shadow">4 Elves of Deep Shadow</span><br/>
+                                <span class="card-name" data-card="Shriekmaw">4 Shriekmaw</span><br/>
+                                <span class="card-name" data-card="Tarmogoyf">4 Tarmogoyf</span><br/>
+                                <span class="card-name" data-card="Treefolk Harbinger">4 Treefolk Harbinger</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -78,9 +105,12 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Chord of Calling<br />4 Garruk Wildspeaker<br />4
-                                Nameless Inversion<br />4 Profane Command<br />4
-                                Sensei's Divining Top<br />4 Thoughtseize
+                                <span class="card-name" data-card="Chord of Calling">4 Chord of Calling</span><br/>
+                                <span class="card-name" data-card="Garruk Wildspeaker">4 Garruk Wildspeaker</span><br/>
+                                <span class="card-name" data-card="Nameless Inversion">4 Nameless Inversion</span><br/>
+                                <span class="card-name" data-card="Profane Command">4 Profane Command</span><br/>
+                                <span class="card-name" data-card="Sensei's Divining Top">4 Sensei's Divining Top</span><br/>
+                                <span class="card-name" data-card="Thoughtseize">4 Thoughtseize</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -88,11 +118,16 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Brushland<br />4 Caves of Koilos<br />4
-                                Gilt-Leaf Palace<br />4 Horizon Canopy<br />4
-                                Llanowar Wastes<br />4 Murmuring Bosk<br />4
-                                Overgrown Tomb<br />4 Pendelhaven<br />4 Temple
-                                Garden<br />4 Treetop Village
+                                <span class="card-name" data-card="Brushland">4 Brushland</span><br/>
+                                <span class="card-name" data-card="Caves of Koilos">4 Caves of Koilos</span><br/>
+                                <span class="card-name" data-card="Gilt-Leaf Palace">4 Gilt-Leaf Palace</span><br/>
+                                <span class="card-name" data-card="Horizon Canopy">4 Horizon Canopy</span><br/>
+                                <span class="card-name" data-card="Llanowar Wastes">4 Llanowar Wastes</span><br/>
+                                <span class="card-name" data-card="Murmuring Bosk">4 Murmuring Bosk</span><br/>
+                                <span class="card-name" data-card="Overgrown Tomb">4 Overgrown Tomb</span><br/>
+                                <span class="card-name" data-card="Pendelhaven">4 Pendelhaven</span><br/>
+                                <span class="card-name" data-card="Temple Garden">4 Temple Garden</span><br/>
+                                <span class="card-name" data-card="Treetop Village">4 Treetop Village</span>
                             </div>
                         </div>
                     </div>
@@ -118,12 +153,18 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Goblin Matron<br />4 Goblin Piledriver<br />4
-                                Goblin Ringleader<br />4 Goblin Warchief<br />4
-                                Gempalm Incinerator<br />4 Kiki-Jiki, Mirror
-                                Breaker<br />4 Mad Auntie<br />4 Mogg Fanatic<br />4
-                                Mogg War Marshal<br />4 Siege-Gang Commander<br />4
-                                Skirk Prospector<br />4 Stingscourger
+                                <span class="card-name" data-card="Goblin Matron">4 Goblin Matron</span><br/>
+                                <span class="card-name" data-card="Goblin Piledriver">4 Goblin Piledriver</span><br/>
+                                <span class="card-name" data-card="Goblin Ringleader">4 Goblin Ringleader</span><br/>
+                                <span class="card-name" data-card="Goblin Warchief">4 Goblin Warchief</span><br/>
+                                <span class="card-name" data-card="Gempalm Incinerator">4 Gempalm Incinerator</span><br/>
+                                <span class="card-name" data-card="Kiki-Jiki, Mirror Breaker">4 Kiki-Jiki, Mirror Breaker</span><br/>
+                                <span class="card-name" data-card="Mad Auntie">4 Mad Auntie</span><br/>
+                                <span class="card-name" data-card="Mogg Fanatic">4 Mogg Fanatic</span><br/>
+                                <span class="card-name" data-card="Mogg War Marshal">4 Mogg War Marshal</span><br/>
+                                <span class="card-name" data-card="Siege-Gang Commander">4 Siege-Gang Commander</span><br/>
+                                <span class="card-name" data-card="Skirk Prospector">4 Skirk Prospector</span><br/>
+                                <span class="card-name" data-card="Stingscourger">4 Stingscourger</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -131,9 +172,12 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Chrome Mox<br />4 Fodder Launch<br />4
-                                Nameless Inversion<br />4 Patriarch's Bidding<br />4
-                                Thoughtseize<br />4 Warren Weirding
+                                <span class="card-name" data-card="Chrome Mox">4 Chrome Mox</span><br/>
+                                <span class="card-name" data-card="Fodder Launch">4 Fodder Launch</span><br/>
+                                <span class="card-name" data-card="Nameless Inversion">4 Nameless Inversion</span><br/>
+                                <span class="card-name" data-card="Patriarch's Bidding">4 Patriarch's Bidding</span><br/>
+                                <span class="card-name" data-card="Thoughtseize">4 Thoughtseize</span><br/>
+                                <span class="card-name" data-card="Warren Weirding">4 Warren Weirding</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -141,8 +185,10 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Auntie's Hovel<br />4 Bloodstained Mire<br />4
-                                Rishadan Port<br />4 Secluded Glen
+                                <span class="card-name" data-card="Auntie's Hovel">4 Auntie's Hovel</span><br/>
+                                <span class="card-name" data-card="Bloodstained Mire">4 Bloodstained Mire</span><br/>
+                                <span class="card-name" data-card="Rishadan Port">4 Rishadan Port</span><br/>
+                                <span class="card-name" data-card="Secluded Glen">4 Secluded Glen</span>
                             </div>
                         </div>
                     </div>
@@ -167,14 +213,21 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birchlore Rangers<br />4 Boreal Druid<br />4
-                                Elvish Champion<br />4 Elvish Visionary<br />4
-                                Essence Warden<br />4 Heritage Druid<br />4
-                                Imperious Perfect<br />4 Llanowar Elves<br />4
-                                Mycoloth<br />4 Nettle Sentinel<br />4 Priest of
-                                Titania<br />4 Regal Force<br />4 Sylvan
-                                Messenger<br />4 Vexing Shusher<br />4 Wirewood
-                                Symbiote
+                                <span class="card-name" data-card="Birchlore Rangers">4 Birchlore Rangers</span><br/>
+                                <span class="card-name" data-card="Boreal Druid">4 Boreal Druid</span><br/>
+                                <span class="card-name" data-card="Elvish Champion">4 Elvish Champion</span><br/>
+                                <span class="card-name" data-card="Elvish Visionary">4 Elvish Visionary</span><br/>
+                                <span class="card-name" data-card="Essence Warden">4 Essence Warden</span><br/>
+                                <span class="card-name" data-card="Heritage Druid">4 Heritage Druid</span><br/>
+                                <span class="card-name" data-card="Imperious Perfect">4 Imperious Perfect</span><br/>
+                                <span class="card-name" data-card="Llanowar Elves">4 Llanowar Elves</span><br/>
+                                <span class="card-name" data-card="Mycoloth">4 Mycoloth</span><br/>
+                                <span class="card-name" data-card="Nettle Sentinel">4 Nettle Sentinel</span><br/>
+                                <span class="card-name" data-card="Priest of Titania">4 Priest of Titania</span><br/>
+                                <span class="card-name" data-card="Regal Force">4 Regal Force</span><br/>
+                                <span class="card-name" data-card="Sylvan Messenger">4 Sylvan Messenger</span><br/>
+                                <span class="card-name" data-card="Vexing Shusher">4 Vexing Shusher</span><br/>
+                                <span class="card-name" data-card="Wirewood Symbiote">4 Wirewood Symbiote</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -182,10 +235,13 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Chord of Calling<br />4 Cloudstone Curio<br />4
-                                Garruk Wildspeaker<br />4 Glimpse of Nature<br />4
-                                Orzhov Pontiff<br />4 Summoner's Pact<br />4
-                                Umezawa's Jitte
+                                <span class="card-name" data-card="Chord of Calling">4 Chord of Calling</span><br/>
+                                <span class="card-name" data-card="Cloudstone Curio">4 Cloudstone Curio</span><br/>
+                                <span class="card-name" data-card="Garruk Wildspeaker">4 Garruk Wildspeaker</span><br/>
+                                <span class="card-name" data-card="Glimpse of Nature">4 Glimpse of Nature</span><br/>
+                                <span class="card-name" data-card="Orzhov Pontiff">4 Orzhov Pontiff</span><br/>
+                                <span class="card-name" data-card="Summoner's Pact">4 Summoner's Pact</span><br/>
+                                <span class="card-name" data-card="Umezawa's Jitte">4 Umezawa's Jitte</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -193,8 +249,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Gilt-Leaf Palace<br />4 Llanowar Wastes<br />4
-                                Pendelhaven
+                                <span class="card-name" data-card="Gilt-Leaf Palace">4 Gilt-Leaf Palace</span><br/>
+                                <span class="card-name" data-card="Llanowar Wastes">4 Llanowar Wastes</span><br/>
+                                <span class="card-name" data-card="Pendelhaven">4 Pendelhaven</span>
                             </div>
                         </div>
                     </div>
@@ -220,8 +277,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Mistbind Clique<br />4 Scion of Oona<br />4
-                                Spellstutter Sprite<br />4 Vendilion Clique
+                                <span class="card-name" data-card="Mistbind Clique">4 Mistbind Clique</span><br/>
+                                <span class="card-name" data-card="Scion of Oona">4 Scion of Oona</span><br/>
+                                <span class="card-name" data-card="Spellstutter Sprite">4 Spellstutter Sprite</span><br/>
+                                <span class="card-name" data-card="Vendilion Clique">4 Vendilion Clique</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -229,9 +288,13 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Bitterblossom<br />4 Cryptic Command<br />4
-                                Nameless Inversion<br />4 Peppersmoke<br />4
-                                Rune Snag<br />4 Spell Snare<br />4 Thoughtseize
+                                <span class="card-name" data-card="Bitterblossom">4 Bitterblossom</span><br/>
+                                <span class="card-name" data-card="Cryptic Command">4 Cryptic Command</span><br/>
+                                <span class="card-name" data-card="Nameless Inversion">4 Nameless Inversion</span><br/>
+                                <span class="card-name" data-card="Peppersmoke">4 Peppersmoke</span><br/>
+                                <span class="card-name" data-card="Rune Snag">4 Rune Snag</span><br/>
+                                <span class="card-name" data-card="Spell Snare">4 Spell Snare</span><br/>
+                                <span class="card-name" data-card="Thoughtseize">4 Thoughtseize</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -239,9 +302,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Mutavault<br />4 River of Tears<br />4
-                                Secluded Glen<br />4 Sunken Ruins<br />4
-                                Underground River
+                                <span class="card-name" data-card="Mutavault">4 Mutavault</span><br/>
+                                <span class="card-name" data-card="River of Tears">4 River of Tears</span><br/>
+                                <span class="card-name" data-card="Secluded Glen">4 Secluded Glen</span><br/>
+                                <span class="card-name" data-card="Sunken Ruins">4 Sunken Ruins</span><br/>
+                                <span class="card-name" data-card="Underground River">4 Underground River</span>
                             </div>
                         </div>
                     </div>
@@ -267,10 +332,13 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Boreal Druid<br />4 Bramblewood Paragon<br />4
-                                Elvish Champion<br />4 Imperious Perfect<br />4
-                                Llanowar Elves<br />4 Tarmogoyf<br />4 Wren's
-                                Run Vanquisher
+                                <span class="card-name" data-card="Boreal Druid">4 Boreal Druid</span><br/>
+                                <span class="card-name" data-card="Bramblewood Paragon">4 Bramblewood Paragon</span><br/>
+                                <span class="card-name" data-card="Elvish Champion">4 Elvish Champion</span><br/>
+                                <span class="card-name" data-card="Imperious Perfect">4 Imperious Perfect</span><br/>
+                                <span class="card-name" data-card="Llanowar Elves">4 Llanowar Elves</span><br/>
+                                <span class="card-name" data-card="Tarmogoyf">4 Tarmogoyf</span><br/>
+                                <span class="card-name" data-card="Wren's Run Vanquisher">4 Wren's Run Vanquisher</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -278,8 +346,10 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Garruk Wildspeaker<br />4 Incinerate<br />4
-                                Lash Out<br />4 Profane Command
+                                <span class="card-name" data-card="Garruk Wildspeaker">4 Garruk Wildspeaker</span><br/>
+                                <span class="card-name" data-card="Incinerate">4 Incinerate</span><br/>
+                                <span class="card-name" data-card="Lash Out">4 Lash Out</span><br/>
+                                <span class="card-name" data-card="Profane Command">4 Profane Command</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -287,8 +357,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Karplusan Forest<br />4 Llanowar Wastes<br />4
-                                Treetop Village
+                                <span class="card-name" data-card="Karplusan Forest">4 Karplusan Forest</span><br/>
+                                <span class="card-name" data-card="Llanowar Wastes">4 Llanowar Wastes</span><br/>
+                                <span class="card-name" data-card="Treetop Village">4 Treetop Village</span>
                             </div>
                         </div>
                     </div>
@@ -314,10 +385,12 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Doran, the Siege
-                                Tower<br />4 Elves of Deep Shadow<br />4
-                                Shriekmaw<br />4 Tarmogoyf<br />4 Treefolk
-                                Harbinger
+                                <span class="card-name" data-card="Birds of Paradise">4 Birds of Paradise</span><br/>
+                                <span class="card-name" data-card="Doran, the Siege Tower">4 Doran, the Siege Tower</span><br/>
+                                <span class="card-name" data-card="Elves of Deep Shadow">4 Elves of Deep Shadow</span><br/>
+                                <span class="card-name" data-card="Shriekmaw">4 Shriekmaw</span><br/>
+                                <span class="card-name" data-card="Tarmogoyf">4 Tarmogoyf</span><br/>
+                                <span class="card-name" data-card="Treefolk Harbinger">4 Treefolk Harbinger</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -325,9 +398,12 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Chord of Calling<br />4 Garruk Wildspeaker<br />4
-                                Nameless Inversion<br />4 Profane Command<br />4
-                                Sensei's Divining Top<br />4 Thoughtseize
+                                <span class="card-name" data-card="Chord of Calling">4 Chord of Calling</span><br/>
+                                <span class="card-name" data-card="Garruk Wildspeaker">4 Garruk Wildspeaker</span><br/>
+                                <span class="card-name" data-card="Nameless Inversion">4 Nameless Inversion</span><br/>
+                                <span class="card-name" data-card="Profane Command">4 Profane Command</span><br/>
+                                <span class="card-name" data-card="Sensei's Divining Top">4 Sensei's Divining Top</span><br/>
+                                <span class="card-name" data-card="Thoughtseize">4 Thoughtseize</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -335,11 +411,16 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Brushland<br />4 Caves of Koilos<br />4
-                                Gilt-Leaf Palace<br />4 Horizon Canopy<br />4
-                                Llanowar Wastes<br />4 Murmuring Bosk<br />4
-                                Overgrown Tomb<br />4 Pendelhaven<br />4 Temple
-                                Garden<br />4 Treetop Village
+                                <span class="card-name" data-card="Brushland">4 Brushland</span><br/>
+                                <span class="card-name" data-card="Caves of Koilos">4 Caves of Koilos</span><br/>
+                                <span class="card-name" data-card="Gilt-Leaf Palace">4 Gilt-Leaf Palace</span><br/>
+                                <span class="card-name" data-card="Horizon Canopy">4 Horizon Canopy</span><br/>
+                                <span class="card-name" data-card="Llanowar Wastes">4 Llanowar Wastes</span><br/>
+                                <span class="card-name" data-card="Murmuring Bosk">4 Murmuring Bosk</span><br/>
+                                <span class="card-name" data-card="Overgrown Tomb">4 Overgrown Tomb</span><br/>
+                                <span class="card-name" data-card="Pendelhaven">4 Pendelhaven</span><br/>
+                                <span class="card-name" data-card="Temple Garden">4 Temple Garden</span><br/>
+                                <span class="card-name" data-card="Treetop Village">4 Treetop Village</span>
                             </div>
                         </div>
                     </div>
@@ -365,10 +446,12 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Doran, the Siege
-                                Tower<br />4 Elves of Deep Shadow<br />4
-                                Shriekmaw<br />4 Tarmogoyf<br />4 Treefolk
-                                Harbinger
+                                <span class="card-name" data-card="Birds of Paradise">4 Birds of Paradise</span><br/>
+                                <span class="card-name" data-card="Doran, the Siege Tower">4 Doran, the Siege Tower</span><br/>
+                                <span class="card-name" data-card="Elves of Deep Shadow">4 Elves of Deep Shadow</span><br/>
+                                <span class="card-name" data-card="Shriekmaw">4 Shriekmaw</span><br/>
+                                <span class="card-name" data-card="Tarmogoyf">4 Tarmogoyf</span><br/>
+                                <span class="card-name" data-card="Treefolk Harbinger">4 Treefolk Harbinger</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -376,9 +459,12 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Chord of Calling<br />4 Garruk Wildspeaker<br />4
-                                Nameless Inversion<br />4 Profane Command<br />4
-                                Sensei's Divining Top<br />4 Thoughtseize
+                                <span class="card-name" data-card="Chord of Calling">4 Chord of Calling</span><br/>
+                                <span class="card-name" data-card="Garruk Wildspeaker">4 Garruk Wildspeaker</span><br/>
+                                <span class="card-name" data-card="Nameless Inversion">4 Nameless Inversion</span><br/>
+                                <span class="card-name" data-card="Profane Command">4 Profane Command</span><br/>
+                                <span class="card-name" data-card="Sensei's Divining Top">4 Sensei's Divining Top</span><br/>
+                                <span class="card-name" data-card="Thoughtseize">4 Thoughtseize</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -386,11 +472,16 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Brushland<br />4 Caves of Koilos<br />4
-                                Gilt-Leaf Palace<br />4 Horizon Canopy<br />4
-                                Llanowar Wastes<br />4 Murmuring Bosk<br />4
-                                Overgrown Tomb<br />4 Pendelhaven<br />4 Temple
-                                Garden<br />4 Treetop Village
+                                <span class="card-name" data-card="Brushland">4 Brushland</span><br/>
+                                <span class="card-name" data-card="Caves of Koilos">4 Caves of Koilos</span><br/>
+                                <span class="card-name" data-card="Gilt-Leaf Palace">4 Gilt-Leaf Palace</span><br/>
+                                <span class="card-name" data-card="Horizon Canopy">4 Horizon Canopy</span><br/>
+                                <span class="card-name" data-card="Llanowar Wastes">4 Llanowar Wastes</span><br/>
+                                <span class="card-name" data-card="Murmuring Bosk">4 Murmuring Bosk</span><br/>
+                                <span class="card-name" data-card="Overgrown Tomb">4 Overgrown Tomb</span><br/>
+                                <span class="card-name" data-card="Pendelhaven">4 Pendelhaven</span><br/>
+                                <span class="card-name" data-card="Temple Garden">4 Temple Garden</span><br/>
+                                <span class="card-name" data-card="Treetop Village">4 Treetop Village</span>
                             </div>
                         </div>
                     </div>
@@ -416,8 +507,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Mistbind Clique<br />4 Scion of Oona<br />4
-                                Spellstutter Sprite<br />4 Vendilion Clique
+                                <span class="card-name" data-card="Mistbind Clique">4 Mistbind Clique</span><br/>
+                                <span class="card-name" data-card="Scion of Oona">4 Scion of Oona</span><br/>
+                                <span class="card-name" data-card="Spellstutter Sprite">4 Spellstutter Sprite</span><br/>
+                                <span class="card-name" data-card="Vendilion Clique">4 Vendilion Clique</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -425,9 +518,13 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Bitterblossom<br />4 Cryptic Command<br />4
-                                Nameless Inversion<br />4 Peppersmoke<br />4
-                                Rune Snag<br />4 Spell Snare<br />4 Thoughtseize
+                                <span class="card-name" data-card="Bitterblossom">4 Bitterblossom</span><br/>
+                                <span class="card-name" data-card="Cryptic Command">4 Cryptic Command</span><br/>
+                                <span class="card-name" data-card="Nameless Inversion">4 Nameless Inversion</span><br/>
+                                <span class="card-name" data-card="Peppersmoke">4 Peppersmoke</span><br/>
+                                <span class="card-name" data-card="Rune Snag">4 Rune Snag</span><br/>
+                                <span class="card-name" data-card="Spell Snare">4 Spell Snare</span><br/>
+                                <span class="card-name" data-card="Thoughtseize">4 Thoughtseize</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -435,9 +532,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Mutavault<br />4 River of Tears<br />4
-                                Secluded Glen<br />4 Sunken Ruins<br />4
-                                Underground River
+                                <span class="card-name" data-card="Mutavault">4 Mutavault</span><br/>
+                                <span class="card-name" data-card="River of Tears">4 River of Tears</span><br/>
+                                <span class="card-name" data-card="Secluded Glen">4 Secluded Glen</span><br/>
+                                <span class="card-name" data-card="Sunken Ruins">4 Sunken Ruins</span><br/>
+                                <span class="card-name" data-card="Underground River">4 Underground River</span>
                             </div>
                         </div>
                     </div>
@@ -445,6 +544,63 @@
             </main>
         </div>
         <script>
+            // Cria o elemento tooltip uma vez quando a página carrega
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.style.display = 'none';
+            document.body.appendChild(tooltip);
+
+            const tooltipImage = document.createElement('img');
+            tooltip.appendChild(tooltipImage);
+
+            // Seleciona todos os spans com a classe 'card-name'
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                const tooltipRect = tooltip.getBoundingClientRect();
+                let x = e.clientX + 15; // Offset para a direita do cursor
+                let y = e.clientY + 15; // Offset para baixo do cursor
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
+
+            // Função original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {

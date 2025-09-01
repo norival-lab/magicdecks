@@ -23,6 +23,29 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -68,9 +91,11 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Archangel of Wrath<br />4 Atraxa, Grand
-                                Unifier<br />4 Herd Migration<br />4 Leyline
-                                Binding<br />4 Topiary Stomper
+                                <span class="card-name" data-card="Archangel of Wrath">4 Archangel of Wrath</span><br/>
+                                <span class="card-name" data-card="Atraxa, Grand Unifier">4 Atraxa, Grand Unifier</span><br/>
+                                <span class="card-name" data-card="Herd Migration">4 Herd Migration</span><br/>
+                                <span class="card-name" data-card="Leyline Binding">4 Leyline Binding</span><br/>
+                                <span class="card-name" data-card="Topiary Stomper">4 Topiary Stomper</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -78,9 +103,11 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Depopulate<br />4 Invasion of Zendikar<br />4
-                                Ossification<br />4 Sunfall<br />4 Up the
-                                Beanstalk
+                                <span class="card-name" data-card="Depopulate">4 Depopulate</span><br/>
+                                <span class="card-name" data-card="Invasion of Zendikar">4 Invasion of Zendikar</span><br/>
+                                <span class="card-name" data-card="Ossification">4 Ossification</span><br/>
+                                <span class="card-name" data-card="Sunfall">4 Sunfall</span><br/>
+                                <span class="card-name" data-card="Up the Beanstalk">4 Up the Beanstalk</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -88,11 +115,15 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Boseiju, Who Endures<br />4 Jetmir's Garden<br />4
-                                Leyline of the Guildpact<br />4 Plaza of
-                                Heroes<br />4 Raugrin Triome<br />4 Spara's
-                                Headquarters<br />4 The Wandering Emperor<br />4
-                                Xander's Lounge<br />4 Ziatora's Proving Ground
+                                <span class="card-name" data-card="Boseiju, Who Endures">4 Boseiju, Who Endures</span><br/>
+                                <span class="card-name" data-card="Jetmir's Garden">4 Jetmir's Garden</span><br/>
+                                <span class="card-name" data-card="Leyline of the Guildpact">4 Leyline of the Guildpact</span><br/>
+                                <span class="card-name" data-card="Plaza of Heroes">4 Plaza of Heroes</span><br/>
+                                <span class="card-name" data-card="Raugrin Triome">4 Raugrin Triome</span><br/>
+                                <span class="card-name" data-card="Spara's Headquarters">4 Spara's Headquarters</span><br/>
+                                <span class="card-name" data-card="The Wandering Emperor">4 The Wandering Emperor</span><br/>
+                                <span class="card-name" data-card="Xander's Lounge">4 Xander's Lounge</span><br/>
+                                <span class="card-name" data-card="Ziatora's Proving Ground">4 Ziatora's Proving Ground</span>
                             </div>
                         </div>
                     </div>
@@ -118,11 +149,14 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Brutal Cathar<br />4 Harbin, Vanguard
-                                Aviator<br />4 Recruitment Officer<br />4
-                                Resolute Reinforcements<br />4 Skystrike
-                                Officer<br />4 Thalia, Guardian of Thraben<br />4
-                                Valiant Veteran<br />4 Yotian Tactician
+                                <span class="card-name" data-card="Brutal Cathar">4 Brutal Cathar</span><br />
+                                <span class="card-name" data-card="Harbin, Vanguard Aviator">4 Harbin, Vanguard Aviator</span><br />
+                                <span class="card-name" data-card="Recruitment Officer">4 Recruitment Officer</span><br />
+                                <span class="card-name" data-card="Resolute Reinforcements">4 Resolute Reinforcements</span><br />
+                                <span class="card-name" data-card="Skystrike Officer">4 Skystrike Officer</span><br />
+                                <span class="card-name" data-card="Thalia, Guardian of Thraben">4 Thalia, Guardian of Thraben</span><br />
+                                <span class="card-name" data-card="Valiant Veteran">4 Valiant Veteran</span><br />
+                                <span class="card-name" data-card="Yotian Tactician">4 Yotian Tactician</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -130,8 +164,10 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Fortified Beachhead<br />4 Make Disappear<br />4
-                                Ossification<br />4 Protect the Negotiators
+                                <span class="card-name" data-card="Fortified Beachhead">4 Fortified Beachhead</span><br />
+                                <span class="card-name" data-card="Make Disappear">4 Make Disappear</span><br />
+                                <span class="card-name" data-card="Ossification">4 Ossification</span><br />
+                                <span class="card-name" data-card="Protect the Negotiators">4 Protect the Negotiators</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -139,8 +175,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />4 Deserted Beach<br />4
-                                Seachrome Coast<br />8 Island<br />8 Plains
+                                <span class="card-name" data-card="Adarkar Wastes">4 Adarkar Wastes</span><br />
+                                <span class="card-name" data-card="Deserted Beach">4 Deserted Beach</span><br />
+                                <span class="card-name" data-card="Seachrome Coast">4 Seachrome Coast</span><br />
+                                <span class="card-name" data-card="Island">8 Island</span><br />
+                                <span class="card-name" data-card="Plains">8 Plains</span>
                             </div>
                         </div>
                     </div>
@@ -166,10 +205,11 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Dennick, Pious Apprentice<br />4 Raffine,
-                                Scheming Seer<br />4 Sheoldred, the
-                                Apocalypse<br />4 Skrelv, Defector Mite<br />4
-                                Thalia, Guardian of Thraben
+                                <span class="card-name" data-card="Dennick, Pious Apprentice">4 Dennick, Pious Apprentice</span><br />
+                                <span class="card-name" data-card="Raffine, Scheming Seer">4 Raffine, Scheming Seer</span><br />
+                                <span class="card-name" data-card="Sheoldred, the Apocalypse">4 Sheoldred, the Apocalypse</span><br />
+                                <span class="card-name" data-card="Skrelv, Defector Mite">4 Skrelv, Defector Mite</span><br />
+                                <span class="card-name" data-card="Thalia, Guardian of Thraben">4 Thalia, Guardian of Thraben</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -177,9 +217,12 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Cut Down<br />4 Go for the Throat<br />4 Make
-                                Disappear<br />4 Plaza of Heroes<br />4 The
-                                Wandering Emperor<br />4 Wedding Announcement
+                                <span class="card-name" data-card="Cut Down">4 Cut Down</span><br />
+                                <span class="card-name" data-card="Go for the Throat">4 Go for the Throat</span><br />
+                                <span class="card-name" data-card="Make Disappear">4 Make Disappear</span><br />
+                                <span class="card-name" data-card="Plaza of Heroes">4 Plaza of Heroes</span><br />
+                                <span class="card-name" data-card="The Wandering Emperor">4 The Wandering Emperor</span><br />
+                                <span class="card-name" data-card="Wedding Announcement">4 Wedding Announcement</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -187,11 +230,14 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Caves of Koilos<br />4 Deserted Beach<br />4
-                                Eiganjo, Seat of the Empire<br />4 Otawara,
-                                Soaring City<br />4 Raffine's Tower<br />4
-                                Seachrome Coast<br />4 Shattered Sanctum<br />4
-                                Takenuma, Abandoned Mire
+                                <span class="card-name" data-card="Caves of Koilos">4 Caves of Koilos</span><br />
+                                <span class="card-name" data-card="Deserted Beach">4 Deserted Beach</span><br />
+                                <span class="card-name" data-card="Eiganjo, Seat of the Empire">4 Eiganjo, Seat of the Empire</span><br />
+                                <span class="card-name" data-card="Otawara, Soaring City">4 Otawara, Soaring City</span><br />
+                                <span class="card-name" data-card="Raffine's Tower">4 Raffine's Tower</span><br />
+                                <span class="card-name" data-card="Seachrome Coast">4 Seachrome Coast</span><br />
+                                <span class="card-name" data-card="Shattered Sanctum">4 Shattered Sanctum</span><br />
+                                <span class="card-name" data-card="Takenuma, Abandoned Mire">4 Takenuma, Abandoned Mire</span>
                             </div>
                         </div>
                     </div>
@@ -217,9 +263,11 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Archangel of Wrath<br />4 Atraxa, Grand
-                                Unifier<br />4 Herd Migration<br />4 Leyline
-                                Binding<br />4 Topiary Stomper
+                                <span class="card-name" data-card="Archangel of Wrath">4 Archangel of Wrath</span><br />
+                                <span class="card-name" data-card="Atraxa, Grand Unifier">4 Atraxa, Grand Unifier</span><br />
+                                <span class="card-name" data-card="Herd Migration">4 Herd Migration</span><br />
+                                <span class="card-name" data-card="Leyline Binding">4 Leyline Binding</span><br />
+                                <span class="card-name" data-card="Topiary Stomper">4 Topiary Stomper</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -227,9 +275,11 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Depopulate<br />4 Invasion of Zendikar<br />4
-                                Ossification<br />4 Sunfall<br />4 Up the
-                                Beanstalk
+                                <span class="card-name" data-card="Depopulate">4 Depopulate</span><br />
+                                <span class="card-name" data-card="Invasion of Zendikar">4 Invasion of Zendikar</span><br />
+                                <span class="card-name" data-card="Ossification">4 Ossification</span><br />
+                                <span class="card-name" data-card="Sunfall">4 Sunfall</span><br />
+                                <span class="card-name" data-card="Up the Beanstalk">4 Up the Beanstalk</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -237,11 +287,15 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Boseiju, Who Endures<br />4 Jetmir's Garden<br />4
-                                Leyline of the Guildpact<br />4 Plaza of
-                                Heroes<br />4 Raugrin Triome<br />4 Spara's
-                                Headquarters<br />4 The Wandering Emperor<br />4
-                                Xander's Lounge<br />4 Ziatora's Proving Ground
+                                <span class="card-name" data-card="Boseiju, Who Endures">4 Boseiju, Who Endures</span><br />
+                                <span class="card-name" data-card="Jetmir's Garden">4 Jetmir's Garden</span><br />
+                                <span class="card-name" data-card="Leyline of the Guildpact">4 Leyline of the Guildpact</span><br />
+                                <span class="card-name" data-card="Plaza of Heroes">4 Plaza of Heroes</span><br />
+                                <span class="card-name" data-card="Raugrin Triome">4 Raugrin Triome</span><br />
+                                <span class="card-name" data-card="Spara's Headquarters">4 Spara's Headquarters</span><br />
+                                <span class="card-name" data-card="The Wandering Emperor">4 The Wandering Emperor</span><br />
+                                <span class="card-name" data-card="Xander's Lounge">4 Xander's Lounge</span><br />
+                                <span class="card-name" data-card="Ziatora's Proving Ground">4 Ziatora's Proving Ground</span>
                             </div>
                         </div>
                     </div>
@@ -267,8 +321,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Atraxa, Grand Unifier<br />4 Herd Migration<br />4
-                                Topiary Stomper
+                                <span class="card-name" data-card="Atraxa, Grand Unifier">4 Atraxa, Grand Unifier</span><br />
+                                <span class="card-name" data-card="Herd Migration">4 Herd Migration</span><br />
+                                <span class="card-name" data-card="Topiary Stomper">4 Topiary Stomper</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -276,10 +331,14 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Depopulate<br />4 Invasion of Zendikar<br />4
-                                Leyline Binding<br />4 Ossification<br />4
-                                Sunfall<br />4 Temporary Lockdown<br />4 The
-                                Wandering Emperor<br />4 Up the Beanstalk
+                                <span class="card-name" data-card="Depopulate">4 Depopulate</span><br />
+                                <span class="card-name" data-card="Invasion of Zendikar">4 Invasion of Zendikar</span><br />
+                                <span class="card-name" data-card="Leyline Binding">4 Leyline Binding</span><br />
+                                <span class="card-name" data-card="Ossification">4 Ossification</span><br />
+                                <span class="card-name" data-card="Sunfall">4 Sunfall</span><br />
+                                <span class="card-name" data-card="Temporary Lockdown">4 Temporary Lockdown</span><br />
+                                <span class="card-name" data-card="The Wandering Emperor">4 The Wandering Emperor</span><br />
+                                <span class="card-name" data-card="Up the Beanstalk">4 Up the Beanstalk</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -287,12 +346,16 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Boseiju, Who Endures<br />4 Brushland<br />4
-                                Deserted Beach<br />4 Dreamroot Cascade<br />4
-                                Eiganjo, Seat of the Empire<br />4 Jetmir's
-                                Garden<br />4 Otawara, Soaring City<br />4
-                                Overgrown Farmland<br />4 Spara's
-                                Headquarters<br />4 Yavimaya Coast
+                                <span class="card-name" data-card="Boseiju, Who Endures">4 Boseiju, Who Endures</span><br />
+                                <span class="card-name" data-card="Brushland">4 Brushland</span><br />
+                                <span class="card-name" data-card="Deserted Beach">4 Deserted Beach</span><br />
+                                <span class="card-name" data-card="Dreamroot Cascade">4 Dreamroot Cascade</span><br />
+                                <span class="card-name" data-card="Eiganjo, Seat of the Empire">4 Eiganjo, Seat of the Empire</span><br />
+                                <span class="card-name" data-card="Jetmir's Garden">4 Jetmir's Garden</span><br />
+                                <span class="card-name" data-card="Otawara, Soaring City">4 Otawara, Soaring City</span><br />
+                                <span class="card-name" data-card="Overgrown Farmland">4 Overgrown Farmland</span><br />
+                                <span class="card-name" data-card="Spara's Headquarters">4 Spara's Headquarters</span><br />
+                                <span class="card-name" data-card="Yavimaya Coast">4 Yavimaya Coast</span>
                             </div>
                         </div>
                     </div>
@@ -318,10 +381,11 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Dennick, Pious Apprentice<br />4 Raffine,
-                                Scheming Seer<br />4 Sheoldred, the
-                                Apocalypse<br />4 Skrelv, Defector Mite<br />4
-                                Thalia, Guardian of Thraben
+                                <span class="card-name" data-card="Dennick, Pious Apprentice">4 Dennick, Pious Apprentice</span><br />
+                                <span class="card-name" data-card="Raffine, Scheming Seer">4 Raffine, Scheming Seer</span><br />
+                                <span class="card-name" data-card="Sheoldred, the Apocalypse">4 Sheoldred, the Apocalypse</span><br />
+                                <span class="card-name" data-card="Skrelv, Defector Mite">4 Skrelv, Defector Mite</span><br />
+                                <span class="card-name" data-card="Thalia, Guardian of Thraben">4 Thalia, Guardian of Thraben</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -329,9 +393,12 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Cut Down<br />4 Go for the Throat<br />4 Make
-                                Disappear<br />4 Plaza of Heroes<br />4 The
-                                Wandering Emperor<br />4 Wedding Announcement
+                                <span class="card-name" data-card="Cut Down">4 Cut Down</span><br />
+                                <span class="card-name" data-card="Go for the Throat">4 Go for the Throat</span><br />
+                                <span class="card-name" data-card="Make Disappear">4 Make Disappear</span><br />
+                                <span class="card-name" data-card="Plaza of Heroes">4 Plaza of Heroes</span><br />
+                                <span class="card-name" data-card="The Wandering Emperor">4 The Wandering Emperor</span><br />
+                                <span class="card-name" data-card="Wedding Announcement">4 Wedding Announcement</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -339,11 +406,14 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Caves of Koilos<br />4 Deserted Beach<br />4
-                                Eiganjo, Seat of the Empire<br />4 Otawara,
-                                Soaring City<br />4 Raffine's Tower<br />4
-                                Seachrome Coast<br />4 Shattered Sanctum<br />4
-                                Takenuma, Abandoned Mire
+                                <span class="card-name" data-card="Caves of Koilos">4 Caves of Koilos</span><br />
+                                <span class="card-name" data-card="Deserted Beach">4 Deserted Beach</span><br />
+                                <span class="card-name" data-card="Eiganjo, Seat of the Empire">4 Eiganjo, Seat of the Empire</span><br />
+                                <span class="card-name" data-card="Otawara, Soaring City">4 Otawara, Soaring City</span><br />
+                                <span class="card-name" data-card="Raffine's Tower">4 Raffine's Tower</span><br />
+                                <span class="card-name" data-card="Seachrome Coast">4 Seachrome Coast</span><br />
+                                <span class="card-name" data-card="Shattered Sanctum">4 Shattered Sanctum</span><br />
+                                <span class="card-name" data-card="Takenuma, Abandoned Mire">4 Takenuma, Abandoned Mire</span>
                             </div>
                         </div>
                     </div>
@@ -369,8 +439,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Atraxa, Grand Unifier<br />4 Herd Migration<br />4
-                                Topiary Stomper
+                                <span class="card-name" data-card="Atraxa, Grand Unifier">4 Atraxa, Grand Unifier</span><br />
+                                <span class="card-name" data-card="Herd Migration">4 Herd Migration</span><br />
+                                <span class="card-name" data-card="Topiary Stomper">4 Topiary Stomper</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -378,10 +449,14 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Depopulate<br />4 Invasion of Zendikar<br />4
-                                Leyline Binding<br />4 Ossification<br />4
-                                Sunfall<br />4 Temporary Lockdown<br />4 The
-                                Wandering Emperor<br />4 Up the Beanstalk
+                                <span class="card-name" data-card="Depopulate">4 Depopulate</span><br />
+                                <span class="card-name" data-card="Invasion of Zendikar">4 Invasion of Zendikar</span><br />
+                                <span class="card-name" data-card="Leyline Binding">4 Leyline Binding</span><br />
+                                <span class="card-name" data-card="Ossification">4 Ossification</span><br />
+                                <span class="card-name" data-card="Sunfall">4 Sunfall</span><br />
+                                <span class="card-name" data-card="Temporary Lockdown">4 Temporary Lockdown</span><br />
+                                <span class="card-name" data-card="The Wandering Emperor">4 The Wandering Emperor</span><br />
+                                <span class="card-name" data-card="Up the Beanstalk">4 Up the Beanstalk</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -389,12 +464,16 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Boseiju, Who Endures<br />4 Brushland<br />4
-                                Deserted Beach<br />4 Dreamroot Cascade<br />4
-                                Eiganjo, Seat of the Empire<br />4 Jetmir's
-                                Garden<br />4 Otawara, Soaring City<br />4
-                                Overgrown Farmland<br />4 Spara's
-                                Headquarters<br />4 Yavimaya Coast
+                                <span class="card-name" data-card="Boseiju, Who Endures">4 Boseiju, Who Endures</span><br />
+                                <span class="card-name" data-card="Brushland">4 Brushland</span><br />
+                                <span class="card-name" data-card="Deserted Beach">4 Deserted Beach</span><br />
+                                <span class="card-name" data-card="Dreamroot Cascade">4 Dreamroot Cascade</span><br />
+                                <span class="card-name" data-card="Eiganjo, Seat of the Empire">4 Eiganjo, Seat of the Empire</span><br />
+                                <span class="card-name" data-card="Jetmir's Garden">4 Jetmir's Garden</span><br />
+                                <span class="card-name" data-card="Otawara, Soaring City">4 Otawara, Soaring City</span><br />
+                                <span class="card-name" data-card="Overgrown Farmland">4 Overgrown Farmland</span><br />
+                                <span class="card-name" data-card="Spara's Headquarters">4 Spara's Headquarters</span><br />
+                                <span class="card-name" data-card="Yavimaya Coast">4 Yavimaya Coast</span>
                             </div>
                         </div>
                     </div>
@@ -419,9 +498,11 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Archangel of Wrath<br />4 Atraxa, Grand
-                                Unifier<br />4 Herd Migration<br />4 Leyline
-                                Binding<br />4 Topiary Stomper
+                                <span class="card-name" data-card="Archangel of Wrath">4 Archangel of Wrath</span><br />
+                                <span class="card-name" data-card="Atraxa, Grand Unifier">4 Atraxa, Grand Unifier</span><br />
+                                <span class="card-name" data-card="Herd Migration">4 Herd Migration</span><br />
+                                <span class="card-name" data-card="Leyline Binding">4 Leyline Binding</span><br />
+                                <span class="card-name" data-card="Topiary Stomper">4 Topiary Stomper</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -429,9 +510,11 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Depopulate<br />4 Invasion of Zendikar<br />4
-                                Ossification<br />4 Sunfall<br />4 Up the
-                                Beanstalk
+                                <span class="card-name" data-card="Depopulate">4 Depopulate</span><br />
+                                <span class="card-name" data-card="Invasion of Zendikar">4 Invasion of Zendikar</span><br />
+                                <span class="card-name" data-card="Ossification">4 Ossification</span><br />
+                                <span class="card-name" data-card="Sunfall">4 Sunfall</span><br />
+                                <span class="card-name" data-card="Up the Beanstalk">4 Up the Beanstalk</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -439,11 +522,15 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Boseiju, Who Endures<br />4 Jetmir's Garden<br />4
-                                Leyline of the Guildpact<br />4 Plaza of
-                                Heroes<br />4 Raugrin Triome<br />4 Spara's
-                                Headquarters<br />4 The Wandering Emperor<br />4
-                                Xander's Lounge<br />4 Ziatora's Proving Ground
+                                <span class="card-name" data-card="Boseiju, Who Endures">4 Boseiju, Who Endures</span><br />
+                                <span class="card-name" data-card="Jetmir's Garden">4 Jetmir's Garden</span><br />
+                                <span class="card-name" data-card="Leyline of the Guildpact">4 Leyline of the Guildpact</span><br />
+                                <span class="card-name" data-card="Plaza of Heroes">4 Plaza of Heroes</span><br />
+                                <span class="card-name" data-card="Raugrin Triome">4 Raugrin Triome</span><br />
+                                <span class="card-name" data-card="Spara's Headquarters">4 Spara's Headquarters</span><br />
+                                <span class="card-name" data-card="The Wandering Emperor">4 The Wandering Emperor</span><br />
+                                <span class="card-name" data-card="Xander's Lounge">4 Xander's Lounge</span><br />
+                                <span class="card-name" data-card="Ziatora's Proving Ground">4 Ziatora's Proving Ground</span>
                             </div>
                         </div>
                     </div>
@@ -457,6 +544,71 @@
                     element.classList.toggle("hidden");
                 }
             }
+
+            // Criar o elemento tooltip
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            document.body.appendChild(tooltip);
+
+            // Selecionar todos os elementos com a classe 'card-name'
+            const cardNames = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            function updateTooltipPosition(event) {
+                const mouseX = event.clientX;
+                const mouseY = event.clientY;
+                const windowWidth = window.innerWidth;
+                const windowHeight = window.innerHeight;
+                const tooltipWidth = 250; // Largura da imagem
+                const tooltipHeight = 350; // Altura estimada da imagem
+
+                let left = mouseX + 15; // Offset para a direita
+                let top = mouseY - tooltipHeight / 2; // Centralizar verticalmente
+
+                // Verificar se o tooltip sairia da tela pela direita
+                if (left + tooltipWidth > windowWidth) {
+                    left = mouseX - tooltipWidth - 15; // Colocar à esquerda
+                }
+
+                // Verificar se o tooltip sairia da tela por cima
+                if (top < 0) {
+                    top = 10;
+                }
+
+                // Verificar se o tooltip sairia da tela por baixo
+                if (top + tooltipHeight > windowHeight) {
+                    top = windowHeight - tooltipHeight - 10;
+                }
+
+                tooltip.style.left = left + 'px';
+                tooltip.style.top = top + 'px';
+            }
+
+            // Adicionar event listeners para cada nome de carta
+            cardNames.forEach(cardName => {
+                cardName.addEventListener('mouseover', function(event) {
+                    const cardNameText = this.getAttribute('data-card');
+                    if (cardNameText) {
+                        // Criar a URL da imagem
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardNameText)}&format=image&version=normal`;
+                        
+                        // Criar e configurar a imagem
+                        tooltip.innerHTML = `<img src="${imageUrl}" alt="${cardNameText}" />`;
+                        
+                        // Mostrar o tooltip
+                        tooltip.style.display = 'block';
+                        
+                        // Atualizar posição
+                        updateTooltipPosition(event);
+                    }
+                });
+
+                cardName.addEventListener('mousemove', updateTooltipPosition);
+
+                cardName.addEventListener('mouseout', function() {
+                    tooltip.style.display = 'none';
+                });
+            });
         </script>
     </body>
 </html>

@@ -23,6 +23,29 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -68,10 +91,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Duskwatch Recruiter<br />4 Heron's Grace
-                                Champion<br />4 Knight of the White Orchid<br />4
-                                Lambholt Pacifist<br />4 Reflector Mage<br />4
-                                Thalia's Lieutenant<br />4 Tireless Tracker
+                                4 <span class="card-name" data-card="Duskwatch Recruiter">Duskwatch Recruiter</span><br />4 <span class="card-name" data-card="Heron's Grace Champion">Heron's Grace
+                                Champion</span><br />4 <span class="card-name" data-card="Knight of the White Orchid">Knight of the White Orchid</span><br />4
+                                <span class="card-name" data-card="Lambholt Pacifist">Lambholt Pacifist</span><br />4 <span class="card-name" data-card="Reflector Mage">Reflector Mage</span><br />4
+                                <span class="card-name" data-card="Thalia's Lieutenant">Thalia's Lieutenant</span><br />4 <span class="card-name" data-card="Tireless Tracker">Tireless Tracker</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -79,8 +102,8 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Collected Company<br />4 Dromoka's Command<br />4
-                                Ojutai's Command
+                                4 <span class="card-name" data-card="Collected Company">Collected Company</span><br />4 <span class="card-name" data-card="Dromoka's Command">Dromoka's Command</span><br />4
+                                <span class="card-name" data-card="Ojutai's Command">Ojutai's Command</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -88,9 +111,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Canopy Vista<br />4 Fortified Village<br />4
-                                Prairie Stream<br />4 Yavimaya Coast<br />8
-                                Forest<br />8 Plains
+                                4 <span class="card-name" data-card="Canopy Vista">Canopy Vista</span><br />4 <span class="card-name" data-card="Fortified Village">Fortified Village</span><br />4
+                                <span class="card-name" data-card="Prairie Stream">Prairie Stream</span><br />4 <span class="card-name" data-card="Yavimaya Coast">Yavimaya Coast</span><br />8
+                                <span class="card-name" data-card="Forest">Forest</span><br />8 <span class="card-name" data-card="Plains">Plains</span>
                             </div>
                         </div>
                     </div>
@@ -116,9 +139,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Gnarlwood Dryad<br />4 Grim Flayer<br />4
-                                Ishkanah, Grafwidow<br />4 Mindwrack Demon<br />4
-                                Sylvan Advocate<br />4 Tireless Tracker
+                                4 <span class="card-name" data-card="Gnarlwood Dryad">Gnarlwood Dryad</span><br />4 <span class="card-name" data-card="Grim Flayer">Grim Flayer</span><br />4
+                                <span class="card-name" data-card="Ishkanah, Grafwidow">Ishkanah, Grafwidow</span><br />4 <span class="card-name" data-card="Mindwrack Demon">Mindwrack Demon</span><br />4
+                                <span class="card-name" data-card="Sylvan Advocate">Sylvan Advocate</span><br />4 <span class="card-name" data-card="Tireless Tracker">Tireless Tracker</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -126,9 +149,9 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Grapple with the Past<br />4 Grasp of
-                                Darkness<br />4 Liliana, the Last Hope<br />4
-                                Ruinous Path<br />4 Traverse the Ulvenwald
+                                4 <span class="card-name" data-card="Grapple with the Past">Grapple with the Past</span><br />4 <span class="card-name" data-card="Grasp of Darkness">Grasp of
+                                Darkness</span><br />4 <span class="card-name" data-card="Liliana, the Last Hope">Liliana, the Last Hope</span><br />4
+                                <span class="card-name" data-card="Ruinous Path">Ruinous Path</span><br />4 <span class="card-name" data-card="Traverse the Ulvenwald">Traverse the Ulvenwald</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -136,8 +159,8 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Blooming Marsh<br />4 Evolving Wilds<br />4
-                                Hissing Quagmire<br />8 Forest<br />8 Swamp
+                                4 <span class="card-name" data-card="Blooming Marsh">Blooming Marsh</span><br />4 <span class="card-name" data-card="Evolving Wilds">Evolving Wilds</span><br />4
+                                <span class="card-name" data-card="Hissing Quagmire">Hissing Quagmire</span><br />8 <span class="card-name" data-card="Forest">Forest</span><br />8 <span class="card-name" data-card="Swamp">Swamp</span>
                             </div>
                         </div>
                     </div>
@@ -162,9 +185,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Elder Deep-Fiend<br />4 Emrakul, the Promised
-                                End<br />4 Ishkanah, Grafwidow<br />4 Pilgrim's
-                                Eye<br />4 Primal Druid<br />4 Wretched Gryff
+                                4 <span class="card-name" data-card="Elder Deep-Fiend">Elder Deep-Fiend</span><br />4 <span class="card-name" data-card="Emrakul, the Promised End">Emrakul, the Promised
+                                End</span><br />4 <span class="card-name" data-card="Ishkanah, Grafwidow">Ishkanah, Grafwidow</span><br />4 <span class="card-name" data-card="Pilgrim's Eye">Pilgrim's
+                                Eye</span><br />4 <span class="card-name" data-card="Primal Druid">Primal Druid</span><br />4 <span class="card-name" data-card="Wretched Gryff">Wretched Gryff</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -172,9 +195,9 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Contingency Plan<br />4 Grapple with the
-                                Past<br />4 Kozilek's Return<br />4 Traverse the
-                                Ulvenwald
+                                4 <span class="card-name" data-card="Contingency Plan">Contingency Plan</span><br />4 <span class="card-name" data-card="Grapple with the Past">Grapple with the
+                                Past</span><br />4 <span class="card-name" data-card="Kozilek's Return">Kozilek's Return</span><br />4 <span class="card-name" data-card="Traverse the Ulvenwald">Traverse the
+                                Ulvenwald</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -182,9 +205,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Botanical Sanctum<br />4 Evolving Wilds<br />4
-                                Lumbering Falls<br />4 Spirebluff Canal<br />4
-                                Yavimaya Coast
+                                4 <span class="card-name" data-card="Botanical Sanctum">Botanical Sanctum</span><br />4 <span class="card-name" data-card="Evolving Wilds">Evolving Wilds</span><br />4
+                                <span class="card-name" data-card="Lumbering Falls">Lumbering Falls</span><br />4 <span class="card-name" data-card="Spirebluff Canal">Spirebluff Canal</span><br />4
+                                <span class="card-name" data-card="Yavimaya Coast">Yavimaya Coast</span>
                             </div>
                         </div>
                     </div>
@@ -210,9 +233,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Gnarlwood Dryad<br />4 Grim Flayer<br />4
-                                Ishkanah, Grafwidow<br />4 Mindwrack Demon<br />4
-                                Sylvan Advocate<br />4 Tireless Tracker
+                                4 <span class="card-name" data-card="Gnarlwood Dryad">Gnarlwood Dryad</span><br />4 <span class="card-name" data-card="Grim Flayer">Grim Flayer</span><br />4
+                                <span class="card-name" data-card="Ishkanah, Grafwidow">Ishkanah, Grafwidow</span><br />4 <span class="card-name" data-card="Mindwrack Demon">Mindwrack Demon</span><br />4
+                                <span class="card-name" data-card="Sylvan Advocate">Sylvan Advocate</span><br />4 <span class="card-name" data-card="Tireless Tracker">Tireless Tracker</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -220,9 +243,9 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Grapple with the Past<br />4 Grasp of
-                                Darkness<br />4 Liliana, the Last Hope<br />4
-                                Ruinous Path<br />4 Traverse the Ulvenwald
+                                4 <span class="card-name" data-card="Grapple with the Past">Grapple with the Past</span><br />4 <span class="card-name" data-card="Grasp of Darkness">Grasp of
+                                Darkness</span><br />4 <span class="card-name" data-card="Liliana, the Last Hope">Liliana, the Last Hope</span><br />4
+                                <span class="card-name" data-card="Ruinous Path">Ruinous Path</span><br />4 <span class="card-name" data-card="Traverse the Ulvenwald">Traverse the Ulvenwald</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -230,8 +253,8 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Blooming Marsh<br />4 Evolving Wilds<br />4
-                                Hissing Quagmire<br />8 Forest<br />8 Swamp
+                                4 <span class="card-name" data-card="Blooming Marsh">Blooming Marsh</span><br />4 <span class="card-name" data-card="Evolving Wilds">Evolving Wilds</span><br />4
+                                <span class="card-name" data-card="Hissing Quagmire">Hissing Quagmire</span><br />8 <span class="card-name" data-card="Forest">Forest</span><br />8 <span class="card-name" data-card="Swamp">Swamp</span>
                             </div>
                         </div>
                     </div>
@@ -239,6 +262,63 @@
             </main>
         </div>
         <script>
+            // Cria o elemento tooltip uma vez e anexa ao body
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.innerHTML = '<img>';
+            document.body.appendChild(tooltip);
+            const tooltipImage = tooltip.querySelector('img');
+
+            // Pega todos os elementos que devem acionar o tooltip
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                // Adiciona um pequeno deslocamento para evitar cintilação/piscar
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+
+                const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
+
+            // Função original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {

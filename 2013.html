@@ -23,6 +23,29 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -67,8 +90,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Augur of Bolas<br />4 Restoration Angel<br />4
-                                Snapcaster Mage
+                                4 <span class="card-name" data-card="Augur of Bolas">Augur of Bolas</span><br />4 <span class="card-name" data-card="Restoration Angel">Restoration Angel</span><br />4
+                                <span class="card-name" data-card="Snapcaster Mage">Snapcaster Mage</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -76,10 +99,10 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Azorius Charm<br />4 Dissipate<br />4 Izzet
-                                Charm<br />4 Pillar of Flame<br />4 Rewind<br />4
-                                Searing Spear<br />4 Sphinx's Revelation<br />4
-                                Think Twice
+                                4 <span class="card-name" data-card="Azorius Charm">Azorius Charm</span><br />4 <span class="card-name" data-card="Dissipate">Dissipate</span><br />4 <span class="card-name" data-card="Izzet Charm">Izzet
+                                Charm</span><br />4 <span class="card-name" data-card="Pillar of Flame">Pillar of Flame</span><br />4 <span class="card-name" data-card="Rewind">Rewind</span><br />4
+                                <span class="card-name" data-card="Searing Spear">Searing Spear</span><br />4 <span class="card-name" data-card="Sphinx's Revelation">Sphinx's Revelation</span><br />4
+                                <span class="card-name" data-card="Think Twice">Think Twice</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -87,9 +110,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Clifftop Retreat<br />4 Glacial Fortress<br />4
-                                Hallowed Fountain<br />4 Sacred Foundry<br />4
-                                Steam Vents<br />4 Sulfur Falls
+                                4 <span class="card-name" data-card="Clifftop Retreat">Clifftop Retreat</span><br />4 <span class="card-name" data-card="Glacial Fortress">Glacial Fortress</span><br />4
+                                <span class="card-name" data-card="Hallowed Fountain">Hallowed Fountain</span><br />4 <span class="card-name" data-card="Sacred Foundry">Sacred Foundry</span><br />4
+                                <span class="card-name" data-card="Steam Vents">Steam Vents</span><br />4 <span class="card-name" data-card="Sulfur Falls">Sulfur Falls</span>
                             </div>
                         </div>
                     </div>
@@ -117,9 +140,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Geist of Saint Traft<br />4 Gladecover
-                                Scout<br />4 Invisible Stalker<br />4 Silhana
-                                Ledgewalker
+                                4 <span class="card-name" data-card="Geist of Saint Traft">Geist of Saint Traft</span><br />4 <span class="card-name" data-card="Gladecover Scout">Gladecover
+                                Scout</span><br />4 <span class="card-name" data-card="Invisible Stalker">Invisible Stalker</span><br />4 <span class="card-name" data-card="Silhana Ledgewalker">Silhana
+                                Ledgewalker</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -127,10 +150,10 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Ethereal Armor<br />4 Favorable Winds<br />4
-                                Hyena Umbra<br />4 Rancor<br />4 Spectral
-                                Flight<br />4 Spider Umbra<br />4 Unflinching
-                                Courage
+                                4 <span class="card-name" data-card="Ethereal Armor">Ethereal Armor</span><br />4 <span class="card-name" data-card="Favorable Winds">Favorable Winds</span><br />4
+                                <span class="card-name" data-card="Hyena Umbra">Hyena Umbra</span><br />4 <span class="card-name" data-card="Rancor">Rancor</span><br />4 <span class="card-name" data-card="Spectral Flight">Spectral
+                                Flight</span><br />4 <span class="card-name" data-card="Spider Umbra">Spider Umbra</span><br />4 <span class="card-name" data-card="Unflinching Courage">Unflinching
+                                Courage</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -138,8 +161,8 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Breeding Pool<br />4 Hallowed Fountain<br />4
-                                Sunpetal Grove<br />4 Temple Garden
+                                4 <span class="card-name" data-card="Breeding Pool">Breeding Pool</span><br />4 <span class="card-name" data-card="Hallowed Fountain">Hallowed Fountain</span><br />4
+                                <span class="card-name" data-card="Sunpetal Grove">Sunpetal Grove</span><br />4 <span class="card-name" data-card="Temple Garden">Temple Garden</span>
                             </div>
                         </div>
                     </div>
@@ -165,9 +188,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Ash Zealot<br />4 Burning-Tree Emissary<br />4
-                                Chandra's Phoenix<br />4 Firedrinker Satyr<br />4
-                                Rakdos Cackler<br />4 Stromkirk Noble
+                                4 <span class="card-name" data-card="Ash Zealot">Ash Zealot</span><br />4 <span class="card-name" data-card="Burning-Tree Emissary">Burning-Tree Emissary</span><br />4
+                                <span class="card-name" data-card="Chandra's Phoenix">Chandra's Phoenix</span><br />4 <span class="card-name" data-card="Firedrinker Satyr">Firedrinker Satyr</span><br />4
+                                <span class="card-name" data-card="Rakdos Cackler">Rakdos Cackler</span><br />4 <span class="card-name" data-card="Stromkirk Noble">Stromkirk Noble</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -175,17 +198,17 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Boros Reckoner<br />4 Burning Earth<br />4
-                                Chandra, Pyromaster<br />4 Firefist Striker<br />4
-                                Lightning Strike<br />4 Mizzium Mortars<br />4
-                                Shock
+                                4 <span class="card-name" data-card="Boros Reckoner">Boros Reckoner</span><br />4 <span class="card-name" data-card="Burning Earth">Burning Earth</span><br />4
+                                <span class="card-name" data-card="Chandra, Pyromaster">Chandra, Pyromaster</span><br />4 <span class="card-name" data-card="Firefist Striker">Firefist Striker</span><br />4
+                                <span class="card-name" data-card="Lightning Strike">Lightning Strike</span><br />4 <span class="card-name" data-card="Mizzium Mortars">Mizzium Mortars</span><br />4
+                                <span class="card-name" data-card="Shock">Shock</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
                                 Terrenos
                             </h3>
-                            <div class="text-gray-300">20 Mountain</div>
+                            <div class="text-gray-300">20 <span class="card-name" data-card="Mountain">Mountain</span></div>
                         </div>
                     </div>
                     <!-- 4th Place -->
@@ -210,8 +233,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Augur of Bolas<br />4 Restoration Angel<br />4
-                                Snapcaster Mage
+                                4 <span class="card-name" data-card="Augur of Bolas">Augur of Bolas</span><br />4 <span class="card-name" data-card="Restoration Angel">Restoration Angel</span><br />4
+                                <span class="card-name" data-card="Snapcaster Mage">Snapcaster Mage</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -219,10 +242,10 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Azorius Charm<br />4 Dissipate<br />4 Izzet
-                                Charm<br />4 Pillar of Flame<br />4 Rewind<br />4
-                                Searing Spear<br />4 Sphinx's Revelation<br />4
-                                Think Twice
+                                4 <span class="card-name" data-card="Azorius Charm">Azorius Charm</span><br />4 <span class="card-name" data-card="Dissipate">Dissipate</span><br />4 <span class="card-name" data-card="Izzet Charm">Izzet
+                                Charm</span><br />4 <span class="card-name" data-card="Pillar of Flame">Pillar of Flame</span><br />4 <span class="card-name" data-card="Rewind">Rewind</span><br />4
+                                <span class="card-name" data-card="Searing Spear">Searing Spear</span><br />4 <span class="card-name" data-card="Sphinx's Revelation">Sphinx's Revelation</span><br />4
+                                <span class="card-name" data-card="Think Twice">Think Twice</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -230,16 +253,74 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Clifftop Retreat<br />4 Glacial Fortress<br />4
-                                Hallowed Fountain<br />4 Sacred Foundry<br />4
-                                Steam Vents<br />4 Sulfur Falls
+                                4 <span class="card-name" data-card="Clifftop Retreat">Clifftop Retreat</span><br />4 <span class="card-name" data-card="Glacial Fortress">Glacial Fortress</span><br />4
+                                <span class="card-name" data-card="Hallowed Fountain">Hallowed Fountain</span><br />4 <span class="card-name" data-card="Sacred Foundry">Sacred Foundry</span><br />4
+                                <span class="card-name" data-card="Steam Vents">Steam Vents</span><br />4 <span class="card-name" data-card="Sulfur Falls">Sulfur Falls</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </main>
         </div>
+        <!-- Script para o tooltip da imagem da carta -->
         <script>
+            // Cria o elemento tooltip uma vez e anexa ao body
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.innerHTML = '<img>';
+            document.body.appendChild(tooltip);
+            const tooltipImage = tooltip.querySelector('img');
+
+            // Pega todos os elementos que devem acionar o tooltip
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                // Adiciona um pequeno deslocamento para evitar cintilação/piscar
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+
+                const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
+
+            // Função original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {

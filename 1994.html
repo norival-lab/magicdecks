@@ -23,6 +23,29 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -73,13 +96,20 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                1 Birds of Paradise<br />1 Elvish Archers<br />1
-                                Erg Raiders<br />1 Grizzly Bears<br />1 Hypnotic
-                                Specter<br />1 Kird Ape<br />1 Llanowar Elves<br />1
-                                Old Man of the Sea<br />1 Savannah Lions<br />1
-                                Scryb Sprites<br />1 Sedge Troll<br />1 Sengir
-                                Vampire<br />1 Serra Angel<br />1 Whirling
-                                Dervish
+                                <span class="card-name" data-card="Birds of Paradise">1 Birds of Paradise</span><br/>
+                                <span class="card-name" data-card="Elvish Archers">1 Elvish Archers</span><br/>
+                                <span class="card-name" data-card="Erg Raiders">1 Erg Raiders</span><br/>
+                                <span class="card-name" data-card="Grizzly Bears">1 Grizzly Bears</span><br/>
+                                <span class="card-name" data-card="Hypnotic Specter">1 Hypnotic Specter</span><br/>
+                                <span class="card-name" data-card="Kird Ape">1 Kird Ape</span><br/>
+                                <span class="card-name" data-card="Llanowar Elves">1 Llanowar Elves</span><br/>
+                                <span class="card-name" data-card="Old Man of the Sea">1 Old Man of the Sea</span><br/>
+                                <span class="card-name" data-card="Savannah Lions">1 Savannah Lions</span><br/>
+                                <span class="card-name" data-card="Scryb Sprites">1 Scryb Sprites</span><br/>
+                                <span class="card-name" data-card="Sedge Troll">1 Sedge Troll</span><br/>
+                                <span class="card-name" data-card="Sengir Vampire">1 Sengir Vampire</span><br/>
+                                <span class="card-name" data-card="Serra Angel">1 Serra Angel</span><br/>
+                                <span class="card-name" data-card="Whirling Dervish">1 Whirling Dervish</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -87,16 +117,24 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                1 Circle of Protection: Black<br />1 Circle of
-                                Protection: Red<br />1 Disrupting Scepter<br />1
-                                Divine Offering<br />1 Earthquake<br />1
-                                Fireball<br />1 Hurricane<br />1 Icy
-                                Manipulator<br />1 Jade Statue<br />1 Mana
-                                Vault<br />1 Nevinyrral's Disk<br />1
-                                Ornithopter<br />1 Pestilence<br />1
-                                Reconstruction<br />1 Red Elemental Blast<br />1
-                                Regrowth<br />1 Sol Ring<br />1 Swords to
-                                Plowshares
+                                <span class="card-name" data-card="Circle of Protection: Black">1 Circle of Protection: Black</span><br/>
+                                <span class="card-name" data-card="Circle of Protection: Red">1 Circle of Protection: Red</span><br/>
+                                <span class="card-name" data-card="Disrupting Scepter">1 Disrupting Scepter</span><br/>
+                                <span class="card-name" data-card="Divine Offering">1 Divine Offering</span><br/>
+                                <span class="card-name" data-card="Earthquake">1 Earthquake</span><br/>
+                                <span class="card-name" data-card="Fireball">1 Fireball</span><br/>
+                                <span class="card-name" data-card="Hurricane">1 Hurricane</span><br/>
+                                <span class="card-name" data-card="Icy Manipulator">1 Icy Manipulator</span><br/>
+                                <span class="card-name" data-card="Jade Statue">1 Jade Statue</span><br/>
+                                <span class="card-name" data-card="Mana Vault">1 Mana Vault</span><br/>
+                                <span class="card-name" data-card="Nevinyrral's Disk">1 Nevinyrral's Disk</span><br/>
+                                <span class="card-name" data-card="Ornithopter">1 Ornithopter</span><br/>
+                                <span class="card-name" data-card="Pestilence">1 Pestilence</span><br/>
+                                <span class="card-name" data-card="Reconstruction">1 Reconstruction</span><br/>
+                                <span class="card-name" data-card="Red Elemental Blast">1 Red Elemental Blast</span><br/>
+                                <span class="card-name" data-card="Regrowth">1 Regrowth</span><br/>
+                                <span class="card-name" data-card="Sol Ring">1 Sol Ring</span><br/>
+                                <span class="card-name" data-card="Swords to Plowshares">1 Swords to Plowshares</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -104,10 +142,14 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                1 City of Brass<br />1 Library of Alexandria<br />1
-                                Mishra's Factory<br />1 Plateau<br />1
-                                Savannah<br />1 Strip Mine<br />1 Taiga<br />1
-                                Tropical Island
+                                <span class="card-name" data-card="City of Brass">1 City of Brass</span><br/>
+                                <span class="card-name" data-card="Library of Alexandria">1 Library of Alexandria</span><br/>
+                                <span class="card-name" data-card="Mishra's Factory">1 Mishra's Factory</span><br/>
+                                <span class="card-name" data-card="Plateau">1 Plateau</span><br/>
+                                <span class="card-name" data-card="Savannah">1 Savannah</span><br/>
+                                <span class="card-name" data-card="Strip Mine">1 Strip Mine</span><br/>
+                                <span class="card-name" data-card="Taiga">1 Taiga</span><br/>
+                                <span class="card-name" data-card="Tropical Island">1 Tropical Island</span>
                             </div>
                         </div>
                     </div>
@@ -134,8 +176,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                2 Vesuvan Doppelganger<br />1 Savannah Lions<br />1
-                                Serra Angel
+                                <span class="card-name" data-card="Vesuvan Doppelganger">2 Vesuvan Doppelganger</span><br/>
+                                <span class="card-name" data-card="Savannah Lions">1 Savannah Lions</span><br/>
+                                <span class="card-name" data-card="Serra Angel">1 Serra Angel</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -143,18 +186,36 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                1 Ancestral Recall<br />1 Armageddon<br />1
-                                Balance<br />1 Black Lotus<br />1 Braingeyser<br />1
-                                Circle of Protection: Red<br />2 Counterspell<br />1
-                                Cyclopean Tomb<br />1 Disenchant<br />1 Divine
-                                Offering<br />1 Feldon's Cane<br />1 Fireball<br />1
-                                Howling Mine<br />1 Icy Manipulator<br />1
-                                Jayemdae Tome<br />1 Mana Drain<br />1 Mind
-                                Twist<br />1 Mox Emerald<br />1 Mox Jet<br />1
-                                Mox Pearl<br />1 Mox Ruby<br />1 Mox Sapphire<br />1
-                                Recall<br />1 Regrowth<br />1 Resurrection<br />1
-                                Sol Ring<br />1 Steal Artifact<br />1 Swords to
-                                Plowshares<br />1 Timetwister<br />1 Time Walk
+                                <span class="card-name" data-card="Ancestral Recall">1 Ancestral Recall</span><br/>
+                                <span class="card-name" data-card="Armageddon">1 Armageddon</span><br/>
+                                <span class="card-name" data-card="Balance">1 Balance</span><br/>
+                                <span class="card-name" data-card="Black Lotus">1 Black Lotus</span><br/>
+                                <span class="card-name" data-card="Braingeyser">1 Braingeyser</span><br/>
+                                <span class="card-name" data-card="Circle of Protection: Red">1 Circle of Protection: Red</span><br/>
+                                <span class="card-name" data-card="Counterspell">2 Counterspell</span><br/>
+                                <span class="card-name" data-card="Cyclopean Tomb">1 Cyclopean Tomb</span><br/>
+                                <span class="card-name" data-card="Disenchant">1 Disenchant</span><br/>
+                                <span class="card-name" data-card="Divine Offering">1 Divine Offering</span><br/>
+                                <span class="card-name" data-card="Feldon's Cane">1 Feldon's Cane</span><br/>
+                                <span class="card-name" data-card="Fireball">1 Fireball</span><br/>
+                                <span class="card-name" data-card="Howling Mine">1 Howling Mine</span><br/>
+                                <span class="card-name" data-card="Icy Manipulator">1 Icy Manipulator</span><br/>
+                                <span class="card-name" data-card="Jayemdae Tome">1 Jayemdae Tome</span><br/>
+                                <span class="card-name" data-card="Mana Drain">1 Mana Drain</span><br/>
+                                <span class="card-name" data-card="Mind Twist">1 Mind Twist</span><br/>
+                                <span class="card-name" data-card="Mox Emerald">1 Mox Emerald</span><br/>
+                                <span class="card-name" data-card="Mox Jet">1 Mox Jet</span><br/>
+                                <span class="card-name" data-card="Mox Pearl">1 Mox Pearl</span><br/>
+                                <span class="card-name" data-card="Mox Ruby">1 Mox Ruby</span><br/>
+                                <span class="card-name" data-card="Mox Sapphire">1 Mox Sapphire</span><br/>
+                                <span class="card-name" data-card="Recall">1 Recall</span><br/>
+                                <span class="card-name" data-card="Regrowth">1 Regrowth</span><br/>
+                                <span class="card-name" data-card="Resurrection">1 Resurrection</span><br/>
+                                <span class="card-name" data-card="Sol Ring">1 Sol Ring</span><br/>
+                                <span class="card-name" data-card="Steal Artifact">1 Steal Artifact</span><br/>
+                                <span class="card-name" data-card="Swords to Plowshares">1 Swords to Plowshares</span><br/>
+                                <span class="card-name" data-card="Timetwister">1 Timetwister</span><br/>
+                                <span class="card-name" data-card="Time Walk">1 Time Walk</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -162,9 +223,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                1 City of Brass<br />1 Library of Alexandria<br />1
-                                Mishra's Factory<br />2 Tundra<br />1 Volcanic
-                                Island
+                                <span class="card-name" data-card="City of Brass">1 City of Brass</span><br/>
+                                <span class="card-name" data-card="Library of Alexandria">1 Library of Alexandria</span><br/>
+                                <span class="card-name" data-card="Mishra's Factory">1 Mishra's Factory</span><br/>
+                                <span class="card-name" data-card="Tundra">2 Tundra</span><br/>
+                                <span class="card-name" data-card="Volcanic Island">1 Volcanic Island</span>
                             </div>
                         </div>
                     </div>
@@ -190,25 +253,41 @@
                             >
                                 Criaturas
                             </h3>
-                            <div class="text-gray-300">4 Chronatog</div>
+                            <div class="text-gray-300">
+                                <span class="card-name" data-card="Chronatog">4 Chronatog</span></div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                1 Ancestral Recall<br />1 Black Lotus<br />1
-                                Black Vise<br />1 Braingeyser<br />1 Chaos
-                                Orb<br />1 Circle of Protection: Red<br />1
-                                Counterspell<br />1 Demonic Tutor<br />1
-                                Feldon's Cane<br />1 Howling Mine<br />1 Icy
-                                Manipulator<br />1 Mana Drain<br />1 Mana
-                                Vault<br />1 Mind Twist<br />1 Mox Emerald<br />1
-                                Mox Jet<br />1 Mox Pearl<br />1 Mox Ruby<br />1
-                                Mox Sapphire<br />1 Recall<br />1 Regrowth<br />1
-                                Relic Barrier<br />1 Sol Ring<br />4 Stasis<br />4
-                                Swords to Plowshares<br />1 Timetwister<br />1
-                                Time Walk
+                                <span class="card-name" data-card="Ancestral Recall">1 Ancestral Recall</span><br/>
+                                <span class="card-name" data-card="Black Lotus">1 Black Lotus</span><br/>
+                                <span class="card-name" data-card="Black Vise">1 Black Vise</span><br/>
+                                <span class="card-name" data-card="Braingeyser">1 Braingeyser</span><br/>
+                                <span class="card-name" data-card="Chaos Orb">1 Chaos Orb</span><br/>
+                                <span class="card-name" data-card="Circle of Protection: Red">1 Circle of Protection: Red</span><br/>
+                                <span class="card-name" data-card="Counterspell">1 Counterspell</span><br/>
+                                <span class="card-name" data-card="Demonic Tutor">1 Demonic Tutor</span><br/>
+                                <span class="card-name" data-card="Feldon's Cane">1 Feldon's Cane</span><br/>
+                                <span class="card-name" data-card="Howling Mine">1 Howling Mine</span><br/>
+                                <span class="card-name" data-card="Icy Manipulator">1 Icy Manipulator</span><br/>
+                                <span class="card-name" data-card="Mana Drain">1 Mana Drain</span><br/>
+                                <span class="card-name" data-card="Mana Vault">1 Mana Vault</span><br/>
+                                <span class="card-name" data-card="Mind Twist">1 Mind Twist</span><br/>
+                                <span class="card-name" data-card="Mox Emerald">1 Mox Emerald</span><br/>
+                                <span class="card-name" data-card="Mox Jet">1 Mox Jet</span><br/>
+                                <span class="card-name" data-card="Mox Pearl">1 Mox Pearl</span><br/>
+                                <span class="card-name" data-card="Mox Ruby">1 Mox Ruby</span><br/>
+                                <span class="card-name" data-card="Mox Sapphire">1 Mox Sapphire</span><br/>
+                                <span class="card-name" data-card="Recall">1 Recall</span><br/>
+                                <span class="card-name" data-card="Regrowth">1 Regrowth</span><br/>
+                                <span class="card-name" data-card="Relic Barrier">1 Relic Barrier</span><br/>
+                                <span class="card-name" data-card="Sol Ring">1 Sol Ring</span><br/>
+                                <span class="card-name" data-card="Stasis">4 Stasis</span><br/>
+                                <span class="card-name" data-card="Swords to Plowshares">4 Swords to Plowshares</span><br/>
+                                <span class="card-name" data-card="Timetwister">1 Timetwister</span><br/>
+                                <span class="card-name" data-card="Time Walk">1 Time Walk</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -216,9 +295,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Island<br />1 Library of Alexandria<br />1
-                                Tropical Island<br />4 Tundra<br />4 Underground
-                                Sea
+                                <span class="card-name" data-card="Island">4 Island</span><br/>
+                                <span class="card-name" data-card="Library of Alexandria">1 Library of Alexandria</span><br/>
+                                <span class="card-name" data-card="Tropical Island">1 Tropical Island</span><br/>
+                                <span class="card-name" data-card="Tundra">4 Tundra</span><br/>
+                                <span class="card-name" data-card="Underground Sea">4 Underground Sea</span>
                             </div>
                         </div>
                     </div>
@@ -245,10 +326,13 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Argothian Pixies<br />1 Birds of Paradise<br />4
-                                Kird Ape<br />4 Savannah Lions<br />2 Serra
-                                Angel<br />4 Scryb Sprites<br />4 Whirling
-                                Dervish
+                                <span class="card-name" data-card="Argothian Pixies">4 Argothian Pixies</span><br/>
+                                <span class="card-name" data-card="Birds of Paradise">1 Birds of Paradise</span><br/>
+                                <span class="card-name" data-card="Kird Ape">4 Kird Ape</span><br/>
+                                <span class="card-name" data-card="Savannah Lions">4 Savannah Lions</span><br/>
+                                <span class="card-name" data-card="Serra Angel">2 Serra Angel</span><br/>
+                                <span class="card-name" data-card="Scryb Sprites">4 Scryb Sprites</span><br/>
+                                <span class="card-name" data-card="Whirling Dervish">4 Whirling Dervish</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -256,11 +340,18 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                1 Ancestral Recall<br />1 Black Lotus<br />2
-                                Disenchant<br />1 Mox Emerald<br />1 Mox
-                                Pearl<br />1 Mox Ruby<br />1 Mox Sapphire<br />1
-                                Regrowth<br />1 Sol Ring<br />4 Swords to
-                                Plowshares<br />1 Time Walk<br />1 Timetwister
+                                <span class="card-name" data-card="Ancestral Recall">1 Ancestral Recall</span><br/>
+                                <span class="card-name" data-card="Black Lotus">1 Black Lotus</span><br/>
+                                <span class="card-name" data-card="Disenchant">2 Disenchant</span><br/>
+                                <span class="card-name" data-card="Mox Emerald">1 Mox Emerald</span><br/>
+                                <span class="card-name" data-card="Mox Pearl">1 Mox Pearl</span><br/>
+                                <span class="card-name" data-card="Mox Ruby">1 Mox Ruby</span><br/>
+                                <span class="card-name" data-card="Mox Sapphire">1 Mox Sapphire</span><br/>
+                                <span class="card-name" data-card="Regrowth">1 Regrowth</span><br/>
+                                <span class="card-name" data-card="Sol Ring">1 Sol Ring</span><br/>
+                                <span class="card-name" data-card="Swords to Plowshares">4 Swords to Plowshares</span><br/>
+                                <span class="card-name" data-card="Time Walk">1 Time Walk</span><br/>
+                                <span class="card-name" data-card="Timetwister">1 Timetwister</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -268,8 +359,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                1 City of Brass<br />1 Library of Alexandria<br />4
-                                Savannah<br />4 Tropical Island<br />4 Tundra
+                                <span class="card-name" data-card="City of Brass">1 City of Brass</span><br/>
+                                <span class="card-name" data-card="Library of Alexandria">1 Library of Alexandria</span><br/>
+                                <span class="card-name" data-card="Savannah">4 Savannah</span><br/>
+                                <span class="card-name" data-card="Tropical Island">4 Tropical Island</span><br/>
+                                <span class="card-name" data-card="Tundra">4 Tundra</span>
                             </div>
                         </div>
                     </div>
@@ -296,9 +390,11 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                3 Order of Leitbur<br />2 Preacher<br />4
-                                Savannah Lions<br />2 Serra Angel<br />4 White
-                                Knight
+                                <span class="card-name" data-card="Order of Leitbur">3 Order of Leitbur</span><br/>
+                                <span class="card-name" data-card="Preacher">2 Preacher</span><br/>
+                                <span class="card-name" data-card="Savannah Lions">4 Savannah Lions</span><br/>
+                                <span class="card-name" data-card="Serra Angel">2 Serra Angel</span><br/>
+                                <span class="card-name" data-card="White Knight">4 White Knight</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -306,10 +402,16 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                1 Armageddon<br />1 Balance<br />1 Black
-                                Lotus<br />4 Crusade<br />4 Disenchant<br />1
-                                Mox Jet<br />1 Mox Pearl<br />1 Mox Sapphire<br />1
-                                Sol Ring<br />4 Swords to Plowshares
+                                <span class="card-name" data-card="Armageddon">1 Armageddon</span><br/>
+                                <span class="card-name" data-card="Balance">1 Balance</span><br/>
+                                <span class="card-name" data-card="Black Lotus">1 Black Lotus</span><br/>
+                                <span class="card-name" data-card="Crusade">4 Crusade</span><br/>
+                                <span class="card-name" data-card="Disenchant">4 Disenchant</span><br/>
+                                <span class="card-name" data-card="Mox Jet">1 Mox Jet</span><br/>
+                                <span class="card-name" data-card="Mox Pearl">1 Mox Pearl</span><br/>
+                                <span class="card-name" data-card="Mox Sapphire">1 Mox Sapphire</span><br/>
+                                <span class="card-name" data-card="Sol Ring">1 Sol Ring</span><br/>
+                                <span class="card-name" data-card="Swords to Plowshares">4 Swords to Plowshares</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -317,8 +419,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                1 Library of Alexandria<br />19 Plains<br />1
-                                Strip Mine
+                                <span class="card-name" data-card="Library of Alexandria">1 Library of Alexandria</span><br/>
+                                <span class="card-name" data-card="Plains">19 Plains</span><br/>
+                                <span class="card-name" data-card="Strip Mine">1 Strip Mine</span>
                             </div>
                         </div>
                     </div>
@@ -343,21 +446,30 @@
                             >
                                 Criaturas
                             </h3>
-                            <div class="text-gray-300">4 Serendib Efreet</div>
+                            <div class="text-gray-300"><span class="card-name" data-card="Serendib Efreet">4 Serendib Efreet</span></div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                1 Ancestral Recall<br />1 Black Lotus<br />1
-                                Braingeyser<br />4 Chain Lightning<br />1
-                                Counterspell<br />1 Earthquake<br />4
-                                Fireball<br />4 Lightning Bolt<br />1 Mana
-                                Drain<br />1 Mana Vault<br />1 Mox Ruby<br />1
-                                Mox Sapphire<br />4 Psionic Blast<br />1
-                                Shatter<br />1 Sol Ring<br />1 Time Walk<br />1
-                                Timetwister
+                                <span class="card-name" data-card="Ancestral Recall">1 Ancestral Recall</span><br/>
+                                <span class="card-name" data-card="Black Lotus">1 Black Lotus</span><br/>
+                                <span class="card-name" data-card="Braingeyser">1 Braingeyser</span><br/>
+                                <span class="card-name" data-card="Chain Lightning">4 Chain Lightning</span><br/>
+                                <span class="card-name" data-card="Counterspell">1 Counterspell</span><br/>
+                                <span class="card-name" data-card="Earthquake">1 Earthquake</span><br/>
+                                <span class="card-name" data-card="Fireball">4 Fireball</span><br/>
+                                <span class="card-name" data-card="Lightning Bolt">4 Lightning Bolt</span><br/>
+                                <span class="card-name" data-card="Mana Drain">1 Mana Drain</span><br/>
+                                <span class="card-name" data-card="Mana Vault">1 Mana Vault</span><br/>
+                                <span class="card-name" data-card="Mox Ruby">1 Mox Ruby</span><br/>
+                                <span class="card-name" data-card="Mox Sapphire">1 Mox Sapphire</span><br/>
+                                <span class="card-name" data-card="Psionic Blast">4 Psionic Blast</span><br/>
+                                <span class="card-name" data-card="Shatter">1 Shatter</span><br/>
+                                <span class="card-name" data-card="Sol Ring">1 Sol Ring</span><br/>
+                                <span class="card-name" data-card="Time Walk">1 Time Walk</span><br/>
+                                <span class="card-name" data-card="Timetwister">1 Timetwister</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -365,8 +477,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                9 Island<br />1 Library of Alexandria<br />1
-                                Strip Mine<br />4 Tundra<br />4 Volcanic Island
+                                <span class="card-name" data-card="Island">9 Island</span><br/>
+                                <span class="card-name" data-card="Library of Alexandria">1 Library of Alexandria</span><br/>
+                                <span class="card-name" data-card="Strip Mine">1 Strip Mine</span><br/>
+                                <span class="card-name" data-card="Tundra">4 Tundra</span><br/>
+                                <span class="card-name" data-card="Volcanic Island">4 Volcanic Island</span>
                             </div>
                         </div>
                     </div>
@@ -393,8 +508,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Erhnam Djinn<br />4
-                                Llanowar Elves<br />2 Serra Angel
+                                <span class="card-name" data-card="Birds of Paradise">4 Birds of Paradise</span><br/>
+                                <span class="card-name" data-card="Erhnam Djinn">4 Erhnam Djinn</span><br/>
+                                <span class="card-name" data-card="Llanowar Elves">4 Llanowar Elves</span><br/>
+                                <span class="card-name" data-card="Serra Angel">2 Serra Angel</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -402,12 +519,22 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                1 Ancestral Recall<br />2 Armageddon<br />1
-                                Balance<br />1 Black Lotus<br />1 Channel<br />4
-                                Disenchant<br />1 Fireball<br />1 Mox Emerald<br />1
-                                Mox Pearl<br />1 Mox Ruby<br />1 Mox Sapphire<br />1
-                                Regrowth<br />1 Sol Ring<br />4 Swords to
-                                Plowshares<br />1 Time Walk<br />1 Timetwister
+                                <span class="card-name" data-card="Ancestral Recall">1 Ancestral Recall</span><br/>
+                                <span class="card-name" data-card="Armageddon">2 Armageddon</span><br/>
+                                <span class="card-name" data-card="Balance">1 Balance</span><br/>
+                                <span class="card-name" data-card="Black Lotus">1 Black Lotus</span><br/>
+                                <span class="card-name" data-card="Channel">1 Channel</span><br/>
+                                <span class="card-name" data-card="Disenchant">4 Disenchant</span><br/>
+                                <span class="card-name" data-card="Fireball">1 Fireball</span><br/>
+                                <span class="card-name" data-card="Mox Emerald">1 Mox Emerald</span><br/>
+                                <span class="card-name" data-card="Mox Pearl">1 Mox Pearl</span><br/>
+                                <span class="card-name" data-card="Mox Ruby">1 Mox Ruby</span><br/>
+                                <span class="card-name" data-card="Mox Sapphire">1 Mox Sapphire</span><br/>
+                                <span class="card-name" data-card="Regrowth">1 Regrowth</span><br/>
+                                <span class="card-name" data-card="Sol Ring">1 Sol Ring</span><br/>
+                                <span class="card-name" data-card="Swords to Plowshares">4 Swords to Plowshares</span><br/>
+                                <span class="card-name" data-card="Time Walk">1 Time Walk</span><br/>
+                                <span class="card-name" data-card="Timetwister">1 Timetwister</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -415,9 +542,12 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                1 City of Brass<br />1 Library of Alexandria<br />4
-                                Savannah<br />1 Strip Mine<br />4 Tropical
-                                Island<br />4 Tundra
+                                <span class="card-name" data-card="City of Brass">1 City of Brass</span><br/>
+                                <span class="card-name" data-card="Library of Alexandria">1 Library of Alexandria</span><br/>
+                                <span class="card-name" data-card="Savannah">4 Savannah</span><br/>
+                                <span class="card-name" data-card="Strip Mine">1 Strip Mine</span><br/>
+                                <span class="card-name" data-card="Tropical Island">4 Tropical Island</span><br/>
+                                <span class="card-name" data-card="Tundra">4 Tundra</span>
                             </div>
                         </div>
                     </div>
@@ -443,21 +573,30 @@
                             >
                                 Criaturas
                             </h3>
-                            <div class="text-gray-300">4 Serendib Efreet</div>
+                            <div class="text-gray-300"><span class="card-name" data-card="Serendib Efreet">4 Serendib Efreet</span></div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                1 Ancestral Recall<br />1 Black Lotus<br />1
-                                Braingeyser<br />4 Chain Lightning<br />1
-                                Counterspell<br />1 Earthquake<br />4
-                                Fireball<br />4 Lightning Bolt<br />1 Mana
-                                Drain<br />1 Mana Vault<br />1 Mox Ruby<br />1
-                                Mox Sapphire<br />4 Psionic Blast<br />1
-                                Shatter<br />1 Sol Ring<br />1 Time Walk<br />1
-                                Timetwister
+                                <span class="card-name" data-card="Ancestral Recall">1 Ancestral Recall</span><br/>
+                                <span class="card-name" data-card="Black Lotus">1 Black Lotus</span><br/>
+                                <span class="card-name" data-card="Braingeyser">1 Braingeyser</span><br/>
+                                <span class="card-name" data-card="Chain Lightning">4 Chain Lightning</span><br/>
+                                <span class="card-name" data-card="Counterspell">1 Counterspell</span><br/>
+                                <span class="card-name" data-card="Earthquake">1 Earthquake</span><br/>
+                                <span class="card-name" data-card="Fireball">4 Fireball</span><br/>
+                                <span class="card-name" data-card="Lightning Bolt">4 Lightning Bolt</span><br/>
+                                <span class="card-name" data-card="Mana Drain">1 Mana Drain</span><br/>
+                                <span class="card-name" data-card="Mana Vault">1 Mana Vault</span><br/>
+                                <span class="card-name" data-card="Mox Ruby">1 Mox Ruby</span><br/>
+                                <span class="card-name" data-card="Mox Sapphire">1 Mox Sapphire</span><br/>
+                                <span class="card-name" data-card="Psionic Blast">4 Psionic Blast</span><br/>
+                                <span class="card-name" data-card="Shatter">1 Shatter</span><br/>
+                                <span class="card-name" data-card="Sol Ring">1 Sol Ring</span><br/>
+                                <span class="card-name" data-card="Time Walk">1 Time Walk</span><br/>
+                                <span class="card-name" data-card="Timetwister">1 Timetwister</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -465,8 +604,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                9 Island<br />1 Library of Alexandria<br />1
-                                Strip Mine<br />4 Tundra<br />4 Volcanic Island
+                                <span class="card-name" data-card="Island">9 Island</span><br/>
+                                <span class="card-name" data-card="Library of Alexandria">1 Library of Alexandria</span><br/>
+                                <span class="card-name" data-card="Strip Mine">1 Strip Mine</span><br/>
+                                <span class="card-name" data-card="Tundra">4 Tundra</span><br/>
+                                <span class="card-name" data-card="Volcanic Island">4 Volcanic Island</span>
                             </div>
                         </div>
                     </div>
@@ -474,7 +616,65 @@
             </main>
         </div>
 
+        <!-- Script para o tooltip da imagem da carta -->
         <script>
+            // Cria o elemento tooltip uma vez e anexa ao body
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.innerHTML = '<img>';
+            document.body.appendChild(tooltip);
+            const tooltipImage = tooltip.querySelector('img');
+
+            // Pega todos os elementos que devem acionar o tooltip
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                // Adiciona um pequeno deslocamento para evitar cintilação/piscar
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+
+                const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
+
+            // Função original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {

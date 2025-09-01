@@ -21,7 +21,30 @@
             }
             .decklist {
                 background-color: #1f2937; /* bg-gray-800 */
-                border-left: 3px solid #10b981; /* border-emerald-500 */
+                border-left: 3px solid #4f46e5; /* border-indigo-600 */
+            }
+                    /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
             }
         </style>
     </head>
@@ -85,14 +108,14 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Murktide Regent<br />4 Dragon's Rage
-                                Channeler<br />4 Ragavan, Nimble Pilferer<br />4
-                                Expressive Iteration<br />4 Mishra's Bauble<br />4
-                                Serum Visions<br />4 Counterspell<br />4
-                                Lightning Bolt<br />2 Unholy Heat<br />4
-                                Scalding Tarn<br />4 Misty Rainforest<br />2
-                                Steam Vents<br />1 Spirebluff Canal<br />6
-                                Island<br />1 Mountain
+                                4 <span class="card-name" data-card="Murktide Regent">Murktide Regent</span><br />4 <span class="card-name" data-card="Dragon's Rage Channeler">Dragon's Rage
+                                Channeler</span><br />4 <span class="card-name" data-card="Ragavan, Nimble Pilferer">Ragavan, Nimble Pilferer</span><br />4
+                                <span class="card-name" data-card="Expressive Iteration">Expressive Iteration</span><br />4 <span class="card-name" data-card="Mishra's Bauble">Mishra's Bauble</span><br />4
+                                <span class="card-name" data-card="Serum Visions">Serum Visions</span><br />4 <span class="card-name" data-card="Counterspell">Counterspell</span><br />4
+                                <span class="card-name" data-card="Lightning Bolt">Lightning Bolt</span><br />2 <span class="card-name" data-card="Unholy Heat">Unholy Heat</span><br />4
+                                <span class="card-name" data-card="Scalding Tarn">Scalding Tarn</span><br />4 <span class="card-name" data-card="Misty Rainforest">Misty Rainforest</span><br />2
+                                <span class="card-name" data-card="Steam Vents">Steam Vents</span><br />1 <span class="card-name" data-card="Spirebluff Canal">Spirebluff Canal</span><br />6
+                                <span class="card-name" data-card="Island">Island</span><br />1 <span class="card-name" data-card="Mountain">Mountain</span>
                             </div>
                         </div>
                     </div>
@@ -131,15 +154,15 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Primeval Titan<br />4 Dryad of the Ilysian
-                                Grove<br />4 Azusa, Lost but Seeking<br />4
-                                Amulet of Vigor<br />4 Summoner's Pact<br />4
-                                Explore<br />1 Pact of Negation<br />1 Slayers'
-                                Stronghold<br />1 Sunhome, Fortress of the
-                                Legion<br />4 Simic Growth Chamber<br />4
-                                Selesnya Sanctuary<br />1 Boros Garrison<br />1
-                                Tolaria West<br />1 Valakut, the Molten
-                                Pinnacle<br />1 Cavern of Souls
+                                4 <span class="card-name" data-card="Primeval Titan">Primeval Titan</span><br />4 <span class="card-name" data-card="Dryad of the Ilysian Grove">Dryad of the Ilysian
+                                Grove</span><br />4 <span class="card-name" data-card="Azusa, Lost but Seeking">Azusa, Lost but Seeking</span><br />4
+                                <span class="card-name" data-card="Amulet of Vigor">Amulet of Vigor</span><br />4 <span class="card-name" data-card="Summoner's Pact">Summoner's Pact</span><br />4
+                                <span class="card-name" data-card="Explore">Explore</span><br />1 <span class="card-name" data-card="Pact of Negation">Pact of Negation</span><br />1 <span class="card-name" data-card="Slayers' Stronghold">Slayers'
+                                Stronghold</span><br />1 <span class="card-name" data-card="Sunhome, Fortress of the Legion">Sunhome, Fortress of the
+                                Legion</span><br />4 <span class="card-name" data-card="Simic Growth Chamber">Simic Growth Chamber</span><br />4
+                                <span class="card-name" data-card="Selesnya Sanctuary">Selesnya Sanctuary</span><br />1 <span class="card-name" data-card="Boros Garrison">Boros Garrison</span><br />1
+                                <span class="card-name" data-card="Tolaria West">Tolaria West</span><br />1 <span class="card-name" data-card="Valakut, the Molten Pinnacle">Valakut, the Molten
+                                Pinnacle</span><br />1 <span class="card-name" data-card="Cavern of Souls">Cavern of Souls</span>
                             </div>
                         </div>
                     </div>
@@ -182,14 +205,14 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Omnath, Locus of Creation<br />4 Solitude<br />4
-                                Endurance<br />4 Wrenn and Six<br />4 Teferi,
-                                Time Raveler<br />4 Leyline Binding<br />4 The
-                                One Ring<br />4 Counterspell<br />4 Misty
-                                Rainforest<br />4 Windswept Heath<br />4 Wooded
-                                Foothills<br />2 Temple Garden<br />2 Steam
-                                Vents<br />2 Sacred Foundry<br />1 Raugrin
-                                Triome
+                                4 <span class="card-name" data-card="Omnath, Locus of Creation">Omnath, Locus of Creation</span><br />4 <span class="card-name" data-card="Solitude">Solitude</span><br />4
+                                <span class="card-name" data-card="Endurance">Endurance</span><br />4 <span class="card-name" data-card="Wrenn and Six">Wrenn and Six</span><br />4 <span class="card-name" data-card="Teferi, Time Raveler">Teferi,
+                                Time Raveler</span><br />4 <span class="card-name" data-card="Leyline Binding">Leyline Binding</span><br />4 <span class="card-name" data-card="The One Ring">The
+                                One Ring</span><br />4 <span class="card-name" data-card="Counterspell">Counterspell</span><br />4 <span class="card-name" data-card="Misty Rainforest">Misty
+                                Rainforest</span><br />4 <span class="card-name" data-card="Windswept Heath">Windswept Heath</span><br />4 <span class="card-name" data-card="Wooded Foothills">Wooded
+                                Foothills</span><br />2 <span class="card-name" data-card="Temple Garden">Temple Garden</span><br />2 <span class="card-name" data-card="Steam Vents">Steam
+                                Vents</span><br />2 <span class="card-name" data-card="Sacred Foundry">Sacred Foundry</span><br />1 <span class="card-name" data-card="Raugrin Triome">Raugrin
+                                Triome</span>
                             </div>
                         </div>
                     </div>
@@ -228,14 +251,14 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Colossus Hammer<br />4 Sigarda's Aid<br />4
-                                Puresteel Paladin<br />4 Ornithopter<br />4
-                                Memnite<br />4 Stoneforge Mystic<br />4 Esper
-                                Sentinel<br />4 Urza's Saga<br />4 Inkmoth
-                                Nexus<br />4 Springleaf Drum<br />1
-                                Shadowspear<br />1 Blacksmith's Skill<br />4
-                                Windswept Heath<br />4 Marsh Flats<br />1
-                                Godless Shrine
+                                4 <span class="card-name" data-card="Colossus Hammer">Colossus Hammer</span><br />4 <span class="card-name" data-card="Sigarda's Aid">Sigarda's Aid</span><br />4
+                                <span class="card-name" data-card="Puresteel Paladin">Puresteel Paladin</span><br />4 <span class="card-name" data-card="Ornithopter">Ornithopter</span><br />4
+                                <span class="card-name" data-card="Memnite">Memnite</span><br />4 <span class="card-name" data-card="Stoneforge Mystic">Stoneforge Mystic</span><br />4 <span class="card-name" data-card="Esper Sentinel">Esper
+                                Sentinel</span><br />4 <span class="card-name" data-card="Urza's Saga">Urza's Saga</span><br />4 <span class="card-name" data-card="Inkmoth Nexus">Inkmoth
+                                Nexus</span><br />4 <span class="card-name" data-card="Springleaf Drum">Springleaf Drum</span><br />1
+                                <span class="card-name" data-card="Shadowspear">Shadowspear</span><br />1 <span class="card-name" data-card="Blacksmith's Skill">Blacksmith's Skill</span><br />4
+                                <span class="card-name" data-card="Windswept Heath">Windswept Heath</span><br />4 <span class="card-name" data-card="Marsh Flats">Marsh Flats</span><br />1
+                                <span class="card-name" data-card="Godless Shrine">Godless Shrine</span>
                             </div>
                         </div>
                     </div>
@@ -275,14 +298,14 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Tarmogoyf<br />4 Dark Confidant<br />4 Wrenn
-                                and Six<br />4 Liliana of the Veil<br />4
-                                Thoughtseize<br />4 Inquisition of Kozilek<br />4
-                                Lightning Bolt<br />3 Fatal Push<br />2
-                                Maelstrom Pulse<br />4 Blackcleave Cliffs<br />4
-                                Verdant Catacombs<br />2 Blood Crypt<br />2
-                                Overgrown Tomb<br />1 Stomping Ground<br />3
-                                Raging Ravine
+                                4 <span class="card-name" data-card="Tarmogoyf">Tarmogoyf</span><br />4 <span class="card-name" data-card="Dark Confidant">Dark Confidant</span><br />4 <span class="card-name" data-card="Wrenn and Six">Wrenn
+                                and Six</span><br />4 <span class="card-name" data-card="Liliana of the Veil">Liliana of the Veil</span><br />4
+                                <span class="card-name" data-card="Thoughtseize">Thoughtseize</span><br />4 <span class="card-name" data-card="Inquisition of Kozilek">Inquisition of Kozilek</span><br />4
+                                <span class="card-name" data-card="Lightning Bolt">Lightning Bolt</span><br />3 <span class="card-name" data-card="Fatal Push">Fatal Push</span><br />2
+                                <span class="card-name" data-card="Maelstrom Pulse">Maelstrom Pulse</span><br />4 <span class="card-name" data-card="Blackcleave Cliffs">Blackcleave Cliffs</span><br />4
+                                <span class="card-name" data-card="Verdant Catacombs">Verdant Catacombs</span><br />2 <span class="card-name" data-card="Blood Crypt">Blood Crypt</span><br />2
+                                <span class="card-name" data-card="Overgrown Tomb">Overgrown Tomb</span><br />1 <span class="card-name" data-card="Stomping Ground">Stomping Ground</span><br />3
+                                <span class="card-name" data-card="Raging Ravine">Raging Ravine</span>
                             </div>
                         </div>
                     </div>
@@ -317,12 +340,12 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Goblin Guide<br />4 Monastery Swiftspear<br />4
-                                Eidolon of the Great Revel<br />4 Lightning
-                                Bolt<br />4 Lava Spike<br />4 Rift Bolt<br />4
-                                Skewer the Critics<br />4 Boros Charm<br />4
-                                Searing Blaze<br />4 Sunbaked Canyon<br />4 Arid
-                                Mesa<br />2 Sacred Foundry<br />8 Mountain
+                                4 <span class="card-name" data-card="Goblin Guide">Goblin Guide</span><br />4 <span class="card-name" data-card="Monastery Swiftspear">Monastery Swiftspear</span><br />4
+                                <span class="card-name" data-card="Eidolon of the Great Revel">Eidolon of the Great Revel</span><br />4 <span class="card-name" data-card="Lightning Bolt">Lightning
+                                Bolt</span><br />4 <span class="card-name" data-card="Lava Spike">Lava Spike</span><br />4 <span class="card-name" data-card="Rift Bolt">Rift Bolt</span><br />4
+                                <span class="card-name" data-card="Skewer the Critics">Skewer the Critics</span><br />4 <span class="card-name" data-card="Boros Charm">Boros Charm</span><br />4
+                                <span class="card-name" data-card="Searing Blaze">Searing Blaze</span><br />4 <span class="card-name" data-card="Sunbaked Canyon">Sunbaked Canyon</span><br />4 <span class="card-name" data-card="Arid Mesa">Arid
+                                Mesa</span><br />2 <span class="card-name" data-card="Sacred Foundry">Sacred Foundry</span><br />8 <span class="card-name" data-card="Mountain">Mountain</span>
                             </div>
                         </div>
                     </div>
@@ -359,13 +382,13 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                3 Living End<br />4 Violent Outburst<br />4
-                                Shardless Agent<br />4 Grief<br />4 Street
-                                Wraith<br />4 Striped Riverwinder<br />4 Troll
-                                of Khazad-dûm<br />4 Generous Ent<br />4 Force
-                                of Negation<br />4 Subtlety<br />4 Zagoth
-                                Triome<br />4 Breeding Pool<br />4 Watery
-                                Grave<br />4 Misty Rainforest
+                                3 <span class="card-name" data-card="Living End">Living End</span><br />4 <span class="card-name" data-card="Violent Outburst">Violent Outburst</span><br />4
+                                <span class="card-name" data-card="Shardless Agent">Shardless Agent</span><br />4 <span class="card-name" data-card="Grief">Grief</span><br />4 <span class="card-name" data-card="Street Wraith">Street
+                                Wraith</span><br />4 <span class="card-name" data-card="Striped Riverwinder">Striped Riverwinder</span><br />4 <span class="card-name" data-card="Troll of Khazad-dûm">Troll
+                                of Khazad-dûm</span><br />4 <span class="card-name" data-card="Generous Ent">Generous Ent</span><br />4 <span class="card-name" data-card="Force of Negation">Force
+                                of Negation</span><br />4 <span class="card-name" data-card="Subtlety">Subtlety</span><br />4 <span class="card-name" data-card="Zagoth Triome">Zagoth
+                                Triome</span><br />4 <span class="card-name" data-card="Breeding Pool">Breeding Pool</span><br />4 <span class="card-name" data-card="Watery Grave">Watery
+                                Grave</span><br />4 <span class="card-name" data-card="Misty Rainforest">Misty Rainforest</span>
                             </div>
                         </div>
                     </div>
@@ -405,14 +428,14 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Karn Liberated<br />4 Wurmcoil Engine<br />2
-                                Ulamog, the Ceaseless Hunger<br />4 Sylvan
-                                Scrying<br />4 Ancient Stirrings<br />4
-                                Expedition Map<br />4 Chromatic Star<br />4
-                                Chromatic Sphere<br />1 Oblivion Stone<br />4
-                                Urza's Mine<br />4 Urza's Power Plant<br />4
-                                Urza's Tower<br />4 Forest<br />1 Sanctum of
-                                Ugin
+                                4 <span class="card-name" data-card="Karn Liberated">Karn Liberated</span><br />4 <span class="card-name" data-card="Wurmcoil Engine">Wurmcoil Engine</span><br />2
+                                <span class="card-name" data-card="Ulamog, the Ceaseless Hunger">Ulamog, the Ceaseless Hunger</span><br />4 <span class="card-name" data-card="Sylvan Scrying">Sylvan
+                                Scrying</span><br />4 <span class="card-name" data-card="Ancient Stirrings">Ancient Stirrings</span><br />4
+                                <span class="card-name" data-card="Expedition Map">Expedition Map</span><br />4 <span class="card-name" data-card="Chromatic Star">Chromatic Star</span><br />4
+                                <span class="card-name" data-card="Chromatic Sphere">Chromatic Sphere</span><br />1 <span class="card-name" data-card="Oblivion Stone">Oblivion Stone</span><br />4
+                                <span class="card-name" data-card="Urza's Mine">Urza's Mine</span><br />4 <span class="card-name" data-card="Urza's Power Plant">Urza's Power Plant</span><br />4
+                                <span class="card-name" data-card="Urza's Tower">Urza's Tower</span><br />4 <span class="card-name" data-card="Forest">Forest</span><br />1 <span class="card-name" data-card="Sanctum of Ugin">Sanctum of
+                                Ugin</span>
                             </div>
                         </div>
                     </div>
@@ -450,14 +473,14 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Crashing Footfalls<br />4 Violent Outburst<br />4
-                                Shardless Agent<br />4 Force of Negation<br />4
-                                Force of Vigor<br />4 Subtlety<br />4 Fire //
-                                Ice<br />4 Bonecrusher Giant<br />4 Brazen
-                                Borrower<br />4 Leyline Binding<br />4 Wooded
-                                Foothills<br />4 Misty Rainforest<br />2
-                                Breeding Pool<br />2 Steam Vents<br />1 Temple
-                                Garden
+                                4 <span class="card-name" data-card="Crashing Footfalls">Crashing Footfalls</span><br />4 <span class="card-name" data-card="Violent Outburst">Violent Outburst</span><br />4
+                                <span class="card-name" data-card="Shardless Agent">Shardless Agent</span><br />4 <span class="card-name" data-card="Force of Negation">Force of Negation</span><br />4
+                                <span class="card-name" data-card="Force of Vigor">Force of Vigor</span><br />4 <span class="card-name" data-card="Subtlety">Subtlety</span><br />4 <span class="card-name" data-card="Fire // Ice">Fire //
+                                Ice</span><br />4 <span class="card-name" data-card="Bonecrusher Giant">Bonecrusher Giant</span><br />4 <span class="card-name" data-card="Brazen Borrower">Brazen
+                                Borrower</span><br />4 <span class="card-name" data-card="Leyline Binding">Leyline Binding</span><br />4 <span class="card-name" data-card="Wooded Foothills">Wooded
+                                Foothills</span><br />4 <span class="card-name" data-card="Misty Rainforest">Misty Rainforest</span><br />2
+                                <span class="card-name" data-card="Breeding Pool">Breeding Pool</span><br />2 <span class="card-name" data-card="Steam Vents">Steam Vents</span><br />1 <span class="card-name" data-card="Temple Garden">Temple
+                                Garden</span>
                             </div>
                         </div>
                     </div>
@@ -494,15 +517,15 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Yawgmoth, Thran Physician<br />4 Strangleroot
-                                Geist<br />4 Young Wolf<br />4 Birds of
-                                Paradise<br />4 Ignoble Hierarch<br />4 Grist,
-                                the Hunger Tide<br />4 Chord of Calling<br />4
-                                Eldritch Evolution<br />2 Geralf's Messenger<br />1
-                                Hapatra, Vizier of Poisons<br />4 Verdant
-                                Catacombs<br />4 Overgrown Tomb<br />4 Twilight
-                                Mire<br />4 Nurturing Peatland<br />2 Forest<br />1
-                                Swamp
+                                4 <span class="card-name" data-card="Yawgmoth, Thran Physician">Yawgmoth, Thran Physician</span><br />4 <span class="card-name" data-card="Strangleroot Geist">Strangleroot
+                                Geist</span><br />4 <span class="card-name" data-card="Young Wolf">Young Wolf</span><br />4 <span class="card-name" data-card="Birds of Paradise">Birds of
+                                Paradise</span><br />4 <span class="card-name" data-card="Ignoble Hierarch">Ignoble Hierarch</span><br />4 <span class="card-name" data-card="Grist, the Hunger Tide">Grist,
+                                the Hunger Tide</span><br />4 <span class="card-name" data-card="Chord of Calling">Chord of Calling</span><br />4
+                                <span class="card-name" data-card="Eldritch Evolution">Eldritch Evolution</span><br />2 <span class="card-name" data-card="Geralf's Messenger">Geralf's Messenger</span><br />1
+                                <span class="card-name" data-card="Hapatra, Vizier of Poisons">Hapatra, Vizier of Poisons</span><br />4 <span class="card-name" data-card="Verdant Catacombs">Verdant
+                                Catacombs</span><br />4 <span class="card-name" data-card="Overgrown Tomb">Overgrown Tomb</span><br />4 <span class="card-name" data-card="Twilight Mire">Twilight
+                                Mire</span><br />4 <span class="card-name" data-card="Nurturing Peatland">Nurturing Peatland</span><br />2 <span class="card-name" data-card="Forest">Forest</span><br />1
+                                <span class="card-name" data-card="Swamp">Swamp</span>
                             </div>
                         </div>
                     </div>
@@ -511,6 +534,63 @@
         </div>
 
         <script>
+            // Cria o elemento tooltip uma vez e anexa ao body
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.innerHTML = '<img>';
+            document.body.appendChild(tooltip);
+            const tooltipImage = tooltip.querySelector('img');
+
+            // Pega todos os elementos que devem acionar o tooltip
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                // Adiciona um pequeno deslocamento para evitar cintilação/piscar
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+
+                const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
+
+            // Função original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {

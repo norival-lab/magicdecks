@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Mundial de 2005 - Arquivo Magic</title>
+        <title>Mundial de 2021 - Arquivo Magic</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,6 +23,29 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -34,11 +57,10 @@
                     >&larr; Voltar para o Arquivo</a
                 >
                 <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
-                    2005 World Championship
+                    2021 World Championship
                 </h1>
                 <p class="text-lg text-gray-400">
-                    O Bloco de Ravnica introduz um novo paradigma com as "shock
-                    lands" e estratégias multicoloridas.
+                    O Standard de Innistrad: Midnight Hunt com decks focados em Alrund's Epiphany e estratégias de dragões.
                 </p>
             </header>
 
@@ -50,16 +72,16 @@
                     <div class="player-entry">
                         <div
                             class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
-                            onclick="toggleVisibility('deck-2005-1')"
+                            onclick="toggleVisibility('deck-2021-1')"
                         >
                             <p>
                                 <span class="font-bold">1º Lugar:</span>
-                                Katsuhiro Mori -
-                                <span class="italic">"G/W Ghazi-Glare"</span>
+                                Yuta Takahashi -
+                                <span class="italic">"Izzet Dragons"</span>
                             </p>
                         </div>
                         <div
-                            id="deck-2005-1"
+                            id="deck-2021-1"
                             class="decklist hidden mt-2 p-4 rounded-b-md"
                         >
                             <h3
@@ -68,19 +90,36 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Elves of Deep
-                                Shadow<br />4 Loxodon Hierarch<br />4 Selesnya
-                                Guildmage<br />4 Watchwolf<br />4 Wood Elves
+                                <span class="card-name" data-card="Smoldering Egg">4 Smoldering Egg</span><br/>
+                                <span class="card-name" data-card="Goldspan Dragon">4 Goldspan Dragon</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
-                                Mágicas
+                                Instantâneos
                             </h3>
                             <div class="text-gray-300">
-                                4 Congregation at Dawn<br />4 Glare of
-                                Subdual<br />4 Selesnya Signet<br />4 Umezawa's
-                                Jitte
+                                <span class="card-name" data-card="Spikefield Hazard">1 Spikefield Hazard</span><br/>
+                                <span class="card-name" data-card="Fading Hope">1 Fading Hope</span><br/>
+                                <span class="card-name" data-card="Jwari Disruption">3 Jwari Disruption</span><br/>
+                                <span class="card-name" data-card="Dragon's Fire">4 Dragon's Fire</span><br/>
+                                <span class="card-name" data-card="Negate">1 Negate</span><br/>
+                                <span class="card-name" data-card="Divide by Zero">2 Divide by Zero</span><br/>
+                                <span class="card-name" data-card="Dissipate">1 Dissipate</span><br/>
+                                <span class="card-name" data-card="Saw It Coming">1 Saw It Coming</span><br/>
+                                <span class="card-name" data-card="Prismari Command">1 Prismari Command</span><br/>
+                                <span class="card-name" data-card="Memory Deluge">4 Memory Deluge</span>
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Feitiços
+                            </h3>
+                            <div class="text-gray-300">
+                                <span class="card-name" data-card="Shatterskull Smashing">4 Shatterskull Smashing</span><br/>
+                                <span class="card-name" data-card="Expressive Iteration">4 Expressive Iteration</span><br/>
+                                <span class="card-name" data-card="Thundering Rebuke">2 Thundering Rebuke</span><br/>
+                                <span class="card-name" data-card="Alrund's Epiphany">3 Alrund's Epiphany</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -88,9 +127,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Brushland<br />4 Overgrown Tomb<br />4
-                                Savannah<br />4 Temple Garden<br />4 Vitu-Ghazi,
-                                the City-Tree
+                                <span class="card-name" data-card="Island">7 Island</span><br/>
+                                <span class="card-name" data-card="Mountain">4 Mountain</span><br/>
+                                <span class="card-name" data-card="Riverglide Pathway">4 Riverglide Pathway</span><br/>
+                                <span class="card-name" data-card="Hall of Storm Giants">2 Hall of Storm Giants</span><br/>
+                                <span class="card-name" data-card="Frostboil Snarl">3 Frostboil Snarl</span>
                             </div>
                         </div>
                     </div>
@@ -98,16 +139,15 @@
                     <div class="player-entry">
                         <div
                             class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
-                            onclick="toggleVisibility('deck-2005-2')"
+                            onclick="toggleVisibility('deck-2021-2')"
                         >
                             <p>
-                                <span class="font-bold">2º Lugar:</span> Frank
-                                Karsten -
-                                <span class="italic">"Gifts Control"</span>
+                                <span class="font-bold">2º Lugar:</span> Jean-Emmanuel Depraz -
+                                <span class="italic">"Temur Treasures"</span>
                             </p>
                         </div>
                         <div
-                            id="deck-2005-2"
+                            id="deck-2021-2"
                             class="decklist hidden mt-2 p-4 rounded-b-md"
                         >
                             <h3
@@ -116,27 +156,45 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Elves of Deep
-                                Shadow<br />4 Hana Kami<br />4 Ink-Eyes, Servant
-                                of Oni<br />4 Kagemaro, First to Suffer<br />4
-                                Kokusho, the Evening Star<br />4 Loxodon
-                                Hierarch<br />4 Meloku the Clouded Mirror<br />4
-                                Myojin of Seeing Winds<br />4 Sakura-Tribe
-                                Elder<br />4 Yosei, the Morning Star
+                                <span class="card-name" data-card="Jaspera Sentinel">4 Jaspera Sentinel</span><br/>
+                                <span class="card-name" data-card="Prosperous Innkeeper">4 Prosperous Innkeeper</span><br/>
+                                <span class="card-name" data-card="Magda, Brazen Outlaw">4 Magda, Brazen Outlaw</span><br/>
+                                <span class="card-name" data-card="Reckless Stormseeker">2 Reckless Stormseeker</span><br/>
+                                <span class="card-name" data-card="Moonveil Regent">3 Moonveil Regent</span><br/>
+                                <span class="card-name" data-card="Goldspan Dragon">4 Goldspan Dragon</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
-                                Mágicas
+                                Instantâneos
                             </h3>
                             <div class="text-gray-300">
-                                4 Circle of Protection: Red<br />4 Cranial
-                                Extraction<br />4 Enduring Ideal<br />4 Gifts
-                                Ungiven<br />4 Goryo's Vengeance<br />4 Greater
-                                Good<br />4 Heartbeat of Spring<br />4 Kodama's
-                                Reach<br />4 Putrefy<br />4 Remand<br />4
-                                Sensei's Divining Top<br />4 Thoughts of Ruin<br />4
-                                Umezawa's Jitte
+                                <span class="card-name" data-card="Negate">2 Negate</span><br/>
+                                <span class="card-name" data-card="Dragon's Fire">3 Dragon's Fire</span>
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Feitiços
+                            </h3>
+                            <div class="text-gray-300">
+                                <span class="card-name" data-card="Shatterskull Smashing">4 Shatterskull Smashing</span>
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Artefatos
+                            </h3>
+                            <div class="text-gray-300">
+                                <span class="card-name" data-card="Esika's Chariot">4 Esika's Chariot</span>
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Encantamentos
+                            </h3>
+                            <div class="text-gray-300">
+                                <span class="card-name" data-card="Ranger Class">4 Ranger Class</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -144,14 +202,13 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />4 Breeding Pool<br />4
-                                Brushland<br />4 Hallowed Fountain<br />4
-                                Overgrown Tomb<br />4 Savannah<br />4 Shivan
-                                Reef<br />4 Steam Vents<br />4 Stomping
-                                Ground<br />4 Temple Garden<br />4 Tropical
-                                Island<br />4 Tundra<br />4 Underground Sea<br />4
-                                Volcanic Island<br />4 Watery Grave<br />4
-                                Yavimaya Coast
+                                <span class="card-name" data-card="Forest">5 Forest</span><br/>
+                                <span class="card-name" data-card="Mountain">1 Mountain</span><br/>
+                                <span class="card-name" data-card="Cragcrown Pathway">4 Cragcrown Pathway</span><br/>
+                                <span class="card-name" data-card="Barkchannel Pathway">4 Barkchannel Pathway</span><br/>
+                                <span class="card-name" data-card="Riverglide Pathway">4 Riverglide Pathway</span><br/>
+                                <span class="card-name" data-card="Den of the Bugbear">2 Den of the Bugbear</span><br/>
+                                <span class="card-name" data-card="Lair of the Hydra">2 Lair of the Hydra</span>
                             </div>
                         </div>
                     </div>
@@ -159,18 +216,15 @@
                     <div class="player-entry">
                         <div
                             class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
-                            onclick="toggleVisibility('deck-2005-3')"
+                            onclick="toggleVisibility('deck-2021-3')"
                         >
                             <p>
-                                <span class="font-bold">3º Lugar:</span> Shuhei
-                                Nakamura -
-                                <span class="italic"
-                                    >"'Hattori' U/W Control"</span
-                                >
+                                <span class="font-bold">3º Lugar:</span> Jan-Moritz Merkel -
+                                <span class="italic">"Grixis Epiphany"</span>
                             </p>
                         </div>
                         <div
-                            id="deck-2005-3"
+                            id="deck-2021-3"
                             class="decklist hidden mt-2 p-4 rounded-b-md"
                         >
                             <h3
@@ -179,24 +233,45 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Jushi Apprentice<br />4 Meloku the Clouded
-                                Mirror<br />4 Morphling
+                                <span class="card-name" data-card="Smoldering Egg">1 Smoldering Egg</span><br/>
+                                <span class="card-name" data-card="Lier, Disciple of the Drowned">3 Lier, Disciple of the Drowned</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
-                                Mágicas
+                                Instantâneos
                             </h3>
                             <div class="text-gray-300">
-                                4 Boomerang<br />4 Circle of Protection: Red<br />4
-                                Condescend<br />4 Counterspell<br />4 Crucible
-                                of Worlds<br />4 Disrupting Shoal<br />4 Dust
-                                Bowl<br />4 Fact or Fiction<br />4 Force
-                                Spike<br />4 Hinder<br />4 Powder Keg<br />4
-                                Psychatog<br />4 Remand<br />4 Sensei's Divining
-                                Top<br />4 Thirst for Knowledge<br />4 Umezawa's
-                                Jitte<br />4 Vedalken Shackles<br />4 Wrath of
-                                God
+                                <span class="card-name" data-card="Fading Hope">4 Fading Hope</span><br/>
+                                <span class="card-name" data-card="Spikefield Hazard">2 Spikefield Hazard</span><br/>
+                                <span class="card-name" data-card="Jwari Disruption">2 Jwari Disruption</span><br/>
+                                <span class="card-name" data-card="Cathartic Pyre">1 Cathartic Pyre</span><br/>
+                                <span class="card-name" data-card="Galvanic Iteration">2 Galvanic Iteration</span><br/>
+                                <span class="card-name" data-card="Power Word Kill">1 Power Word Kill</span><br/>
+                                <span class="card-name" data-card="Cinderclasm">1 Cinderclasm</span><br/>
+                                <span class="card-name" data-card="Demon Bolt">1 Demon Bolt</span><br/>
+                                <span class="card-name" data-card="Prismari Command">1 Prismari Command</span><br/>
+                                <span class="card-name" data-card="Memory Deluge">3 Memory Deluge</span>
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Feitiços
+                            </h3>
+                            <div class="text-gray-300">
+                                <span class="card-name" data-card="Duress">2 Duress</span><br/>
+                                <span class="card-name" data-card="Bloodchief's Thirst">1 Bloodchief's Thirst</span><br/>
+                                <span class="card-name" data-card="Expressive Iteration">4 Expressive Iteration</span><br/>
+                                <span class="card-name" data-card="Burn Down the House">1 Burn Down the House</span><br/>
+                                <span class="card-name" data-card="Alrund's Epiphany">4 Alrund's Epiphany</span>
+                            </div>
+                            <h3
+                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
+                            >
+                                Artefatos
+                            </h3>
+                            <div class="text-gray-300">
+                                <span class="card-name" data-card="The Celestus">3 The Celestus</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -204,12 +279,14 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />4 Desert<br />4 Flooded
-                                Strand<br />4 Minamo, School at Water's Edge<br />4
-                                Mishra's Factory<br />4 Oboro, Palace in the
-                                Clouds<br />4 Polluted Delta<br />4 Rishadan
-                                Port<br />10 Snow-Covered Island<br />4 Stalking
-                                Stones<br />4 Wayfarer's Bauble
+                                <span class="card-name" data-card="Island">1 Island</span><br/>
+                                <span class="card-name" data-card="Mountain">2 Mountain</span><br/>
+                                <span class="card-name" data-card="Hall of Storm Giants">2 Hall of Storm Giants</span><br/>
+                                <span class="card-name" data-card="Riverglide Pathway">4 Riverglide Pathway</span><br/>
+                                <span class="card-name" data-card="Blightstep Pathway">4 Blightstep Pathway</span><br/>
+                                <span class="card-name" data-card="Clearwater Pathway">3 Clearwater Pathway</span><br/>
+                                <span class="card-name" data-card="Shipwreck Marsh">3 Shipwreck Marsh</span><br/>
+                                <span class="card-name" data-card="Haunted Ridge">4 Haunted Ridge</span>
                             </div>
                         </div>
                     </div>
@@ -217,16 +294,15 @@
                     <div class="player-entry">
                         <div
                             class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
-                            onclick="toggleVisibility('deck-2005-4')"
+                            onclick="toggleVisibility('deck-2021-4')"
                         >
                             <p>
-                                <span class="font-bold">4º Lugar:</span>
-                                Tomohiro Kaji -
-                                <span class="italic">"Gifts Control"</span>
+                                <span class="font-bold">4º Lugar:</span> Ondřej Stráský -
+                                <span class="italic">"Izzet Epiphany"</span>
                             </p>
                         </div>
                         <div
-                            id="deck-2005-4"
+                            id="deck-2021-4"
                             class="decklist hidden mt-2 p-4 rounded-b-md"
                         >
                             <h3
@@ -235,84 +311,40 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Elves of Deep
-                                Shadow<br />4 Hana Kami<br />4 Ink-Eyes, Servant
-                                of Oni<br />4 Kagemaro, First to Suffer<br />4
-                                Kokusho, the Evening Star<br />4 Loxodon
-                                Hierarch<br />4 Meloku the Clouded Mirror<br />4
-                                Myojin of Seeing Winds<br />4 Sakura-Tribe
-                                Elder<br />4 Yosei, the Morning Star
+                                <span class="card-name" data-card="Smoldering Egg">4 Smoldering Egg</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
-                                Mágicas
+                                Instantâneos
                             </h3>
                             <div class="text-gray-300">
-                                4 Circle of Protection: Red<br />4 Cranial
-                                Extraction<br />4 Enduring Ideal<br />4 Gifts
-                                Ungiven<br />4 Goryo's Vengeance<br />4 Greater
-                                Good<br />4 Heartbeat of Spring<br />4 Kodama's
-                                Reach<br />4 Putrefy<br />4 Remand<br />4
-                                Sensei's Divining Top<br />4 Thoughts of Ruin<br />4
-                                Umezawa's Jitte
+                                <span class="card-name" data-card="Fading Hope">2 Fading Hope</span><br/>
+                                <span class="card-name" data-card="Spikefield Hazard">1 Spikefield Hazard</span><br/>
+                                <span class="card-name" data-card="Cathartic Pyre">2 Cathartic Pyre</span><br/>
+                                <span class="card-name" data-card="Jwari Disruption">2 Jwari Disruption</span><br/>
+                                <span class="card-name" data-card="Burning Hands">2 Burning Hands</span><br/>
+                                <span class="card-name" data-card="Disdainful Stroke">1 Disdainful Stroke</span><br/>
+                                <span class="card-name" data-card="Galvanic Iteration">2 Galvanic Iteration</span><br/>
+                                <span class="card-name" data-card="Into the Roil">1 Into the Roil</span><br/>
+                                <span class="card-name" data-card="Negate">1 Negate</span><br/>
+                                <span class="card-name" data-card="Prismari Command">1 Prismari Command</span><br/>
+                                <span class="card-name" data-card="Saw It Coming">1 Saw It Coming</span><br/>
+                                <span class="card-name" data-card="Divide by Zero">3 Divide by Zero</span><br/>
+                                <span class="card-name" data-card="Demon Bolt">1 Demon Bolt</span><br/>
+                                <span class="card-name" data-card="Memory Deluge">2 Memory Deluge</span><br/>
+                                <span class="card-name" data-card="Behold the Multiverse">1 Behold the Multiverse</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
-                                Terrenos
+                                Feitiços
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />4 Breeding Pool<br />4
-                                Brushland<br />4 Hallowed Fountain<br />4
-                                Overgrown Tomb<br />4 Savannah<br />4 Shivan
-                                Reef<br />4 Steam Vents<br />4 Stomping
-                                Ground<br />4 Temple Garden<br />4 Tropical
-                                Island<br />4 Tundra<br />4 Underground Sea<br />4
-                                Volcanic Island<br />4 Watery Grave<br />4
-                                Yavimaya Coast
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 5th Place -->
-                    <div class="player-entry">
-                        <div
-                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
-                            onclick="toggleVisibility('deck-2005-5')"
-                        >
-                            <p>
-                                <span class="font-bold">5º Lugar:</span> André
-                                Coimbra -
-                                <span class="italic"
-                                    >"B/W Aggro 'Hand in Hand'"</span
-                                >
-                            </p>
-                        </div>
-                        <div
-                            id="deck-2005-5"
-                            class="decklist hidden mt-2 p-4 rounded-b-md"
-                        >
-                            <h3
-                                class="font-semibold text-lg mb-2 text-indigo-400"
-                            >
-                                Criaturas
-                            </h3>
-                            <div class="text-gray-300">
-                                4 Dark Confidant<br />4 Hand of Cruelty<br />4
-                                Hand of Honor<br />4 Hypnotic Specter<br />4
-                                Isamaru, Hound of Konda<br />4 Knight of the
-                                Holy Nimbus<br />4 Paladin en-Vec<br />4
-                                Savannah Lions<br />4 White Knight
-                            </div>
-                            <h3
-                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
-                            >
-                                Mágicas
-                            </h3>
-                            <div class="text-gray-300">
-                                4 Castigate<br />4 Gerrard's Verdict<br />4
-                                Mortify<br />4 Shining Shoal<br />4 Umezawa's
-                                Jitte
+                                <span class="card-name" data-card="Expressive Iteration">4 Expressive Iteration</span><br/>
+                                <span class="card-name" data-card="Shatterskull Smashing">2 Shatterskull Smashing</span><br/>
+                                <span class="card-name" data-card="Burn Down the House">1 Burn Down the House</span><br/>
+                                <span class="card-name" data-card="Alrund's Epiphany">4 Alrund's Epiphany</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -320,160 +352,14 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Caves of Koilos<br />4 Godless Shrine<br />4
-                                Shizo, Death's Storehouse
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 6th Place -->
-                    <div class="player-entry">
-                        <div
-                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
-                            onclick="toggleVisibility('deck-2005-6')"
-                        >
-                            <p>
-                                <span class="font-bold">6º Lugar:</span> Marcio
-                                Carvalho -
-                                <span class="italic">"U/R Magnivore"</span>
-                            </p>
-                        </div>
-                        <div
-                            id="deck-2005-6"
-                            class="decklist hidden mt-2 p-4 rounded-b-md"
-                        >
-                            <h3
-                                class="font-semibold text-lg mb-2 text-indigo-400"
-                            >
-                                Criaturas
-                            </h3>
-                            <div class="text-gray-300">4 Magnivore</div>
-                            <h3
-                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
-                            >
-                                Mágicas
-                            </h3>
-                            <div class="text-gray-300">
-                                4 Annex<br />4 Boomerang<br />4 Demolish<br />4
-                                Eye of Nowhere<br />4 Mana Leak<br />4 Remand<br />4
-                                Shard of Broken Glass<br />4 Sleight of Hand<br />4
-                                Stone Rain<br />4 Volcanic Hammer
-                            </div>
-                            <h3
-                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
-                            >
-                                Terrenos
-                            </h3>
-                            <div class="text-gray-300">
-                                4 Shivan Reef<br />4 Steam Vents<br />10
-                                Island<br />10 Mountain
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 7th Place -->
-                    <div class="player-entry">
-                        <div
-                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
-                            onclick="toggleVisibility('deck-2005-7')"
-                        >
-                            <p>
-                                <span class="font-bold">7º Lugar:</span> Akira
-                                Asahara -
-                                <span class="italic">"Gifts Control"</span>
-                            </p>
-                        </div>
-                        <div
-                            id="deck-2005-7"
-                            class="decklist hidden mt-2 p-4 rounded-b-md"
-                        >
-                            <h3
-                                class="font-semibold text-lg mb-2 text-indigo-400"
-                            >
-                                Criaturas
-                            </h3>
-                            <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Elves of Deep
-                                Shadow<br />4 Hana Kami<br />4 Ink-Eyes, Servant
-                                of Oni<br />4 Kagemaro, First to Suffer<br />4
-                                Kokusho, the Evening Star<br />4 Loxodon
-                                Hierarch<br />4 Meloku the Clouded Mirror<br />4
-                                Myojin of Seeing Winds<br />4 Sakura-Tribe
-                                Elder<br />4 Yosei, the Morning Star
-                            </div>
-                            <h3
-                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
-                            >
-                                Mágicas
-                            </h3>
-                            <div class="text-gray-300">
-                                4 Circle of Protection: Red<br />4 Cranial
-                                Extraction<br />4 Enduring Ideal<br />4 Gifts
-                                Ungiven<br />4 Goryo's Vengeance<br />4 Greater
-                                Good<br />4 Heartbeat of Spring<br />4 Kodama's
-                                Reach<br />4 Putrefy<br />4 Remand<br />4
-                                Sensei's Divining Top<br />4 Thoughts of Ruin<br />4
-                                Umezawa's Jitte
-                            </div>
-                            <h3
-                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
-                            >
-                                Terrenos
-                            </h3>
-                            <div class="text-gray-300">
-                                4 Adarkar Wastes<br />4 Breeding Pool<br />4
-                                Brushland<br />4 Hallowed Fountain<br />4
-                                Overgrown Tomb<br />4 Savannah<br />4 Shivan
-                                Reef<br />4 Steam Vents<br />4 Stomping
-                                Ground<br />4 Temple Garden<br />4 Tropical
-                                Island<br />4 Tundra<br />4 Underground Sea<br />4
-                                Volcanic Island<br />4 Watery Grave<br />4
-                                Yavimaya Coast
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 8th Place -->
-                    <div class="player-entry">
-                        <div
-                            class="player-header bg-gray-700 hover:bg-gray-600 p-3 rounded-md"
-                            onclick="toggleVisibility('deck-2005-8')"
-                        >
-                            <p>
-                                <span class="font-bold">8º Lugar:</span> Ding
-                                Leong - <span class="italic">"G/W Aggro"</span>
-                            </p>
-                        </div>
-                        <div
-                            id="deck-2005-8"
-                            class="decklist hidden mt-2 p-4 rounded-b-md"
-                        >
-                            <h3
-                                class="font-semibold text-lg mb-2 text-indigo-400"
-                            >
-                                Criaturas
-                            </h3>
-                            <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Elves of Deep
-                                Shadow<br />4 Loxodon Hierarch<br />4 Selesnya
-                                Guildmage<br />4 Watchwolf<br />4 Wood Elves
-                            </div>
-                            <h3
-                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
-                            >
-                                Mágicas
-                            </h3>
-                            <div class="text-gray-300">
-                                4 Congregation at Dawn<br />4 Glare of
-                                Subdual<br />4 Selesnya Signet<br />4 Umezawa's
-                                Jitte
-                            </div>
-                            <h3
-                                class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
-                            >
-                                Terrenos
-                            </h3>
-                            <div class="text-gray-300">
-                                4 Brushland<br />4 Overgrown Tomb<br />4
-                                Savannah<br />4 Temple Garden<br />4 Vitu-Ghazi,
-                                the City-Tree
+                                <span class="card-name" data-card="Island">6 Island</span><br/>
+                                <span class="card-name" data-card="Mountain">5 Mountain</span><br/>
+                                <span class="card-name" data-card="Field of Ruin">1 Field of Ruin</span><br/>
+                                <span class="card-name" data-card="Hall of Storm Giants">3 Hall of Storm Giants</span><br/>
+                                <span class="card-name" data-card="Riverglide Pathway">4 Riverglide Pathway</span><br/>
+                                <span class="card-name" data-card="Prismari Campus">1 Prismari Campus</span><br/>
+                                <span class="card-name" data-card="Den of the Bugbear">1 Den of the Bugbear</span><br/>
+                                <span class="card-name" data-card="Frostboil Snarl">1 Frostboil Snarl</span>
                             </div>
                         </div>
                     </div>
@@ -487,6 +373,75 @@
                     element.classList.toggle("hidden");
                 }
             }
+
+            // Criar o elemento tooltip
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            document.body.appendChild(tooltip);
+
+            // Função para mostrar o tooltip
+            function showTooltip(event, cardName) {
+                const img = document.createElement('img');
+                img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image`;
+                img.alt = cardName;
+                
+                tooltip.innerHTML = '';
+                tooltip.appendChild(img);
+                tooltip.style.display = 'block';
+                
+                // Posicionar o tooltip
+                updateTooltipPosition(event);
+            }
+
+            // Função para esconder o tooltip
+            function hideTooltip() {
+                tooltip.style.display = 'none';
+            }
+
+            // Função para atualizar a posição do tooltip
+            function updateTooltipPosition(event) {
+                const tooltipRect = tooltip.getBoundingClientRect();
+                const viewportWidth = window.innerWidth;
+                const viewportHeight = window.innerHeight;
+                
+                let left = event.clientX + 15;
+                let top = event.clientY + 15;
+                
+                // Ajustar se o tooltip sair da tela pela direita
+                if (left + tooltipRect.width > viewportWidth) {
+                    left = event.clientX - tooltipRect.width - 15;
+                }
+                
+                // Ajustar se o tooltip sair da tela por baixo
+                if (top + tooltipRect.height > viewportHeight) {
+                    top = event.clientY - tooltipRect.height - 15;
+                }
+                
+                // Garantir que não saia da tela pela esquerda ou por cima
+                left = Math.max(10, left);
+                top = Math.max(10, top);
+                
+                tooltip.style.left = left + 'px';
+                tooltip.style.top = top + 'px';
+            }
+
+            // Adicionar event listeners para todas as cartas
+            document.addEventListener('DOMContentLoaded', function() {
+                const cardElements = document.querySelectorAll('.card-name');
+                
+                cardElements.forEach(element => {
+                    element.addEventListener('mouseenter', function(event) {
+                        const cardName = this.getAttribute('data-card');
+                        if (cardName) {
+                            showTooltip(event, cardName);
+                        }
+                    });
+                    
+                    element.addEventListener('mouseleave', hideTooltip);
+                    
+                    element.addEventListener('mousemove', updateTooltipPosition);
+                });
+            });
         </script>
     </body>
 </html>

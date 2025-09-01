@@ -23,6 +23,29 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -67,19 +90,19 @@
                             >
                                 Criaturas
                             </h3>
-                            <div class="text-gray-300">4 Brazen Borrower</div>
+                            <div class="text-gray-300"><span class="card-name" data-card="Brazen Borrower">4 Brazen Borrower</span></div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Absorb<br />4 Archon of Sun's Grace<br />4
-                                Banishing Light<br />4 Dovin's Veto<br />4
-                                Elspeth Conquers Death<br />4 Glass Casket<br />4
-                                Narset, Parter of Veils<br />4 Omen of the
-                                Sea<br />4 Shatter the Sky<br />4 Teferi, Time
-                                Raveler<br />4 The Birth of Meletis
+                                <span class="card-name" data-card="Absorb">4 Absorb</span><br /><span class="card-name" data-card="Archon of Sun's Grace">4 Archon of Sun's Grace</span><br /><span class="card-name" data-card="Banishing Light">4
+                                Banishing Light</span><br /><span class="card-name" data-card="Dovin's Veto">4 Dovin's Veto</span><br /><span class="card-name" data-card="Elspeth Conquers Death">4
+                                Elspeth Conquers Death</span><br /><span class="card-name" data-card="Glass Casket">4 Glass Casket</span><br /><span class="card-name" data-card="Narset, Parter of Veils">4
+                                Narset, Parter of Veils</span><br /><span class="card-name" data-card="Omen of the Sea">4 Omen of the
+                                Sea</span><br /><span class="card-name" data-card="Shatter the Sky">4 Shatter the Sky</span><br /><span class="card-name" data-card="Teferi, Time Raveler">4 Teferi, Time
+                                Raveler</span><br /><span class="card-name" data-card="The Birth of Meletis">4 The Birth of Meletis</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -87,9 +110,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Castle Vantress<br />4 Fabled Passage<br />4
-                                Hallowed Fountain<br />4 Temple of
-                                Enlightenment<br />8 Island<br />8 Plains
+                                <span class="card-name" data-card="Castle Vantress">4 Castle Vantress</span><br /><span class="card-name" data-card="Fabled Passage">4 Fabled Passage</span><br /><span class="card-name" data-card="Hallowed Fountain">4
+                                Hallowed Fountain</span><br /><span class="card-name" data-card="Temple of Enlightenment">4 Temple of
+                                Enlightenment</span><br /><span class="card-name" data-card="Island">8 Island</span><br /><span class="card-name" data-card="Plains">8 Plains</span>
                             </div>
                         </div>
                     </div>
@@ -115,10 +138,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Bonecrusher Giant<br />4 Brazen Borrower<br />4
-                                Cavalier of Flame<br />4 Cavalier of Gales<br />4
-                                Kenrith, the Returned King<br />4 Sphinx of
-                                Foresight
+                                <span class="card-name" data-card="Bonecrusher Giant">4 Bonecrusher Giant</span><br /><span class="card-name" data-card="Brazen Borrower">4 Brazen Borrower</span><br /><span class="card-name" data-card="Cavalier of Flame">4
+                                Cavalier of Flame</span><br /><span class="card-name" data-card="Cavalier of Gales">4 Cavalier of Gales</span><br /><span class="card-name" data-card="Kenrith, the Returned King">4
+                                Kenrith, the Returned King</span><br /><span class="card-name" data-card="Sphinx of Foresight">4 Sphinx of
+                                Foresight</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -126,9 +149,9 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Deafening Clarion<br />4 Fires of Invention<br />4
-                                Justice Strike<br />4 Omen of the Sea<br />4
-                                Teferi, Time Raveler
+                                <span class="card-name" data-card="Deafening Clarion">4 Deafening Clarion</span><br /><span class="card-name" data-card="Fires of Invention">4 Fires of Invention</span><br /><span class="card-name" data-card="Justice Strike">4
+                                Justice Strike</span><br /><span class="card-name" data-card="Omen of the Sea">4 Omen of the Sea</span><br /><span class="card-name" data-card="Teferi, Time Raveler">4
+                                Teferi, Time Raveler</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -136,10 +159,10 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Castle Vantress<br />4 Fabled Passage<br />4
-                                Hallowed Fountain<br />4 Raugrin Triome<br />4
-                                Sacred Foundry<br />4 Steam Vents<br />4 Temple
-                                of Epiphany<br />4 Temple of Triumph
+                                <span class="card-name" data-card="Castle Vantress">4 Castle Vantress</span><br /><span class="card-name" data-card="Fabled Passage">4 Fabled Passage</span><br /><span class="card-name" data-card="Hallowed Fountain">4
+                                Hallowed Fountain</span><br /><span class="card-name" data-card="Raugrin Triome">4 Raugrin Triome</span><br /><span class="card-name" data-card="Sacred Foundry">4
+                                Sacred Foundry</span><br /><span class="card-name" data-card="Steam Vents">4 Steam Vents</span><br /><span class="card-name" data-card="Temple of Epiphany">4 Temple
+                                of Epiphany</span><br /><span class="card-name" data-card="Temple of Triumph">4 Temple of Triumph</span>
                             </div>
                         </div>
                     </div>
@@ -165,10 +188,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Bonecrusher Giant<br />4 Brazen Borrower<br />4
-                                Cavalier of Flame<br />4 Cavalier of Gales<br />4
-                                Kenrith, the Returned King<br />4 Sphinx of
-                                Foresight
+                                <span class="card-name" data-card="Bonecrusher Giant">4 Bonecrusher Giant</span><br /><span class="card-name" data-card="Brazen Borrower">4 Brazen Borrower</span><br /><span class="card-name" data-card="Cavalier of Flame">4
+                                Cavalier of Flame</span><br /><span class="card-name" data-card="Cavalier of Gales">4 Cavalier of Gales</span><br /><span class="card-name" data-card="Kenrith, the Returned King">4
+                                Kenrith, the Returned King</span><br /><span class="card-name" data-card="Sphinx of Foresight">4 Sphinx of
+                                Foresight</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -176,9 +199,9 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Deafening Clarion<br />4 Fires of Invention<br />4
-                                Justice Strike<br />4 Omen of the Sea<br />4
-                                Teferi, Time Raveler
+                                <span class="card-name" data-card="Deafening Clarion">4 Deafening Clarion</span><br /><span class="card-name" data-card="Fires of Invention">4 Fires of Invention</span><br /><span class="card-name" data-card="Justice Strike">4
+                                Justice Strike</span><br /><span class="card-name" data-card="Omen of the Sea">4 Omen of the Sea</span><br /><span class="card-name" data-card="Teferi, Time Raveler">4
+                                Teferi, Time Raveler</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -186,10 +209,10 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Castle Vantress<br />4 Fabled Passage<br />4
-                                Hallowed Fountain<br />4 Raugrin Triome<br />4
-                                Sacred Foundry<br />4 Steam Vents<br />4 Temple
-                                of Epiphany<br />4 Temple of Triumph
+                                <span class="card-name" data-card="Castle Vantress">4 Castle Vantress</span><br /><span class="card-name" data-card="Fabled Passage">4 Fabled Passage</span><br /><span class="card-name" data-card="Hallowed Fountain">4
+                                Hallowed Fountain</span><br /><span class="card-name" data-card="Raugrin Triome">4 Raugrin Triome</span><br /><span class="card-name" data-card="Sacred Foundry">4
+                                Sacred Foundry</span><br /><span class="card-name" data-card="Steam Vents">4 Steam Vents</span><br /><span class="card-name" data-card="Temple of Epiphany">4 Temple
+                                of Epiphany</span><br /><span class="card-name" data-card="Temple of Triumph">4 Temple of Triumph</span>
                             </div>
                         </div>
                     </div>
@@ -215,11 +238,11 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Anax, Hardened in the Forge<br />4 Bonecrusher
-                                Giant<br />4 Fervent Champion<br />4
-                                Gingerbrute<br />4 Robber of the Rich<br />4
-                                Scorch Spitter<br />4 Tin Street Dodger<br />4
-                                Torbran, Thane of Red Fell
+                                <span class="card-name" data-card="Anax, Hardened in the Forge">4 Anax, Hardened in the Forge</span><br /><span class="card-name" data-card="Bonecrusher Giant">4 Bonecrusher
+                                Giant</span><br /><span class="card-name" data-card="Fervent Champion">4 Fervent Champion</span><br /><span class="card-name" data-card="Gingerbrute">4
+                                Gingerbrute</span><br /><span class="card-name" data-card="Robber of the Rich">4 Robber of the Rich</span><br /><span class="card-name" data-card="Scorch Spitter">4
+                                Scorch Spitter</span><br /><span class="card-name" data-card="Tin Street Dodger">4 Tin Street Dodger</span><br /><span class="card-name" data-card="Torbran, Thane of Red Fell">4
+                                Torbran, Thane of Red Fell</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -227,8 +250,8 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Embercleave<br />4 Light Up the Stage<br />4
-                                Rimrock Knight<br />4 Shock
+                                <span class="card-name" data-card="Embercleave">4 Embercleave</span><br /><span class="card-name" data-card="Light Up the Stage">4 Light Up the Stage</span><br /><span class="card-name" data-card="Rimrock Knight">4
+                                Rimrock Knight</span><br /><span class="card-name" data-card="Shock">4 Shock</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -236,7 +259,7 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Castle Embereth<br />16 Mountain
+                                <span class="card-name" data-card="Castle Embereth">4 Castle Embereth</span><br /><span class="card-name" data-card="Mountain">16 Mountain</span>
                             </div>
                         </div>
                     </div>
@@ -248,6 +271,83 @@
                 const element = document.getElementById(elementId);
                 if (element) {
                     element.classList.toggle("hidden");
+                }
+            }
+
+            // Cria o elemento tooltip se não existir
+            let tooltip = document.getElementById('card-tooltip');
+            if (!tooltip) {
+                tooltip = document.createElement('div');
+                tooltip.id = 'card-tooltip';
+                document.body.appendChild(tooltip);
+            }
+
+            // Adiciona event listeners para todos os elementos com a classe 'card-name'
+            document.addEventListener('DOMContentLoaded', function() {
+                const cardNames = document.querySelectorAll('.card-name');
+                
+                cardNames.forEach(function(cardElement) {
+                    cardElement.addEventListener('mouseenter', function(e) {
+                        const cardName = e.target.getAttribute('data-card');
+                        if (cardName) {
+                            showCardImage(e, cardName);
+                        }
+                    });
+                    
+                    cardElement.addEventListener('mouseleave', function() {
+                        hideCardImage();
+                    });
+                    
+                    cardElement.addEventListener('mousemove', function(e) {
+                        updateTooltipPosition(e);
+                    });
+                });
+            });
+
+            function showCardImage(event, cardName) {
+                const tooltip = document.getElementById('card-tooltip');
+                
+                // Limpa o conteúdo anterior
+                tooltip.innerHTML = '';
+                
+                // Cria a imagem
+                const img = document.createElement('img');
+                
+                // Constrói a URL da API do Scryfall
+                const scryfallUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}`;
+                
+                // Faz a requisição para a API
+                fetch(scryfallUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.image_uris && data.image_uris.normal) {
+                            img.src = data.image_uris.normal;
+                            img.alt = cardName;
+                            img.onload = function() {
+                                tooltip.style.display = 'block';
+                                updateTooltipPosition(event);
+                            };
+                            tooltip.appendChild(img);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erro ao buscar a carta:', error);
+                    });
+            }
+
+            function hideCardImage() {
+                const tooltip = document.getElementById('card-tooltip');
+                tooltip.style.display = 'none';
+            }
+
+            function updateTooltipPosition(event) {
+                const tooltip = document.getElementById('card-tooltip');
+                if (tooltip.style.display === 'block') {
+                    const x = event.clientX + 15; // Offset para não ficar exatamente no cursor
+                    const y = event.clientY + 15;
+                    
+                    tooltip.style.left = x + 'px';
+                    tooltip.style.top = y + 'px';
                 }
             }
         </script>

@@ -23,6 +23,29 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -68,9 +91,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Ball Lightning<br />4 Flowstone Sculpture<br />4
-                                Goblin Vandal<br />4 Ironclaw Orcs<br />4 Jackal
-                                Pup<br />4 Mogg Fanatic<br />1 Raging Goblin
+                                4 <span class="card-name" data-card="Ball Lightning">Ball Lightning</span><br />4 <span class="card-name" data-card="Flowstone Sculpture">Flowstone Sculpture</span><br />4
+                                <span class="card-name" data-card="Goblin Vandal">Goblin Vandal</span><br />4 <span class="card-name" data-card="Ironclaw Orcs">Ironclaw Orcs</span><br />4 <span class="card-name" data-card="Jackal Pup">Jackal
+                                Pup</span><br />4 <span class="card-name" data-card="Mogg Fanatic">Mogg Fanatic</span><br />1 <span class="card-name" data-card="Raging Goblin">Raging Goblin</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -78,16 +101,16 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Cursed Scroll<br />4 Fireblast<br />4 Giant
-                                Strength<br />4 Hammer of Bogardan<br />4
-                                Incinerate<br />4 Kindl<br />4 Shock
+                                4 <span class="card-name" data-card="Cursed Scroll">Cursed Scroll</span><br />4 <span class="card-name" data-card="Fireblast">Fireblast</span><br />4 <span class="card-name" data-card="Giant Strength">Giant
+                                Strength</span><br />4 <span class="card-name" data-card="Hammer of Bogardan">Hammer of Bogardan</span><br />4
+                                <span class="card-name" data-card="Incinerate">Incinerate</span><br />4 <span class="card-name" data-card="Kindle">Kindle</span><br />4 <span class="card-name" data-card="Shock">Shock</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
                                 Terrenos
                             </h3>
-                            <div class="text-gray-300">19 Mountain</div>
+                            <div class="text-gray-300">19 <span class="card-name" data-card="Mountain">Mountain</span></div>
                         </div>
                     </div>
                     <!-- 2nd Place -->
@@ -111,20 +134,20 @@
                             >
                                 Criaturas
                             </h3>
-                            <div class="text-gray-300">4 Palinchron</div>
+                            <div class="text-gray-300">4 <span class="card-name" data-card="Palinchron">Palinchron</span></div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                1 Brainstorm<br />4 Capsize<br />4
-                                Counterspell<br />4 Cursed Scroll<br />4
-                                Disrupt<br />4 Force of Will<br />4 Force
-                                Spike<br />4 High Tide<br />4 Impulse<br />4
-                                Mana Leak<br />4 Merchant Scroll<br />4 Mind
-                                Games<br />4 Nevinyrral's Disk<br />4 Stroke of
-                                Genius<br />4 Time Spiral<br />4 Turnabout
+                                1 <span class="card-name" data-card="Brainstorm">Brainstorm</span><br />4 <span class="card-name" data-card="Capsize">Capsize</span><br />4
+                                <span class="card-name" data-card="Counterspell">Counterspell</span><br />4 <span class="card-name" data-card="Cursed Scroll">Cursed Scroll</span><br />4
+                                <span class="card-name" data-card="Disrupt">Disrupt</span><br />4 <span class="card-name" data-card="Force of Will">Force of Will</span><br />4 <span class="card-name" data-card="Force Spike">Force
+                                Spike</span><br />4 <span class="card-name" data-card="High Tide">High Tide</span><br />4 <span class="card-name" data-card="Impulse">Impulse</span><br />4
+                                <span class="card-name" data-card="Mana Leak">Mana Leak</span><br />4 <span class="card-name" data-card="Merchant Scroll">Merchant Scroll</span><br />4 <span class="card-name" data-card="Mind Games">Mind
+                                Games</span><br />4 <span class="card-name" data-card="Nevinyrral's Disk">Nevinyrral's Disk</span><br />4 <span class="card-name" data-card="Stroke of Genius">Stroke of
+                                Genius</span><br />4 <span class="card-name" data-card="Time Spiral">Time Spiral</span><br />4 <span class="card-name" data-card="Turnabout">Turnabout</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -132,7 +155,7 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                20 Island<br />1 Maze of Ith
+                                20 <span class="card-name" data-card="Island">Island</span><br />1 <span class="card-name" data-card="Maze of Ith">Maze of Ith</span>
                             </div>
                         </div>
                     </div>
@@ -158,11 +181,11 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Exalted Dragon<br />4 Knight of the White
-                                Orchid<br />4 Mother of Runes<br />4 Savannah
-                                Lions<br />4 Soltari Champion<br />4 Soltari
-                                Monk<br />4 Soltari Priest<br />4 Soul Warden<br />4
-                                Warrior Angel<br />4 White Knight
+                                4 <span class="card-name" data-card="Exalted Dragon">Exalted Dragon</span><br />4 <span class="card-name" data-card="Knight of the White Orchid">Knight of the White
+                                Orchid</span><br />4 <span class="card-name" data-card="Mother of Runes">Mother of Runes</span><br />4 <span class="card-name" data-card="Savannah Lions">Savannah
+                                Lions</span><br />4 <span class="card-name" data-card="Soltari Champion">Soltari Champion</span><br />4 <span class="card-name" data-card="Soltari Monk">Soltari
+                                Monk</span><br />4 <span class="card-name" data-card="Soltari Priest">Soltari Priest</span><br />4 <span class="card-name" data-card="Soul Warden">Soul Warden</span><br />4
+                                <span class="card-name" data-card="Warrior Angel">Warrior Angel</span><br />4 <span class="card-name" data-card="White Knight">White Knight</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -170,16 +193,16 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Abeyance<br />4 Capsize<br />4 Cataclysm<br />4
-                                Cursed Scroll<br />4 Empyrial Armor<br />4
-                                Healing Salve<br />4 Humility<br />4 Waylay
+                                4 <span class="card-name" data-card="Abeyance">Abeyance</span><br />4 <span class="card-name" data-card="Capsize">Capsize</span><br />4 <span class="card-name" data-card="Cataclysm">Cataclysm</span><br />4
+                                <span class="card-name" data-card="Cursed Scroll">Cursed Scroll</span><br />4 <span class="card-name" data-card="Empyrial Armor">Empyrial Armor</span><br />4
+                                <span class="card-name" data-card="Healing Salve">Healing Salve</span><br />4 <span class="card-name" data-card="Humility">Humility</span><br />4 <span class="card-name" data-card="Waylay">Waylay</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
                                 Terrenos
                             </h3>
-                            <div class="text-gray-300">17 Plains</div>
+                            <div class="text-gray-300">17 <span class="card-name" data-card="Plains">Plains</span></div>
                         </div>
                     </div>
                     <!-- 4th Place -->
@@ -204,8 +227,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Ball Lightning<br />4 Ironclaw Orcs<br />4
-                                Jackal Pup<br />4 Mogg Fanatic
+                                4 <span class="card-name" data-card="Ball Lightning">Ball Lightning</span><br />4 <span class="card-name" data-card="Ironclaw Orcs">Ironclaw Orcs</span><br />4
+                                <span class="card-name" data-card="Jackal Pup">Jackal Pup</span><br />4 <span class="card-name" data-card="Mogg Fanatic">Mogg Fanatic</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -213,16 +236,16 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Cursed Scroll<br />4 Fireblast<br />4 Hammer
-                                of Bogardan<br />4 Incinerate<br />4 Pillage<br />4
-                                Shock<br />4 Stone Rain
+                                4 <span class="card-name" data-card="Cursed Scroll">Cursed Scroll</span><br />4 <span class="card-name" data-card="Fireblast">Fireblast</span><br />4 <span class="card-name" data-card="Hammer of Bogardan">Hammer
+                                of Bogardan</span><br />4 <span class="card-name" data-card="Incinerate">Incinerate</span><br />4 <span class="card-name" data-card="Pillage">Pillage</span><br />4
+                                <span class="card-name" data-card="Shock">Shock</span><br />4 <span class="card-name" data-card="Stone Rain">Stone Rain</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
                                 Terrenos
                             </h3>
-                            <div class="text-gray-300">20 Mountain</div>
+                            <div class="text-gray-300">20 <span class="card-name" data-card="Mountain">Mountain</span></div>
                         </div>
                     </div>
                     <!-- 5th Place -->
@@ -247,8 +270,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Ball Lightning<br />4 Ironclaw Orcs<br />4
-                                Jackal Pup<br />4 Mogg Fanatic
+                                4 <span class="card-name" data-card="Ball Lightning">Ball Lightning</span><br />4 <span class="card-name" data-card="Ironclaw Orcs">Ironclaw Orcs</span><br />4
+                                <span class="card-name" data-card="Jackal Pup">Jackal Pup</span><br />4 <span class="card-name" data-card="Mogg Fanatic">Mogg Fanatic</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -256,16 +279,16 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Cursed Scroll<br />4 Fireblast<br />4 Hammer
-                                of Bogardan<br />4 Incinerate<br />4 Pillage<br />4
-                                Shock<br />4 Stone Rain
+                                4 <span class="card-name" data-card="Cursed Scroll">Cursed Scroll</span><br />4 <span class="card-name" data-card="Fireblast">Fireblast</span><br />4 <span class="card-name" data-card="Hammer of Bogardan">Hammer
+                                of Bogardan</span><br />4 <span class="card-name" data-card="Incinerate">Incinerate</span><br />4 <span class="card-name" data-card="Pillage">Pillage</span><br />4
+                                <span class="card-name" data-card="Shock">Shock</span><br />4 <span class="card-name" data-card="Stone Rain">Stone Rain</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
                                 Terrenos
                             </h3>
-                            <div class="text-gray-300">20 Mountain</div>
+                            <div class="text-gray-300">20 <span class="card-name" data-card="Mountain">Mountain</span></div>
                         </div>
                     </div>
                     <!-- 6th Place -->
@@ -289,9 +312,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Llanowar Elves<br />4
-                                Quirion Ranger<br />4 Wall of Blossoms<br />4
-                                Wall of Roots
+                                4 <span class="card-name" data-card="Birds of Paradise">Birds of Paradise</span><br />4 <span class="card-name" data-card="Llanowar Elves">Llanowar Elves</span><br />4
+                                <span class="card-name" data-card="Quirion Ranger">Quirion Ranger</span><br />4 <span class="card-name" data-card="Wall of Blossoms">Wall of Blossoms</span><br />4
+                                <span class="card-name" data-card="Wall of Roots">Wall of Roots</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -299,9 +322,9 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Aluren<br />4 Brainstorm<br />4 Cavern
-                                Harpy<br />4 Corpse Dance<br />4 Man-o'-War<br />4
-                                Recycle<br />4 Uktabi Orangutan
+                                4 <span class="card-name" data-card="Aluren">Aluren</span><br />4 <span class="card-name" data-card="Brainstorm">Brainstorm</span><br />4 <span class="card-name" data-card="Cavern Harpy">Cavern
+                                Harpy</span><br />4 <span class="card-name" data-card="Corpse Dance">Corpse Dance</span><br />4 <span class="card-name" data-card="Man-o'-War">Man-o'-War</span><br />4
+                                <span class="card-name" data-card="Recycle">Recycle</span><br />4 <span class="card-name" data-card="Uktabi Orangutan">Uktabi Orangutan</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -309,8 +332,8 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 City of Brass<br />4 Gemstone Mine<br />4
-                                Undiscovered Paradise
+                                4 <span class="card-name" data-card="City of Brass">City of Brass</span><br />4 <span class="card-name" data-card="Gemstone Mine">Gemstone Mine</span><br />4
+                                <span class="card-name" data-card="Undiscovered Paradise">Undiscovered Paradise</span>
                             </div>
                         </div>
                     </div>
@@ -336,7 +359,7 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Man-o'-War<br />4 Spindrift Drake
+                                4 <span class="card-name" data-card="Man-o'-War">Man-o'-War</span><br />4 <span class="card-name" data-card="Spindrift Drake">Spindrift Drake</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -344,10 +367,10 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Brainstorm<br />4 Counterspell<br />4 Force of
-                                Will<br />4 Force Spike<br />4 Impulse<br />4
-                                Mana Leak<br />4 Nevinyrral's Disk<br />4
-                                Whispers of the Muse
+                                4 <span class="card-name" data-card="Brainstorm">Brainstorm</span><br />4 <span class="card-name" data-card="Counterspell">Counterspell</span><br />4 <span class="card-name" data-card="Force of Will">Force of
+                                Will</span><br />4 <span class="card-name" data-card="Force Spike">Force Spike</span><br />4 <span class="card-name" data-card="Impulse">Impulse</span><br />4
+                                <span class="card-name" data-card="Mana Leak">Mana Leak</span><br />4 <span class="card-name" data-card="Nevinyrral's Disk">Nevinyrral's Disk</span><br />4
+                                <span class="card-name" data-card="Whispers of the Muse">Whispers of the Muse</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -355,7 +378,7 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                20 Island<br />4 Underground River
+                                20 <span class="card-name" data-card="Island">Island</span><br />4 <span class="card-name" data-card="Underground River">Underground River</span>
                             </div>
                         </div>
                     </div>
@@ -381,8 +404,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Ball Lightning<br />4 Ironclaw Orcs<br />4
-                                Jackal Pup<br />4 Mogg Fanatic
+                                4 <span class="card-name" data-card="Ball Lightning">Ball Lightning</span><br />4 <span class="card-name" data-card="Ironclaw Orcs">Ironclaw Orcs</span><br />4
+                                <span class="card-name" data-card="Jackal Pup">Jackal Pup</span><br />4 <span class="card-name" data-card="Mogg Fanatic">Mogg Fanatic</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -390,22 +413,79 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Cursed Scroll<br />4 Fireblast<br />4 Hammer
-                                of Bogardan<br />4 Incinerate<br />4 Pillage<br />4
-                                Shock<br />4 Stone Rain
+                                4 <span class="card-name" data-card="Cursed Scroll">Cursed Scroll</span><br />4 <span class="card-name" data-card="Fireblast">Fireblast</span><br />4 <span class="card-name" data-card="Hammer of Bogardan">Hammer
+                                of Bogardan</span><br />4 <span class="card-name" data-card="Incinerate">Incinerate</span><br />4 <span class="card-name" data-card="Pillage">Pillage</span><br />4
+                                <span class="card-name" data-card="Shock">Shock</span><br />4 <span class="card-name" data-card="Stone Rain">Stone Rain</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
                                 Terrenos
                             </h3>
-                            <div class="text-gray-300">20 Mountain</div>
+                            <div class="text-gray-300">20 <span class="card-name" data-card="Mountain">Mountain</span></div>
                         </div>
                     </div>
                 </div>
             </main>
         </div>
         <script>
+            // Cria o elemento tooltip uma vez e anexa ao body
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.innerHTML = '<img>';
+            document.body.appendChild(tooltip);
+            const tooltipImage = tooltip.querySelector('img');
+
+            // Pega todos os elementos que devem acionar o tooltip
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                // Adiciona um pequeno deslocamento para evitar cintilação/piscar
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+
+                const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
+
+            // Função original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {

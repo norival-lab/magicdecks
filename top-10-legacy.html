@@ -21,7 +21,30 @@
             }
             .decklist {
                 background-color: #1f2937; /* bg-gray-800 */
-                border-left: 3px solid #f43f5e; /* border-rose-500 */
+                border-left: 3px solid #4f46e5; /* border-indigo-600 */
+            }
+                    /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
             }
         </style>
     </head>
@@ -88,13 +111,20 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Delver of Secrets<br />4 Dragon's Rage
-                                Channeler<br />4 Murktide Regent<br />4
-                                Brainstorm<br />4 Ponder<br />4 Lightning
-                                Bolt<br />4 Daze<br />4 Force of Will<br />4
-                                Mishra's Bauble<br />3 Volcanic Island<br />3
-                                Underground Sea<br />4 Wasteland<br />4 Polluted
-                                Delta<br />4 Scalding Tarn
+                                <span class="card-name" data-card="Delver of Secrets">4 Delver of Secrets</span><br />
+                                <span class="card-name" data-card="Dragon's Rage Channeler">4 Dragon's Rage Channeler</span><br />
+                                <span class="card-name" data-card="Murktide Regent">4 Murktide Regent</span><br />
+                                <span class="card-name" data-card="Brainstorm">4 Brainstorm</span><br />
+                                <span class="card-name" data-card="Ponder">4 Ponder</span><br />
+                                <span class="card-name" data-card="Lightning Bolt">4 Lightning Bolt</span><br />
+                                <span class="card-name" data-card="Daze">4 Daze</span><br />
+                                <span class="card-name" data-card="Force of Will">4 Force of Will</span><br />
+                                <span class="card-name" data-card="Mishra's Bauble">4 Mishra's Bauble</span><br />
+                                <span class="card-name" data-card="Volcanic Island">3 Volcanic Island</span><br />
+                                <span class="card-name" data-card="Underground Sea">3 Underground Sea</span><br />
+                                <span class="card-name" data-card="Wasteland">4 Wasteland</span><br />
+                                <span class="card-name" data-card="Polluted Delta">4 Polluted Delta</span><br />
+                                <span class="card-name" data-card="Scalding Tarn">4 Scalding Tarn</span>
                             </div>
                         </div>
                     </div>
@@ -137,13 +167,21 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Life from the Loam<br />4 Exploration<br />4
-                                Mox Diamond<br />4 Crop Rotation<br />4
-                                Wasteland<br />4 Rishadan Port<br />1 Dark
-                                Depths<br />1 Thespian's Stage<br />1 The
-                                Tabernacle at Pendrell Vale<br />4 Taiga<br />3
-                                Savannah<br />1 Karakas<br />1 Forest<br />4
-                                Grove of the Burnwillows<br />1 Maze of Ith
+                                <span class="card-name" data-card="Life from the Loam">4 Life from the Loam</span><br />
+                                <span class="card-name" data-card="Exploration">4 Exploration</span><br />
+                                <span class="card-name" data-card="Mox Diamond">4 Mox Diamond</span><br />
+                                <span class="card-name" data-card="Crop Rotation">4 Crop Rotation</span><br />
+                                <span class="card-name" data-card="Wasteland">4 Wasteland</span><br />
+                                <span class="card-name" data-card="Rishadan Port">4 Rishadan Port</span><br />
+                                <span class="card-name" data-card="Dark Depths">1 Dark Depths</span><br />
+                                <span class="card-name" data-card="Thespian's Stage">1 Thespian's Stage</span><br />
+                                <span class="card-name" data-card="The Tabernacle at Pendrell Vale">1 The Tabernacle at Pendrell Vale</span><br />
+                                <span class="card-name" data-card="Taiga">4 Taiga</span><br />
+                                <span class="card-name" data-card="Savannah">3 Savannah</span><br />
+                                <span class="card-name" data-card="Karakas">1 Karakas</span><br />
+                                <span class="card-name" data-card="Forest">1 Forest</span><br />
+                                <span class="card-name" data-card="Grove of the Burnwillows">4 Grove of the Burnwillows</span><br />
+                                <span class="card-name" data-card="Maze of Ith">1 Maze of Ith</span>
                             </div>
                         </div>
                     </div>
@@ -187,13 +225,20 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Thalia, Guardian of Thraben<br />4 Mother of
-                                Runes<br />4 Stoneforge Mystic<br />4 Aether
-                                Vial<br />4 Swords to Plowshares<br />4 Rishadan
-                                Port<br />4 Wasteland<br />1 Karakas<br />3
-                                Flickerwisp<br />2 Recruiter of the Guard<br />1
-                                Umezawa's Jitte<br />1 Batterskull<br />10
-                                Plains<br />4 Solitude
+                                <span class="card-name" data-card="Thalia, Guardian of Thraben">4 Thalia, Guardian of Thraben</span><br />
+                                <span class="card-name" data-card="Mother of Runes">4 Mother of Runes</span><br />
+                                <span class="card-name" data-card="Stoneforge Mystic">4 Stoneforge Mystic</span><br />
+                                <span class="card-name" data-card="Aether Vial">4 Aether Vial</span><br />
+                                <span class="card-name" data-card="Swords to Plowshares">4 Swords to Plowshares</span><br />
+                                <span class="card-name" data-card="Rishadan Port">4 Rishadan Port</span><br />
+                                <span class="card-name" data-card="Wasteland">4 Wasteland</span><br />
+                                <span class="card-name" data-card="Karakas">1 Karakas</span><br />
+                                <span class="card-name" data-card="Flickerwisp">3 Flickerwisp</span><br />
+                                <span class="card-name" data-card="Recruiter of the Guard">2 Recruiter of the Guard</span><br />
+                                <span class="card-name" data-card="Umezawa's Jitte">1 Umezawa's Jitte</span><br />
+                                <span class="card-name" data-card="Batterskull">1 Batterskull</span><br />
+                                <span class="card-name" data-card="Plains">10 Plains</span><br />
+                                <span class="card-name" data-card="Solitude">4 Solitude</span>
                             </div>
                         </div>
                     </div>
@@ -237,13 +282,21 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Show and Tell<br />4 Sneak Attack<br />4
-                                Emrakul, the Aeons Torn<br />4 Griselbrand<br />4
-                                Force of Will<br />4 Brainstorm<br />4 Ponder<br />4
-                                Lotus Petal<br />4 Preordain<br />3 Volcanic
-                                Island<br />3 Ancient Tomb<br />4 Scalding
-                                Tarn<br />4 Misty Rainforest<br />1 Mountain<br />1
-                                Island
+                                <span class="card-name" data-card="Show and Tell">4 Show and Tell</span><br />
+                                <span class="card-name" data-card="Sneak Attack">4 Sneak Attack</span><br />
+                                <span class="card-name" data-card="Emrakul, the Aeons Torn">4 Emrakul, the Aeons Torn</span><br />
+                                <span class="card-name" data-card="Griselbrand">4 Griselbrand</span><br />
+                                <span class="card-name" data-card="Force of Will">4 Force of Will</span><br />
+                                <span class="card-name" data-card="Brainstorm">4 Brainstorm</span><br />
+                                <span class="card-name" data-card="Ponder">4 Ponder</span><br />
+                                <span class="card-name" data-card="Lotus Petal">4 Lotus Petal</span><br />
+                                <span class="card-name" data-card="Preordain">4 Preordain</span><br />
+                                <span class="card-name" data-card="Volcanic Island">3 Volcanic Island</span><br />
+                                <span class="card-name" data-card="Ancient Tomb">3 Ancient Tomb</span><br />
+                                <span class="card-name" data-card="Scalding Tarn">4 Scalding Tarn</span><br />
+                                <span class="card-name" data-card="Misty Rainforest">4 Misty Rainforest</span><br />
+                                <span class="card-name" data-card="Mountain">1 Mountain</span><br />
+                                <span class="card-name" data-card="Island">1 Island</span>
                             </div>
                         </div>
                     </div>
@@ -285,12 +338,20 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Reanimate<br />4 Exhume<br />4 Entomb<br />4
-                                Griselbrand<br />4 Chancellor of the Annex<br />4
-                                Dark Ritual<br />4 Thoughtseize<br />4 Force of
-                                Will<br />4 Brainstorm<br />4 Daze<br />4
-                                Underground Sea<br />4 Polluted Delta<br />4
-                                Watery Grave<br />2 Swamp
+                                <span class="card-name" data-card="Reanimate">4 Reanimate</span><br />
+                                <span class="card-name" data-card="Exhume">4 Exhume</span><br />
+                                <span class="card-name" data-card="Entomb">4 Entomb</span><br />
+                                <span class="card-name" data-card="Griselbrand">4 Griselbrand</span><br />
+                                <span class="card-name" data-card="Chancellor of the Annex">4 Chancellor of the Annex</span><br />
+                                <span class="card-name" data-card="Dark Ritual">4 Dark Ritual</span><br />
+                                <span class="card-name" data-card="Thoughtseize">4 Thoughtseize</span><br />
+                                <span class="card-name" data-card="Force of Will">4 Force of Will</span><br />
+                                <span class="card-name" data-card="Brainstorm">4 Brainstorm</span><br />
+                                <span class="card-name" data-card="Daze">4 Daze</span><br />
+                                <span class="card-name" data-card="Underground Sea">4 Underground Sea</span><br />
+                                <span class="card-name" data-card="Polluted Delta">4 Polluted Delta</span><br />
+                                <span class="card-name" data-card="Watery Grave">4 Watery Grave</span><br />
+                                <span class="card-name" data-card="Swamp">2 Swamp</span>
                             </div>
                         </div>
                     </div>
@@ -329,12 +390,20 @@
                                 Lista Exemplo (ANT)
                             </h3>
                             <div class="text-gray-300">
-                                4 Lion's Eye Diamond<br />4 Dark Ritual<br />4
-                                Cabal Ritual<br />4 Brainstorm<br />4 Ponder<br />1
-                                Ad Nauseam<br />1 Tendrils of Agony<br />4 Lotus
-                                Petal<br />4 Duress<br />1 Demonic Tutor<br />2
-                                Underground Sea<br />1 Volcanic Island<br />1
-                                Badlands<br />4 Polluted Delta
+                                <span class="card-name" data-card="Lion's Eye Diamond">4 Lion's Eye Diamond</span><br />
+                                <span class="card-name" data-card="Dark Ritual">4 Dark Ritual</span><br />
+                                <span class="card-name" data-card="Cabal Ritual">4 Cabal Ritual</span><br />
+                                <span class="card-name" data-card="Brainstorm">4 Brainstorm</span><br />
+                                <span class="card-name" data-card="Ponder">4 Ponder</span><br />
+                                <span class="card-name" data-card="Ad Nauseam">1 Ad Nauseam</span><br />
+                                <span class="card-name" data-card="Tendrils of Agony">1 Tendrils of Agony</span><br />
+                                <span class="card-name" data-card="Lotus Petal">4 Lotus Petal</span><br />
+                                <span class="card-name" data-card="Duress">4 Duress</span><br />
+                                <span class="card-name" data-card="Demonic Tutor">1 Demonic Tutor</span><br />
+                                <span class="card-name" data-card="Underground Sea">2 Underground Sea</span><br />
+                                <span class="card-name" data-card="Volcanic Island">1 Volcanic Island</span><br />
+                                <span class="card-name" data-card="Badlands">1 Badlands</span><br />
+                                <span class="card-name" data-card="Polluted Delta">4 Polluted Delta</span>
                             </div>
                         </div>
                     </div>
@@ -372,13 +441,20 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Glimpse of Nature<br />4 Heritage Druid<br />4
-                                Nettle Sentinel<br />4 Quirion Ranger<br />4
-                                Wirewood Symbiote<br />4 Elvish Visionary<br />1
-                                Craterhoof Behemoth<br />4 Green Sun's Zenith<br />4
-                                Natural Order<br />4 Gaea's Cradle<br />4
-                                Windswept Heath<br />2 Bayou<br />2 Savannah<br />4
-                                Forest
+                                <span class="card-name" data-card="Glimpse of Nature">4 Glimpse of Nature</span><br />
+                                <span class="card-name" data-card="Heritage Druid">4 Heritage Druid</span><br />
+                                <span class="card-name" data-card="Nettle Sentinel">4 Nettle Sentinel</span><br />
+                                <span class="card-name" data-card="Quirion Ranger">4 Quirion Ranger</span><br />
+                                <span class="card-name" data-card="Wirewood Symbiote">4 Wirewood Symbiote</span><br />
+                                <span class="card-name" data-card="Elvish Visionary">4 Elvish Visionary</span><br />
+                                <span class="card-name" data-card="Craterhoof Behemoth">1 Craterhoof Behemoth</span><br />
+                                <span class="card-name" data-card="Green Sun's Zenith">4 Green Sun's Zenith</span><br />
+                                <span class="card-name" data-card="Natural Order">4 Natural Order</span><br />
+                                <span class="card-name" data-card="Gaea's Cradle">4 Gaea's Cradle</span><br />
+                                <span class="card-name" data-card="Windswept Heath">4 Windswept Heath</span><br />
+                                <span class="card-name" data-card="Bayou">2 Bayou</span><br />
+                                <span class="card-name" data-card="Savannah">2 Savannah</span><br />
+                                <span class="card-name" data-card="Forest">4 Forest</span>
                             </div>
                         </div>
                     </div>
@@ -414,12 +490,21 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Doomsday<br />4 Thassa's Oracle<br />4 Dark
-                                Ritual<br />4 Brainstorm<br />4 Ponder<br />4
-                                Force of Will<br />4 Daze<br />4 Lotus Petal<br />1
-                                Street Wraith<br />1 Lion's Eye Diamond<br />4
-                                Underground Sea<br />4 Polluted Delta<br />4
-                                Misty Rainforest<br />2 Island<br />1 Swamp
+                                <span class="card-name" data-card="Doomsday">4 Doomsday</span><br />
+                                <span class="card-name" data-card="Thassa's Oracle">4 Thassa's Oracle</span><br />
+                                <span class="card-name" data-card="Dark Ritual">4 Dark Ritual</span><br />
+                                <span class="card-name" data-card="Brainstorm">4 Brainstorm</span><br />
+                                <span class="card-name" data-card="Ponder">4 Ponder</span><br />
+                                <span class="card-name" data-card="Force of Will">4 Force of Will</span><br />
+                                <span class="card-name" data-card="Daze">4 Daze</span><br />
+                                <span class="card-name" data-card="Lotus Petal">4 Lotus Petal</span><br />
+                                <span class="card-name" data-card="Street Wraith">1 Street Wraith</span><br />
+                                <span class="card-name" data-card="Lion's Eye Diamond">1 Lion's Eye Diamond</span><br />
+                                <span class="card-name" data-card="Underground Sea">4 Underground Sea</span><br />
+                                <span class="card-name" data-card="Polluted Delta">4 Polluted Delta</span><br />
+                                <span class="card-name" data-card="Misty Rainforest">4 Misty Rainforest</span><br />
+                                <span class="card-name" data-card="Island">2 Island</span><br />
+                                <span class="card-name" data-card="Swamp">1 Swamp</span>
                             </div>
                         </div>
                     </div>
@@ -462,13 +547,19 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Thoughtcast<br />4 Thought Monitor<br />4
-                                Urza's Saga<br />4 Emry, Lurker of the Loch<br />4
-                                Sai, Master Thopterist<br />4 Kappa Cannoneer<br />4
-                                Force of Will<br />4 Chalice of the Void<br />4
-                                Mishra's Bauble<br />4 Urza's Bauble<br />4 Mox
-                                Opal<br />4 Ancient Tomb<br />4 Seat of the
-                                Synod
+                                <span class="card-name" data-card="Thoughtcast">4 Thoughtcast</span><br />
+                                <span class="card-name" data-card="Thought Monitor">4 Thought Monitor</span><br />
+                                <span class="card-name" data-card="Urza's Saga">4 Urza's Saga</span><br />
+                                <span class="card-name" data-card="Emry, Lurker of the Loch">4 Emry, Lurker of the Loch</span><br />
+                                <span class="card-name" data-card="Sai, Master Thopterist">4 Sai, Master Thopterist</span><br />
+                                <span class="card-name" data-card="Kappa Cannoneer">4 Kappa Cannoneer</span><br />
+                                <span class="card-name" data-card="Force of Will">4 Force of Will</span><br />
+                                <span class="card-name" data-card="Chalice of the Void">4 Chalice of the Void</span><br />
+                                <span class="card-name" data-card="Mishra's Bauble">4 Mishra's Bauble</span><br />
+                                <span class="card-name" data-card="Urza's Bauble">4 Urza's Bauble</span><br />
+                                <span class="card-name" data-card="Mox Opal">4 Mox Opal</span><br />
+                                <span class="card-name" data-card="Ancient Tomb">4 Ancient Tomb</span><br />
+                                <span class="card-name" data-card="Seat of the Synod">4 Seat of the Synod</span>
                             </div>
                         </div>
                     </div>
@@ -507,15 +598,22 @@
                                 Lista Exemplo
                             </h3>
                             <div class="text-gray-300">
-                                4 Brainstorm<br />4 Ponder<br />4 Force of
-                                Will<br />4 Swords to Plowshares<br />4
-                                Lightning Bolt<br />2 Counterspell<br />2
-                                Supreme Verdict<br />2 Teferi, Time Raveler<br />2
-                                Narset, Parter of Veils<br />2 Expressive
-                                Iteration<br />4 Prismatic Ending<br />4
-                                Tundra<br />4 Volcanic Island<br />4 Flooded
-                                Strand<br />4 Scalding Tarn<br />2 Mystic
-                                Sanctuary
+                                <span class="card-name" data-card="Brainstorm">4 Brainstorm</span><br />
+                                <span class="card-name" data-card="Ponder">4 Ponder</span><br />
+                                <span class="card-name" data-card="Force of Will">4 Force of Will</span><br />
+                                <span class="card-name" data-card="Swords to Plowshares">4 Swords to Plowshares</span><br />
+                                <span class="card-name" data-card="Lightning Bolt">4 Lightning Bolt</span><br />
+                                <span class="card-name" data-card="Counterspell">2 Counterspell</span><br />
+                                <span class="card-name" data-card="Supreme Verdict">2 Supreme Verdict</span><br />
+                                <span class="card-name" data-card="Teferi, Time Raveler">2 Teferi, Time Raveler</span><br />
+                                <span class="card-name" data-card="Narset, Parter of Veils">2 Narset, Parter of Veils</span><br />
+                                <span class="card-name" data-card="Expressive Iteration">2 Expressive Iteration</span><br />
+                                <span class="card-name" data-card="Prismatic Ending">4 Prismatic Ending</span><br />
+                                <span class="card-name" data-card="Tundra">4 Tundra</span><br />
+                                <span class="card-name" data-card="Volcanic Island">4 Volcanic Island</span><br />
+                                <span class="card-name" data-card="Flooded Strand">4 Flooded Strand</span><br />
+                                <span class="card-name" data-card="Scalding Tarn">4 Scalding Tarn</span><br />
+                                <span class="card-name" data-card="Mystic Sanctuary">2 Mystic Sanctuary</span>
                             </div>
                         </div>
                     </div>
@@ -523,7 +621,65 @@
             </main>
         </div>
 
+        <!-- Script para o tooltip da imagem da carta -->
         <script>
+            // Cria o elemento tooltip uma vez e anexa ao body
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.innerHTML = '<img>';
+            document.body.appendChild(tooltip);
+            const tooltipImage = tooltip.querySelector('img');
+
+            // Pega todos os elementos que devem acionar o tooltip
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                // Adiciona um pequeno deslocamento para evitar cintilação/piscar
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+
+                const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
+
+            // Função original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {

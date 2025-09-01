@@ -23,6 +23,29 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -71,9 +94,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Bloodtithe Harvester<br />4 Corpse
-                                Appraiser<br />4 Graveyard Trespasser<br />4
-                                Sheoldred, the Apocalypse
+                                <span class="card-name" data-card="Bloodtithe Harvester">4 Bloodtithe Harvester</span><br /><span class="card-name" data-card="Corpse Appraiser">4 Corpse
+                                Appraiser</span><br /><span class="card-name" data-card="Graveyard Trespasser">4 Graveyard Trespasser</span><br /><span class="card-name" data-card="Sheoldred, the Apocalypse">4
+                                Sheoldred, the Apocalypse</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -81,10 +104,10 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Abrade<br />4 Cut Down<br />4 Fable of the
-                                Mirror-Breaker<br />4 Invoke Despair<br />4 Make
-                                Disappear<br />4 Reckoner Bankbuster<br />4
-                                Voltage Surge
+                                <span class="card-name" data-card="Abrade">4 Abrade</span><br /><span class="card-name" data-card="Cut Down">4 Cut Down</span><br /><span class="card-name" data-card="Fable of the Mirror-Breaker">4 Fable of the
+                                Mirror-Breaker</span><br /><span class="card-name" data-card="Invoke Despair">4 Invoke Despair</span><br /><span class="card-name" data-card="Make Disappear">4 Make
+                                Disappear</span><br /><span class="card-name" data-card="Reckoner Bankbuster">4 Reckoner Bankbuster</span><br /><span class="card-name" data-card="Voltage Surge">4
+                                Voltage Surge</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -92,10 +115,10 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Blackcleave Cliffs<br />4 Darkslick Shores<br />4
-                                Haunted Ridge<br />4 Shipwreck Marsh<br />4
-                                Stormcarved Coast<br />4 Sulfurous Springs<br />4
-                                Underground River<br />4 Xander's Lounge
+                                <span class="card-name" data-card="Blackcleave Cliffs">4 Blackcleave Cliffs</span><br /><span class="card-name" data-card="Darkslick Shores">4 Darkslick Shores</span><br /><span class="card-name" data-card="Haunted Ridge">4
+                                Haunted Ridge</span><br /><span class="card-name" data-card="Shipwreck Marsh">4 Shipwreck Marsh</span><br /><span class="card-name" data-card="Stormcarved Coast">4
+                                Stormcarved Coast</span><br /><span class="card-name" data-card="Sulfurous Springs">4 Sulfurous Springs</span><br /><span class="card-name" data-card="Underground River">4
+                                Underground River</span><br /><span class="card-name" data-card="Xander's Lounge">4 Xander's Lounge</span>
                             </div>
                         </div>
                     </div>
@@ -121,10 +144,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Bloodtithe Harvester<br />4 Briarbridge
-                                Tracker<br />4 Graveyard Trespasser<br />4
-                                Sheoldred, the Apocalypse<br />4 Tenacious
-                                Underdog
+                                <span class="card-name" data-card="Bloodtithe Harvester">4 Bloodtithe Harvester</span><br /><span class="card-name" data-card="Briarbridge Tracker">4 Briarbridge
+                                Tracker</span><br /><span class="card-name" data-card="Graveyard Trespasser">4 Graveyard Trespasser</span><br /><span class="card-name" data-card="Sheoldred, the Apocalypse">4
+                                Sheoldred, the Apocalypse</span><br /><span class="card-name" data-card="Tenacious Underdog">4 Tenacious
+                                Underdog</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -132,9 +155,9 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Abrade<br />4 Fable of the Mirror-Breaker<br />4
-                                Infernal Grasp<br />4 Reckoner Bankbuster<br />4
-                                The Cruelty of Gix<br />4 Unleash the Inferno
+                                <span class="card-name" data-card="Abrade">4 Abrade</span><br /><span class="card-name" data-card="Fable of the Mirror-Breaker">4 Fable of the Mirror-Breaker</span><br /><span class="card-name" data-card="Infernal Grasp">4
+                                Infernal Grasp</span><br /><span class="card-name" data-card="Reckoner Bankbuster">4 Reckoner Bankbuster</span><br /><span class="card-name" data-card="The Cruelty of Gix">4
+                                The Cruelty of Gix</span><br /><span class="card-name" data-card="Unleash the Inferno">4 Unleash the Inferno</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -142,9 +165,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Deathcap Glade<br />4 Haunted Ridge<br />4
-                                Karplusan Forest<br />4 Llanowar Wastes<br />4
-                                Rockfall Vale<br />4 Ziatora's Proving Ground
+                                <span class="card-name" data-card="Deathcap Glade">4 Deathcap Glade</span><br /><span class="card-name" data-card="Haunted Ridge">4 Haunted Ridge</span><br /><span class="card-name" data-card="Karplusan Forest">4
+                                Karplusan Forest</span><br /><span class="card-name" data-card="Llanowar Wastes">4 Llanowar Wastes</span><br /><span class="card-name" data-card="Rockfall Vale">4
+                                Rockfall Vale</span><br /><span class="card-name" data-card="Ziatora's Proving Ground">4 Ziatora's Proving Ground</span>
                             </div>
                         </div>
                     </div>
@@ -170,10 +193,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Dennick, Pious Apprentice<br />4 Graveyard
-                                Trespasser<br />4 Raffine, Scheming Seer<br />4
-                                Sheoldred, the Apocalypse<br />4 Tenacious
-                                Underdog
+                                <span class="card-name" data-card="Dennick, Pious Apprentice">4 Dennick, Pious Apprentice</span><br /><span class="card-name" data-card="Graveyard Trespasser">4 Graveyard
+                                Trespasser</span><br /><span class="card-name" data-card="Raffine, Scheming Seer">4 Raffine, Scheming Seer</span><br /><span class="card-name" data-card="Sheoldred, the Apocalypse">4
+                                Sheoldred, the Apocalypse</span><br /><span class="card-name" data-card="Tenacious Underdog">4 Tenacious
+                                Underdog</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -181,9 +204,9 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Cut Down<br />4 Make Disappear<br />4 The
-                                Wandering Emperor<br />4 Void Rend<br />4
-                                Wedding Announcement
+                                <span class="card-name" data-card="Cut Down">4 Cut Down</span><br /><span class="card-name" data-card="Make Disappear">4 Make Disappear</span><br /><span class="card-name" data-card="The Wandering Emperor">4 The
+                                Wandering Emperor</span><br /><span class="card-name" data-card="Void Rend">4 Void Rend</span><br /><span class="card-name" data-card="Wedding Announcement">4
+                                Wedding Announcement</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -191,9 +214,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />4 Caves of Koilos<br />4
-                                Deserted Beach<br />4 Raffine's Tower<br />4
-                                Shattered Sanctum<br />4 Shipwreck Marsh
+                                <span class="card-name" data-card="Adarkar Wastes">4 Adarkar Wastes</span><br /><span class="card-name" data-card="Caves of Koilos">4 Caves of Koilos</span><br /><span class="card-name" data-card="Deserted Beach">4
+                                Deserted Beach</span><br /><span class="card-name" data-card="Raffine's Tower">4 Raffine's Tower</span><br /><span class="card-name" data-card="Shattered Sanctum">4
+                                Shattered Sanctum</span><br /><span class="card-name" data-card="Shipwreck Marsh">4 Shipwreck Marsh</span>
                             </div>
                         </div>
                     </div>
@@ -219,10 +242,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Dennick, Pious Apprentice<br />4 Graveyard
-                                Trespasser<br />4 Raffine, Scheming Seer<br />4
-                                Sheoldred, the Apocalypse<br />4 Tenacious
-                                Underdog
+                                <span class="card-name" data-card="Dennick, Pious Apprentice">4 Dennick, Pious Apprentice</span><br /><span class="card-name" data-card="Graveyard Trespasser">4 Graveyard
+                                Trespasser</span><br /><span class="card-name" data-card="Raffine, Scheming Seer">4 Raffine, Scheming Seer</span><br /><span class="card-name" data-card="Sheoldred, the Apocalypse">4
+                                Sheoldred, the Apocalypse</span><br /><span class="card-name" data-card="Tenacious Underdog">4 Tenacious
+                                Underdog</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -230,9 +253,9 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Cut Down<br />4 Make Disappear<br />4 The
-                                Wandering Emperor<br />4 Void Rend<br />4
-                                Wedding Announcement
+                                <span class="card-name" data-card="Cut Down">4 Cut Down</span><br /><span class="card-name" data-card="Make Disappear">4 Make Disappear</span><br /><span class="card-name" data-card="The Wandering Emperor">4 The
+                                Wandering Emperor</span><br /><span class="card-name" data-card="Void Rend">4 Void Rend</span><br /><span class="card-name" data-card="Wedding Announcement">4
+                                Wedding Announcement</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -240,9 +263,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />4 Caves of Koilos<br />4
-                                Deserted Beach<br />4 Raffine's Tower<br />4
-                                Shattered Sanctum<br />4 Shipwreck Marsh
+                                <span class="card-name" data-card="Adarkar Wastes">4 Adarkar Wastes</span><br /><span class="card-name" data-card="Caves of Koilos">4 Caves of Koilos</span><br /><span class="card-name" data-card="Deserted Beach">4
+                                Deserted Beach</span><br /><span class="card-name" data-card="Raffine's Tower">4 Raffine's Tower</span><br /><span class="card-name" data-card="Shattered Sanctum">4
+                                Shattered Sanctum</span><br /><span class="card-name" data-card="Shipwreck Marsh">4 Shipwreck Marsh</span>
                             </div>
                         </div>
                     </div>
@@ -256,6 +279,72 @@
                     element.classList.toggle("hidden");
                 }
             }
+
+            // Criar o elemento tooltip uma única vez
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            const tooltipImage = document.createElement('img');
+            tooltip.appendChild(tooltipImage);
+            document.body.appendChild(tooltip);
+
+            // Selecionar todos os elementos com a classe 'card-name'
+            const cardNames = document.querySelectorAll('.card-name');
+
+            function updateTooltipPosition(event) {
+                const x = event.clientX;
+                const y = event.clientY;
+                const windowWidth = window.innerWidth;
+                const windowHeight = window.innerHeight;
+                const tooltipWidth = 250; // Largura da imagem
+                const tooltipHeight = 350; // Altura estimada da imagem
+
+                let left = x + 15;
+                let top = y + 15;
+
+                // Verificar se o tooltip sairia da tela pela direita
+                if (left + tooltipWidth > windowWidth) {
+                    left = x - tooltipWidth - 15;
+                }
+
+                // Verificar se o tooltip sairia da tela por baixo
+                if (top + tooltipHeight > windowHeight) {
+                    top = y - tooltipHeight - 15;
+                }
+
+                // Garantir que não saia pela esquerda ou por cima
+                if (left < 0) left = 10;
+                if (top < 0) top = 10;
+
+                tooltip.style.left = left + 'px';
+                tooltip.style.top = top + 'px';
+            }
+
+            cardNames.forEach(cardName => {
+                cardName.addEventListener('mouseover', function(event) {
+                    const cardNameText = this.getAttribute('data-card');
+                    if (cardNameText) {
+                        // Limpar a imagem anterior
+                        tooltipImage.src = '';
+                        
+                        // Definir a nova imagem
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardNameText)}&format=image`;
+                        
+                        tooltipImage.onload = function() {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(event);
+                        };
+                        
+                        tooltipImage.src = imageUrl;
+                    }
+                });
+
+                cardName.addEventListener('mousemove', updateTooltipPosition);
+
+                cardName.addEventListener('mouseout', function() {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpar a imagem para economizar recursos
+                });
+            });
         </script>
     </body>
 </html>

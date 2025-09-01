@@ -23,6 +23,29 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -66,18 +89,26 @@
                             >
                                 Criaturas
                             </h3>
-                            <div class="text-gray-300">4 Nether Spirit</div>
+                            <div class="text-gray-300">
+                                <span class="card-name" data-card="Nether Spirit">4 Nether Spirit</span>
+                            </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Counterspell<br />4 Dismantling Blow<br />4
-                                Dromar's Charm<br />4 Fact or Fiction<br />4
-                                Gerrard's Verdict<br />4 Repulse<br />4 Rout<br />4
-                                Teferi's Moat<br />4 Tsabo's Decree<br />4
-                                Vindicate<br />4 Yawgmoth's Agenda
+                                <span class="card-name" data-card="Counterspell">4 Counterspell</span><br/>
+                                <span class="card-name" data-card="Dismantling Blow">4 Dismantling Blow</span><br/>
+                                <span class="card-name" data-card="Dromar's Charm">4 Dromar's Charm</span><br/>
+                                <span class="card-name" data-card="Fact or Fiction">4 Fact or Fiction</span><br/>
+                                <span class="card-name" data-card="Gerrard's Verdict">4 Gerrard's Verdict</span><br/>
+                                <span class="card-name" data-card="Repulse">4 Repulse</span><br/>
+                                <span class="card-name" data-card="Rout">4 Rout</span><br/>
+                                <span class="card-name" data-card="Teferi's Moat">4 Teferi's Moat</span><br/>
+                                <span class="card-name" data-card="Tsabo's Decree">4 Tsabo's Decree</span><br/>
+                                <span class="card-name" data-card="Vindicate">4 Vindicate</span><br/>
+                                <span class="card-name" data-card="Yawgmoth's Agenda">4 Yawgmoth's Agenda</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -85,9 +116,12 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />4 Coastal Tower<br />4
-                                Godless Shrine<br />4 Hallowed Fountain<br />4
-                                Island<br />4 Plains
+                                <span class="card-name" data-card="Adarkar Wastes">4 Adarkar Wastes</span><br/>
+                                <span class="card-name" data-card="Coastal Tower">4 Coastal Tower</span><br/>
+                                <span class="card-name" data-card="Caves of Koilos">4 Godless Shrine</span><br/>
+                                <span class="card-name" data-card="Salt Marsh">4 Hallowed Fountain</span><br/>
+                                <span class="card-name" data-card="Island">4 Island</span><br/>
+                                <span class="card-name" data-card="Plains">4 Plains</span>
                             </div>
                         </div>
                     </div>
@@ -115,10 +149,13 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Flametongue Kavu<br />4
-                                Llanowar Elves<br />4 Raging Kavu<br />4
-                                Skizzik<br />4 Thornscape Battlemage<br />4
-                                Two-Headed Dragon
+                                <span class="card-name" data-card="Birds of Paradise">4 Birds of Paradise</span><br/>
+                                <span class="card-name" data-card="Flametongue Kavu">4 Flametongue Kavu</span><br/>
+                                <span class="card-name" data-card="Llanowar Elves">4 Llanowar Elves</span><br/>
+                                <span class="card-name" data-card="Raging Kavu">4 Raging Kavu</span><br/>
+                                <span class="card-name" data-card="Skizzik">4 Skizzik</span><br/>
+                                <span class="card-name" data-card="Thornscape Battlemage">4 Thornscape Battlemage</span><br/>
+                                <span class="card-name" data-card="Two-Headed Dragon">4 Two-Headed Dragon</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -126,9 +163,11 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Chimeric Idol<br />4 Fires of Yavimaya<br />4
-                                Ghitu Fire<br />4 Saproling Burst<br />4 Urza's
-                                Rage
+                                <span class="card-name" data-card="Chimeric Idol">4 Chimeric Idol</span><br/>
+                                <span class="card-name" data-card="Fires of Yavimaya">4 Fires of Yavimaya</span><br/>
+                                <span class="card-name" data-card="Ghitu Fire">4 Ghitu Fire</span><br/>
+                                <span class="card-name" data-card="Saproling Burst">4 Saproling Burst</span><br/>
+                                <span class="card-name" data-card="Urza's Rage">4 Urza's Rage</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -136,8 +175,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Brushland<br />4 Karplusan Forest<br />4
-                                Shivan Oasis
+                                <span class="card-name" data-card="Brushland">4 Brushland</span><br/>
+                                <span class="card-name" data-card="Karplusan Forest">4 Karplusan Forest</span><br/>
+                                <span class="card-name" data-card="Shivan Oasis">4 Shivan Oasis</span>
                             </div>
                         </div>
                     </div>
@@ -165,10 +205,14 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Carnophage<br />4
-                                Phyrexian Negator<br />4 River Boa<br />4
-                                Skittering Skirge<br />4 Spiritmonger<br />4
-                                Uktabi Orangutan<br />4 Yavimaya Elder
+                                <span class="card-name" data-card="Birds of Paradise">4 Birds of Paradise</span><br/>
+                                <span class="card-name" data-card="Carnophage">4 Carnophage</span><br/>
+                                <span class="card-name" data-card="Phyrexian Negator">4 Phyrexian Negator</span><br/>
+                                <span class="card-name" data-card="River Boa">4 River Boa</span><br/>
+                                <span class="card-name" data-card="Skittering Skirge">4 Skittering Skirge</span><br/>
+                                <span class="card-name" data-card="Spiritmonger">4 Spiritmonger</span><br/>
+                                <span class="card-name" data-card="Uktabi Orangutan">4 Uktabi Orangutan</span><br/>
+                                <span class="card-name" data-card="Yavimaya Elder">4 Yavimaya Elder</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -176,9 +220,13 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Carrionette<br />4 Cursed Scroll<br />4
-                                Diabolic Edict<br />4 Duress<br />4 Pernicious
-                                Deed<br />4 Sarcomancy<br />4 Vampiric Tutor
+                                <span class="card-name" data-card="Carrionette">4 Carrionette</span><br/>
+                                <span class="card-name" data-card="Cursed Scroll">4 Cursed Scroll</span><br/>
+                                <span class="card-name" data-card="Diabolic Edict">4 Diabolic Edict</span><br/>
+                                <span class="card-name" data-card="Duress">4 Duress</span><br/>
+                                <span class="card-name" data-card="Pernicious Deed">4 Pernicious Deed</span><br/>
+                                <span class="card-name" data-card="Sarcomancy">4 Sarcomancy</span><br/>
+                                <span class="card-name" data-card="Vampiric Tutor">4 Vampiric Tutor</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -186,8 +234,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Bayou<br />4 Llanowar Wastes<br />4 Treetop
-                                Village
+                                <span class="card-name" data-card="Bayou">4 Bayou</span><br/>
+                                <span class="card-name" data-card="Llanowar Wastes">4 Llanowar Wastes</span><br/>
+                                <span class="card-name" data-card="Treetop Village">4 Treetop Village</span>
                             </div>
                         </div>
                     </div>
@@ -213,7 +262,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Meddling Mage<br />4 Millstone
+                                <span class="card-name" data-card="Meddling Mage">4 Meddling Mage</span><br/>
+                                <span class="card-name" data-card="Millstone">4 Millstone</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -221,10 +271,17 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Absorb<br />4 Counterspell<br />4 Dismantling
-                                Blow<br />4 Fact or Fiction<br />4 Forbid<br />4
-                                Impulse<br />4 Opt<br />4 Orim's Chant<br />4
-                                Power Sink<br />4 Repulse<br />4 Wrath of God
+                                <span class="card-name" data-card="Absorb">4 Absorb</span><br/>
+                                <span class="card-name" data-card="Counterspell">4 Counterspell</span><br/>
+                                <span class="card-name" data-card="Dismantling Blow">4 Dismantling Blow</span><br/>
+                                <span class="card-name" data-card="Fact or Fiction">4 Fact or Fiction</span><br/>
+                                <span class="card-name" data-card="Forbid">4 Forbid</span><br/>
+                                <span class="card-name" data-card="Impulse">4 Impulse</span><br/>
+                                <span class="card-name" data-card="Opt">4 Opt</span><br/>
+                                <span class="card-name" data-card="Orim's Chant">4 Orim's Chant</span><br/>
+                                <span class="card-name" data-card="Power Sink">4 Power Sink</span><br/>
+                                <span class="card-name" data-card="Repulse">4 Repulse</span><br/>
+                                <span class="card-name" data-card="Wrath of God">4 Wrath of God</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -232,7 +289,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />10 Island<br />10 Plains
+                                <span class="card-name" data-card="Adarkar Wastes">4 Adarkar Wastes</span><br/>
+                                <span class="card-name" data-card="Island">10 Island</span><br/>
+                                <span class="card-name" data-card="Plains">10 Plains</span>
                             </div>
                         </div>
                     </div>
@@ -257,10 +316,13 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Llanowar Elves<br />4
-                                Penumbra Wurm<br />4 Phyrexian Scuta<br />4
-                                Spiritmonger<br />4 Thornscape Familiar<br />4
-                                Yavimaya Elder
+                                <span class="card-name" data-card="Birds of Paradise">4 Birds of Paradise</span><br/>
+                                <span class="card-name" data-card="Llanowar Elves">4 Llanowar Elves</span><br/>
+                                <span class="card-name" data-card="Penumbra Wurm">4 Penumbra Wurm</span><br/>
+                                <span class="card-name" data-card="Phyrexian Scuta">4 Phyrexian Scuta</span><br/>
+                                <span class="card-name" data-card="Spiritmonger">4 Spiritmonger</span><br/>
+                                <span class="card-name" data-card="Thornscape Familiar">4 Thornscape Familiar</span><br/>
+                                <span class="card-name" data-card="Yavimaya Elder">4 Yavimaya Elder</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -268,8 +330,10 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Duress<br />4 Pernicious Deed<br />4 Saproling
-                                Burst<br />4 Vampiric Tutor
+                                <span class="card-name" data-card="Duress">4 Duress</span><br/>
+                                <span class="card-name" data-card="Pernicious Deed">4 Pernicious Deed</span><br/>
+                                <span class="card-name" data-card="Saproling Burst">4 Saproling Burst</span><br/>
+                                <span class="card-name" data-card="Vampiric Tutor">4 Vampiric Tutor</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -277,8 +341,10 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Llanowar Wastes<br />4 Treetop Village<br />8
-                                Forest<br />8 Swamp
+                                <span class="card-name" data-card="Llanowar Wastes">4 Llanowar Wastes</span><br/>
+                                <span class="card-name" data-card="Treetop Village">4 Treetop Village</span><br/>
+                                <span class="card-name" data-card="Forest">8 Forest</span><br/>
+                                <span class="card-name" data-card="Swamp">8 Swamp</span>
                             </div>
                         </div>
                     </div>
@@ -304,8 +370,11 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Blazing Specter<br />4 Flametongue Kavu<br />4
-                                Kris Mage<br />4 Mogg Sentry<br />4 Seal of Fire
+                                <span class="card-name" data-card="Blazing Specter">4 Blazing Specter</span><br/>
+                                <span class="card-name" data-card="Flametongue Kavu">4 Flametongue Kavu</span><br/>
+                                <span class="card-name" data-card="Kris Mage">4 Kris Mage</span><br/>
+                                <span class="card-name" data-card="Mogg Sentry">4 Mogg Sentry</span><br/>
+                                <span class="card-name" data-card="Seal of Fire">4 Seal of Fire</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -313,15 +382,20 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Firebolt<br />4 Ghitu Fire<br />4 Pillage<br />4
-                                Stone Rain<br />4 Urza's Rage
+                                <span class="card-name" data-card="Firebolt">4 Firebolt</span><br/>
+                                <span class="card-name" data-card="Ghitu Fire">4 Ghitu Fire</span><br/>
+                                <span class="card-name" data-card="Pillage">4 Pillage</span><br/>
+                                <span class="card-name" data-card="Stone Rain">4 Stone Rain</span><br/>
+                                <span class="card-name" data-card="Urza's Rage">4 Urza's Rage</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
                             >
                                 Terrenos
                             </h3>
-                            <div class="text-gray-300">20 Mountain</div>
+                            <div class="text-gray-300">
+                                <span class="card-name" data-card="Mountain">20 Mountain</span>
+                            </div>
                         </div>
                     </div>
                     <!-- 7th Place -->
@@ -345,10 +419,13 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Birds of Paradise<br />4 Flametongue Kavu<br />4
-                                Llanowar Elves<br />4 Raging Kavu<br />4
-                                Skizzik<br />4 Thornscape Battlemage<br />4
-                                Two-Headed Dragon
+                                <span class="card-name" data-card="Birds of Paradise">4 Birds of Paradise</span><br/>
+                                <span class="card-name" data-card="Flametongue Kavu">4 Flametongue Kavu</span><br/>
+                                <span class="card-name" data-card="Llanowar Elves">4 Llanowar Elves</span><br/>
+                                <span class="card-name" data-card="Raging Kavu">4 Raging Kavu</span><br/>
+                                <span class="card-name" data-card="Skizzik">4 Skizzik</span><br/>
+                                <span class="card-name" data-card="Thornscape Battlemage">4 Thornscape Battlemage</span><br/>
+                                <span class="card-name" data-card="Two-Headed Dragon">4 Two-Headed Dragon</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -356,9 +433,11 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Chimeric Idol<br />4 Fires of Yavimaya<br />4
-                                Ghitu Fire<br />4 Saproling Burst<br />4 Urza's
-                                Rage
+                                <span class="card-name" data-card="Chimeric Idol">4 Chimeric Idol</span><br/>
+                                <span class="card-name" data-card="Fires of Yavimaya">4 Fires of Yavimaya</span><br/>
+                                <span class="card-name" data-card="Ghitu Fire">4 Ghitu Fire</span><br/>
+                                <span class="card-name" data-card="Saproling Burst">4 Saproling Burst</span><br/>
+                                <span class="card-name" data-card="Urza's Rage">4 Urza's Rage</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -366,8 +445,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Brushland<br />4 Karplusan Forest<br />4
-                                Shivan Oasis
+                                <span class="card-name" data-card="Brushland">4 Brushland</span><br/>
+                                <span class="card-name" data-card="Karplusan Forest">4 Karplusan Forest</span><br/>
+                                <span class="card-name" data-card="Shivan Oasis">4 Shivan Oasis</span>
                             </div>
                         </div>
                     </div>
@@ -393,7 +473,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Flametongue Kavu<br />4 Nightscape Familiar
+                                <span class="card-name" data-card="Flametongue Kavu">4 Flametongue Kavu</span><br/>
+                                <span class="card-name" data-card="Nightscape Familiar">4 Nightscape Familiar</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -401,10 +482,15 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Counterspell<br />4 Duress<br />4 Fact or
-                                Fiction<br />4 Fire/Ice<br />4 Prophetic Bolt<br />4
-                                Repulse<br />4 Spite/Malice<br />4 Undermine<br />4
-                                Urza's Rage
+                                <span class="card-name" data-card="Counterspell">4 Counterspell</span><br/>
+                                <span class="card-name" data-card="Duress">4 Duress</span><br/>
+                                <span class="card-name" data-card="Fact or Fiction">4 Fact or Fiction</span><br/>
+                                <span class="card-name" data-card="Fire/Ice">4 Fire/Ice</span><br/>
+                                <span class="card-name" data-card="Prophetic Bolt">4 Prophetic Bolt</span><br/>
+                                <span class="card-name" data-card="Repulse">4 Repulse</span><br/>
+                                <span class="card-name" data-card="Spite/Malice">4 Spite/Malice</span><br/>
+                                <span class="card-name" data-card="Undermine">4 Undermine</span><br/>
+                                <span class="card-name" data-card="Urza's Rage">4 Urza's Rage</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -412,8 +498,10 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Shivan Reef<br />4 Sulfurous Springs<br />4
-                                Underground River<br />4 Urborg Volcano
+                                <span class="card-name" data-card="Shivan Reef">4 Shivan Reef</span><br/>
+                                <span class="card-name" data-card="Sulfurous Springs">4 Sulfurous Springs</span><br/>
+                                <span class="card-name" data-card="Underground River">4 Underground River</span><br/>
+                                <span class="card-name" data-card="Urborg Volcano">4 Urborg Volcano</span>
                             </div>
                         </div>
                     </div>
@@ -421,6 +509,71 @@
             </main>
         </div>
         <script>
+            function toggleVisibility(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.classList.toggle("hidden");
+                }
+            }
+
+            // Script para o tooltip da imagem da carta
+            // Cria o elemento tooltip uma vez e anexa ao body
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.innerHTML = '<img>';
+            document.body.appendChild(tooltip);
+            const tooltipImage = tooltip.querySelector('img');
+
+            // Pega todos os elementos que devem acionar o tooltip
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                // Adiciona um pequeno deslocamento para evitar cintilação/piscar
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+
+                const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
+
+            // Função original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {

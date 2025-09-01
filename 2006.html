@@ -23,6 +23,29 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -68,8 +91,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Bogardan Hellkite<br />4 Hunted Dragon<br />4
-                                Teferi, Mage of Zhalfir
+                                <span class="card-name" data-card="Bogardan Hellkite">4 Bogardan Hellkite</span><br/>
+                                <span class="card-name" data-card="Hunted Dragon">4 Hunted Dragon</span><br/>
+                                <span class="card-name" data-card="Teferi, Mage of Zhalfir">4 Teferi, Mage of Zhalfir</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -77,11 +101,16 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Desperate Ritual<br />4 Dragonstorm<br />4
-                                Gigadrowse<br />4 Izzet Signet<br />4 Lotus
-                                Bloom<br />4 Remand<br />4 Rite of Flame<br />4
-                                Seething Song<br />4 Sleight of Hand<br />4
-                                Telling Time
+                                <span class="card-name" data-card="Desperate Ritual">4 Desperate Ritual</span><br/>
+                                <span class="card-name" data-card="Dragonstorm">4 Dragonstorm</span><br/>
+                                <span class="card-name" data-card="Gigadrowse">4 Gigadrowse</span><br/>
+                                <span class="card-name" data-card="Izzet Signet">4 Izzet Signet</span><br/>
+                                <span class="card-name" data-card="Lotus Bloom">4 Lotus Bloom</span><br/>
+                                <span class="card-name" data-card="Remand">4 Remand</span><br/>
+                                <span class="card-name" data-card="Rite of Flame">4 Rite of Flame</span><br/>
+                                <span class="card-name" data-card="Seething Song">4 Seething Song</span><br/>
+                                <span class="card-name" data-card="Sleight of Hand">4 Sleight of Hand</span><br/>
+                                <span class="card-name" data-card="Telling Time">4 Telling Time</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -89,9 +118,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Calciform Pools<br />4 Dreadship Reef<br />4
-                                Shivan Reef<br />4 Spinerock Knoll<br />4 Steam
-                                Vents
+                                <span class="card-name" data-card="Calciform Pools">4 Calciform Pools</span><br/>
+                                <span class="card-name" data-card="Dreadship Reef">4 Dreadship Reef</span><br/>
+                                <span class="card-name" data-card="Shivan Reef">4 Shivan Reef</span><br/>
+                                <span class="card-name" data-card="Spinerock Knoll">4 Spinerock Knoll</span><br/>
+                                <span class="card-name" data-card="Steam Vents">4 Steam Vents</span>
                             </div>
                         </div>
                     </div>
@@ -119,9 +150,12 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Akroma, Angel of Wrath<br />4 Court Hussar<br />4
-                                Exalted Angel<br />4 Martyr of Sands<br />4
-                                Paladin en-Vec<br />4 Serra Avenger
+                                <span class="card-name" data-card="Akroma, Angel of Wrath">4 Akroma, Angel of Wrath</span><br/>
+                                <span class="card-name" data-card="Court Hussar">4 Court Hussar</span><br/>
+                                <span class="card-name" data-card="Exalted Angel">4 Exalted Angel</span><br/>
+                                <span class="card-name" data-card="Martyr of Sands">4 Martyr of Sands</span><br/>
+                                <span class="card-name" data-card="Paladin en-Vec">4 Paladin en-Vec</span><br/>
+                                <span class="card-name" data-card="Serra Avenger">4 Serra Avenger</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -129,13 +163,20 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Condemn<br />4 Consecrate Land<br />4 Damping
-                                Matrix<br />4 Decree of Justice<br />4
-                                Disenchant<br />4 Jester's Cap<br />4 Last
-                                Gasp<br />4 Proclamation of Rebirth<br />4
-                                Remand<br />4 Rune Snag<br />4 Sacred Mesa<br />4
-                                Spell Snare<br />4 Teferi, Mage of Zhalfir<br />4
-                                Wrath of God
+                                <span class="card-name" data-card="Condemn">4 Condemn</span><br/>
+                                <span class="card-name" data-card="Consecrate Land">4 Consecrate Land</span><br/>
+                                <span class="card-name" data-card="Damping Matrix">4 Damping Matrix</span><br/>
+                                <span class="card-name" data-card="Decree of Justice">4 Decree of Justice</span><br/>
+                                <span class="card-name" data-card="Disenchant">4 Disenchant</span><br/>
+                                <span class="card-name" data-card="Jester's Cap">4 Jester's Cap</span><br/>
+                                <span class="card-name" data-card="Last Gasp">4 Last Gasp</span><br/>
+                                <span class="card-name" data-card="Proclamation of Rebirth">4 Proclamation of Rebirth</span><br/>
+                                <span class="card-name" data-card="Remand">4 Remand</span><br/>
+                                <span class="card-name" data-card="Rune Snag">4 Rune Snag</span><br/>
+                                <span class="card-name" data-card="Sacred Mesa">4 Sacred Mesa</span><br/>
+                                <span class="card-name" data-card="Spell Snare">4 Spell Snare</span><br/>
+                                <span class="card-name" data-card="Teferi, Mage of Zhalfir">4 Teferi, Mage of Zhalfir</span><br/>
+                                <span class="card-name" data-card="Wrath of God">4 Wrath of God</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -143,8 +184,10 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />4 Hallowed Fountain<br />4
-                                Plains<br />4 Urza's Factory
+                                <span class="card-name" data-card="Adarkar Wastes">4 Adarkar Wastes</span><br/>
+                                <span class="card-name" data-card="Hallowed Fountain">4 Hallowed Fountain</span><br/>
+                                <span class="card-name" data-card="Plains">4 Plains</span><br/>
+                                <span class="card-name" data-card="Urza's Factory">4 Urza's Factory</span>
                             </div>
                         </div>
                     </div>
@@ -170,11 +213,16 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Boros Swiftblade<br />4 Giant Solifuge<br />4
-                                Hand of Honor<br />4 Icatian Javelineers<br />4
-                                Isamaru, Hound of Konda<br />4 Kird Ape<br />4
-                                Paladin en-Vec<br />4 Savannah Lions<br />4
-                                Soltari Priest<br />4 White Knight
+                                <span class="card-name" data-card="Boros Swiftblade">4 Boros Swiftblade</span><br/>
+                                <span class="card-name" data-card="Giant Solifuge">4 Giant Solifuge</span><br/>
+                                <span class="card-name" data-card="Hand of Honor">4 Hand of Honor</span><br/>
+                                <span class="card-name" data-card="Icatian Javelineers">4 Icatian Javelineers</span><br/>
+                                <span class="card-name" data-card="Isamaru, Hound of Konda">4 Isamaru, Hound of Konda</span><br/>
+                                <span class="card-name" data-card="Kird Ape">4 Kird Ape</span><br/>
+                                <span class="card-name" data-card="Paladin en-Vec">4 Paladin en-Vec</span><br/>
+                                <span class="card-name" data-card="Savannah Lions">4 Savannah Lions</span><br/>
+                                <span class="card-name" data-card="Soltari Priest">4 Soltari Priest</span><br/>
+                                <span class="card-name" data-card="White Knight">4 White Knight</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -182,9 +230,12 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Char<br />4 Demonfire<br />4 Lightning
-                                Helix<br />4 Seal of Fire<br />4 Shock<br />4
-                                Volcanic Hammer
+                                <span class="card-name" data-card="Char">4 Char</span><br/>
+                                <span class="card-name" data-card="Demonfire">4 Demonfire</span><br/>
+                                <span class="card-name" data-card="Lightning Helix">4 Lightning Helix</span><br/>
+                                <span class="card-name" data-card="Seal of Fire">4 Seal of Fire</span><br/>
+                                <span class="card-name" data-card="Shock">4 Shock</span><br/>
+                                <span class="card-name" data-card="Volcanic Hammer">4 Volcanic Hammer</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -192,8 +243,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Battlefield Forge<br />4 Boros Garrison<br />4
-                                Flagstones of Trokair
+                                <span class="card-name" data-card="Battlefield Forge">4 Battlefield Forge</span><br/>
+                                <span class="card-name" data-card="Boros Garrison">4 Boros Garrison</span><br/>
+                                <span class="card-name" data-card="Flagstones of Trokair">4 Flagstones of Trokair</span>
                             </div>
                         </div>
                     </div>
@@ -219,8 +271,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Court Hussar<br />4 Dark Confidant<br />4
-                                Teferi, Mage of Zhalfir
+                                <span class="card-name" data-card="Court Hussar">4 Court Hussar</span><br/>
+                                <span class="card-name" data-card="Dark Confidant">4 Dark Confidant</span><br/>
+                                <span class="card-name" data-card="Teferi, Mage of Zhalfir">4 Teferi, Mage of Zhalfir</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -228,9 +281,14 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Condemn<br />4 Cruel Edict<br />4 Last Gasp<br />4
-                                Mortify<br />4 Remand<br />4 Rune Snag<br />4
-                                Spell Snare<br />4 Wrath of God
+                                <span class="card-name" data-card="Condemn">4 Condemn</span><br/>
+                                <span class="card-name" data-card="Cruel Edict">4 Cruel Edict</span><br/>
+                                <span class="card-name" data-card="Last Gasp">4 Last Gasp</span><br/>
+                                <span class="card-name" data-card="Mortify">4 Mortify</span><br/>
+                                <span class="card-name" data-card="Remand">4 Remand</span><br/>
+                                <span class="card-name" data-card="Rune Snag">4 Rune Snag</span><br/>
+                                <span class="card-name" data-card="Spell Snare">4 Spell Snare</span><br/>
+                                <span class="card-name" data-card="Wrath of God">4 Wrath of God</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -238,9 +296,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Adarkar Wastes<br />4 Godless Shrine<br />4
-                                Hallowed Fountain<br />4 Underground River<br />4
-                                Watery Grave
+                                <span class="card-name" data-card="Adarkar Wastes">4 Adarkar Wastes</span><br/>
+                                <span class="card-name" data-card="Godless Shrine">4 Godless Shrine</span><br/>
+                                <span class="card-name" data-card="Hallowed Fountain">4 Hallowed Fountain</span><br/>
+                                <span class="card-name" data-card="Underground River">4 Underground River</span><br/>
+                                <span class="card-name" data-card="Watery Grave">4 Watery Grave</span>
                             </div>
                         </div>
                     </div>
@@ -265,8 +325,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Bogardan Hellkite<br />4 Hunted Dragon<br />4
-                                Teferi, Mage of Zhalfir
+                                <span class="card-name" data-card="Bogardan Hellkite">4 Bogardan Hellkite</span><br/>
+                                <span class="card-name" data-card="Hunted Dragon">4 Hunted Dragon</span><br/>
+                                <span class="card-name" data-card="Teferi, Mage of Zhalfir">4 Teferi, Mage of Zhalfir</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -274,11 +335,16 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Desperate Ritual<br />4 Dragonstorm<br />4
-                                Gigadrowse<br />4 Izzet Signet<br />4 Lotus
-                                Bloom<br />4 Remand<br />4 Rite of Flame<br />4
-                                Seething Song<br />4 Sleight of Hand<br />4
-                                Telling Time
+                                <span class="card-name" data-card="Desperate Ritual">4 Desperate Ritual</span><br/>
+                                <span class="card-name" data-card="Dragonstorm">4 Dragonstorm</span><br/>
+                                <span class="card-name" data-card="Gigadrowse">4 Gigadrowse</span><br/>
+                                <span class="card-name" data-card="Izzet Signet">4 Izzet Signet</span><br/>
+                                <span class="card-name" data-card="Lotus Bloom">4 Lotus Bloom</span><br/>
+                                <span class="card-name" data-card="Remand">4 Remand</span><br/>
+                                <span class="card-name" data-card="Rite of Flame">4 Rite of Flame</span><br/>
+                                <span class="card-name" data-card="Seething Song">4 Seething Song</span><br/>
+                                <span class="card-name" data-card="Sleight of Hand">4 Sleight of Hand</span><br/>
+                                <span class="card-name" data-card="Telling Time">4 Telling Time</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -286,9 +352,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Calciform Pools<br />4 Dreadship Reef<br />4
-                                Shivan Reef<br />4 Spinerock Knoll<br />4 Steam
-                                Vents
+                                <span class="card-name" data-card="Calciform Pools">4 Calciform Pools</span><br/>
+                                <span class="card-name" data-card="Dreadship Reef">4 Dreadship Reef</span><br/>
+                                <span class="card-name" data-card="Shivan Reef">4 Shivan Reef</span><br/>
+                                <span class="card-name" data-card="Spinerock Knoll">4 Spinerock Knoll</span><br/>
+                                <span class="card-name" data-card="Steam Vents">4 Steam Vents</span>
                             </div>
                         </div>
                     </div>
@@ -316,7 +384,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Firemane Angel<br />4 Lightning Angel
+                                <span class="card-name" data-card="Firemane Angel">4 Firemane Angel</span><br/>
+                                <span class="card-name" data-card="Lightning Angel">4 Lightning Angel</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -324,10 +393,14 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Azorius Signet<br />4 Boros Signet<br />4
-                                Compulsive Research<br />4 Fire/Ice<br />4 Izzet
-                                Signet<br />4 Lightning Helix<br />4 Remand<br />4
-                                Wrath of God
+                                <span class="card-name" data-card="Azorius Signet">4 Azorius Signet</span><br/>
+                                <span class="card-name" data-card="Boros Signet">4 Boros Signet</span><br/>
+                                <span class="card-name" data-card="Compulsive Research">4 Compulsive Research</span><br/>
+                                <span class="card-name" data-card="Fire/Ice">4 Fire/Ice</span><br/>
+                                <span class="card-name" data-card="Izzet Signet">4 Izzet Signet</span><br/>
+                                <span class="card-name" data-card="Lightning Helix">4 Lightning Helix</span><br/>
+                                <span class="card-name" data-card="Remand">4 Remand</span><br/>
+                                <span class="card-name" data-card="Wrath of God">4 Wrath of God</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -335,9 +408,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Battlefield Forge<br />4 Hallowed Fountain<br />4
-                                Sacred Foundry<br />4 Shivan Reef<br />4 Steam
-                                Vents
+                                <span class="card-name" data-card="Battlefield Forge">4 Battlefield Forge</span><br/>
+                                <span class="card-name" data-card="Hallowed Fountain">4 Hallowed Fountain</span><br/>
+                                <span class="card-name" data-card="Sacred Foundry">4 Sacred Foundry</span><br/>
+                                <span class="card-name" data-card="Shivan Reef">4 Shivan Reef</span><br/>
+                                <span class="card-name" data-card="Steam Vents">4 Steam Vents</span>
                             </div>
                         </div>
                     </div>
@@ -363,7 +438,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Bogardan Hellkite<br />4 Keiga, the Tide Star
+                                <span class="card-name" data-card="Bogardan Hellkite">4 Bogardan Hellkite</span><br/>
+                                <span class="card-name" data-card="Keiga, the Tide Star">4 Keiga, the Tide Star</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -371,9 +447,14 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Compulsive Research<br />4 Demonfire<br />4
-                                Izzet Signet<br />4 Magnivore<br />4 Remand<br />4
-                                Repeal<br />4 Sleight of Hand<br />4 Tidings
+                                <span class="card-name" data-card="Compulsive Research">4 Compulsive Research</span><br/>
+                                <span class="card-name" data-card="Demonfire">4 Demonfire</span><br/>
+                                <span class="card-name" data-card="Izzet Signet">4 Izzet Signet</span><br/>
+                                <span class="card-name" data-card="Magnivore">4 Magnivore</span><br/>
+                                <span class="card-name" data-card="Remand">4 Remand</span><br/>
+                                <span class="card-name" data-card="Repeal">4 Repeal</span><br/>
+                                <span class="card-name" data-card="Sleight of Hand">4 Sleight of Hand</span><br/>
+                                <span class="card-name" data-card="Tidings">4 Tidings</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -381,9 +462,12 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Shivan Reef<br />4 Steam Vents<br />4 Urza's
-                                Factory<br />4 Urza's Mine<br />4 Urza's Power
-                                Plant<br />4 Urza's Tower
+                                <span class="card-name" data-card="Shivan Reef">4 Shivan Reef</span><br/>
+                                <span class="card-name" data-card="Steam Vents">4 Steam Vents</span><br/>
+                                <span class="card-name" data-card="Urza's Factory">4 Urza's Factory</span><br/>
+                                <span class="card-name" data-card="Urza's Mine">4 Urza's Mine</span><br/>
+                                <span class="card-name" data-card="Urza's Power Plant">4 Urza's Power Plant</span><br/>
+                                <span class="card-name" data-card="Urza's Tower">4 Urza's Tower</span>
                             </div>
                         </div>
                     </div>
@@ -411,7 +495,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Firemane Angel<br />4 Lightning Angel
+                                <span class="card-name" data-card="Firemane Angel">4 Firemane Angel</span><br/>
+                                <span class="card-name" data-card="Lightning Angel">4 Lightning Angel</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -419,10 +504,14 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Azorius Signet<br />4 Boros Signet<br />4
-                                Compulsive Research<br />4 Fire/Ice<br />4 Izzet
-                                Signet<br />4 Lightning Helix<br />4 Remand<br />4
-                                Wrath of God
+                                <span class="card-name" data-card="Azorius Signet">4 Azorius Signet</span><br/>
+                                <span class="card-name" data-card="Boros Signet">4 Boros Signet</span><br/>
+                                <span class="card-name" data-card="Compulsive Research">4 Compulsive Research</span><br/>
+                                <span class="card-name" data-card="Fire/Ice">4 Fire/Ice</span><br/>
+                                <span class="card-name" data-card="Izzet Signet">4 Izzet Signet</span><br/>
+                                <span class="card-name" data-card="Lightning Helix">4 Lightning Helix</span><br/>
+                                <span class="card-name" data-card="Remand">4 Remand</span><br/>
+                                <span class="card-name" data-card="Wrath of God">4 Wrath of God</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -430,9 +519,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Battlefield Forge<br />4 Hallowed Fountain<br />4
-                                Sacred Foundry<br />4 Shivan Reef<br />4 Steam
-                                Vents
+                                <span class="card-name" data-card="Battlefield Forge">4 Battlefield Forge</span><br/>
+                                <span class="card-name" data-card="Hallowed Fountain">4 Hallowed Fountain</span><br/>
+                                <span class="card-name" data-card="Sacred Foundry">4 Sacred Foundry</span><br/>
+                                <span class="card-name" data-card="Shivan Reef">4 Shivan Reef</span><br/>
+                                <span class="card-name" data-card="Steam Vents">4 Steam Vents</span>
                             </div>
                         </div>
                     </div>
@@ -440,6 +531,63 @@
             </main>
         </div>
         <script>
+            // Cria o elemento tooltip uma vez quando a página carrega
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.style.display = 'none';
+            document.body.appendChild(tooltip);
+
+            const tooltipImage = document.createElement('img');
+            tooltip.appendChild(tooltipImage);
+
+            // Seleciona todos os spans com a classe 'card-name'
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                const tooltipRect = tooltip.getBoundingClientRect();
+                let x = e.clientX + 15; // Offset para a direita do cursor
+                let y = e.clientY + 15; // Offset para baixo do cursor
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
+
+            // Função original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {

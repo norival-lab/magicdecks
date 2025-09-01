@@ -23,6 +23,29 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -67,10 +90,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Arbor Elf<br />4 Borderland Ranger<br />4
-                                Huntmaster of the Fells<br />4 Olivia
-                                Voldaren<br />4 Strangleroot Geist<br />4
-                                Thragtusk
+                                4 <span class="card-name" data-card="Arbor Elf">Arbor Elf</span><br />4 <span class="card-name" data-card="Borderland Ranger">Borderland Ranger</span><br />4
+                                <span class="card-name" data-card="Huntmaster of the Fells">Huntmaster of the Fells</span><br />4 <span class="card-name" data-card="Olivia Voldaren">Olivia
+                                Voldaren</span><br />4 <span class="card-name" data-card="Strangleroot Geist">Strangleroot Geist</span><br />4
+                                <span class="card-name" data-card="Thragtusk">Thragtusk</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -78,10 +101,10 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Bonfire of the Damned<br />4 Dreadbore<br />4
-                                Farseek<br />4 Garruk, Primal Hunter<br />4
-                                Mizzium Mortars<br />4 Rakdos's Return<br />4
-                                Sever the Bloodline
+                                4 <span class="card-name" data-card="Bonfire of the Damned">Bonfire of the Damned</span><br />4 <span class="card-name" data-card="Dreadbore">Dreadbore</span><br />4
+                                <span class="card-name" data-card="Farseek">Farseek</span><br />4 <span class="card-name" data-card="Garruk, Primal Hunter">Garruk, Primal Hunter</span><br />4
+                                <span class="card-name" data-card="Mizzium Mortars">Mizzium Mortars</span><br />4 <span class="card-name" data-card="Rakdos's Return">Rakdos's Return</span><br />4
+                                <span class="card-name" data-card="Sever the Bloodline">Sever the Bloodline</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -89,10 +112,10 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Blood Crypt<br />4 Dragonskull Summit<br />4
-                                Kessig Wolf Run<br />4 Overgrown Tomb<br />4
-                                Rootbound Crag<br />4 Stomping Ground<br />4
-                                Woodland Cemetery
+                                4 <span class="card-name" data-card="Blood Crypt">Blood Crypt</span><br />4 <span class="card-name" data-card="Dragonskull Summit">Dragonskull Summit</span><br />4
+                                <span class="card-name" data-card="Kessig Wolf Run">Kessig Wolf Run</span><br />4 <span class="card-name" data-card="Overgrown Tomb">Overgrown Tomb</span><br />4
+                                <span class="card-name" data-card="Rootbound Crag">Rootbound Crag</span><br />4 <span class="card-name" data-card="Stomping Ground">Stomping Ground</span><br />4
+                                <span class="card-name" data-card="Woodland Cemetery">Woodland Cemetery</span>
                             </div>
                         </div>
                     </div>
@@ -118,9 +141,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Augur of Bolas<br />4 Centaur Healer<br />4
-                                Loxodon Smiter<br />4 Restoration Angel<br />4
-                                Snapcaster Mage<br />4 Thragtusk
+                                4 <span class="card-name" data-card="Augur of Bolas">Augur of Bolas</span><br />4 <span class="card-name" data-card="Centaur Healer">Centaur Healer</span><br />4
+                                <span class="card-name" data-card="Loxodon Smiter">Loxodon Smiter</span><br />4 <span class="card-name" data-card="Restoration Angel">Restoration Angel</span><br />4
+                                <span class="card-name" data-card="Snapcaster Mage">Snapcaster Mage</span><br />4 <span class="card-name" data-card="Thragtusk">Thragtusk</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -128,10 +151,10 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Azorius Charm<br />4 Detention Sphere<br />4
-                                Dissipate<br />4 Farseek<br />4 Jace, Architect
-                                of Thought<br />4 Supreme Verdict<br />4 Tamiyo,
-                                the Moon Sage<br />4 Think Twice
+                                4 <span class="card-name" data-card="Azorius Charm">Azorius Charm</span><br />4 <span class="card-name" data-card="Detention Sphere">Detention Sphere</span><br />4
+                                <span class="card-name" data-card="Dissipate">Dissipate</span><br />4 <span class="card-name" data-card="Farseek">Farseek</span><br />4 <span class="card-name" data-card="Jace, Architect of Thought">Jace, Architect
+                                of Thought</span><br />4 <span class="card-name" data-card="Supreme Verdict">Supreme Verdict</span><br />4 <span class="card-name" data-card="Tamiyo, the Moon Sage">Tamiyo,
+                                the Moon Sage</span><br />4 <span class="card-name" data-card="Think Twice">Think Twice</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -139,9 +162,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Breeding Pool<br />4 Glacial Fortress<br />4
-                                Hallowed Fountain<br />4 Hinterland Harbor<br />4
-                                Sunpetal Grove<br />4 Temple Garden
+                                4 <span class="card-name" data-card="Breeding Pool">Breeding Pool</span><br />4 <span class="card-name" data-card="Glacial Fortress">Glacial Fortress</span><br />4
+                                <span class="card-name" data-card="Hallowed Fountain">Hallowed Fountain</span><br />4 <span class="card-name" data-card="Hinterland Harbor">Hinterland Harbor</span><br />4
+                                <span class="card-name" data-card="Sunpetal Grove">Sunpetal Grove</span><br />4 <span class="card-name" data-card="Temple Garden">Temple Garden</span>
                             </div>
                         </div>
                     </div>
@@ -169,10 +192,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Angel of Serenity<br />4 Arbor Elf<br />4
-                                Avacyn's Pilgrim<br />4 Centaur Healer<br />4
-                                Craterhoof Behemoth<br />4 Restoration Angel<br />4
-                                Somberwald Sage<br />4 Thragtusk
+                                4 <span class="card-name" data-card="Angel of Serenity">Angel of Serenity</span><br />4 <span class="card-name" data-card="Arbor Elf">Arbor Elf</span><br />4
+                                <span class="card-name" data-card="Avacyn's Pilgrim">Avacyn's Pilgrim</span><br />4 <span class="card-name" data-card="Centaur Healer">Centaur Healer</span><br />4
+                                <span class="card-name" data-card="Craterhoof Behemoth">Craterhoof Behemoth</span><br />4 <span class="card-name" data-card="Restoration Angel">Restoration Angel</span><br />4
+                                <span class="card-name" data-card="Somberwald Sage">Somberwald Sage</span><br />4 <span class="card-name" data-card="Thragtusk">Thragtusk</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -180,8 +203,8 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Farseek<br />4 Grisly Salvage<br />4 Lingering
-                                Souls<br />4 Mulch<br />4 Unburial Rites
+                                4 <span class="card-name" data-card="Farseek">Farseek</span><br />4 <span class="card-name" data-card="Grisly Salvage">Grisly Salvage</span><br />4 <span class="card-name" data-card="Lingering Souls">Lingering
+                                Souls</span><br />4 <span class="card-name" data-card="Mulch">Mulch</span><br />4 <span class="card-name" data-card="Unburial Rites">Unburial Rites</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -189,9 +212,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Godless Shrine<br />4 Isolated Chapel<br />4
-                                Overgrown Tomb<br />4 Sunpetal Grove<br />4
-                                Temple Garden<br />4 Woodland Cemetery
+                                4 <span class="card-name" data-card="Godless Shrine">Godless Shrine</span><br />4 <span class="card-name" data-card="Isolated Chapel">Isolated Chapel</span><br />4
+                                <span class="card-name" data-card="Overgrown Tomb">Overgrown Tomb</span><br />4 <span class="card-name" data-card="Sunpetal Grove">Sunpetal Grove</span><br />4
+                                <span class="card-name" data-card="Temple Garden">Temple Garden</span><br />4 <span class="card-name" data-card="Woodland Cemetery">Woodland Cemetery</span>
                             </div>
                         </div>
                     </div>
@@ -217,8 +240,8 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Augur of Bolas<br />4 Geist of Saint Traft<br />4
-                                Restoration Angel<br />4 Snapcaster Mage
+                                4 <span class="card-name" data-card="Augur of Bolas">Augur of Bolas</span><br />4 <span class="card-name" data-card="Geist of Saint Traft">Geist of Saint Traft</span><br />4
+                                <span class="card-name" data-card="Restoration Angel">Restoration Angel</span><br />4 <span class="card-name" data-card="Snapcaster Mage">Snapcaster Mage</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -226,10 +249,10 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Azorius Charm<br />4 Dissipate<br />4 Feeling
-                                of Dread<br />4 Pillar of Flame<br />4 Rewind<br />4
-                                Searing Spear<br />4 Syncopate<br />4 Thought
-                                Scour
+                                4 <span class="card-name" data-card="Azorius Charm">Azorius Charm</span><br />4 <span class="card-name" data-card="Dissipate">Dissipate</span><br />4 <span class="card-name" data-card="Feeling of Dread">Feeling
+                                of Dread</span><br />4 <span class="card-name" data-card="Pillar of Flame">Pillar of Flame</span><br />4 <span class="card-name" data-card="Rewind">Rewind</span><br />4
+                                <span class="card-name" data-card="Searing Spear">Searing Spear</span><br />4 <span class="card-name" data-card="Syncopate">Syncopate</span><br />4 <span class="card-name" data-card="Thought Scour">Thought
+                                Scour</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -237,16 +260,74 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Clifftop Retreat<br />4 Glacial Fortress<br />4
-                                Hallowed Fountain<br />4 Sacred Foundry<br />4
-                                Steam Vents<br />4 Sulfur Falls
+                                4 <span class="card-name" data-card="Clifftop Retreat">Clifftop Retreat</span><br />4 <span class="card-name" data-card="Glacial Fortress">Glacial Fortress</span><br />4
+                                <span class="card-name" data-card="Hallowed Fountain">Hallowed Fountain</span><br />4 <span class="card-name" data-card="Sacred Foundry">Sacred Foundry</span><br />4
+                                <span class="card-name" data-card="Steam Vents">Steam Vents</span><br />4 <span class="card-name" data-card="Sulfur Falls">Sulfur Falls</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </main>
         </div>
+        <!-- Script para o tooltip da imagem da carta -->
         <script>
+            // Cria o elemento tooltip uma vez e anexa ao body
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.innerHTML = '<img>';
+            document.body.appendChild(tooltip);
+            const tooltipImage = tooltip.querySelector('img');
+
+            // Pega todos os elementos que devem acionar o tooltip
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                // Adiciona um pequeno deslocamento para evitar cintilação/piscar
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+
+                const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
+
+            // Função original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {

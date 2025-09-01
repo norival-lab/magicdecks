@@ -23,6 +23,29 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -67,9 +90,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Bristling Hydra<br />4 Longtusk Cub<br />4
-                                Rogue Refiner<br />4 Servant of the Conduit<br />4
-                                Whirler Virtuoso
+                                4 <span class="card-name" data-card="Bristling Hydra">Bristling Hydra</span><br />4 <span class="card-name" data-card="Longtusk Cub">Longtusk Cub</span><br />4
+                                <span class="card-name" data-card="Rogue Refiner">Rogue Refiner</span><br />4 <span class="card-name" data-card="Servant of the Conduit">Servant of the Conduit</span><br />4
+                                <span class="card-name" data-card="Whirler Virtuoso">Whirler Virtuoso</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -77,9 +100,9 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Abrade<br />4 Attune with Aether<br />4
-                                Chandra, Torch of Defiance<br />4 Harnessed
-                                Lightning<br />4 Magma Spray
+                                4 <span class="card-name" data-card="Abrade">Abrade</span><br />4 <span class="card-name" data-card="Attune with Aether">Attune with Aether</span><br />4
+                                <span class="card-name" data-card="Chandra, Torch of Defiance">Chandra, Torch of Defiance</span><br />4 <span class="card-name" data-card="Harnessed Lightning">Harnessed
+                                Lightning</span><br />4 <span class="card-name" data-card="Magma Spray">Magma Spray</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -87,9 +110,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Aether Hub<br />4 Botanical Sanctum<br />4
-                                Rootbound Crag<br />4 Spirebluff Canal<br />8
-                                Forest<br />8 Mountain
+                                4 <span class="card-name" data-card="Aether Hub">Aether Hub</span><br />4 <span class="card-name" data-card="Botanical Sanctum">Botanical Sanctum</span><br />4
+                                <span class="card-name" data-card="Rootbound Crag">Rootbound Crag</span><br />4 <span class="card-name" data-card="Spirebluff Canal">Spirebluff Canal</span><br />8
+                                <span class="card-name" data-card="Forest">Forest</span><br />8 <span class="card-name" data-card="Mountain">Mountain</span>
                             </div>
                         </div>
                     </div>
@@ -115,10 +138,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Ahn-Crop Crasher<br />4 Bomat Courier<br />4
-                                Earthshaker Khenra<br />4 Falkenrath Gorger<br />4
-                                Hazoret the Fervent<br />4 Kari Zev, Skyship
-                                Raider<br />4 Soul-Scar Mage
+                                4 <span class="card-name" data-card="Ahn-Crop Crasher">Ahn-Crop Crasher</span><br />4 <span class="card-name" data-card="Bomat Courier">Bomat Courier</span><br />4
+                                <span class="card-name" data-card="Earthshaker Khenra">Earthshaker Khenra</span><br />4 <span class="card-name" data-card="Falkenrath Gorger">Falkenrath Gorger</span><br />4
+                                <span class="card-name" data-card="Hazoret the Fervent">Hazoret the Fervent</span><br />4 <span class="card-name" data-card="Kari Zev, Skyship Raider">Kari Zev, Skyship
+                                Raider</span><br />4 <span class="card-name" data-card="Soul-Scar Mage">Soul-Scar Mage</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -126,7 +149,7 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Abrade<br />4 Lightning Strike<br />4 Shock
+                                4 <span class="card-name" data-card="Abrade">Abrade</span><br />4 <span class="card-name" data-card="Lightning Strike">Lightning Strike</span><br />4 <span class="card-name" data-card="Shock">Shock</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -134,8 +157,8 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Ramunap Ruins<br />4 Sunscorched Desert<br />12
-                                Mountain
+                                4 <span class="card-name" data-card="Ramunap Ruins">Ramunap Ruins</span><br />4 <span class="card-name" data-card="Sunscorched Desert">Sunscorched Desert</span><br />12
+                                <span class="card-name" data-card="Mountain">Mountain</span>
                             </div>
                         </div>
                     </div>
@@ -161,9 +184,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Bristling Hydra<br />4 Longtusk Cub<br />4
-                                Rogue Refiner<br />4 Servant of the Conduit<br />4
-                                Whirler Virtuoso
+                                4 <span class="card-name" data-card="Bristling Hydra">Bristling Hydra</span><br />4 <span class="card-name" data-card="Longtusk Cub">Longtusk Cub</span><br />4
+                                <span class="card-name" data-card="Rogue Refiner">Rogue Refiner</span><br />4 <span class="card-name" data-card="Servant of the Conduit">Servant of the Conduit</span><br />4
+                                <span class="card-name" data-card="Whirler Virtuoso">Whirler Virtuoso</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -171,9 +194,9 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Abrade<br />4 Attune with Aether<br />4
-                                Chandra, Torch of Defiance<br />4 Harnessed
-                                Lightning<br />4 Magma Spray
+                                4 <span class="card-name" data-card="Abrade">Abrade</span><br />4 <span class="card-name" data-card="Attune with Aether">Attune with Aether</span><br />4
+                                <span class="card-name" data-card="Chandra, Torch of Defiance">Chandra, Torch of Defiance</span><br />4 <span class="card-name" data-card="Harnessed Lightning">Harnessed
+                                Lightning</span><br />4 <span class="card-name" data-card="Magma Spray">Magma Spray</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -181,9 +204,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Aether Hub<br />4 Botanical Sanctum<br />4
-                                Rootbound Crag<br />4 Spirebluff Canal<br />8
-                                Forest<br />8 Mountain
+                                4 <span class="card-name" data-card="Aether Hub">Aether Hub</span><br />4 <span class="card-name" data-card="Botanical Sanctum">Botanical Sanctum</span><br />4
+                                <span class="card-name" data-card="Rootbound Crag">Rootbound Crag</span><br />4 <span class="card-name" data-card="Spirebluff Canal">Spirebluff Canal</span><br />8
+                                <span class="card-name" data-card="Forest">Forest</span><br />8 <span class="card-name" data-card="Mountain">Mountain</span>
                             </div>
                         </div>
                     </div>
@@ -209,9 +232,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Bristling Hydra<br />4 Longtusk Cub<br />4
-                                Rogue Refiner<br />4 Servant of the Conduit<br />4
-                                Whirler Virtuoso
+                                4 <span class="card-name" data-card="Bristling Hydra">Bristling Hydra</span><br />4 <span class="card-name" data-card="Longtusk Cub">Longtusk Cub</span><br />4
+                                <span class="card-name" data-card="Rogue Refiner">Rogue Refiner</span><br />4 <span class="card-name" data-card="Servant of the Conduit">Servant of the Conduit</span><br />4
+                                <span class="card-name" data-card="Whirler Virtuoso">Whirler Virtuoso</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -219,9 +242,9 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Abrade<br />4 Attune with Aether<br />4
-                                Chandra, Torch of Defiance<br />4 Harnessed
-                                Lightning<br />4 Magma Spray
+                                4 <span class="card-name" data-card="Abrade">Abrade</span><br />4 <span class="card-name" data-card="Attune with Aether">Attune with Aether</span><br />4
+                                <span class="card-name" data-card="Chandra, Torch of Defiance">Chandra, Torch of Defiance</span><br />4 <span class="card-name" data-card="Harnessed Lightning">Harnessed
+                                Lightning</span><br />4 <span class="card-name" data-card="Magma Spray">Magma Spray</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -229,9 +252,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Aether Hub<br />4 Botanical Sanctum<br />4
-                                Rootbound Crag<br />4 Spirebluff Canal<br />8
-                                Forest<br />8 Mountain
+                                4 <span class="card-name" data-card="Aether Hub">Aether Hub</span><br />4 <span class="card-name" data-card="Botanical Sanctum">Botanical Sanctum</span><br />4
+                                <span class="card-name" data-card="Rootbound Crag">Rootbound Crag</span><br />4 <span class="card-name" data-card="Spirebluff Canal">Spirebluff Canal</span><br />8
+                                <span class="card-name" data-card="Forest">Forest</span><br />8 <span class="card-name" data-card="Mountain">Mountain</span>
                             </div>
                         </div>
                     </div>
@@ -239,6 +262,63 @@
             </main>
         </div>
         <script>
+            // Cria o elemento tooltip uma vez e anexa ao body
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.innerHTML = '<img>';
+            document.body.appendChild(tooltip);
+            const tooltipImage = tooltip.querySelector('img');
+
+            // Pega todos os elementos que devem acionar o tooltip
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                // Adiciona um pequeno deslocamento para evitar cintilação/piscar
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+
+                const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
+
+            // Função original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {

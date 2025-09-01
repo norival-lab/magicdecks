@@ -23,6 +23,29 @@
                 background-color: #1f2937; /* bg-gray-800 */
                 border-left: 3px solid #4f46e5; /* border-indigo-600 */
             }
+            /* Estilo para o nome da carta, para indicar que é interativo */
+            .card-name {
+                cursor: pointer;
+                /* text-decoration: underline; */
+                /* text-decoration-style: dotted; */
+                /* text-decoration-color: #9ca3af; */ /* gray-400 */
+            }
+            /* Estilo para a "caixinha" da imagem da carta */
+            #card-tooltip {
+                position: fixed; /* Usa 'fixed' para se posicionar relativo à janela */
+                display: none;
+                z-index: 100;
+                border: 2px solid #6366f1; /* indigo-500 */
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                pointer-events: none; /* Impede que o tooltip interfira com o mouse */
+            }
+            #card-tooltip img {
+                display: block;
+                width: 250px; /* Tamanho da imagem */
+                height: auto;
+            }
         </style>
     </head>
     <body class="bg-gray-900 text-gray-200">
@@ -67,9 +90,11 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Mistbind Clique<br />4 Scion of Oona<br />4
-                                Spellstutter Sprite<br />4 Sower of
-                                Temptation<br />4 Vendilion Clique
+                                <span class="card-name" data-card="Mistbind Clique">4 Mistbind Clique</span><br/>
+                                <span class="card-name" data-card="Scion of Oona">4 Scion of Oona</span><br/>
+                                <span class="card-name" data-card="Spellstutter Sprite">4 Spellstutter Sprite</span><br/>
+                                <span class="card-name" data-card="Sower of Temptation">4 Sower of Temptation</span><br/>
+                                <span class="card-name" data-card="Vendilion Clique">4 Vendilion Clique</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -77,11 +102,16 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Agony Warp<br />4 Bitterblossom<br />4 Broken
-                                Ambitions<br />4 Cryptic Command<br />4
-                                Infest<br />4 Jace Beleren<br />4 Peppersmoke<br />4
-                                Puppeteer Clique<br />4 Terror<br />4
-                                Thoughtseize
+                                <span class="card-name" data-card="Agony Warp">4 Agony Warp</span><br/>
+                                <span class="card-name" data-card="Bitterblossom">4 Bitterblossom</span><br/>
+                                <span class="card-name" data-card="Broken Ambitions">4 Broken Ambitions</span><br/>
+                                <span class="card-name" data-card="Cryptic Command">4 Cryptic Command</span><br/>
+                                <span class="card-name" data-card="Infest">4 Infest</span><br/>
+                                <span class="card-name" data-card="Jace Beleren">4 Jace Beleren</span><br/>
+                                <span class="card-name" data-card="Peppersmoke">4 Peppersmoke</span><br/>
+                                <span class="card-name" data-card="Puppeteer Clique">4 Puppeteer Clique</span><br/>
+                                <span class="card-name" data-card="Terror">4 Terror</span><br/>
+                                <span class="card-name" data-card="Thoughtseize">4 Thoughtseize</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -89,9 +119,11 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Mutavault<br />4 River of Tears<br />4
-                                Secluded Glen<br />4 Sunken Ruins<br />4
-                                Underground River
+                                <span class="card-name" data-card="Mutavault">4 Mutavault</span><br/>
+                                <span class="card-name" data-card="River of Tears">4 River of Tears</span><br/>
+                                <span class="card-name" data-card="Secluded Glen">4 Secluded Glen</span><br/>
+                                <span class="card-name" data-card="Sunken Ruins">4 Sunken Ruins</span><br/>
+                                <span class="card-name" data-card="Underground River">4 Underground River</span>
                             </div>
                         </div>
                     </div>
@@ -116,13 +148,19 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Boreal Druid<br />4 Chameleon Colossus<br />4
-                                Civic Wayfinder<br />4 Elvish Archdruid<br />4
-                                Elvish Champion<br />4 Heritage Druid<br />4
-                                Imperious Perfect<br />4 Llanowar Elves<br />4
-                                Nettle Sentinel<br />4 Regal Force<br />4
-                                Tarmogoyf<br />4 Viridian Shaman<br />4 Wren's
-                                Run Vanquisher
+                                <span class="card-name" data-card="Boreal Druid">4 Boreal Druid</span><br/>
+                                <span class="card-name" data-card="Chameleon Colossus">4 Chameleon Colossus</span><br/>
+                                <span class="card-name" data-card="Civic Wayfinder">4 Civic Wayfinder</span><br/>
+                                <span class="card-name" data-card="Elvish Archdruid">4 Elvish Archdruid</span><br/>
+                                <span class="card-name" data-card="Elvish Champion">4 Elvish Champion</span><br/>
+                                <span class="card-name" data-card="Heritage Druid">4 Heritage Druid</span><br/>
+                                <span class="card-name" data-card="Imperious Perfect">4 Imperious Perfect</span><br/>
+                                <span class="card-name" data-card="Llanowar Elves">4 Llanowar Elves</span><br/>
+                                <span class="card-name" data-card="Nettle Sentinel">4 Nettle Sentinel</span><br/>
+                                <span class="card-name" data-card="Regal Force">4 Regal Force</span><br/>
+                                <span class="card-name" data-card="Tarmogoyf">4 Tarmogoyf</span><br/>
+                                <span class="card-name" data-card="Viridian Shaman">4 Viridian Shaman</span><br/>
+                                <span class="card-name" data-card="Wren's Run Vanquisher">4 Wren's Run Vanquisher</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -130,9 +168,12 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Elvish Promenade<br />4 Garruk Wildspeaker<br />4
-                                Overrun<br />4 Primal Command<br />4 Profane
-                                Command<br />4 Thoughtseize
+                                <span class="card-name" data-card="Elvish Promenade">4 Elvish Promenade</span><br/>
+                                <span class="card-name" data-card="Garruk Wildspeaker">4 Garruk Wildspeaker</span><br/>
+                                <span class="card-name" data-card="Overrun">4 Overrun</span><br/>
+                                <span class="card-name" data-card="Primal Command">4 Primal Command</span><br/>
+                                <span class="card-name" data-card="Profane Command">4 Profane Command</span><br/>
+                                <span class="card-name" data-card="Thoughtseize">4 Thoughtseize</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -140,8 +181,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Gilt-Leaf Palace<br />4 Llanowar Wastes<br />4
-                                Mutavault
+                                <span class="card-name" data-card="Gilt-Leaf Palace">4 Gilt-Leaf Palace</span><br/>
+                                <span class="card-name" data-card="Llanowar Wastes">4 Llanowar Wastes</span><br/>
+                                <span class="card-name" data-card="Mutavault">4 Mutavault</span>
                             </div>
                         </div>
                     </div>
@@ -167,11 +209,14 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Burrenton Forge-Tender<br />4 Cloudgoat
-                                Ranger<br />4 Figure of Destiny<br />4
-                                Goldmeadow Stalwart<br />4 Knight of
-                                Meadowgrain<br />4 Ranger of Eos<br />4
-                                Stillmoon Cavalier<br />4 Wizened Cenn
+                                <span class="card-name" data-card="Burrenton Forge-Tender">4 Burrenton Forge-Tender</span><br/>
+                                <span class="card-name" data-card="Cloudgoat Ranger">4 Cloudgoat Ranger</span><br/>
+                                <span class="card-name" data-card="Figure of Destiny">4 Figure of Destiny</span><br/>
+                                <span class="card-name" data-card="Goldmeadow Stalwart">4 Goldmeadow Stalwart</span><br/>
+                                <span class="card-name" data-card="Knight of Meadowgrain">4 Knight of Meadowgrain</span><br/>
+                                <span class="card-name" data-card="Ranger of Eos">4 Ranger of Eos</span><br/>
+                                <span class="card-name" data-card="Stillmoon Cavalier">4 Stillmoon Cavalier</span><br/>
+                                <span class="card-name" data-card="Wizened Cenn">4 Wizened Cenn</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -179,9 +224,12 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Ajani Goldmane<br />4 Honor of the Pure<br />4
-                                Mirrorweave<br />4 Path to Exile<br />4 Spectral
-                                Procession<br />4 Unmake
+                                <span class="card-name" data-card="Ajani Goldmane">4 Ajani Goldmane</span><br/>
+                                <span class="card-name" data-card="Honor of the Pure">4 Honor of the Pure</span><br/>
+                                <span class="card-name" data-card="Mirrorweave">4 Mirrorweave</span><br/>
+                                <span class="card-name" data-card="Path to Exile">4 Path to Exile</span><br/>
+                                <span class="card-name" data-card="Spectral Procession">4 Spectral Procession</span><br/>
+                                <span class="card-name" data-card="Unmake">4 Unmake</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -216,9 +264,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Mistbind Clique<br />4 Scion of Oona<br />4
-                                Spellstutter Sprite<br />4 Sower of
-                                Temptation<br />4 Vendilion Clique
+                                4 <span class="card-name" data-card="Mistbind Clique">Mistbind Clique</span><br />4 <span class="card-name" data-card="Scion of Oona">Scion of Oona</span><br />4
+                                <span class="card-name" data-card="Spellstutter Sprite">Spellstutter Sprite</span><br />4 <span class="card-name" data-card="Sower of Temptation">Sower of
+                                Temptation</span><br />4 <span class="card-name" data-card="Vendilion Clique">Vendilion Clique</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -226,11 +274,11 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Agony Warp<br />4 Bitterblossom<br />4 Broken
-                                Ambitions<br />4 Cryptic Command<br />4
-                                Infest<br />4 Jace Beleren<br />4 Peppersmoke<br />4
-                                Puppeteer Clique<br />4 Terror<br />4
-                                Thoughtseize
+                                4 <span class="card-name" data-card="Agony Warp">Agony Warp</span><br />4 <span class="card-name" data-card="Bitterblossom">Bitterblossom</span><br />4 <span class="card-name" data-card="Broken Ambitions">Broken
+                                Ambitions</span><br />4 <span class="card-name" data-card="Cryptic Command">Cryptic Command</span><br />4
+                                <span class="card-name" data-card="Infest">Infest</span><br />4 <span class="card-name" data-card="Jace Beleren">Jace Beleren</span><br />4 <span class="card-name" data-card="Peppersmoke">Peppersmoke</span><br />4
+                                <span class="card-name" data-card="Puppeteer Clique">Puppeteer Clique</span><br />4 <span class="card-name" data-card="Terror">Terror</span><br />4
+                                <span class="card-name" data-card="Thoughtseize">Thoughtseize</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -238,9 +286,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Mutavault<br />4 River of Tears<br />4
-                                Secluded Glen<br />4 Sunken Ruins<br />4
-                                Underground River
+                                4 <span class="card-name" data-card="Mutavault">Mutavault</span><br />4 <span class="card-name" data-card="River of Tears">River of Tears</span><br />4
+                                <span class="card-name" data-card="Secluded Glen">Secluded Glen</span><br />4 <span class="card-name" data-card="Sunken Ruins">Sunken Ruins</span><br />4
+                                <span class="card-name" data-card="Underground River">Underground River</span>
                             </div>
                         </div>
                     </div>
@@ -265,10 +313,10 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Cloudgoat Ranger<br />4 Figure of Destiny<br />4
-                                Kitchen Finks<br />4 Knight of the White
-                                Orchid<br />4 Murderous Redcap<br />4 Ranger of
-                                Eos
+                                4 <span class="card-name" data-card="Cloudgoat Ranger">Cloudgoat Ranger</span><br />4 <span class="card-name" data-card="Figure of Destiny">Figure of Destiny</span><br />4
+                                <span class="card-name" data-card="Kitchen Finks">Kitchen Finks</span><br />4 <span class="card-name" data-card="Knight of the White Orchid">Knight of the White
+                                Orchid</span><br />4 <span class="card-name" data-card="Murderous Redcap">Murderous Redcap</span><br />4 <span class="card-name" data-card="Ranger of Eos">Ranger of
+                                Eos</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -276,9 +324,9 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Ajani Goldmane<br />4 Bitterblossom<br />4
-                                Glorious Anthem<br />4 Path to Exile<br />4
-                                Spectral Procession<br />4 Unmake
+                                4 <span class="card-name" data-card="Ajani Goldmane">Ajani Goldmane</span><br />4 <span class="card-name" data-card="Bitterblossom">Bitterblossom</span><br />4
+                                <span class="card-name" data-card="Glorious Anthem">Glorious Anthem</span><br />4 <span class="card-name" data-card="Path to Exile">Path to Exile</span><br />4
+                                <span class="card-name" data-card="Spectral Procession">Spectral Procession</span><br />4 <span class="card-name" data-card="Unmake">Unmake</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -286,9 +334,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Caves of Koilos<br />4 Fetid Heath<br />4
-                                Godless Shrine<br />4 Mutavault<br />4 Windbrisk
-                                Heights
+                                4 <span class="card-name" data-card="Caves of Koilos">Caves of Koilos</span><br />4 <span class="card-name" data-card="Fetid Heath">Fetid Heath</span><br />4
+                                <span class="card-name" data-card="Godless Shrine">Godless Shrine</span><br />4 <span class="card-name" data-card="Mutavault">Mutavault</span><br />4 <span class="card-name" data-card="Windbrisk Heights">Windbrisk
+                                Heights</span>
                             </div>
                         </div>
                     </div>
@@ -313,9 +361,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Mistbind Clique<br />4 Scion of Oona<br />4
-                                Spellstutter Sprite<br />4 Sower of
-                                Temptation<br />4 Vendilion Clique
+                                4 <span class="card-name" data-card="Mistbind Clique">Mistbind Clique</span><br />4 <span class="card-name" data-card="Scion of Oona">Scion of Oona</span><br />4
+                                <span class="card-name" data-card="Spellstutter Sprite">Spellstutter Sprite</span><br />4 <span class="card-name" data-card="Sower of Temptation">Sower of
+                                Temptation</span><br />4 <span class="card-name" data-card="Vendilion Clique">Vendilion Clique</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -323,11 +371,11 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Agony Warp<br />4 Bitterblossom<br />4 Broken
-                                Ambitions<br />4 Cryptic Command<br />4
-                                Infest<br />4 Jace Beleren<br />4 Peppersmoke<br />4
-                                Puppeteer Clique<br />4 Terror<br />4
-                                Thoughtseize
+                                4 <span class="card-name" data-card="Agony Warp">Agony Warp</span><br />4 <span class="card-name" data-card="Bitterblossom">Bitterblossom</span><br />4 <span class="card-name" data-card="Broken Ambitions">Broken
+                                Ambitions</span><br />4 <span class="card-name" data-card="Cryptic Command">Cryptic Command</span><br />4
+                                <span class="card-name" data-card="Infest">Infest</span><br />4 <span class="card-name" data-card="Jace Beleren">Jace Beleren</span><br />4 <span class="card-name" data-card="Peppersmoke">Peppersmoke</span><br />4
+                                <span class="card-name" data-card="Puppeteer Clique">Puppeteer Clique</span><br />4 <span class="card-name" data-card="Terror">Terror</span><br />4
+                                <span class="card-name" data-card="Thoughtseize">Thoughtseize</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -335,9 +383,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Mutavault<br />4 River of Tears<br />4
-                                Secluded Glen<br />4 Sunken Ruins<br />4
-                                Underground River
+                                4 <span class="card-name" data-card="Mutavault">Mutavault</span><br />4 <span class="card-name" data-card="River of Tears">River of Tears</span><br />4
+                                <span class="card-name" data-card="Secluded Glen">Secluded Glen</span><br />4 <span class="card-name" data-card="Sunken Ruins">Sunken Ruins</span><br />4
+                                <span class="card-name" data-card="Underground River">Underground River</span>
                             </div>
                         </div>
                     </div>
@@ -362,9 +410,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Mistbind Clique<br />4 Scion of Oona<br />4
-                                Spellstutter Sprite<br />4 Sower of
-                                Temptation<br />4 Vendilion Clique
+                                4 <span class="card-name" data-card="Mistbind Clique">Mistbind Clique</span><br />4 <span class="card-name" data-card="Scion of Oona">Scion of Oona</span><br />4
+                                <span class="card-name" data-card="Spellstutter Sprite">Spellstutter Sprite</span><br />4 <span class="card-name" data-card="Sower of Temptation">Sower of
+                                Temptation</span><br />4 <span class="card-name" data-card="Vendilion Clique">Vendilion Clique</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -372,11 +420,11 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Agony Warp<br />4 Bitterblossom<br />4 Broken
-                                Ambitions<br />4 Cryptic Command<br />4
-                                Infest<br />4 Jace Beleren<br />4 Peppersmoke<br />4
-                                Puppeteer Clique<br />4 Terror<br />4
-                                Thoughtseize
+                                4 <span class="card-name" data-card="Agony Warp">Agony Warp</span><br />4 <span class="card-name" data-card="Bitterblossom">Bitterblossom</span><br />4 <span class="card-name" data-card="Broken Ambitions">Broken
+                                Ambitions</span><br />4 <span class="card-name" data-card="Cryptic Command">Cryptic Command</span><br />4
+                                <span class="card-name" data-card="Infest">Infest</span><br />4 <span class="card-name" data-card="Jace Beleren">Jace Beleren</span><br />4 <span class="card-name" data-card="Peppersmoke">Peppersmoke</span><br />4
+                                <span class="card-name" data-card="Puppeteer Clique">Puppeteer Clique</span><br />4 <span class="card-name" data-card="Terror">Terror</span><br />4
+                                <span class="card-name" data-card="Thoughtseize">Thoughtseize</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -384,9 +432,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Mutavault<br />4 River of Tears<br />4
-                                Secluded Glen<br />4 Sunken Ruins<br />4
-                                Underground River
+                                4 <span class="card-name" data-card="Mutavault">Mutavault</span><br />4 <span class="card-name" data-card="River of Tears">River of Tears</span><br />4
+                                <span class="card-name" data-card="Secluded Glen">Secluded Glen</span><br />4 <span class="card-name" data-card="Sunken Ruins">Sunken Ruins</span><br />4
+                                <span class="card-name" data-card="Underground River">Underground River</span>
                             </div>
                         </div>
                     </div>
@@ -412,9 +460,9 @@
                                 Criaturas
                             </h3>
                             <div class="text-gray-300">
-                                4 Mistbind Clique<br />4 Scion of Oona<br />4
-                                Spellstutter Sprite<br />4 Sower of
-                                Temptation<br />4 Vendilion Clique
+                                4 <span class="card-name" data-card="Mistbind Clique">Mistbind Clique</span><br />4 <span class="card-name" data-card="Scion of Oona">Scion of Oona</span><br />4
+                                <span class="card-name" data-card="Spellstutter Sprite">Spellstutter Sprite</span><br />4 <span class="card-name" data-card="Sower of Temptation">Sower of
+                                Temptation</span><br />4 <span class="card-name" data-card="Vendilion Clique">Vendilion Clique</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -422,11 +470,11 @@
                                 Mágicas
                             </h3>
                             <div class="text-gray-300">
-                                4 Agony Warp<br />4 Bitterblossom<br />4 Broken
-                                Ambitions<br />4 Cryptic Command<br />4
-                                Infest<br />4 Jace Beleren<br />4 Peppersmoke<br />4
-                                Puppeteer Clique<br />4 Terror<br />4
-                                Thoughtseize
+                                4 <span class="card-name" data-card="Agony Warp">Agony Warp</span><br />4 <span class="card-name" data-card="Bitterblossom">Bitterblossom</span><br />4 <span class="card-name" data-card="Broken Ambitions">Broken
+                                Ambitions</span><br />4 <span class="card-name" data-card="Cryptic Command">Cryptic Command</span><br />4
+                                <span class="card-name" data-card="Infest">Infest</span><br />4 <span class="card-name" data-card="Jace Beleren">Jace Beleren</span><br />4 <span class="card-name" data-card="Peppersmoke">Peppersmoke</span><br />4
+                                <span class="card-name" data-card="Puppeteer Clique">Puppeteer Clique</span><br />4 <span class="card-name" data-card="Terror">Terror</span><br />4
+                                <span class="card-name" data-card="Thoughtseize">Thoughtseize</span>
                             </div>
                             <h3
                                 class="font-semibold text-lg mt-4 mb-2 text-indigo-400"
@@ -434,9 +482,9 @@
                                 Terrenos
                             </h3>
                             <div class="text-gray-300">
-                                4 Mutavault<br />4 River of Tears<br />4
-                                Secluded Glen<br />4 Sunken Ruins<br />4
-                                Underground River
+                                4 <span class="card-name" data-card="Mutavault">Mutavault</span><br />4 <span class="card-name" data-card="River of Tears">River of Tears</span><br />4
+                                <span class="card-name" data-card="Secluded Glen">Secluded Glen</span><br />4 <span class="card-name" data-card="Sunken Ruins">Sunken Ruins</span><br />4
+                                <span class="card-name" data-card="Underground River">Underground River</span>
                             </div>
                         </div>
                     </div>
@@ -444,6 +492,63 @@
             </main>
         </div>
         <script>
+            // Cria o elemento tooltip uma vez e anexa ao body
+            const tooltip = document.createElement('div');
+            tooltip.id = 'card-tooltip';
+            tooltip.innerHTML = '<img>';
+            document.body.appendChild(tooltip);
+            const tooltipImage = tooltip.querySelector('img');
+
+            // Pega todos os elementos que devem acionar o tooltip
+            const cardSpans = document.querySelectorAll('.card-name');
+
+            // Função para atualizar a posição do tooltip
+            const updateTooltipPosition = (e) => {
+                // Adiciona um pequeno deslocamento para evitar cintilação/piscar
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+
+                const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Impede que o tooltip saia da borda direita da tela
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                // Impede que o tooltip saia da borda inferior da tela
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            };
+
+            cardSpans.forEach(span => {
+                span.addEventListener('mouseover', (e) => {
+                    const cardName = span.getAttribute('data-card');
+                    if (cardName) {
+                        // Usa a API do Scryfall para imagens de cartas. É ótima para isso.
+                        // A versão 'normal' tem um bom tamanho. 'large' também está disponível.
+                        const imageUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+                        tooltipImage.src = imageUrl;
+                        
+                        // Espera a imagem carregar para obter as dimensões corretas antes de mostrar
+                        tooltipImage.onload = () => {
+                            tooltip.style.display = 'block';
+                            updateTooltipPosition(e); // Posição inicial correta
+                        }
+                    }
+                });
+
+                span.addEventListener('mousemove', updateTooltipPosition);
+
+                span.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                    tooltipImage.src = ''; // Limpa o src para parar de carregar se o mouse sair rápido
+                });
+            });
+
+            // Função original para expandir/recolher as listas de deck
             function toggleVisibility(elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {
